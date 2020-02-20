@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="vkUnions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\vkConsts.cs" Link="vkConsts.cs" />
+    <Compile Include="..\vkEnums.cs" Link="vkEnums.cs" />
+    <Compile Include="..\vkFuncs.cs" Link="vkFuncs.cs" />
+    <Compile Include="..\vkStructs.cs" Link="vkStructs.cs" />
+    <Compile Include="..\vkUnions.cs" Link="vkUnions.cs" />
+  </ItemGroup>
+
+</Project>
