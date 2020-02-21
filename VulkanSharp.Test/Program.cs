@@ -1,6 +1,6 @@
 ﻿using System;
-using static VulkanSharp.Raw.VkFuncs;
-using glfw3;
+using static VulkanSharp.Raw.Vk;
+using static VulkanSharp.Raw.Glfw;
 
 namespace VulkanSharp.Test
 {
@@ -10,8 +10,18 @@ namespace VulkanSharp.Test
         {
             unsafe
             {
-                Glfw.WindowHint(glfw3.)
-                //Glfw.CreateWindow()
+                glfwInit();
+                glfwWindowHint(GlfwClientApi, GlfwNoApi);
+                glfwWindowHint(GlfwResizable, GlfwFalse);
+                var window = glfwCreateWindow(800, 600, "Vulkan", null, null);
+
+                while(glfwWindowShouldClose(window) == 0)
+                {
+                    glfwPollEvents();
+                }
+                glfwDestroyWindow(window);
+                glfwTerminate();
+
                 IntPtr inst = IntPtr.Zero;
                 var res = vkCreateInstance(new VkInstanceCreateInfo[]
                 {

@@ -14,6 +14,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\glfw3.dll" Link="glfw3.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="GlfwSharp.NET">
+      <HintPath>..\GlfwSharp.NET.dll</HintPath>
+    </Reference>
     <Reference Include="VulkanSharp.NET">
       <HintPath>..\VulkanSharp.NET.dll</HintPath>
     </Reference>
