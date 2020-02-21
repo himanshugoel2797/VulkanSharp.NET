@@ -175,11 +175,11 @@ namespace VulkanSharp.BindingGen
             //emit function definitions in class: VulkanSharp.Raw.VkFuncs
             EmitFuncs();
 
-            File.WriteAllText("vkConsts.cs", constFile);
-            File.WriteAllText("vkEnums.cs", enumFile);
-            File.WriteAllText("vkStructs.cs", structFile);
-            File.WriteAllText("vkUnions.cs", unionFile);
-            File.WriteAllText("vkFuncs.cs", funcFile);
+            File.WriteAllText("../../../../vkConsts.cs", constFile);
+            File.WriteAllText("../../../../vkEnums.cs", enumFile);
+            File.WriteAllText("../../../../vkStructs.cs", structFile);
+            File.WriteAllText("../../../../vkUnions.cs", unionFile);
+            File.WriteAllText("../../../../vkFuncs.cs", funcFile);
         }
 
         #region Parser
@@ -624,36 +624,80 @@ namespace VulkanSharp.BindingGen
         }
 
         #region Emitter
+        private string ConvertConstName(string n, bool rmVk = false)
+        {
+            //return n;
+            if (int.TryParse(n, out _))
+                return n;
+
+            string convertPart(string n)
+            {
+                if (int.TryParse(n, out _))
+                    return n;
+
+                var p = n.Split('_');
+                var p_str = "";
+                for (int i = 0; i < p.Length; i++)
+                {
+                    if (rmVk && p[i] == "VK") continue;
+                    var tmp = char.ToUpper(p[i][0]) + p[i].ToLowerInvariant().Substring(1);
+                    p_str += tmp;
+                }
+                return p_str;
+            }
+
+            var p0_str = "";
+            var p0 = n.Split('-');
+            for (int i = 0; i < p0.Length; i++)
+            {
+                var p1_str = "";
+                var p1 = p0[i].Split(' ');
+                for (int j = 0; j < p1.Length; j++)
+                {
+                    bool hasLParen = p1[j].StartsWith('(');
+                    bool hasRParen = p1[j].EndsWith(')');
+
+                    p1_str += convertPart(p1[j].TrimStart('(').TrimEnd(')')) + " ";
+
+                    if (hasLParen) p1_str = "(" + p1_str;
+                    if (hasRParen) p1_str += ")";
+                }
+                p1_str = p1_str.Trim();
+                p0_str += p1_str + "-";
+            }
+            return p0_str.Trim('-');
+        }
+
         private void EmitConstants()
         {
             constFile = "namespace VulkanSharp.Raw {\n";
-            constFile += "\tpublic class VkDefines {\n";
+            constFile += "\tpublic unsafe static partial class VkFuncs {\n";
 
             void handleDef(VkDefineDef d)
             {
                 if (int.TryParse(d.Value, out _))
                 {
-                    constFile += $"\t\tpublic const int {d.Name} = {d.Value};\n";
+                    constFile += $"\t\t\tpublic const int {ConvertConstName(d.Name)} = {d.Value};\n";
                     d.ValType = typeof(int);
                 }
                 else if ((d.Value.EndsWith("f") | d.Value.EndsWith("F")) && float.TryParse(d.Value.TrimEnd('f').TrimEnd('F'), out _))
                 {
-                    constFile += $"\t\tpublic const float {d.Name} = {d.Value};\n";
+                    constFile += $"\t\t\tpublic const float {ConvertConstName(d.Name)} = {d.Value};\n";
                     d.ValType = typeof(float);
                 }
                 else if ((d.Value.EndsWith("u") | d.Value.EndsWith("U")) && uint.TryParse(d.Value.TrimStart('~').TrimEnd('u').TrimEnd('U'), out _))
                 {
-                    constFile += $"\t\tpublic const uint {d.Name} = {d.Value};\n";
+                    constFile += $"\t\t\tpublic const uint {ConvertConstName(d.Name)} = {d.Value};\n";
                     d.ValType = typeof(uint);
                 }
                 else if ((d.Value.EndsWith("ull") | d.Value.EndsWith("ULL")) && ulong.TryParse(d.Value.TrimStart('~').Replace("ull", "").Replace("ULL", ""), out _))
                 {
-                    constFile += $"\t\tpublic const ulong {d.Name} = {d.Value.Substring(0, d.Value.Length - 1)};\n";
+                    constFile += $"\t\t\tpublic const ulong {ConvertConstName(d.Name)} = {d.Value.Substring(0, d.Value.Length - 1)};\n";
                     d.ValType = typeof(ulong);
                 }
                 else if (d.Value.StartsWith("\""))
                 {
-                    constFile += $"\t\tpublic const string {d.Name} = {d.Value};\n";
+                    constFile += $"\t\t\tpublic const string {ConvertConstName(d.Name)} = {d.Value};\n";
                     d.ValType = typeof(string);
                 }
                 else if (d.Name.StartsWith("VK_MAKE_VERSION"))
@@ -695,13 +739,13 @@ namespace VulkanSharp.BindingGen
                     uint minor = uint.Parse(v[1]);
                     uint patch = uint.Parse(v[2]);
 
-                    constFile += $"\t\tpublic const uint {d.Name} = {((major) << 22) | ((minor) << 12) | (patch)};\n";
+                    constFile += $"\t\t\tpublic const uint {ConvertConstName(d.Name)} = {((major) << 22) | ((minor) << 12) | (patch)};\n";
                     d.ValType = typeof(uint);
                 }
                 else if (d.Value.Contains('-'))
                 {
                     //~0U-N
-                    constFile += $"\t\tpublic const uint {d.Name} = {d.Value};\n";
+                    constFile += $"\t\t\tpublic const uint {ConvertConstName(d.Name)} = {d.Value};\n";
                     d.ValType = typeof(uint);
                 }
                 else if (defines.Any(a => a.Name == d.Value))
@@ -711,7 +755,7 @@ namespace VulkanSharp.BindingGen
                         {
                             if (defines[j].ValType == null)
                                 handleDef(defines[j]);
-                            constFile += $"\t\tpublic const {defines[j].ValType.FullName} {d.Name} = {d.Value};\n";
+                            constFile += $"\t\t\tpublic const {defines[j].ValType.FullName} {ConvertConstName(d.Name)} = {ConvertConstName(d.Value)};\n";
                             break;
                         }
                 }
@@ -733,36 +777,48 @@ namespace VulkanSharp.BindingGen
         private void EmitEnums()
         {
             enumFile = "namespace VulkanSharp.Raw {\n";
+            enumFile += "\tpublic unsafe static partial class VkFuncs {\n";
             for (int i = 0; i < enums.Count; i++)
             {
                 var d = enums[i];
-                enumFile += $"\tpublic enum {d.Name} {{\n";
+                var dict = new Dictionary<string, string>();
+                enumFile += $"\t\tpublic enum {d.Name} {{\n";
                 foreach (var kvp in d.Values)
                 {
-                    enumFile += $"\t\t{kvp.Key} = {kvp.Value},\n";
+                    //Convert enum name
+                    var k = ConvertConstName(kvp.Key, true);
+                    var v = ConvertConstName(kvp.Value, true);
+
+                    if (!dict.ContainsKey(k))
+                    {
+                        dict[k] = v;
+                        enumFile += $"\t\t\t{k} = {v},\n";
+                    }
                 }
-                enumFile += "}\n";
+                enumFile += "\t\t}\n";
             }
+            enumFile += "\t}\n";
             enumFile += "}\n";
         }
 
         private void EmitUnions()
         {
             unionFile = "using System;\nusing System.Runtime.InteropServices;\nnamespace VulkanSharp.Raw {\n";
+            unionFile += "\tpublic unsafe static partial class VkFuncs {\n";
             for (int i = 0; i < unions.Count; i++)
             {
                 var d = unions[i];
-                unionFile += $"\t[StructLayout(LayoutKind.Explicit, CharSet = CharSet.{(d.Name.Contains("Win32") ? CharSet.Unicode : CharSet.Ansi)})]\n";
-                unionFile += $"\tpublic unsafe struct {d.Name} {{\n";
+                unionFile += $"\t\t[StructLayout(LayoutKind.Explicit, CharSet = CharSet.{(d.Name.Contains("Win32") ? CharSet.Unicode : CharSet.Ansi)})]\n";
+                unionFile += $"\t\tpublic unsafe struct {d.Name} {{\n";
                 foreach (var kvp in d.Parameters)
                 {
                     if (kvp.ParamName.Contains('['))
                     {
                         var tn = CleanTypeName(kvp.TypeName);
                         if (tn == "byte" || tn == "short" || tn == "int" || tn == "long" || tn == "ushort")
-                            unionFile += $"\t\t[FieldOffset({kvp.Offset})]public fixed {tn} {CleanItemName(kvp.ParamName)};\n";
+                            unionFile += $"\t\t\t[FieldOffset({kvp.Offset})]public fixed {tn} {CleanItemName(kvp.ParamName)};\n";
                         else
-                            unionFile += $"\t\t[FieldOffset({kvp.Offset})][MarshalAs(UnmanagedType.ByValArray, SizeConst={kvp.ElementCount})] public {tn}[] {CleanItemName(kvp.ParamName).Split('[')[0]};\n";
+                            unionFile += $"\t\t\t[FieldOffset({kvp.Offset})][MarshalAs(UnmanagedType.ByValArray, SizeConst={kvp.ElementCount})] public {tn}[] {CleanItemName(kvp.ParamName).Split('[')[0]};\n";
                     }
                     else
                     {
@@ -778,22 +834,24 @@ namespace VulkanSharp.BindingGen
                             tn = tn.Trim('*') + "[]";
                             attr = "[MarshalAs(UnmanagedType.LPArray)]";
                         }
-                        unionFile += $"\t\t[FieldOffset({kvp.Offset})]{attr}public {tn} {CleanItemName(kvp.ParamName)};\n";
+                        unionFile += $"\t\t\t[FieldOffset({kvp.Offset})]{attr}public {tn} {CleanItemName(kvp.ParamName)};\n";
                     }
                 }
-                unionFile += "\t}\n";
+                unionFile += "\t\t}\n";
             }
+            unionFile += "\t}\n";
             unionFile += "}\n";
         }
 
         private void EmitStructs()
         {
             structFile = "using System;\nusing System.Runtime.InteropServices;\nnamespace VulkanSharp.Raw {\n";
+            structFile += "\tpublic unsafe static partial class VkFuncs {\n";
             for (int i = 0; i < structs.Count; i++)
             {
                 var d = structs[i];
-                structFile += $"\t[StructLayout(LayoutKind.Explicit, CharSet = CharSet.{(d.Name.Contains("Win32") ? CharSet.Unicode : CharSet.Ansi)})]\n";
-                structFile += $"\tpublic unsafe struct {d.Name} {{\n";
+                structFile += $"\t\t[StructLayout(LayoutKind.Explicit, CharSet = CharSet.{(d.Name.Contains("Win32") ? CharSet.Unicode : CharSet.Ansi)})]\n";
+                structFile += $"\t\tpublic unsafe struct {d.Name} {{\n";
                 foreach (var kvp in d.Parameters)
                 {
                     //if (typedefs.ContainsKey(kvp.TypeName.TrimEnd('*')))
@@ -801,9 +859,9 @@ namespace VulkanSharp.BindingGen
                     {
                         var tn = CleanTypeName(kvp.TypeName);
                         if (tn == "byte" || tn == "short" || tn == "int" || tn == "long" || tn == "ushort")
-                            structFile += $"\t\t[FieldOffset({kvp.Offset})]public fixed {tn} {CleanItemName(kvp.ParamName)};\n";
+                            structFile += $"\t\t\t[FieldOffset({kvp.Offset})]public fixed {tn} {CleanItemName(kvp.ParamName)};\n";
                         else
-                            structFile += $"\t\t[FieldOffset({kvp.Offset})][MarshalAs(UnmanagedType.ByValArray, SizeConst={kvp.ElementCount})] public {tn}[] {CleanItemName(kvp.ParamName).Split('[')[0]};\n";
+                            structFile += $"\t\t\t[FieldOffset({kvp.Offset})][MarshalAs(UnmanagedType.ByValArray, SizeConst={kvp.ElementCount})] public {tn}[] {CleanItemName(kvp.ParamName).Split('[')[0]};\n";
                     }
                     else
                     {
@@ -819,15 +877,16 @@ namespace VulkanSharp.BindingGen
                             tn = tn.Trim('*') + "[]";
                             attr = "[MarshalAs(UnmanagedType.ByValArray)]";
                         }
-                        if(tn == "string[]")
+                        if (tn == "string[]")
                         {
                             attr = "[MarshalAs(UnmanagedType.ByValArray, ArraySubType = UnmanagedType.LPStr)]";
                         }
-                        structFile += $"\t\t[FieldOffset({kvp.Offset})]{attr}public {tn} {CleanItemName(kvp.ParamName)};\n";
+                        structFile += $"\t\t\t[FieldOffset({kvp.Offset})]{attr}public {tn} {CleanItemName(kvp.ParamName)};\n";
                     }
                 }
-                structFile += "\t}\n";
+                structFile += "\t\t}\n";
             }
+            structFile += "\t}\n";
             structFile += "}\n";
         }
 

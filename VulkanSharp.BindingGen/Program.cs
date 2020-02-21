@@ -24,7 +24,14 @@ namespace VulkanSharp.BindingGen
             p.Process();
 
             //Rewrite
-            var process = Process.Start( new ProcessStartInfo()
+            var process = Process.Start(new ProcessStartInfo()
+            {
+                FileName = "dotnet",
+                Arguments = "clean ../../../../VulkanSharp.NET/VulkanSharp.NET.csproj -c Release",
+                WorkingDirectory = Environment.CurrentDirectory
+            });
+            process.WaitForExit();
+            process = Process.Start( new ProcessStartInfo()
             {
                 FileName = "dotnet",
                 Arguments = "build ../../../../VulkanSharp.NET/VulkanSharp.NET.csproj -c Release",
@@ -70,7 +77,6 @@ namespace VulkanSharp.BindingGen
                             proc.Emit(OpCodes.Ret);
                         }
             mod.Write("../../../../VulkanSharp.NET.dll");
-
         }
     }
 }

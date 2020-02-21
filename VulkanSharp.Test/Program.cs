@@ -1,5 +1,5 @@
 ﻿using System;
-using VulkanSharp.Raw;
+using static VulkanSharp.Raw.VkFuncs;
 
 namespace VulkanSharp.Test
 {
@@ -10,11 +10,11 @@ namespace VulkanSharp.Test
             unsafe
             {
                 IntPtr inst = IntPtr.Zero;
-                var res = VkFuncs.vkCreateInstance(new VkInstanceCreateInfo[]
+                var res = vkCreateInstance(new VkInstanceCreateInfo[]
                 {
                     new VkInstanceCreateInfo()
                     {
-                        sType = VkStructureType.VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO,
+                        sType = VkStructureType.StructureTypeInstanceCreateInfo,
                         enabledExtensionCount = 0,
                         enabledLayerCount = 0,
                         flags = 0,
@@ -25,10 +25,10 @@ namespace VulkanSharp.Test
                         {
                             new VkApplicationInfo()
                             {
-                                sType = VkStructureType.VK_STRUCTURE_TYPE_APPLICATION_INFO,
+                                sType = VkStructureType.StructureTypeApplicationInfo,
                                 pApplicationName = "Vulkan Test",
                                 pEngineName = "Test Engine",
-                                apiVersion = VkDefines.VK_API_VERSION_1_2,
+                                apiVersion = VkApiVersion12,
                                 applicationVersion = 0,
                                 engineVersion = 0,
                                 pNext = IntPtr.Zero
