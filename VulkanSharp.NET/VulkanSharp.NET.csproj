@@ -13,10 +13,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="vkUnions.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Include="..\vkConsts.cs" Link="vkConsts.cs" />
     <Compile Include="..\vkEnums.cs" Link="vkEnums.cs" />
     <Compile Include="..\vkFuncs.cs" Link="vkFuncs.cs" />

@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VulkanSharp.NET", "VulkanSharp.NET\VulkanSharp.NET.csproj", "{DDBEDB66-454C-4C27-AFA7-670FA956FB87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VulkanSharp.NET", "VulkanSharp.NET\VulkanSharp.NET.csproj", "{DDBEDB66-454C-4C27-AFA7-670FA956FB87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VulkanSharp.BindingGen", "VulkanSharp.BindingGen\VulkanSharp.BindingGen.csproj", "{CE150F71-5565-4215-A1C1-6B7C2250CFAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VulkanSharp.BindingGen", "VulkanSharp.BindingGen\VulkanSharp.BindingGen.csproj", "{CE150F71-5565-4215-A1C1-6B7C2250CFAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VukanSharp.Rewrite", "VukanSharp.Rewrite\VukanSharp.Rewrite.csproj", "{1265118E-8012-4F04-AF93-4633C5F624E4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VulkanSharp.Test", "VulkanSharp.Test\VulkanSharp.Test.csproj", "{DEF44A2C-D5DD-4BAC-9B45-4BBB0779C8CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VulkanSharp.Test", "VulkanSharp.Test\VulkanSharp.Test.csproj", "{DEF44A2C-D5DD-4BAC-9B45-4BBB0779C8CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +23,6 @@ Global
 		{CE150F71-5565-4215-A1C1-6B7C2250CFAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE150F71-5565-4215-A1C1-6B7C2250CFAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE150F71-5565-4215-A1C1-6B7C2250CFAC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1265118E-8012-4F04-AF93-4633C5F624E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1265118E-8012-4F04-AF93-4633C5F624E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1265118E-8012-4F04-AF93-4633C5F624E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1265118E-8012-4F04-AF93-4633C5F624E4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DEF44A2C-D5DD-4BAC-9B45-4BBB0779C8CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DEF44A2C-D5DD-4BAC-9B45-4BBB0779C8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEF44A2C-D5DD-4BAC-9B45-4BBB0779C8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -92,6 +92,12 @@ namespace VulkanSharp.BindingGen
         string unionFile;
         string funcFile;
 
+        public string ConstantFile { get => constFile; }
+        public string EnumFile { get => enumFile; }
+        public string StructFile { get => structFile; }
+        public string UnionFile { get => unionFile; }
+        public string FuncFile { get => funcFile; }
+
         string funcPtrDefs;
         string funcPtrInit;
 
@@ -169,11 +175,11 @@ namespace VulkanSharp.BindingGen
             //emit function definitions in class: VulkanSharp.Raw.VkFuncs
             EmitFuncs();
 
-            File.WriteAllText("../../../../vkConsts.cs", constFile);
-            File.WriteAllText("../../../../vkEnums.cs", enumFile);
-            File.WriteAllText("../../../../vkStructs.cs", structFile);
-            File.WriteAllText("../../../../vkUnions.cs", unionFile);
-            File.WriteAllText("../../../../vkFuncs.cs", funcFile);
+            File.WriteAllText("vkConsts.cs", constFile);
+            File.WriteAllText("vkEnums.cs", enumFile);
+            File.WriteAllText("vkStructs.cs", structFile);
+            File.WriteAllText("vkUnions.cs", unionFile);
+            File.WriteAllText("vkFuncs.cs", funcFile);
         }
 
         #region Parser
