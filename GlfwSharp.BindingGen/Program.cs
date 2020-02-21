@@ -4,21 +4,18 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace VulkanSharp.BindingGen
+namespace GlfwSharp.BindingGen
 {
     class Program
     {
         static List<string> files;
-        static string path = @"I:\VulkanSDK\1.2.131.2\Include\vulkan";
+        static string path = @"I:\glfw-3.3.1.bin.WIN64\include\GLFW";
 
         static void Main(string[] args)
         {
             files = new List<string>();
 
-            files.Add("vulkan_win32.h");
-            files.Add("vulkan_wayland.h");
-            files.Add("vulkan_xlib.h");
-            files.Add("vulkan_core.h");
+            files.Add("glfw3.h");
 
             FileParser p = new FileParser(path, files.ToArray());
             p.Process();
@@ -27,24 +24,24 @@ namespace VulkanSharp.BindingGen
             var process = Process.Start(new ProcessStartInfo()
             {
                 FileName = "dotnet",
-                Arguments = "clean ../../../../VulkanSharp.NET/VulkanSharp.NET.csproj -c Release",
+                Arguments = "clean ../../../../GlfwSharp.NET/GlfwSharp.NET.csproj -c Release",
                 WorkingDirectory = Environment.CurrentDirectory
             });
             process.WaitForExit();
-            process = Process.Start( new ProcessStartInfo()
+            process = Process.Start(new ProcessStartInfo()
             {
                 FileName = "dotnet",
-                Arguments = "build ../../../../VulkanSharp.NET/VulkanSharp.NET.csproj -c Release",
+                Arguments = "build ../../../../GlfwSharp.NET/GlfwSharp.NET.csproj -c Release",
                 WorkingDirectory = Environment.CurrentDirectory
             });
             process.WaitForExit();
 
             //Load assembly
-            ModuleDefinition mod = ModuleDefinition.ReadModule("../../../../VulkanSharp.NET/bin/Release/netcoreapp3.1/VulkanSharp.NET.dll");
+            ModuleDefinition mod = ModuleDefinition.ReadModule("../../../../GlfwSharp.NET/bin/Release/netcoreapp3.1/GlfwSharp.NET.dll");
 
             //generate interface implementation
             foreach (TypeDefinition type in mod.Types)
-                if (type.Name == "Vk")
+                if (type.Name == "Glfw")
                     foreach (MethodDefinition mthd in type.Methods)
                         if (!mthd.IsConstructor && mthd.IsStatic && mthd.Name != "InitPtrs")
                         {
@@ -76,7 +73,7 @@ namespace VulkanSharp.BindingGen
                             proc.Emit(OpCodes.Calli, cSite);
                             proc.Emit(OpCodes.Ret);
                         }
-            mod.Write("../../../../VulkanSharp.NET.dll");
+            mod.Write("../../../../GlfwSharp.NET.dll");
         }
     }
 }

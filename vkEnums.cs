@@ -1,5 +1,5 @@
 namespace VulkanSharp.Raw {
-	public unsafe static partial class VkFuncs {
+	public unsafe static partial class Vk {
 		public enum VkFullScreenExclusiveEXT {
 			FullScreenExclusiveDefaultExt = 0,
 			FullScreenExclusiveAllowedExt = 1,

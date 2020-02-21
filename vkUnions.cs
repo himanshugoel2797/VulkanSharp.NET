@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 namespace VulkanSharp.Raw {
-	public unsafe static partial class VkFuncs {
+	public unsafe static partial class Vk {
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkClearColorValue {
 			[FieldOffset(0)][MarshalAs(UnmanagedType.ByValArray, SizeConst=0)] public float[] float32;

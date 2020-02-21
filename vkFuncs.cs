@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 namespace VulkanSharp.Raw {
-	public unsafe static partial class VkFuncs {
+	public unsafe static partial class Vk {
 		public static VkResult vkCreateWin32SurfaceKHR(IntPtr instance, [MarshalAs(UnmanagedType.LPArray)]VkWin32SurfaceCreateInfoKHR[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pSurface) { throw new NotImplementedException(); }
 		public static uint vkGetPhysicalDeviceWin32PresentationSupportKHR(IntPtr physicalDevice, uint queueFamilyIndex) { throw new NotImplementedException(); }
 		public static VkResult vkGetMemoryWin32HandleKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkMemoryGetWin32HandleInfoKHR[] pGetWin32HandleInfo, IntPtr* pHandle) { throw new NotImplementedException(); }

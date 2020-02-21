@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 namespace VulkanSharp.Raw {
-	public unsafe static partial class VkFuncs {
+	public unsafe static partial class Vk {
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Unicode)]
 		public unsafe struct VkWin32SurfaceCreateInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;

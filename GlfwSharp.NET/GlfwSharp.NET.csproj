@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\glfwConsts.cs" Link="glfwConsts.cs" />
+    <Compile Include="..\glfwEnums.cs" Link="glfwEnums.cs" />
+    <Compile Include="..\glfwFuncs.cs" Link="glfwFuncs.cs" />
+    <Compile Include="..\glfwStructs.cs" Link="glfwStructs.cs" />
+    <Compile Include="..\glfwUnions.cs" Link="glfwUnions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VulkanSharp.NET\VulkanSharp.NET.csproj" />
+  </ItemGroup>
+
+</Project>

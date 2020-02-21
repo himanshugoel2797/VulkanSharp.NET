@@ -1,5 +1,5 @@
 namespace VulkanSharp.Raw {
-	public unsafe static partial class VkFuncs {
+	public unsafe static partial class Vk {
 			public const int VkKhrWin32Surface = 1;
 			public const int VkKhrWin32SurfaceSpecVersion = 6;
 			public const string VkKhrWin32SurfaceExtensionName = "VK_KHR_win32_surface";

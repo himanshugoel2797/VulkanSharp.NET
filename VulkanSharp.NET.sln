@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VulkanSharp.BindingGen", "V
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VulkanSharp.Test", "VulkanSharp.Test\VulkanSharp.Test.csproj", "{DEF44A2C-D5DD-4BAC-9B45-4BBB0779C8CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlfwSharp.BindingGen", "GlfwSharp.BindingGen\GlfwSharp.BindingGen.csproj", "{CE5ECA0C-D349-4F4F-8BBD-E1BE5D723AEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlfwSharp.NET", "GlfwSharp.NET\GlfwSharp.NET.csproj", "{647BE7CB-3A07-4391-A573-FDB2B8A58DC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{DEF44A2C-D5DD-4BAC-9B45-4BBB0779C8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEF44A2C-D5DD-4BAC-9B45-4BBB0779C8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEF44A2C-D5DD-4BAC-9B45-4BBB0779C8CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE5ECA0C-D349-4F4F-8BBD-E1BE5D723AEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE5ECA0C-D349-4F4F-8BBD-E1BE5D723AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE5ECA0C-D349-4F4F-8BBD-E1BE5D723AEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE5ECA0C-D349-4F4F-8BBD-E1BE5D723AEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{647BE7CB-3A07-4391-A573-FDB2B8A58DC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{647BE7CB-3A07-4391-A573-FDB2B8A58DC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{647BE7CB-3A07-4391-A573-FDB2B8A58DC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{647BE7CB-3A07-4391-A573-FDB2B8A58DC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

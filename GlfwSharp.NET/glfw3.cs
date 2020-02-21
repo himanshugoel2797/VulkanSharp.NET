@@ -3,16 +3,15 @@ using System.Runtime.InteropServices;
 
 namespace VulkanSharp.Raw
 {
-    public unsafe static partial class Vk
+    public unsafe static partial class Glfw
     {
         static IntPtr libHndl;
-        static Vk()
+        static Glfw()
         {
-            //Load assembly based on platform
             bool isLinux = RuntimeInformation.IsOSPlatform(OSPlatform.Linux);
 
-            string libname = "vulkan-1.dll";
-            if (isLinux) libname = "libvulkan.so.1";
+            string libname = "glfw3.dll";
+            if (isLinux) libname = "libglfw.so.3";
 
             libHndl = NativeLibrary.Load(libname);
             InitPtrs();
