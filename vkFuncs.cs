@@ -2,119 +2,119 @@ using System;
 using System.Runtime.InteropServices;
 namespace VulkanSharp.Raw {
 	public unsafe static partial class Vk {
-		public static VkResult vkCreateWin32SurfaceKHR(IntPtr instance, [MarshalAs(UnmanagedType.LPArray)]VkWin32SurfaceCreateInfoKHR[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pSurface) { throw new NotImplementedException(); }
+		public static VkResult vkCreateWin32SurfaceKHR(IntPtr instance, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pSurface) { throw new NotImplementedException(); }
 		public static uint vkGetPhysicalDeviceWin32PresentationSupportKHR(IntPtr physicalDevice, uint queueFamilyIndex) { throw new NotImplementedException(); }
-		public static VkResult vkGetMemoryWin32HandleKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkMemoryGetWin32HandleInfoKHR[] pGetWin32HandleInfo, IntPtr* pHandle) { throw new NotImplementedException(); }
-		public static VkResult vkGetMemoryWin32HandlePropertiesKHR(IntPtr device, VkExternalMemoryHandleTypeFlagBits handleType, IntPtr handle, [MarshalAs(UnmanagedType.LPArray)]VkMemoryWin32HandlePropertiesKHR[] pMemoryWin32HandleProperties) { throw new NotImplementedException(); }
-		public static VkResult vkImportSemaphoreWin32HandleKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkImportSemaphoreWin32HandleInfoKHR[] pImportSemaphoreWin32HandleInfo) { throw new NotImplementedException(); }
-		public static VkResult vkGetSemaphoreWin32HandleKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkSemaphoreGetWin32HandleInfoKHR[] pGetWin32HandleInfo, IntPtr* pHandle) { throw new NotImplementedException(); }
-		public static VkResult vkImportFenceWin32HandleKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkImportFenceWin32HandleInfoKHR[] pImportFenceWin32HandleInfo) { throw new NotImplementedException(); }
-		public static VkResult vkGetFenceWin32HandleKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkFenceGetWin32HandleInfoKHR[] pGetWin32HandleInfo, IntPtr* pHandle) { throw new NotImplementedException(); }
+		public static VkResult vkGetMemoryWin32HandleKHR(IntPtr device, IntPtr pGetWin32HandleInfo, IntPtr* pHandle) { throw new NotImplementedException(); }
+		public static VkResult vkGetMemoryWin32HandlePropertiesKHR(IntPtr device, VkExternalMemoryHandleTypeFlagBits handleType, IntPtr handle, IntPtr pMemoryWin32HandleProperties) { throw new NotImplementedException(); }
+		public static VkResult vkImportSemaphoreWin32HandleKHR(IntPtr device, IntPtr pImportSemaphoreWin32HandleInfo) { throw new NotImplementedException(); }
+		public static VkResult vkGetSemaphoreWin32HandleKHR(IntPtr device, IntPtr pGetWin32HandleInfo, IntPtr* pHandle) { throw new NotImplementedException(); }
+		public static VkResult vkImportFenceWin32HandleKHR(IntPtr device, IntPtr pImportFenceWin32HandleInfo) { throw new NotImplementedException(); }
+		public static VkResult vkGetFenceWin32HandleKHR(IntPtr device, IntPtr pGetWin32HandleInfo, IntPtr* pHandle) { throw new NotImplementedException(); }
 		public static VkResult vkGetMemoryWin32HandleNV(IntPtr device, IntPtr memory, uint handleType, IntPtr* pHandle) { throw new NotImplementedException(); }
-		public static VkResult vkGetPhysicalDeviceSurfacePresentModes2EXT(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceSurfaceInfo2KHR[] pSurfaceInfo, uint* pPresentModeCount, VkPresentModeKHR* pPresentModes) { throw new NotImplementedException(); }
+		public static VkResult vkGetPhysicalDeviceSurfacePresentModes2EXT(IntPtr physicalDevice, IntPtr pSurfaceInfo, uint* pPresentModeCount, VkPresentModeKHR* pPresentModes) { throw new NotImplementedException(); }
 		public static VkResult vkAcquireFullScreenExclusiveModeEXT(IntPtr device, IntPtr swapchain) { throw new NotImplementedException(); }
 		public static VkResult vkReleaseFullScreenExclusiveModeEXT(IntPtr device, IntPtr swapchain) { throw new NotImplementedException(); }
-		public static VkResult vkGetDeviceGroupSurfacePresentModes2EXT(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceSurfaceInfo2KHR[] pSurfaceInfo, uint* pModes) { throw new NotImplementedException(); }
-		public static VkResult vkCreateWaylandSurfaceKHR(IntPtr instance, [MarshalAs(UnmanagedType.LPArray)]VkWaylandSurfaceCreateInfoKHR[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pSurface) { throw new NotImplementedException(); }
+		public static VkResult vkGetDeviceGroupSurfacePresentModes2EXT(IntPtr device, IntPtr pSurfaceInfo, uint* pModes) { throw new NotImplementedException(); }
+		public static VkResult vkCreateWaylandSurfaceKHR(IntPtr instance, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pSurface) { throw new NotImplementedException(); }
 		public static uint vkGetPhysicalDeviceWaylandPresentationSupportKHR(IntPtr physicalDevice, uint queueFamilyIndex, IntPtr display) { throw new NotImplementedException(); }
-		public static VkResult vkCreateXlibSurfaceKHR(IntPtr instance, [MarshalAs(UnmanagedType.LPArray)]VkXlibSurfaceCreateInfoKHR[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pSurface) { throw new NotImplementedException(); }
+		public static VkResult vkCreateXlibSurfaceKHR(IntPtr instance, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pSurface) { throw new NotImplementedException(); }
 		public static uint vkGetPhysicalDeviceXlibPresentationSupportKHR(IntPtr physicalDevice, uint queueFamilyIndex, IntPtr dpy, IntPtr visualID) { throw new NotImplementedException(); }
-		public static VkResult vkCreateInstance([MarshalAs(UnmanagedType.LPArray)]VkInstanceCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pInstance) { throw new NotImplementedException(); }
-		public static void vkDestroyInstance(IntPtr instance, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkCreateInstance(IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pInstance) { throw new NotImplementedException(); }
+		public static void vkDestroyInstance(IntPtr instance, IntPtr pAllocator) { throw new NotImplementedException(); }
 		public static VkResult vkEnumeratePhysicalDevices(IntPtr instance, uint* pPhysicalDeviceCount, IntPtr* pPhysicalDevices) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceFeatures(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceFeatures[] pFeatures) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceFormatProperties(IntPtr physicalDevice, VkFormat format, [MarshalAs(UnmanagedType.LPArray)]VkFormatProperties[] pFormatProperties) { throw new NotImplementedException(); }
-		public static VkResult vkGetPhysicalDeviceImageFormatProperties(IntPtr physicalDevice, VkFormat format, VkImageType type, VkImageTiling tiling, uint usage, uint flags, [MarshalAs(UnmanagedType.LPArray)]VkImageFormatProperties[] pImageFormatProperties) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceProperties(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceProperties[] pProperties) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceQueueFamilyProperties(IntPtr physicalDevice, uint* pQueueFamilyPropertyCount, [MarshalAs(UnmanagedType.LPArray)]VkQueueFamilyProperties[] pQueueFamilyProperties) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceMemoryProperties(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceMemoryProperties[] pMemoryProperties) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceFeatures(IntPtr physicalDevice, IntPtr pFeatures) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceFormatProperties(IntPtr physicalDevice, VkFormat format, IntPtr pFormatProperties) { throw new NotImplementedException(); }
+		public static VkResult vkGetPhysicalDeviceImageFormatProperties(IntPtr physicalDevice, VkFormat format, VkImageType type, VkImageTiling tiling, uint usage, uint flags, IntPtr pImageFormatProperties) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceProperties(IntPtr physicalDevice, IntPtr pProperties) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceQueueFamilyProperties(IntPtr physicalDevice, uint* pQueueFamilyPropertyCount, IntPtr pQueueFamilyProperties) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceMemoryProperties(IntPtr physicalDevice, IntPtr pMemoryProperties) { throw new NotImplementedException(); }
 		public static IntPtr vkGetInstanceProcAddr(IntPtr instance, string pName) { throw new NotImplementedException(); }
 		public static IntPtr vkGetDeviceProcAddr(IntPtr device, string pName) { throw new NotImplementedException(); }
-		public static VkResult vkCreateDevice(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkDeviceCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pDevice) { throw new NotImplementedException(); }
-		public static void vkDestroyDevice(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
-		public static VkResult vkEnumerateInstanceExtensionProperties(string pLayerName, uint* pPropertyCount, [MarshalAs(UnmanagedType.LPArray)]VkExtensionProperties[] pProperties) { throw new NotImplementedException(); }
-		public static VkResult vkEnumerateDeviceExtensionProperties(IntPtr physicalDevice, string pLayerName, uint* pPropertyCount, [MarshalAs(UnmanagedType.LPArray)]VkExtensionProperties[] pProperties) { throw new NotImplementedException(); }
-		public static VkResult vkEnumerateInstanceLayerProperties(uint* pPropertyCount, [MarshalAs(UnmanagedType.LPArray)]VkLayerProperties[] pProperties) { throw new NotImplementedException(); }
-		public static VkResult vkEnumerateDeviceLayerProperties(IntPtr physicalDevice, uint* pPropertyCount, [MarshalAs(UnmanagedType.LPArray)]VkLayerProperties[] pProperties) { throw new NotImplementedException(); }
+		public static VkResult vkCreateDevice(IntPtr physicalDevice, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pDevice) { throw new NotImplementedException(); }
+		public static void vkDestroyDevice(IntPtr device, IntPtr pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkEnumerateInstanceExtensionProperties(string pLayerName, uint* pPropertyCount, IntPtr pProperties) { throw new NotImplementedException(); }
+		public static VkResult vkEnumerateDeviceExtensionProperties(IntPtr physicalDevice, string pLayerName, uint* pPropertyCount, IntPtr pProperties) { throw new NotImplementedException(); }
+		public static VkResult vkEnumerateInstanceLayerProperties(uint* pPropertyCount, IntPtr pProperties) { throw new NotImplementedException(); }
+		public static VkResult vkEnumerateDeviceLayerProperties(IntPtr physicalDevice, uint* pPropertyCount, IntPtr pProperties) { throw new NotImplementedException(); }
 		public static void vkGetDeviceQueue(IntPtr device, uint queueFamilyIndex, uint queueIndex, IntPtr* pQueue) { throw new NotImplementedException(); }
-		public static VkResult vkQueueSubmit(IntPtr queue, uint submitCount, [MarshalAs(UnmanagedType.LPArray)]VkSubmitInfo[] pSubmits, IntPtr fence) { throw new NotImplementedException(); }
+		public static VkResult vkQueueSubmit(IntPtr queue, uint submitCount, IntPtr pSubmits, IntPtr fence) { throw new NotImplementedException(); }
 		public static VkResult vkQueueWaitIdle(IntPtr queue) { throw new NotImplementedException(); }
 		public static VkResult vkDeviceWaitIdle(IntPtr device) { throw new NotImplementedException(); }
-		public static VkResult vkAllocateMemory(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkMemoryAllocateInfo[] pAllocateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pMemory) { throw new NotImplementedException(); }
-		public static void vkFreeMemory(IntPtr device, IntPtr memory, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkAllocateMemory(IntPtr device, IntPtr pAllocateInfo, IntPtr pAllocator, IntPtr* pMemory) { throw new NotImplementedException(); }
+		public static void vkFreeMemory(IntPtr device, IntPtr memory, IntPtr pAllocator) { throw new NotImplementedException(); }
 		public static VkResult vkMapMemory(IntPtr device, IntPtr memory, ulong offset, ulong size, uint flags, void** ppData) { throw new NotImplementedException(); }
 		public static void vkUnmapMemory(IntPtr device, IntPtr memory) { throw new NotImplementedException(); }
-		public static VkResult vkFlushMappedMemoryRanges(IntPtr device, uint memoryRangeCount, [MarshalAs(UnmanagedType.LPArray)]VkMappedMemoryRange[] pMemoryRanges) { throw new NotImplementedException(); }
-		public static VkResult vkInvalidateMappedMemoryRanges(IntPtr device, uint memoryRangeCount, [MarshalAs(UnmanagedType.LPArray)]VkMappedMemoryRange[] pMemoryRanges) { throw new NotImplementedException(); }
+		public static VkResult vkFlushMappedMemoryRanges(IntPtr device, uint memoryRangeCount, IntPtr pMemoryRanges) { throw new NotImplementedException(); }
+		public static VkResult vkInvalidateMappedMemoryRanges(IntPtr device, uint memoryRangeCount, IntPtr pMemoryRanges) { throw new NotImplementedException(); }
 		public static void vkGetDeviceMemoryCommitment(IntPtr device, IntPtr memory, ulong* pCommittedMemoryInBytes) { throw new NotImplementedException(); }
 		public static VkResult vkBindBufferMemory(IntPtr device, IntPtr buffer, IntPtr memory, ulong memoryOffset) { throw new NotImplementedException(); }
 		public static VkResult vkBindImageMemory(IntPtr device, IntPtr image, IntPtr memory, ulong memoryOffset) { throw new NotImplementedException(); }
-		public static void vkGetBufferMemoryRequirements(IntPtr device, IntPtr buffer, [MarshalAs(UnmanagedType.LPArray)]VkMemoryRequirements[] pMemoryRequirements) { throw new NotImplementedException(); }
-		public static void vkGetImageMemoryRequirements(IntPtr device, IntPtr image, [MarshalAs(UnmanagedType.LPArray)]VkMemoryRequirements[] pMemoryRequirements) { throw new NotImplementedException(); }
-		public static void vkGetImageSparseMemoryRequirements(IntPtr device, IntPtr image, uint* pSparseMemoryRequirementCount, [MarshalAs(UnmanagedType.LPArray)]VkSparseImageMemoryRequirements[] pSparseMemoryRequirements) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceSparseImageFormatProperties(IntPtr physicalDevice, VkFormat format, VkImageType type, VkSampleCountFlagBits samples, uint usage, VkImageTiling tiling, uint* pPropertyCount, [MarshalAs(UnmanagedType.LPArray)]VkSparseImageFormatProperties[] pProperties) { throw new NotImplementedException(); }
-		public static VkResult vkQueueBindSparse(IntPtr queue, uint bindInfoCount, [MarshalAs(UnmanagedType.LPArray)]VkBindSparseInfo[] pBindInfo, IntPtr fence) { throw new NotImplementedException(); }
-		public static VkResult vkCreateFence(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkFenceCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pFence) { throw new NotImplementedException(); }
-		public static void vkDestroyFence(IntPtr device, IntPtr fence, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
+		public static void vkGetBufferMemoryRequirements(IntPtr device, IntPtr buffer, IntPtr pMemoryRequirements) { throw new NotImplementedException(); }
+		public static void vkGetImageMemoryRequirements(IntPtr device, IntPtr image, IntPtr pMemoryRequirements) { throw new NotImplementedException(); }
+		public static void vkGetImageSparseMemoryRequirements(IntPtr device, IntPtr image, uint* pSparseMemoryRequirementCount, IntPtr pSparseMemoryRequirements) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceSparseImageFormatProperties(IntPtr physicalDevice, VkFormat format, VkImageType type, VkSampleCountFlagBits samples, uint usage, VkImageTiling tiling, uint* pPropertyCount, IntPtr pProperties) { throw new NotImplementedException(); }
+		public static VkResult vkQueueBindSparse(IntPtr queue, uint bindInfoCount, IntPtr pBindInfo, IntPtr fence) { throw new NotImplementedException(); }
+		public static VkResult vkCreateFence(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pFence) { throw new NotImplementedException(); }
+		public static void vkDestroyFence(IntPtr device, IntPtr fence, IntPtr pAllocator) { throw new NotImplementedException(); }
 		public static VkResult vkResetFences(IntPtr device, uint fenceCount, IntPtr* pFences) { throw new NotImplementedException(); }
 		public static VkResult vkGetFenceStatus(IntPtr device, IntPtr fence) { throw new NotImplementedException(); }
 		public static VkResult vkWaitForFences(IntPtr device, uint fenceCount, IntPtr* pFences, uint waitAll, ulong timeout) { throw new NotImplementedException(); }
-		public static VkResult vkCreateSemaphore(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkSemaphoreCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pSemaphore) { throw new NotImplementedException(); }
-		public static void vkDestroySemaphore(IntPtr device, IntPtr semaphore, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
-		public static VkResult vkCreateEvent(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkEventCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pEvent) { throw new NotImplementedException(); }
-		public static void vkDestroyEvent(IntPtr device, IntPtr @event, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkCreateSemaphore(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pSemaphore) { throw new NotImplementedException(); }
+		public static void vkDestroySemaphore(IntPtr device, IntPtr semaphore, IntPtr pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkCreateEvent(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pEvent) { throw new NotImplementedException(); }
+		public static void vkDestroyEvent(IntPtr device, IntPtr @event, IntPtr pAllocator) { throw new NotImplementedException(); }
 		public static VkResult vkGetEventStatus(IntPtr device, IntPtr @event) { throw new NotImplementedException(); }
 		public static VkResult vkSetEvent(IntPtr device, IntPtr @event) { throw new NotImplementedException(); }
 		public static VkResult vkResetEvent(IntPtr device, IntPtr @event) { throw new NotImplementedException(); }
-		public static VkResult vkCreateQueryPool(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkQueryPoolCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pQueryPool) { throw new NotImplementedException(); }
-		public static void vkDestroyQueryPool(IntPtr device, IntPtr queryPool, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkCreateQueryPool(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pQueryPool) { throw new NotImplementedException(); }
+		public static void vkDestroyQueryPool(IntPtr device, IntPtr queryPool, IntPtr pAllocator) { throw new NotImplementedException(); }
 		public static VkResult vkGetQueryPoolResults(IntPtr device, IntPtr queryPool, uint firstQuery, uint queryCount, ulong dataSize, IntPtr pData, ulong stride, uint flags) { throw new NotImplementedException(); }
-		public static VkResult vkCreateBuffer(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkBufferCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pBuffer) { throw new NotImplementedException(); }
-		public static void vkDestroyBuffer(IntPtr device, IntPtr buffer, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
-		public static VkResult vkCreateBufferView(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkBufferViewCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pView) { throw new NotImplementedException(); }
-		public static void vkDestroyBufferView(IntPtr device, IntPtr bufferView, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
-		public static VkResult vkCreateImage(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkImageCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pImage) { throw new NotImplementedException(); }
-		public static void vkDestroyImage(IntPtr device, IntPtr image, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
-		public static void vkGetImageSubresourceLayout(IntPtr device, IntPtr image, [MarshalAs(UnmanagedType.LPArray)]VkImageSubresource[] pSubresource, [MarshalAs(UnmanagedType.LPArray)]VkSubresourceLayout[] pLayout) { throw new NotImplementedException(); }
-		public static VkResult vkCreateImageView(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkImageViewCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pView) { throw new NotImplementedException(); }
-		public static void vkDestroyImageView(IntPtr device, IntPtr imageView, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
-		public static VkResult vkCreateShaderModule(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkShaderModuleCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pShaderModule) { throw new NotImplementedException(); }
-		public static void vkDestroyShaderModule(IntPtr device, IntPtr shaderModule, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
-		public static VkResult vkCreatePipelineCache(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkPipelineCacheCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pPipelineCache) { throw new NotImplementedException(); }
-		public static void vkDestroyPipelineCache(IntPtr device, IntPtr pipelineCache, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkCreateBuffer(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pBuffer) { throw new NotImplementedException(); }
+		public static void vkDestroyBuffer(IntPtr device, IntPtr buffer, IntPtr pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkCreateBufferView(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pView) { throw new NotImplementedException(); }
+		public static void vkDestroyBufferView(IntPtr device, IntPtr bufferView, IntPtr pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkCreateImage(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pImage) { throw new NotImplementedException(); }
+		public static void vkDestroyImage(IntPtr device, IntPtr image, IntPtr pAllocator) { throw new NotImplementedException(); }
+		public static void vkGetImageSubresourceLayout(IntPtr device, IntPtr image, IntPtr pSubresource, IntPtr pLayout) { throw new NotImplementedException(); }
+		public static VkResult vkCreateImageView(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pView) { throw new NotImplementedException(); }
+		public static void vkDestroyImageView(IntPtr device, IntPtr imageView, IntPtr pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkCreateShaderModule(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pShaderModule) { throw new NotImplementedException(); }
+		public static void vkDestroyShaderModule(IntPtr device, IntPtr shaderModule, IntPtr pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkCreatePipelineCache(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pPipelineCache) { throw new NotImplementedException(); }
+		public static void vkDestroyPipelineCache(IntPtr device, IntPtr pipelineCache, IntPtr pAllocator) { throw new NotImplementedException(); }
 		public static VkResult vkGetPipelineCacheData(IntPtr device, IntPtr pipelineCache, ulong* pDataSize, IntPtr pData) { throw new NotImplementedException(); }
 		public static VkResult vkMergePipelineCaches(IntPtr device, IntPtr dstCache, uint srcCacheCount, IntPtr* pSrcCaches) { throw new NotImplementedException(); }
-		public static VkResult vkCreateGraphicsPipelines(IntPtr device, IntPtr pipelineCache, uint createInfoCount, [MarshalAs(UnmanagedType.LPArray)]VkGraphicsPipelineCreateInfo[] pCreateInfos, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pPipelines) { throw new NotImplementedException(); }
-		public static VkResult vkCreateComputePipelines(IntPtr device, IntPtr pipelineCache, uint createInfoCount, [MarshalAs(UnmanagedType.LPArray)]VkComputePipelineCreateInfo[] pCreateInfos, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pPipelines) { throw new NotImplementedException(); }
-		public static void vkDestroyPipeline(IntPtr device, IntPtr pipeline, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
-		public static VkResult vkCreatePipelineLayout(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkPipelineLayoutCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pPipelineLayout) { throw new NotImplementedException(); }
-		public static void vkDestroyPipelineLayout(IntPtr device, IntPtr pipelineLayout, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
-		public static VkResult vkCreateSampler(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkSamplerCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pSampler) { throw new NotImplementedException(); }
-		public static void vkDestroySampler(IntPtr device, IntPtr sampler, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
-		public static VkResult vkCreateDescriptorSetLayout(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkDescriptorSetLayoutCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pSetLayout) { throw new NotImplementedException(); }
-		public static void vkDestroyDescriptorSetLayout(IntPtr device, IntPtr descriptorSetLayout, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
-		public static VkResult vkCreateDescriptorPool(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkDescriptorPoolCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pDescriptorPool) { throw new NotImplementedException(); }
-		public static void vkDestroyDescriptorPool(IntPtr device, IntPtr descriptorPool, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkCreateGraphicsPipelines(IntPtr device, IntPtr pipelineCache, uint createInfoCount, IntPtr pCreateInfos, IntPtr pAllocator, IntPtr* pPipelines) { throw new NotImplementedException(); }
+		public static VkResult vkCreateComputePipelines(IntPtr device, IntPtr pipelineCache, uint createInfoCount, IntPtr pCreateInfos, IntPtr pAllocator, IntPtr* pPipelines) { throw new NotImplementedException(); }
+		public static void vkDestroyPipeline(IntPtr device, IntPtr pipeline, IntPtr pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkCreatePipelineLayout(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pPipelineLayout) { throw new NotImplementedException(); }
+		public static void vkDestroyPipelineLayout(IntPtr device, IntPtr pipelineLayout, IntPtr pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkCreateSampler(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pSampler) { throw new NotImplementedException(); }
+		public static void vkDestroySampler(IntPtr device, IntPtr sampler, IntPtr pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkCreateDescriptorSetLayout(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pSetLayout) { throw new NotImplementedException(); }
+		public static void vkDestroyDescriptorSetLayout(IntPtr device, IntPtr descriptorSetLayout, IntPtr pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkCreateDescriptorPool(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pDescriptorPool) { throw new NotImplementedException(); }
+		public static void vkDestroyDescriptorPool(IntPtr device, IntPtr descriptorPool, IntPtr pAllocator) { throw new NotImplementedException(); }
 		public static VkResult vkResetDescriptorPool(IntPtr device, IntPtr descriptorPool, uint flags) { throw new NotImplementedException(); }
-		public static VkResult vkAllocateDescriptorSets(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkDescriptorSetAllocateInfo[] pAllocateInfo, IntPtr* pDescriptorSets) { throw new NotImplementedException(); }
+		public static VkResult vkAllocateDescriptorSets(IntPtr device, IntPtr pAllocateInfo, IntPtr* pDescriptorSets) { throw new NotImplementedException(); }
 		public static VkResult vkFreeDescriptorSets(IntPtr device, IntPtr descriptorPool, uint descriptorSetCount, IntPtr* pDescriptorSets) { throw new NotImplementedException(); }
-		public static void vkUpdateDescriptorSets(IntPtr device, uint descriptorWriteCount, [MarshalAs(UnmanagedType.LPArray)]VkWriteDescriptorSet[] pDescriptorWrites, uint descriptorCopyCount, [MarshalAs(UnmanagedType.LPArray)]VkCopyDescriptorSet[] pDescriptorCopies) { throw new NotImplementedException(); }
-		public static VkResult vkCreateFramebuffer(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkFramebufferCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pFramebuffer) { throw new NotImplementedException(); }
-		public static void vkDestroyFramebuffer(IntPtr device, IntPtr framebuffer, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
-		public static VkResult vkCreateRenderPass(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkRenderPassCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pRenderPass) { throw new NotImplementedException(); }
-		public static void vkDestroyRenderPass(IntPtr device, IntPtr renderPass, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
-		public static void vkGetRenderAreaGranularity(IntPtr device, IntPtr renderPass, [MarshalAs(UnmanagedType.LPArray)]VkExtent2D[] pGranularity) { throw new NotImplementedException(); }
-		public static VkResult vkCreateCommandPool(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkCommandPoolCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pCommandPool) { throw new NotImplementedException(); }
-		public static void vkDestroyCommandPool(IntPtr device, IntPtr commandPool, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
+		public static void vkUpdateDescriptorSets(IntPtr device, uint descriptorWriteCount, IntPtr pDescriptorWrites, uint descriptorCopyCount, IntPtr pDescriptorCopies) { throw new NotImplementedException(); }
+		public static VkResult vkCreateFramebuffer(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pFramebuffer) { throw new NotImplementedException(); }
+		public static void vkDestroyFramebuffer(IntPtr device, IntPtr framebuffer, IntPtr pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkCreateRenderPass(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pRenderPass) { throw new NotImplementedException(); }
+		public static void vkDestroyRenderPass(IntPtr device, IntPtr renderPass, IntPtr pAllocator) { throw new NotImplementedException(); }
+		public static void vkGetRenderAreaGranularity(IntPtr device, IntPtr renderPass, IntPtr pGranularity) { throw new NotImplementedException(); }
+		public static VkResult vkCreateCommandPool(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pCommandPool) { throw new NotImplementedException(); }
+		public static void vkDestroyCommandPool(IntPtr device, IntPtr commandPool, IntPtr pAllocator) { throw new NotImplementedException(); }
 		public static VkResult vkResetCommandPool(IntPtr device, IntPtr commandPool, uint flags) { throw new NotImplementedException(); }
-		public static VkResult vkAllocateCommandBuffers(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkCommandBufferAllocateInfo[] pAllocateInfo, IntPtr* pCommandBuffers) { throw new NotImplementedException(); }
+		public static VkResult vkAllocateCommandBuffers(IntPtr device, IntPtr pAllocateInfo, IntPtr* pCommandBuffers) { throw new NotImplementedException(); }
 		public static void vkFreeCommandBuffers(IntPtr device, IntPtr commandPool, uint commandBufferCount, IntPtr* pCommandBuffers) { throw new NotImplementedException(); }
-		public static VkResult vkBeginCommandBuffer(IntPtr commandBuffer, [MarshalAs(UnmanagedType.LPArray)]VkCommandBufferBeginInfo[] pBeginInfo) { throw new NotImplementedException(); }
+		public static VkResult vkBeginCommandBuffer(IntPtr commandBuffer, IntPtr pBeginInfo) { throw new NotImplementedException(); }
 		public static VkResult vkEndCommandBuffer(IntPtr commandBuffer) { throw new NotImplementedException(); }
 		public static VkResult vkResetCommandBuffer(IntPtr commandBuffer, uint flags) { throw new NotImplementedException(); }
 		public static void vkCmdBindPipeline(IntPtr commandBuffer, VkPipelineBindPoint pipelineBindPoint, IntPtr pipeline) { throw new NotImplementedException(); }
-		public static void vkCmdSetViewport(IntPtr commandBuffer, uint firstViewport, uint viewportCount, [MarshalAs(UnmanagedType.LPArray)]VkViewport[] pViewports) { throw new NotImplementedException(); }
-		public static void vkCmdSetScissor(IntPtr commandBuffer, uint firstScissor, uint scissorCount, [MarshalAs(UnmanagedType.LPArray)]VkRect2D[] pScissors) { throw new NotImplementedException(); }
+		public static void vkCmdSetViewport(IntPtr commandBuffer, uint firstViewport, uint viewportCount, IntPtr pViewports) { throw new NotImplementedException(); }
+		public static void vkCmdSetScissor(IntPtr commandBuffer, uint firstScissor, uint scissorCount, IntPtr pScissors) { throw new NotImplementedException(); }
 		public static void vkCmdSetLineWidth(IntPtr commandBuffer, float lineWidth) { throw new NotImplementedException(); }
 		public static void vkCmdSetDepthBias(IntPtr commandBuffer, float depthBiasConstantFactor, float depthBiasClamp, float depthBiasSlopeFactor) { throw new NotImplementedException(); }
 		public static void vkCmdSetBlendConstants(IntPtr commandBuffer, [MarshalAs(UnmanagedType.LPArray, SizeConst=4)] float[] blendConstants) { throw new NotImplementedException(); }
@@ -131,253 +131,253 @@ namespace VulkanSharp.Raw {
 		public static void vkCmdDrawIndexedIndirect(IntPtr commandBuffer, IntPtr buffer, ulong offset, uint drawCount, uint stride) { throw new NotImplementedException(); }
 		public static void vkCmdDispatch(IntPtr commandBuffer, uint groupCountX, uint groupCountY, uint groupCountZ) { throw new NotImplementedException(); }
 		public static void vkCmdDispatchIndirect(IntPtr commandBuffer, IntPtr buffer, ulong offset) { throw new NotImplementedException(); }
-		public static void vkCmdCopyBuffer(IntPtr commandBuffer, IntPtr srcBuffer, IntPtr dstBuffer, uint regionCount, [MarshalAs(UnmanagedType.LPArray)]VkBufferCopy[] pRegions) { throw new NotImplementedException(); }
-		public static void vkCmdCopyImage(IntPtr commandBuffer, IntPtr srcImage, VkImageLayout srcImageLayout, IntPtr dstImage, VkImageLayout dstImageLayout, uint regionCount, [MarshalAs(UnmanagedType.LPArray)]VkImageCopy[] pRegions) { throw new NotImplementedException(); }
-		public static void vkCmdBlitImage(IntPtr commandBuffer, IntPtr srcImage, VkImageLayout srcImageLayout, IntPtr dstImage, VkImageLayout dstImageLayout, uint regionCount, [MarshalAs(UnmanagedType.LPArray)]VkImageBlit[] pRegions, VkFilter filter) { throw new NotImplementedException(); }
-		public static void vkCmdCopyBufferToImage(IntPtr commandBuffer, IntPtr srcBuffer, IntPtr dstImage, VkImageLayout dstImageLayout, uint regionCount, [MarshalAs(UnmanagedType.LPArray)]VkBufferImageCopy[] pRegions) { throw new NotImplementedException(); }
-		public static void vkCmdCopyImageToBuffer(IntPtr commandBuffer, IntPtr srcImage, VkImageLayout srcImageLayout, IntPtr dstBuffer, uint regionCount, [MarshalAs(UnmanagedType.LPArray)]VkBufferImageCopy[] pRegions) { throw new NotImplementedException(); }
+		public static void vkCmdCopyBuffer(IntPtr commandBuffer, IntPtr srcBuffer, IntPtr dstBuffer, uint regionCount, IntPtr pRegions) { throw new NotImplementedException(); }
+		public static void vkCmdCopyImage(IntPtr commandBuffer, IntPtr srcImage, VkImageLayout srcImageLayout, IntPtr dstImage, VkImageLayout dstImageLayout, uint regionCount, IntPtr pRegions) { throw new NotImplementedException(); }
+		public static void vkCmdBlitImage(IntPtr commandBuffer, IntPtr srcImage, VkImageLayout srcImageLayout, IntPtr dstImage, VkImageLayout dstImageLayout, uint regionCount, IntPtr pRegions, VkFilter filter) { throw new NotImplementedException(); }
+		public static void vkCmdCopyBufferToImage(IntPtr commandBuffer, IntPtr srcBuffer, IntPtr dstImage, VkImageLayout dstImageLayout, uint regionCount, IntPtr pRegions) { throw new NotImplementedException(); }
+		public static void vkCmdCopyImageToBuffer(IntPtr commandBuffer, IntPtr srcImage, VkImageLayout srcImageLayout, IntPtr dstBuffer, uint regionCount, IntPtr pRegions) { throw new NotImplementedException(); }
 		public static void vkCmdUpdateBuffer(IntPtr commandBuffer, IntPtr dstBuffer, ulong dstOffset, ulong dataSize, IntPtr pData) { throw new NotImplementedException(); }
 		public static void vkCmdFillBuffer(IntPtr commandBuffer, IntPtr dstBuffer, ulong dstOffset, ulong size, uint data) { throw new NotImplementedException(); }
-		public static void vkCmdClearColorImage(IntPtr commandBuffer, IntPtr image, VkImageLayout imageLayout, [MarshalAs(UnmanagedType.LPArray)]VkClearColorValue[] pColor, uint rangeCount, [MarshalAs(UnmanagedType.LPArray)]VkImageSubresourceRange[] pRanges) { throw new NotImplementedException(); }
-		public static void vkCmdClearDepthStencilImage(IntPtr commandBuffer, IntPtr image, VkImageLayout imageLayout, [MarshalAs(UnmanagedType.LPArray)]VkClearDepthStencilValue[] pDepthStencil, uint rangeCount, [MarshalAs(UnmanagedType.LPArray)]VkImageSubresourceRange[] pRanges) { throw new NotImplementedException(); }
-		public static void vkCmdClearAttachments(IntPtr commandBuffer, uint attachmentCount, [MarshalAs(UnmanagedType.LPArray)]VkClearAttachment[] pAttachments, uint rectCount, [MarshalAs(UnmanagedType.LPArray)]VkClearRect[] pRects) { throw new NotImplementedException(); }
-		public static void vkCmdResolveImage(IntPtr commandBuffer, IntPtr srcImage, VkImageLayout srcImageLayout, IntPtr dstImage, VkImageLayout dstImageLayout, uint regionCount, [MarshalAs(UnmanagedType.LPArray)]VkImageResolve[] pRegions) { throw new NotImplementedException(); }
+		public static void vkCmdClearColorImage(IntPtr commandBuffer, IntPtr image, VkImageLayout imageLayout, IntPtr pColor, uint rangeCount, IntPtr pRanges) { throw new NotImplementedException(); }
+		public static void vkCmdClearDepthStencilImage(IntPtr commandBuffer, IntPtr image, VkImageLayout imageLayout, IntPtr pDepthStencil, uint rangeCount, IntPtr pRanges) { throw new NotImplementedException(); }
+		public static void vkCmdClearAttachments(IntPtr commandBuffer, uint attachmentCount, IntPtr pAttachments, uint rectCount, IntPtr pRects) { throw new NotImplementedException(); }
+		public static void vkCmdResolveImage(IntPtr commandBuffer, IntPtr srcImage, VkImageLayout srcImageLayout, IntPtr dstImage, VkImageLayout dstImageLayout, uint regionCount, IntPtr pRegions) { throw new NotImplementedException(); }
 		public static void vkCmdSetEvent(IntPtr commandBuffer, IntPtr @event, uint stageMask) { throw new NotImplementedException(); }
 		public static void vkCmdResetEvent(IntPtr commandBuffer, IntPtr @event, uint stageMask) { throw new NotImplementedException(); }
-		public static void vkCmdWaitEvents(IntPtr commandBuffer, uint eventCount, IntPtr* pEvents, uint srcStageMask, uint dstStageMask, uint memoryBarrierCount, [MarshalAs(UnmanagedType.LPArray)]VkMemoryBarrier[] pMemoryBarriers, uint bufferMemoryBarrierCount, [MarshalAs(UnmanagedType.LPArray)]VkBufferMemoryBarrier[] pBufferMemoryBarriers, uint imageMemoryBarrierCount, [MarshalAs(UnmanagedType.LPArray)]VkImageMemoryBarrier[] pImageMemoryBarriers) { throw new NotImplementedException(); }
-		public static void vkCmdPipelineBarrier(IntPtr commandBuffer, uint srcStageMask, uint dstStageMask, uint dependencyFlags, uint memoryBarrierCount, [MarshalAs(UnmanagedType.LPArray)]VkMemoryBarrier[] pMemoryBarriers, uint bufferMemoryBarrierCount, [MarshalAs(UnmanagedType.LPArray)]VkBufferMemoryBarrier[] pBufferMemoryBarriers, uint imageMemoryBarrierCount, [MarshalAs(UnmanagedType.LPArray)]VkImageMemoryBarrier[] pImageMemoryBarriers) { throw new NotImplementedException(); }
+		public static void vkCmdWaitEvents(IntPtr commandBuffer, uint eventCount, IntPtr* pEvents, uint srcStageMask, uint dstStageMask, uint memoryBarrierCount, IntPtr pMemoryBarriers, uint bufferMemoryBarrierCount, IntPtr pBufferMemoryBarriers, uint imageMemoryBarrierCount, IntPtr pImageMemoryBarriers) { throw new NotImplementedException(); }
+		public static void vkCmdPipelineBarrier(IntPtr commandBuffer, uint srcStageMask, uint dstStageMask, uint dependencyFlags, uint memoryBarrierCount, IntPtr pMemoryBarriers, uint bufferMemoryBarrierCount, IntPtr pBufferMemoryBarriers, uint imageMemoryBarrierCount, IntPtr pImageMemoryBarriers) { throw new NotImplementedException(); }
 		public static void vkCmdBeginQuery(IntPtr commandBuffer, IntPtr queryPool, uint query, uint flags) { throw new NotImplementedException(); }
 		public static void vkCmdEndQuery(IntPtr commandBuffer, IntPtr queryPool, uint query) { throw new NotImplementedException(); }
 		public static void vkCmdResetQueryPool(IntPtr commandBuffer, IntPtr queryPool, uint firstQuery, uint queryCount) { throw new NotImplementedException(); }
 		public static void vkCmdWriteTimestamp(IntPtr commandBuffer, VkPipelineStageFlagBits pipelineStage, IntPtr queryPool, uint query) { throw new NotImplementedException(); }
 		public static void vkCmdCopyQueryPoolResults(IntPtr commandBuffer, IntPtr queryPool, uint firstQuery, uint queryCount, IntPtr dstBuffer, ulong dstOffset, ulong stride, uint flags) { throw new NotImplementedException(); }
 		public static void vkCmdPushConstants(IntPtr commandBuffer, IntPtr layout, uint stageFlags, uint offset, uint size, IntPtr pValues) { throw new NotImplementedException(); }
-		public static void vkCmdBeginRenderPass(IntPtr commandBuffer, [MarshalAs(UnmanagedType.LPArray)]VkRenderPassBeginInfo[] pRenderPassBegin, VkSubpassContents contents) { throw new NotImplementedException(); }
+		public static void vkCmdBeginRenderPass(IntPtr commandBuffer, IntPtr pRenderPassBegin, VkSubpassContents contents) { throw new NotImplementedException(); }
 		public static void vkCmdNextSubpass(IntPtr commandBuffer, VkSubpassContents contents) { throw new NotImplementedException(); }
 		public static void vkCmdEndRenderPass(IntPtr commandBuffer) { throw new NotImplementedException(); }
 		public static void vkCmdExecuteCommands(IntPtr commandBuffer, uint commandBufferCount, IntPtr* pCommandBuffers) { throw new NotImplementedException(); }
 		public static VkResult vkEnumerateInstanceVersion(uint* pApiVersion) { throw new NotImplementedException(); }
-		public static VkResult vkBindBufferMemory2(IntPtr device, uint bindInfoCount, [MarshalAs(UnmanagedType.LPArray)]VkBindBufferMemoryInfo[] pBindInfos) { throw new NotImplementedException(); }
-		public static VkResult vkBindImageMemory2(IntPtr device, uint bindInfoCount, [MarshalAs(UnmanagedType.LPArray)]VkBindImageMemoryInfo[] pBindInfos) { throw new NotImplementedException(); }
+		public static VkResult vkBindBufferMemory2(IntPtr device, uint bindInfoCount, IntPtr pBindInfos) { throw new NotImplementedException(); }
+		public static VkResult vkBindImageMemory2(IntPtr device, uint bindInfoCount, IntPtr pBindInfos) { throw new NotImplementedException(); }
 		public static void vkGetDeviceGroupPeerMemoryFeatures(IntPtr device, uint heapIndex, uint localDeviceIndex, uint remoteDeviceIndex, uint* pPeerMemoryFeatures) { throw new NotImplementedException(); }
 		public static void vkCmdSetDeviceMask(IntPtr commandBuffer, uint deviceMask) { throw new NotImplementedException(); }
 		public static void vkCmdDispatchBase(IntPtr commandBuffer, uint baseGroupX, uint baseGroupY, uint baseGroupZ, uint groupCountX, uint groupCountY, uint groupCountZ) { throw new NotImplementedException(); }
-		public static VkResult vkEnumeratePhysicalDeviceGroups(IntPtr instance, uint* pPhysicalDeviceGroupCount, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceGroupProperties[] pPhysicalDeviceGroupProperties) { throw new NotImplementedException(); }
-		public static void vkGetImageMemoryRequirements2(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkImageMemoryRequirementsInfo2[] pInfo, [MarshalAs(UnmanagedType.LPArray)]VkMemoryRequirements2[] pMemoryRequirements) { throw new NotImplementedException(); }
-		public static void vkGetBufferMemoryRequirements2(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkBufferMemoryRequirementsInfo2[] pInfo, [MarshalAs(UnmanagedType.LPArray)]VkMemoryRequirements2[] pMemoryRequirements) { throw new NotImplementedException(); }
-		public static void vkGetImageSparseMemoryRequirements2(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkImageSparseMemoryRequirementsInfo2[] pInfo, uint* pSparseMemoryRequirementCount, [MarshalAs(UnmanagedType.LPArray)]VkSparseImageMemoryRequirements2[] pSparseMemoryRequirements) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceFeatures2(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceFeatures2[] pFeatures) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceProperties2(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceProperties2[] pProperties) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceFormatProperties2(IntPtr physicalDevice, VkFormat format, [MarshalAs(UnmanagedType.LPArray)]VkFormatProperties2[] pFormatProperties) { throw new NotImplementedException(); }
-		public static VkResult vkGetPhysicalDeviceImageFormatProperties2(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceImageFormatInfo2[] pImageFormatInfo, [MarshalAs(UnmanagedType.LPArray)]VkImageFormatProperties2[] pImageFormatProperties) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceQueueFamilyProperties2(IntPtr physicalDevice, uint* pQueueFamilyPropertyCount, [MarshalAs(UnmanagedType.LPArray)]VkQueueFamilyProperties2[] pQueueFamilyProperties) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceMemoryProperties2(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceMemoryProperties2[] pMemoryProperties) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceSparseImageFormatProperties2(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceSparseImageFormatInfo2[] pFormatInfo, uint* pPropertyCount, [MarshalAs(UnmanagedType.LPArray)]VkSparseImageFormatProperties2[] pProperties) { throw new NotImplementedException(); }
+		public static VkResult vkEnumeratePhysicalDeviceGroups(IntPtr instance, uint* pPhysicalDeviceGroupCount, IntPtr pPhysicalDeviceGroupProperties) { throw new NotImplementedException(); }
+		public static void vkGetImageMemoryRequirements2(IntPtr device, IntPtr pInfo, IntPtr pMemoryRequirements) { throw new NotImplementedException(); }
+		public static void vkGetBufferMemoryRequirements2(IntPtr device, IntPtr pInfo, IntPtr pMemoryRequirements) { throw new NotImplementedException(); }
+		public static void vkGetImageSparseMemoryRequirements2(IntPtr device, IntPtr pInfo, uint* pSparseMemoryRequirementCount, IntPtr pSparseMemoryRequirements) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceFeatures2(IntPtr physicalDevice, IntPtr pFeatures) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceProperties2(IntPtr physicalDevice, IntPtr pProperties) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceFormatProperties2(IntPtr physicalDevice, VkFormat format, IntPtr pFormatProperties) { throw new NotImplementedException(); }
+		public static VkResult vkGetPhysicalDeviceImageFormatProperties2(IntPtr physicalDevice, IntPtr pImageFormatInfo, IntPtr pImageFormatProperties) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceQueueFamilyProperties2(IntPtr physicalDevice, uint* pQueueFamilyPropertyCount, IntPtr pQueueFamilyProperties) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceMemoryProperties2(IntPtr physicalDevice, IntPtr pMemoryProperties) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceSparseImageFormatProperties2(IntPtr physicalDevice, IntPtr pFormatInfo, uint* pPropertyCount, IntPtr pProperties) { throw new NotImplementedException(); }
 		public static void vkTrimCommandPool(IntPtr device, IntPtr commandPool, uint flags) { throw new NotImplementedException(); }
-		public static void vkGetDeviceQueue2(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkDeviceQueueInfo2[] pQueueInfo, IntPtr* pQueue) { throw new NotImplementedException(); }
-		public static VkResult vkCreateSamplerYcbcrConversion(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkSamplerYcbcrConversionCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pYcbcrConversion) { throw new NotImplementedException(); }
-		public static void vkDestroySamplerYcbcrConversion(IntPtr device, IntPtr ycbcrConversion, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
-		public static VkResult vkCreateDescriptorUpdateTemplate(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkDescriptorUpdateTemplateCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pDescriptorUpdateTemplate) { throw new NotImplementedException(); }
-		public static void vkDestroyDescriptorUpdateTemplate(IntPtr device, IntPtr descriptorUpdateTemplate, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
+		public static void vkGetDeviceQueue2(IntPtr device, IntPtr pQueueInfo, IntPtr* pQueue) { throw new NotImplementedException(); }
+		public static VkResult vkCreateSamplerYcbcrConversion(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pYcbcrConversion) { throw new NotImplementedException(); }
+		public static void vkDestroySamplerYcbcrConversion(IntPtr device, IntPtr ycbcrConversion, IntPtr pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkCreateDescriptorUpdateTemplate(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pDescriptorUpdateTemplate) { throw new NotImplementedException(); }
+		public static void vkDestroyDescriptorUpdateTemplate(IntPtr device, IntPtr descriptorUpdateTemplate, IntPtr pAllocator) { throw new NotImplementedException(); }
 		public static void vkUpdateDescriptorSetWithTemplate(IntPtr device, IntPtr descriptorSet, IntPtr descriptorUpdateTemplate, IntPtr pData) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceExternalBufferProperties(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceExternalBufferInfo[] pExternalBufferInfo, [MarshalAs(UnmanagedType.LPArray)]VkExternalBufferProperties[] pExternalBufferProperties) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceExternalFenceProperties(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceExternalFenceInfo[] pExternalFenceInfo, [MarshalAs(UnmanagedType.LPArray)]VkExternalFenceProperties[] pExternalFenceProperties) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceExternalSemaphoreProperties(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceExternalSemaphoreInfo[] pExternalSemaphoreInfo, [MarshalAs(UnmanagedType.LPArray)]VkExternalSemaphoreProperties[] pExternalSemaphoreProperties) { throw new NotImplementedException(); }
-		public static void vkGetDescriptorSetLayoutSupport(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkDescriptorSetLayoutCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkDescriptorSetLayoutSupport[] pSupport) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceExternalBufferProperties(IntPtr physicalDevice, IntPtr pExternalBufferInfo, IntPtr pExternalBufferProperties) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceExternalFenceProperties(IntPtr physicalDevice, IntPtr pExternalFenceInfo, IntPtr pExternalFenceProperties) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceExternalSemaphoreProperties(IntPtr physicalDevice, IntPtr pExternalSemaphoreInfo, IntPtr pExternalSemaphoreProperties) { throw new NotImplementedException(); }
+		public static void vkGetDescriptorSetLayoutSupport(IntPtr device, IntPtr pCreateInfo, IntPtr pSupport) { throw new NotImplementedException(); }
 		public static void vkCmdDrawIndirectCount(IntPtr commandBuffer, IntPtr buffer, ulong offset, IntPtr countBuffer, ulong countBufferOffset, uint maxDrawCount, uint stride) { throw new NotImplementedException(); }
 		public static void vkCmdDrawIndexedIndirectCount(IntPtr commandBuffer, IntPtr buffer, ulong offset, IntPtr countBuffer, ulong countBufferOffset, uint maxDrawCount, uint stride) { throw new NotImplementedException(); }
-		public static VkResult vkCreateRenderPass2(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkRenderPassCreateInfo2[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pRenderPass) { throw new NotImplementedException(); }
-		public static void vkCmdBeginRenderPass2(IntPtr commandBuffer, [MarshalAs(UnmanagedType.LPArray)]VkRenderPassBeginInfo[] pRenderPassBegin, [MarshalAs(UnmanagedType.LPArray)]VkSubpassBeginInfo[] pSubpassBeginInfo) { throw new NotImplementedException(); }
-		public static void vkCmdNextSubpass2(IntPtr commandBuffer, [MarshalAs(UnmanagedType.LPArray)]VkSubpassBeginInfo[] pSubpassBeginInfo, [MarshalAs(UnmanagedType.LPArray)]VkSubpassEndInfo[] pSubpassEndInfo) { throw new NotImplementedException(); }
-		public static void vkCmdEndRenderPass2(IntPtr commandBuffer, [MarshalAs(UnmanagedType.LPArray)]VkSubpassEndInfo[] pSubpassEndInfo) { throw new NotImplementedException(); }
+		public static VkResult vkCreateRenderPass2(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pRenderPass) { throw new NotImplementedException(); }
+		public static void vkCmdBeginRenderPass2(IntPtr commandBuffer, IntPtr pRenderPassBegin, IntPtr pSubpassBeginInfo) { throw new NotImplementedException(); }
+		public static void vkCmdNextSubpass2(IntPtr commandBuffer, IntPtr pSubpassBeginInfo, IntPtr pSubpassEndInfo) { throw new NotImplementedException(); }
+		public static void vkCmdEndRenderPass2(IntPtr commandBuffer, IntPtr pSubpassEndInfo) { throw new NotImplementedException(); }
 		public static void vkResetQueryPool(IntPtr device, IntPtr queryPool, uint firstQuery, uint queryCount) { throw new NotImplementedException(); }
 		public static VkResult vkGetSemaphoreCounterValue(IntPtr device, IntPtr semaphore, ulong* pValue) { throw new NotImplementedException(); }
-		public static VkResult vkWaitSemaphores(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkSemaphoreWaitInfo[] pWaitInfo, ulong timeout) { throw new NotImplementedException(); }
-		public static VkResult vkSignalSemaphore(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkSemaphoreSignalInfo[] pSignalInfo) { throw new NotImplementedException(); }
-		public static ulong vkGetBufferDeviceAddress(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkBufferDeviceAddressInfo[] pInfo) { throw new NotImplementedException(); }
-		public static ulong vkGetBufferOpaqueCaptureAddress(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkBufferDeviceAddressInfo[] pInfo) { throw new NotImplementedException(); }
-		public static ulong vkGetDeviceMemoryOpaqueCaptureAddress(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkDeviceMemoryOpaqueCaptureAddressInfo[] pInfo) { throw new NotImplementedException(); }
-		public static void vkDestroySurfaceKHR(IntPtr instance, IntPtr surface, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkWaitSemaphores(IntPtr device, IntPtr pWaitInfo, ulong timeout) { throw new NotImplementedException(); }
+		public static VkResult vkSignalSemaphore(IntPtr device, IntPtr pSignalInfo) { throw new NotImplementedException(); }
+		public static ulong vkGetBufferDeviceAddress(IntPtr device, IntPtr pInfo) { throw new NotImplementedException(); }
+		public static ulong vkGetBufferOpaqueCaptureAddress(IntPtr device, IntPtr pInfo) { throw new NotImplementedException(); }
+		public static ulong vkGetDeviceMemoryOpaqueCaptureAddress(IntPtr device, IntPtr pInfo) { throw new NotImplementedException(); }
+		public static void vkDestroySurfaceKHR(IntPtr instance, IntPtr surface, IntPtr pAllocator) { throw new NotImplementedException(); }
 		public static VkResult vkGetPhysicalDeviceSurfaceSupportKHR(IntPtr physicalDevice, uint queueFamilyIndex, IntPtr surface, uint* pSupported) { throw new NotImplementedException(); }
-		public static VkResult vkGetPhysicalDeviceSurfaceCapabilitiesKHR(IntPtr physicalDevice, IntPtr surface, [MarshalAs(UnmanagedType.LPArray)]VkSurfaceCapabilitiesKHR[] pSurfaceCapabilities) { throw new NotImplementedException(); }
-		public static VkResult vkGetPhysicalDeviceSurfaceFormatsKHR(IntPtr physicalDevice, IntPtr surface, uint* pSurfaceFormatCount, [MarshalAs(UnmanagedType.LPArray)]VkSurfaceFormatKHR[] pSurfaceFormats) { throw new NotImplementedException(); }
+		public static VkResult vkGetPhysicalDeviceSurfaceCapabilitiesKHR(IntPtr physicalDevice, IntPtr surface, IntPtr pSurfaceCapabilities) { throw new NotImplementedException(); }
+		public static VkResult vkGetPhysicalDeviceSurfaceFormatsKHR(IntPtr physicalDevice, IntPtr surface, uint* pSurfaceFormatCount, IntPtr pSurfaceFormats) { throw new NotImplementedException(); }
 		public static VkResult vkGetPhysicalDeviceSurfacePresentModesKHR(IntPtr physicalDevice, IntPtr surface, uint* pPresentModeCount, VkPresentModeKHR* pPresentModes) { throw new NotImplementedException(); }
-		public static VkResult vkCreateSwapchainKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkSwapchainCreateInfoKHR[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pSwapchain) { throw new NotImplementedException(); }
-		public static void vkDestroySwapchainKHR(IntPtr device, IntPtr swapchain, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkCreateSwapchainKHR(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pSwapchain) { throw new NotImplementedException(); }
+		public static void vkDestroySwapchainKHR(IntPtr device, IntPtr swapchain, IntPtr pAllocator) { throw new NotImplementedException(); }
 		public static VkResult vkGetSwapchainImagesKHR(IntPtr device, IntPtr swapchain, uint* pSwapchainImageCount, IntPtr* pSwapchainImages) { throw new NotImplementedException(); }
 		public static VkResult vkAcquireNextImageKHR(IntPtr device, IntPtr swapchain, ulong timeout, IntPtr semaphore, IntPtr fence, uint* pImageIndex) { throw new NotImplementedException(); }
-		public static VkResult vkQueuePresentKHR(IntPtr queue, [MarshalAs(UnmanagedType.LPArray)]VkPresentInfoKHR[] pPresentInfo) { throw new NotImplementedException(); }
-		public static VkResult vkGetDeviceGroupPresentCapabilitiesKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkDeviceGroupPresentCapabilitiesKHR[] pDeviceGroupPresentCapabilities) { throw new NotImplementedException(); }
+		public static VkResult vkQueuePresentKHR(IntPtr queue, IntPtr pPresentInfo) { throw new NotImplementedException(); }
+		public static VkResult vkGetDeviceGroupPresentCapabilitiesKHR(IntPtr device, IntPtr pDeviceGroupPresentCapabilities) { throw new NotImplementedException(); }
 		public static VkResult vkGetDeviceGroupSurfacePresentModesKHR(IntPtr device, IntPtr surface, uint* pModes) { throw new NotImplementedException(); }
-		public static VkResult vkGetPhysicalDevicePresentRectanglesKHR(IntPtr physicalDevice, IntPtr surface, uint* pRectCount, [MarshalAs(UnmanagedType.LPArray)]VkRect2D[] pRects) { throw new NotImplementedException(); }
-		public static VkResult vkAcquireNextImage2KHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkAcquireNextImageInfoKHR[] pAcquireInfo, uint* pImageIndex) { throw new NotImplementedException(); }
-		public static VkResult vkGetPhysicalDeviceDisplayPropertiesKHR(IntPtr physicalDevice, uint* pPropertyCount, [MarshalAs(UnmanagedType.LPArray)]VkDisplayPropertiesKHR[] pProperties) { throw new NotImplementedException(); }
-		public static VkResult vkGetPhysicalDeviceDisplayPlanePropertiesKHR(IntPtr physicalDevice, uint* pPropertyCount, [MarshalAs(UnmanagedType.LPArray)]VkDisplayPlanePropertiesKHR[] pProperties) { throw new NotImplementedException(); }
+		public static VkResult vkGetPhysicalDevicePresentRectanglesKHR(IntPtr physicalDevice, IntPtr surface, uint* pRectCount, IntPtr pRects) { throw new NotImplementedException(); }
+		public static VkResult vkAcquireNextImage2KHR(IntPtr device, IntPtr pAcquireInfo, uint* pImageIndex) { throw new NotImplementedException(); }
+		public static VkResult vkGetPhysicalDeviceDisplayPropertiesKHR(IntPtr physicalDevice, uint* pPropertyCount, IntPtr pProperties) { throw new NotImplementedException(); }
+		public static VkResult vkGetPhysicalDeviceDisplayPlanePropertiesKHR(IntPtr physicalDevice, uint* pPropertyCount, IntPtr pProperties) { throw new NotImplementedException(); }
 		public static VkResult vkGetDisplayPlaneSupportedDisplaysKHR(IntPtr physicalDevice, uint planeIndex, uint* pDisplayCount, IntPtr* pDisplays) { throw new NotImplementedException(); }
-		public static VkResult vkGetDisplayModePropertiesKHR(IntPtr physicalDevice, IntPtr display, uint* pPropertyCount, [MarshalAs(UnmanagedType.LPArray)]VkDisplayModePropertiesKHR[] pProperties) { throw new NotImplementedException(); }
-		public static VkResult vkCreateDisplayModeKHR(IntPtr physicalDevice, IntPtr display, [MarshalAs(UnmanagedType.LPArray)]VkDisplayModeCreateInfoKHR[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pMode) { throw new NotImplementedException(); }
-		public static VkResult vkGetDisplayPlaneCapabilitiesKHR(IntPtr physicalDevice, IntPtr mode, uint planeIndex, [MarshalAs(UnmanagedType.LPArray)]VkDisplayPlaneCapabilitiesKHR[] pCapabilities) { throw new NotImplementedException(); }
-		public static VkResult vkCreateDisplayPlaneSurfaceKHR(IntPtr instance, [MarshalAs(UnmanagedType.LPArray)]VkDisplaySurfaceCreateInfoKHR[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pSurface) { throw new NotImplementedException(); }
-		public static VkResult vkCreateSharedSwapchainsKHR(IntPtr device, uint swapchainCount, [MarshalAs(UnmanagedType.LPArray)]VkSwapchainCreateInfoKHR[] pCreateInfos, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pSwapchains) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceFeatures2KHR(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceFeatures2[] pFeatures) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceProperties2KHR(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceProperties2[] pProperties) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceFormatProperties2KHR(IntPtr physicalDevice, VkFormat format, [MarshalAs(UnmanagedType.LPArray)]VkFormatProperties2[] pFormatProperties) { throw new NotImplementedException(); }
-		public static VkResult vkGetPhysicalDeviceImageFormatProperties2KHR(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceImageFormatInfo2[] pImageFormatInfo, [MarshalAs(UnmanagedType.LPArray)]VkImageFormatProperties2[] pImageFormatProperties) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceQueueFamilyProperties2KHR(IntPtr physicalDevice, uint* pQueueFamilyPropertyCount, [MarshalAs(UnmanagedType.LPArray)]VkQueueFamilyProperties2[] pQueueFamilyProperties) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceMemoryProperties2KHR(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceMemoryProperties2[] pMemoryProperties) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceSparseImageFormatProperties2KHR(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceSparseImageFormatInfo2[] pFormatInfo, uint* pPropertyCount, [MarshalAs(UnmanagedType.LPArray)]VkSparseImageFormatProperties2[] pProperties) { throw new NotImplementedException(); }
+		public static VkResult vkGetDisplayModePropertiesKHR(IntPtr physicalDevice, IntPtr display, uint* pPropertyCount, IntPtr pProperties) { throw new NotImplementedException(); }
+		public static VkResult vkCreateDisplayModeKHR(IntPtr physicalDevice, IntPtr display, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pMode) { throw new NotImplementedException(); }
+		public static VkResult vkGetDisplayPlaneCapabilitiesKHR(IntPtr physicalDevice, IntPtr mode, uint planeIndex, IntPtr pCapabilities) { throw new NotImplementedException(); }
+		public static VkResult vkCreateDisplayPlaneSurfaceKHR(IntPtr instance, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pSurface) { throw new NotImplementedException(); }
+		public static VkResult vkCreateSharedSwapchainsKHR(IntPtr device, uint swapchainCount, IntPtr pCreateInfos, IntPtr pAllocator, IntPtr* pSwapchains) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceFeatures2KHR(IntPtr physicalDevice, IntPtr pFeatures) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceProperties2KHR(IntPtr physicalDevice, IntPtr pProperties) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceFormatProperties2KHR(IntPtr physicalDevice, VkFormat format, IntPtr pFormatProperties) { throw new NotImplementedException(); }
+		public static VkResult vkGetPhysicalDeviceImageFormatProperties2KHR(IntPtr physicalDevice, IntPtr pImageFormatInfo, IntPtr pImageFormatProperties) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceQueueFamilyProperties2KHR(IntPtr physicalDevice, uint* pQueueFamilyPropertyCount, IntPtr pQueueFamilyProperties) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceMemoryProperties2KHR(IntPtr physicalDevice, IntPtr pMemoryProperties) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceSparseImageFormatProperties2KHR(IntPtr physicalDevice, IntPtr pFormatInfo, uint* pPropertyCount, IntPtr pProperties) { throw new NotImplementedException(); }
 		public static void vkGetDeviceGroupPeerMemoryFeaturesKHR(IntPtr device, uint heapIndex, uint localDeviceIndex, uint remoteDeviceIndex, uint* pPeerMemoryFeatures) { throw new NotImplementedException(); }
 		public static void vkCmdSetDeviceMaskKHR(IntPtr commandBuffer, uint deviceMask) { throw new NotImplementedException(); }
 		public static void vkCmdDispatchBaseKHR(IntPtr commandBuffer, uint baseGroupX, uint baseGroupY, uint baseGroupZ, uint groupCountX, uint groupCountY, uint groupCountZ) { throw new NotImplementedException(); }
 		public static void vkTrimCommandPoolKHR(IntPtr device, IntPtr commandPool, uint flags) { throw new NotImplementedException(); }
-		public static VkResult vkEnumeratePhysicalDeviceGroupsKHR(IntPtr instance, uint* pPhysicalDeviceGroupCount, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceGroupProperties[] pPhysicalDeviceGroupProperties) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceExternalBufferPropertiesKHR(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceExternalBufferInfo[] pExternalBufferInfo, [MarshalAs(UnmanagedType.LPArray)]VkExternalBufferProperties[] pExternalBufferProperties) { throw new NotImplementedException(); }
-		public static VkResult vkGetMemoryFdKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkMemoryGetFdInfoKHR[] pGetFdInfo, int* pFd) { throw new NotImplementedException(); }
-		public static VkResult vkGetMemoryFdPropertiesKHR(IntPtr device, VkExternalMemoryHandleTypeFlagBits handleType, int fd, [MarshalAs(UnmanagedType.LPArray)]VkMemoryFdPropertiesKHR[] pMemoryFdProperties) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceExternalSemaphorePropertiesKHR(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceExternalSemaphoreInfo[] pExternalSemaphoreInfo, [MarshalAs(UnmanagedType.LPArray)]VkExternalSemaphoreProperties[] pExternalSemaphoreProperties) { throw new NotImplementedException(); }
-		public static VkResult vkImportSemaphoreFdKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkImportSemaphoreFdInfoKHR[] pImportSemaphoreFdInfo) { throw new NotImplementedException(); }
-		public static VkResult vkGetSemaphoreFdKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkSemaphoreGetFdInfoKHR[] pGetFdInfo, int* pFd) { throw new NotImplementedException(); }
-		public static void vkCmdPushDescriptorSetKHR(IntPtr commandBuffer, VkPipelineBindPoint pipelineBindPoint, IntPtr layout, uint set, uint descriptorWriteCount, [MarshalAs(UnmanagedType.LPArray)]VkWriteDescriptorSet[] pDescriptorWrites) { throw new NotImplementedException(); }
+		public static VkResult vkEnumeratePhysicalDeviceGroupsKHR(IntPtr instance, uint* pPhysicalDeviceGroupCount, IntPtr pPhysicalDeviceGroupProperties) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceExternalBufferPropertiesKHR(IntPtr physicalDevice, IntPtr pExternalBufferInfo, IntPtr pExternalBufferProperties) { throw new NotImplementedException(); }
+		public static VkResult vkGetMemoryFdKHR(IntPtr device, IntPtr pGetFdInfo, int* pFd) { throw new NotImplementedException(); }
+		public static VkResult vkGetMemoryFdPropertiesKHR(IntPtr device, VkExternalMemoryHandleTypeFlagBits handleType, int fd, IntPtr pMemoryFdProperties) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceExternalSemaphorePropertiesKHR(IntPtr physicalDevice, IntPtr pExternalSemaphoreInfo, IntPtr pExternalSemaphoreProperties) { throw new NotImplementedException(); }
+		public static VkResult vkImportSemaphoreFdKHR(IntPtr device, IntPtr pImportSemaphoreFdInfo) { throw new NotImplementedException(); }
+		public static VkResult vkGetSemaphoreFdKHR(IntPtr device, IntPtr pGetFdInfo, int* pFd) { throw new NotImplementedException(); }
+		public static void vkCmdPushDescriptorSetKHR(IntPtr commandBuffer, VkPipelineBindPoint pipelineBindPoint, IntPtr layout, uint set, uint descriptorWriteCount, IntPtr pDescriptorWrites) { throw new NotImplementedException(); }
 		public static void vkCmdPushDescriptorSetWithTemplateKHR(IntPtr commandBuffer, IntPtr descriptorUpdateTemplate, IntPtr layout, uint set, IntPtr pData) { throw new NotImplementedException(); }
-		public static VkResult vkCreateDescriptorUpdateTemplateKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkDescriptorUpdateTemplateCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pDescriptorUpdateTemplate) { throw new NotImplementedException(); }
-		public static void vkDestroyDescriptorUpdateTemplateKHR(IntPtr device, IntPtr descriptorUpdateTemplate, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkCreateDescriptorUpdateTemplateKHR(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pDescriptorUpdateTemplate) { throw new NotImplementedException(); }
+		public static void vkDestroyDescriptorUpdateTemplateKHR(IntPtr device, IntPtr descriptorUpdateTemplate, IntPtr pAllocator) { throw new NotImplementedException(); }
 		public static void vkUpdateDescriptorSetWithTemplateKHR(IntPtr device, IntPtr descriptorSet, IntPtr descriptorUpdateTemplate, IntPtr pData) { throw new NotImplementedException(); }
-		public static VkResult vkCreateRenderPass2KHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkRenderPassCreateInfo2[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pRenderPass) { throw new NotImplementedException(); }
-		public static void vkCmdBeginRenderPass2KHR(IntPtr commandBuffer, [MarshalAs(UnmanagedType.LPArray)]VkRenderPassBeginInfo[] pRenderPassBegin, [MarshalAs(UnmanagedType.LPArray)]VkSubpassBeginInfo[] pSubpassBeginInfo) { throw new NotImplementedException(); }
-		public static void vkCmdNextSubpass2KHR(IntPtr commandBuffer, [MarshalAs(UnmanagedType.LPArray)]VkSubpassBeginInfo[] pSubpassBeginInfo, [MarshalAs(UnmanagedType.LPArray)]VkSubpassEndInfo[] pSubpassEndInfo) { throw new NotImplementedException(); }
-		public static void vkCmdEndRenderPass2KHR(IntPtr commandBuffer, [MarshalAs(UnmanagedType.LPArray)]VkSubpassEndInfo[] pSubpassEndInfo) { throw new NotImplementedException(); }
+		public static VkResult vkCreateRenderPass2KHR(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pRenderPass) { throw new NotImplementedException(); }
+		public static void vkCmdBeginRenderPass2KHR(IntPtr commandBuffer, IntPtr pRenderPassBegin, IntPtr pSubpassBeginInfo) { throw new NotImplementedException(); }
+		public static void vkCmdNextSubpass2KHR(IntPtr commandBuffer, IntPtr pSubpassBeginInfo, IntPtr pSubpassEndInfo) { throw new NotImplementedException(); }
+		public static void vkCmdEndRenderPass2KHR(IntPtr commandBuffer, IntPtr pSubpassEndInfo) { throw new NotImplementedException(); }
 		public static VkResult vkGetSwapchainStatusKHR(IntPtr device, IntPtr swapchain) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceExternalFencePropertiesKHR(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceExternalFenceInfo[] pExternalFenceInfo, [MarshalAs(UnmanagedType.LPArray)]VkExternalFenceProperties[] pExternalFenceProperties) { throw new NotImplementedException(); }
-		public static VkResult vkImportFenceFdKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkImportFenceFdInfoKHR[] pImportFenceFdInfo) { throw new NotImplementedException(); }
-		public static VkResult vkGetFenceFdKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkFenceGetFdInfoKHR[] pGetFdInfo, int* pFd) { throw new NotImplementedException(); }
-		public static VkResult vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR(IntPtr physicalDevice, uint queueFamilyIndex, uint* pCounterCount, [MarshalAs(UnmanagedType.LPArray)]VkPerformanceCounterKHR[] pCounters, [MarshalAs(UnmanagedType.LPArray)]VkPerformanceCounterDescriptionKHR[] pCounterDescriptions) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkQueryPoolPerformanceCreateInfoKHR[] pPerformanceQueryCreateInfo, uint* pNumPasses) { throw new NotImplementedException(); }
-		public static VkResult vkAcquireProfilingLockKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkAcquireProfilingLockInfoKHR[] pInfo) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceExternalFencePropertiesKHR(IntPtr physicalDevice, IntPtr pExternalFenceInfo, IntPtr pExternalFenceProperties) { throw new NotImplementedException(); }
+		public static VkResult vkImportFenceFdKHR(IntPtr device, IntPtr pImportFenceFdInfo) { throw new NotImplementedException(); }
+		public static VkResult vkGetFenceFdKHR(IntPtr device, IntPtr pGetFdInfo, int* pFd) { throw new NotImplementedException(); }
+		public static VkResult vkEnumeratePhysicalDeviceQueueFamilyPerformanceQueryCountersKHR(IntPtr physicalDevice, uint queueFamilyIndex, uint* pCounterCount, IntPtr pCounters, IntPtr pCounterDescriptions) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceQueueFamilyPerformanceQueryPassesKHR(IntPtr physicalDevice, IntPtr pPerformanceQueryCreateInfo, uint* pNumPasses) { throw new NotImplementedException(); }
+		public static VkResult vkAcquireProfilingLockKHR(IntPtr device, IntPtr pInfo) { throw new NotImplementedException(); }
 		public static void vkReleaseProfilingLockKHR(IntPtr device) { throw new NotImplementedException(); }
-		public static VkResult vkGetPhysicalDeviceSurfaceCapabilities2KHR(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceSurfaceInfo2KHR[] pSurfaceInfo, [MarshalAs(UnmanagedType.LPArray)]VkSurfaceCapabilities2KHR[] pSurfaceCapabilities) { throw new NotImplementedException(); }
-		public static VkResult vkGetPhysicalDeviceSurfaceFormats2KHR(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceSurfaceInfo2KHR[] pSurfaceInfo, uint* pSurfaceFormatCount, [MarshalAs(UnmanagedType.LPArray)]VkSurfaceFormat2KHR[] pSurfaceFormats) { throw new NotImplementedException(); }
-		public static VkResult vkGetPhysicalDeviceDisplayProperties2KHR(IntPtr physicalDevice, uint* pPropertyCount, [MarshalAs(UnmanagedType.LPArray)]VkDisplayProperties2KHR[] pProperties) { throw new NotImplementedException(); }
-		public static VkResult vkGetPhysicalDeviceDisplayPlaneProperties2KHR(IntPtr physicalDevice, uint* pPropertyCount, [MarshalAs(UnmanagedType.LPArray)]VkDisplayPlaneProperties2KHR[] pProperties) { throw new NotImplementedException(); }
-		public static VkResult vkGetDisplayModeProperties2KHR(IntPtr physicalDevice, IntPtr display, uint* pPropertyCount, [MarshalAs(UnmanagedType.LPArray)]VkDisplayModeProperties2KHR[] pProperties) { throw new NotImplementedException(); }
-		public static VkResult vkGetDisplayPlaneCapabilities2KHR(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkDisplayPlaneInfo2KHR[] pDisplayPlaneInfo, [MarshalAs(UnmanagedType.LPArray)]VkDisplayPlaneCapabilities2KHR[] pCapabilities) { throw new NotImplementedException(); }
-		public static void vkGetImageMemoryRequirements2KHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkImageMemoryRequirementsInfo2[] pInfo, [MarshalAs(UnmanagedType.LPArray)]VkMemoryRequirements2[] pMemoryRequirements) { throw new NotImplementedException(); }
-		public static void vkGetBufferMemoryRequirements2KHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkBufferMemoryRequirementsInfo2[] pInfo, [MarshalAs(UnmanagedType.LPArray)]VkMemoryRequirements2[] pMemoryRequirements) { throw new NotImplementedException(); }
-		public static void vkGetImageSparseMemoryRequirements2KHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkImageSparseMemoryRequirementsInfo2[] pInfo, uint* pSparseMemoryRequirementCount, [MarshalAs(UnmanagedType.LPArray)]VkSparseImageMemoryRequirements2[] pSparseMemoryRequirements) { throw new NotImplementedException(); }
-		public static VkResult vkCreateSamplerYcbcrConversionKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkSamplerYcbcrConversionCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pYcbcrConversion) { throw new NotImplementedException(); }
-		public static void vkDestroySamplerYcbcrConversionKHR(IntPtr device, IntPtr ycbcrConversion, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
-		public static VkResult vkBindBufferMemory2KHR(IntPtr device, uint bindInfoCount, [MarshalAs(UnmanagedType.LPArray)]VkBindBufferMemoryInfo[] pBindInfos) { throw new NotImplementedException(); }
-		public static VkResult vkBindImageMemory2KHR(IntPtr device, uint bindInfoCount, [MarshalAs(UnmanagedType.LPArray)]VkBindImageMemoryInfo[] pBindInfos) { throw new NotImplementedException(); }
-		public static void vkGetDescriptorSetLayoutSupportKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkDescriptorSetLayoutCreateInfo[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkDescriptorSetLayoutSupport[] pSupport) { throw new NotImplementedException(); }
+		public static VkResult vkGetPhysicalDeviceSurfaceCapabilities2KHR(IntPtr physicalDevice, IntPtr pSurfaceInfo, IntPtr pSurfaceCapabilities) { throw new NotImplementedException(); }
+		public static VkResult vkGetPhysicalDeviceSurfaceFormats2KHR(IntPtr physicalDevice, IntPtr pSurfaceInfo, uint* pSurfaceFormatCount, IntPtr pSurfaceFormats) { throw new NotImplementedException(); }
+		public static VkResult vkGetPhysicalDeviceDisplayProperties2KHR(IntPtr physicalDevice, uint* pPropertyCount, IntPtr pProperties) { throw new NotImplementedException(); }
+		public static VkResult vkGetPhysicalDeviceDisplayPlaneProperties2KHR(IntPtr physicalDevice, uint* pPropertyCount, IntPtr pProperties) { throw new NotImplementedException(); }
+		public static VkResult vkGetDisplayModeProperties2KHR(IntPtr physicalDevice, IntPtr display, uint* pPropertyCount, IntPtr pProperties) { throw new NotImplementedException(); }
+		public static VkResult vkGetDisplayPlaneCapabilities2KHR(IntPtr physicalDevice, IntPtr pDisplayPlaneInfo, IntPtr pCapabilities) { throw new NotImplementedException(); }
+		public static void vkGetImageMemoryRequirements2KHR(IntPtr device, IntPtr pInfo, IntPtr pMemoryRequirements) { throw new NotImplementedException(); }
+		public static void vkGetBufferMemoryRequirements2KHR(IntPtr device, IntPtr pInfo, IntPtr pMemoryRequirements) { throw new NotImplementedException(); }
+		public static void vkGetImageSparseMemoryRequirements2KHR(IntPtr device, IntPtr pInfo, uint* pSparseMemoryRequirementCount, IntPtr pSparseMemoryRequirements) { throw new NotImplementedException(); }
+		public static VkResult vkCreateSamplerYcbcrConversionKHR(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pYcbcrConversion) { throw new NotImplementedException(); }
+		public static void vkDestroySamplerYcbcrConversionKHR(IntPtr device, IntPtr ycbcrConversion, IntPtr pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkBindBufferMemory2KHR(IntPtr device, uint bindInfoCount, IntPtr pBindInfos) { throw new NotImplementedException(); }
+		public static VkResult vkBindImageMemory2KHR(IntPtr device, uint bindInfoCount, IntPtr pBindInfos) { throw new NotImplementedException(); }
+		public static void vkGetDescriptorSetLayoutSupportKHR(IntPtr device, IntPtr pCreateInfo, IntPtr pSupport) { throw new NotImplementedException(); }
 		public static void vkCmdDrawIndirectCountKHR(IntPtr commandBuffer, IntPtr buffer, ulong offset, IntPtr countBuffer, ulong countBufferOffset, uint maxDrawCount, uint stride) { throw new NotImplementedException(); }
 		public static void vkCmdDrawIndexedIndirectCountKHR(IntPtr commandBuffer, IntPtr buffer, ulong offset, IntPtr countBuffer, ulong countBufferOffset, uint maxDrawCount, uint stride) { throw new NotImplementedException(); }
 		public static VkResult vkGetSemaphoreCounterValueKHR(IntPtr device, IntPtr semaphore, ulong* pValue) { throw new NotImplementedException(); }
-		public static VkResult vkWaitSemaphoresKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkSemaphoreWaitInfo[] pWaitInfo, ulong timeout) { throw new NotImplementedException(); }
-		public static VkResult vkSignalSemaphoreKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkSemaphoreSignalInfo[] pSignalInfo) { throw new NotImplementedException(); }
-		public static ulong vkGetBufferDeviceAddressKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkBufferDeviceAddressInfo[] pInfo) { throw new NotImplementedException(); }
-		public static ulong vkGetBufferOpaqueCaptureAddressKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkBufferDeviceAddressInfo[] pInfo) { throw new NotImplementedException(); }
-		public static ulong vkGetDeviceMemoryOpaqueCaptureAddressKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkDeviceMemoryOpaqueCaptureAddressInfo[] pInfo) { throw new NotImplementedException(); }
-		public static VkResult vkGetPipelineExecutablePropertiesKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkPipelineInfoKHR[] pPipelineInfo, uint* pExecutableCount, [MarshalAs(UnmanagedType.LPArray)]VkPipelineExecutablePropertiesKHR[] pProperties) { throw new NotImplementedException(); }
-		public static VkResult vkGetPipelineExecutableStatisticsKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkPipelineExecutableInfoKHR[] pExecutableInfo, uint* pStatisticCount, [MarshalAs(UnmanagedType.LPArray)]VkPipelineExecutableStatisticKHR[] pStatistics) { throw new NotImplementedException(); }
-		public static VkResult vkGetPipelineExecutableInternalRepresentationsKHR(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkPipelineExecutableInfoKHR[] pExecutableInfo, uint* pInternalRepresentationCount, [MarshalAs(UnmanagedType.LPArray)]VkPipelineExecutableInternalRepresentationKHR[] pInternalRepresentations) { throw new NotImplementedException(); }
-		public static VkResult vkCreateDebugReportCallbackEXT(IntPtr instance, [MarshalAs(UnmanagedType.LPArray)]VkDebugReportCallbackCreateInfoEXT[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pCallback) { throw new NotImplementedException(); }
-		public static void vkDestroyDebugReportCallbackEXT(IntPtr instance, IntPtr callback, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkWaitSemaphoresKHR(IntPtr device, IntPtr pWaitInfo, ulong timeout) { throw new NotImplementedException(); }
+		public static VkResult vkSignalSemaphoreKHR(IntPtr device, IntPtr pSignalInfo) { throw new NotImplementedException(); }
+		public static ulong vkGetBufferDeviceAddressKHR(IntPtr device, IntPtr pInfo) { throw new NotImplementedException(); }
+		public static ulong vkGetBufferOpaqueCaptureAddressKHR(IntPtr device, IntPtr pInfo) { throw new NotImplementedException(); }
+		public static ulong vkGetDeviceMemoryOpaqueCaptureAddressKHR(IntPtr device, IntPtr pInfo) { throw new NotImplementedException(); }
+		public static VkResult vkGetPipelineExecutablePropertiesKHR(IntPtr device, IntPtr pPipelineInfo, uint* pExecutableCount, IntPtr pProperties) { throw new NotImplementedException(); }
+		public static VkResult vkGetPipelineExecutableStatisticsKHR(IntPtr device, IntPtr pExecutableInfo, uint* pStatisticCount, IntPtr pStatistics) { throw new NotImplementedException(); }
+		public static VkResult vkGetPipelineExecutableInternalRepresentationsKHR(IntPtr device, IntPtr pExecutableInfo, uint* pInternalRepresentationCount, IntPtr pInternalRepresentations) { throw new NotImplementedException(); }
+		public static VkResult vkCreateDebugReportCallbackEXT(IntPtr instance, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pCallback) { throw new NotImplementedException(); }
+		public static void vkDestroyDebugReportCallbackEXT(IntPtr instance, IntPtr callback, IntPtr pAllocator) { throw new NotImplementedException(); }
 		public static void vkDebugReportMessageEXT(IntPtr instance, uint flags, VkDebugReportObjectTypeEXT objectType, ulong @object, ulong location, int messageCode, string pLayerPrefix, string pMessage) { throw new NotImplementedException(); }
-		public static VkResult vkDebugMarkerSetObjectTagEXT(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkDebugMarkerObjectTagInfoEXT[] pTagInfo) { throw new NotImplementedException(); }
-		public static VkResult vkDebugMarkerSetObjectNameEXT(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkDebugMarkerObjectNameInfoEXT[] pNameInfo) { throw new NotImplementedException(); }
-		public static void vkCmdDebugMarkerBeginEXT(IntPtr commandBuffer, [MarshalAs(UnmanagedType.LPArray)]VkDebugMarkerMarkerInfoEXT[] pMarkerInfo) { throw new NotImplementedException(); }
+		public static VkResult vkDebugMarkerSetObjectTagEXT(IntPtr device, IntPtr pTagInfo) { throw new NotImplementedException(); }
+		public static VkResult vkDebugMarkerSetObjectNameEXT(IntPtr device, IntPtr pNameInfo) { throw new NotImplementedException(); }
+		public static void vkCmdDebugMarkerBeginEXT(IntPtr commandBuffer, IntPtr pMarkerInfo) { throw new NotImplementedException(); }
 		public static void vkCmdDebugMarkerEndEXT(IntPtr commandBuffer) { throw new NotImplementedException(); }
-		public static void vkCmdDebugMarkerInsertEXT(IntPtr commandBuffer, [MarshalAs(UnmanagedType.LPArray)]VkDebugMarkerMarkerInfoEXT[] pMarkerInfo) { throw new NotImplementedException(); }
+		public static void vkCmdDebugMarkerInsertEXT(IntPtr commandBuffer, IntPtr pMarkerInfo) { throw new NotImplementedException(); }
 		public static void vkCmdBindTransformFeedbackBuffersEXT(IntPtr commandBuffer, uint firstBinding, uint bindingCount, IntPtr* pBuffers, ulong* pOffsets, ulong* pSizes) { throw new NotImplementedException(); }
 		public static void vkCmdBeginTransformFeedbackEXT(IntPtr commandBuffer, uint firstCounterBuffer, uint counterBufferCount, IntPtr* pCounterBuffers, ulong* pCounterBufferOffsets) { throw new NotImplementedException(); }
 		public static void vkCmdEndTransformFeedbackEXT(IntPtr commandBuffer, uint firstCounterBuffer, uint counterBufferCount, IntPtr* pCounterBuffers, ulong* pCounterBufferOffsets) { throw new NotImplementedException(); }
 		public static void vkCmdBeginQueryIndexedEXT(IntPtr commandBuffer, IntPtr queryPool, uint query, uint flags, uint index) { throw new NotImplementedException(); }
 		public static void vkCmdEndQueryIndexedEXT(IntPtr commandBuffer, IntPtr queryPool, uint query, uint index) { throw new NotImplementedException(); }
 		public static void vkCmdDrawIndirectByteCountEXT(IntPtr commandBuffer, uint instanceCount, uint firstInstance, IntPtr counterBuffer, ulong counterBufferOffset, uint counterOffset, uint vertexStride) { throw new NotImplementedException(); }
-		public static uint vkGetImageViewHandleNVX(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkImageViewHandleInfoNVX[] pInfo) { throw new NotImplementedException(); }
+		public static uint vkGetImageViewHandleNVX(IntPtr device, IntPtr pInfo) { throw new NotImplementedException(); }
 		public static void vkCmdDrawIndirectCountAMD(IntPtr commandBuffer, IntPtr buffer, ulong offset, IntPtr countBuffer, ulong countBufferOffset, uint maxDrawCount, uint stride) { throw new NotImplementedException(); }
 		public static void vkCmdDrawIndexedIndirectCountAMD(IntPtr commandBuffer, IntPtr buffer, ulong offset, IntPtr countBuffer, ulong countBufferOffset, uint maxDrawCount, uint stride) { throw new NotImplementedException(); }
 		public static VkResult vkGetShaderInfoAMD(IntPtr device, IntPtr pipeline, VkShaderStageFlagBits shaderStage, VkShaderInfoTypeAMD infoType, ulong* pInfoSize, IntPtr pInfo) { throw new NotImplementedException(); }
-		public static VkResult vkGetPhysicalDeviceExternalImageFormatPropertiesNV(IntPtr physicalDevice, VkFormat format, VkImageType type, VkImageTiling tiling, uint usage, uint flags, uint externalHandleType, [MarshalAs(UnmanagedType.LPArray)]VkExternalImageFormatPropertiesNV[] pExternalImageFormatProperties) { throw new NotImplementedException(); }
-		public static void vkCmdBeginConditionalRenderingEXT(IntPtr commandBuffer, [MarshalAs(UnmanagedType.LPArray)]VkConditionalRenderingBeginInfoEXT[] pConditionalRenderingBegin) { throw new NotImplementedException(); }
+		public static VkResult vkGetPhysicalDeviceExternalImageFormatPropertiesNV(IntPtr physicalDevice, VkFormat format, VkImageType type, VkImageTiling tiling, uint usage, uint flags, uint externalHandleType, IntPtr pExternalImageFormatProperties) { throw new NotImplementedException(); }
+		public static void vkCmdBeginConditionalRenderingEXT(IntPtr commandBuffer, IntPtr pConditionalRenderingBegin) { throw new NotImplementedException(); }
 		public static void vkCmdEndConditionalRenderingEXT(IntPtr commandBuffer) { throw new NotImplementedException(); }
-		public static void vkCmdProcessCommandsNVX(IntPtr commandBuffer, [MarshalAs(UnmanagedType.LPArray)]VkCmdProcessCommandsInfoNVX[] pProcessCommandsInfo) { throw new NotImplementedException(); }
-		public static void vkCmdReserveSpaceForCommandsNVX(IntPtr commandBuffer, [MarshalAs(UnmanagedType.LPArray)]VkCmdReserveSpaceForCommandsInfoNVX[] pReserveSpaceInfo) { throw new NotImplementedException(); }
-		public static VkResult vkCreateIndirectCommandsLayoutNVX(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkIndirectCommandsLayoutCreateInfoNVX[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pIndirectCommandsLayout) { throw new NotImplementedException(); }
-		public static void vkDestroyIndirectCommandsLayoutNVX(IntPtr device, IntPtr indirectCommandsLayout, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
-		public static VkResult vkCreateObjectTableNVX(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkObjectTableCreateInfoNVX[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pObjectTable) { throw new NotImplementedException(); }
-		public static void vkDestroyObjectTableNVX(IntPtr device, IntPtr objectTable, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
-		public static VkResult vkRegisterObjectsNVX(IntPtr device, IntPtr objectTable, uint objectCount, VkObjectTableEntryNVX** ppObjectTableEntries, uint* pObjectIndices) { throw new NotImplementedException(); }
+		public static void vkCmdProcessCommandsNVX(IntPtr commandBuffer, IntPtr pProcessCommandsInfo) { throw new NotImplementedException(); }
+		public static void vkCmdReserveSpaceForCommandsNVX(IntPtr commandBuffer, IntPtr pReserveSpaceInfo) { throw new NotImplementedException(); }
+		public static VkResult vkCreateIndirectCommandsLayoutNVX(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pIndirectCommandsLayout) { throw new NotImplementedException(); }
+		public static void vkDestroyIndirectCommandsLayoutNVX(IntPtr device, IntPtr indirectCommandsLayout, IntPtr pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkCreateObjectTableNVX(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pObjectTable) { throw new NotImplementedException(); }
+		public static void vkDestroyObjectTableNVX(IntPtr device, IntPtr objectTable, IntPtr pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkRegisterObjectsNVX(IntPtr device, IntPtr objectTable, uint objectCount, IntPtr ppObjectTableEntries, uint* pObjectIndices) { throw new NotImplementedException(); }
 		public static VkResult vkUnregisterObjectsNVX(IntPtr device, IntPtr objectTable, uint objectCount, VkObjectEntryTypeNVX* pObjectEntryTypes, uint* pObjectIndices) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceGeneratedCommandsPropertiesNVX(IntPtr physicalDevice, [MarshalAs(UnmanagedType.LPArray)]VkDeviceGeneratedCommandsFeaturesNVX[] pFeatures, [MarshalAs(UnmanagedType.LPArray)]VkDeviceGeneratedCommandsLimitsNVX[] pLimits) { throw new NotImplementedException(); }
-		public static void vkCmdSetViewportWScalingNV(IntPtr commandBuffer, uint firstViewport, uint viewportCount, [MarshalAs(UnmanagedType.LPArray)]VkViewportWScalingNV[] pViewportWScalings) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceGeneratedCommandsPropertiesNVX(IntPtr physicalDevice, IntPtr pFeatures, IntPtr pLimits) { throw new NotImplementedException(); }
+		public static void vkCmdSetViewportWScalingNV(IntPtr commandBuffer, uint firstViewport, uint viewportCount, IntPtr pViewportWScalings) { throw new NotImplementedException(); }
 		public static VkResult vkReleaseDisplayEXT(IntPtr physicalDevice, IntPtr display) { throw new NotImplementedException(); }
-		public static VkResult vkGetPhysicalDeviceSurfaceCapabilities2EXT(IntPtr physicalDevice, IntPtr surface, [MarshalAs(UnmanagedType.LPArray)]VkSurfaceCapabilities2EXT[] pSurfaceCapabilities) { throw new NotImplementedException(); }
-		public static VkResult vkDisplayPowerControlEXT(IntPtr device, IntPtr display, [MarshalAs(UnmanagedType.LPArray)]VkDisplayPowerInfoEXT[] pDisplayPowerInfo) { throw new NotImplementedException(); }
-		public static VkResult vkRegisterDeviceEventEXT(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkDeviceEventInfoEXT[] pDeviceEventInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pFence) { throw new NotImplementedException(); }
-		public static VkResult vkRegisterDisplayEventEXT(IntPtr device, IntPtr display, [MarshalAs(UnmanagedType.LPArray)]VkDisplayEventInfoEXT[] pDisplayEventInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pFence) { throw new NotImplementedException(); }
+		public static VkResult vkGetPhysicalDeviceSurfaceCapabilities2EXT(IntPtr physicalDevice, IntPtr surface, IntPtr pSurfaceCapabilities) { throw new NotImplementedException(); }
+		public static VkResult vkDisplayPowerControlEXT(IntPtr device, IntPtr display, IntPtr pDisplayPowerInfo) { throw new NotImplementedException(); }
+		public static VkResult vkRegisterDeviceEventEXT(IntPtr device, IntPtr pDeviceEventInfo, IntPtr pAllocator, IntPtr* pFence) { throw new NotImplementedException(); }
+		public static VkResult vkRegisterDisplayEventEXT(IntPtr device, IntPtr display, IntPtr pDisplayEventInfo, IntPtr pAllocator, IntPtr* pFence) { throw new NotImplementedException(); }
 		public static VkResult vkGetSwapchainCounterEXT(IntPtr device, IntPtr swapchain, VkSurfaceCounterFlagBitsEXT counter, ulong* pCounterValue) { throw new NotImplementedException(); }
-		public static VkResult vkGetRefreshCycleDurationGOOGLE(IntPtr device, IntPtr swapchain, [MarshalAs(UnmanagedType.LPArray)]VkRefreshCycleDurationGOOGLE[] pDisplayTimingProperties) { throw new NotImplementedException(); }
-		public static VkResult vkGetPastPresentationTimingGOOGLE(IntPtr device, IntPtr swapchain, uint* pPresentationTimingCount, [MarshalAs(UnmanagedType.LPArray)]VkPastPresentationTimingGOOGLE[] pPresentationTimings) { throw new NotImplementedException(); }
-		public static void vkCmdSetDiscardRectangleEXT(IntPtr commandBuffer, uint firstDiscardRectangle, uint discardRectangleCount, [MarshalAs(UnmanagedType.LPArray)]VkRect2D[] pDiscardRectangles) { throw new NotImplementedException(); }
-		public static void vkSetHdrMetadataEXT(IntPtr device, uint swapchainCount, IntPtr* pSwapchains, [MarshalAs(UnmanagedType.LPArray)]VkHdrMetadataEXT[] pMetadata) { throw new NotImplementedException(); }
-		public static VkResult vkSetDebugUtilsObjectNameEXT(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkDebugUtilsObjectNameInfoEXT[] pNameInfo) { throw new NotImplementedException(); }
-		public static VkResult vkSetDebugUtilsObjectTagEXT(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkDebugUtilsObjectTagInfoEXT[] pTagInfo) { throw new NotImplementedException(); }
-		public static void vkQueueBeginDebugUtilsLabelEXT(IntPtr queue, [MarshalAs(UnmanagedType.LPArray)]VkDebugUtilsLabelEXT[] pLabelInfo) { throw new NotImplementedException(); }
+		public static VkResult vkGetRefreshCycleDurationGOOGLE(IntPtr device, IntPtr swapchain, IntPtr pDisplayTimingProperties) { throw new NotImplementedException(); }
+		public static VkResult vkGetPastPresentationTimingGOOGLE(IntPtr device, IntPtr swapchain, uint* pPresentationTimingCount, IntPtr pPresentationTimings) { throw new NotImplementedException(); }
+		public static void vkCmdSetDiscardRectangleEXT(IntPtr commandBuffer, uint firstDiscardRectangle, uint discardRectangleCount, IntPtr pDiscardRectangles) { throw new NotImplementedException(); }
+		public static void vkSetHdrMetadataEXT(IntPtr device, uint swapchainCount, IntPtr* pSwapchains, IntPtr pMetadata) { throw new NotImplementedException(); }
+		public static VkResult vkSetDebugUtilsObjectNameEXT(IntPtr device, IntPtr pNameInfo) { throw new NotImplementedException(); }
+		public static VkResult vkSetDebugUtilsObjectTagEXT(IntPtr device, IntPtr pTagInfo) { throw new NotImplementedException(); }
+		public static void vkQueueBeginDebugUtilsLabelEXT(IntPtr queue, IntPtr pLabelInfo) { throw new NotImplementedException(); }
 		public static void vkQueueEndDebugUtilsLabelEXT(IntPtr queue) { throw new NotImplementedException(); }
-		public static void vkQueueInsertDebugUtilsLabelEXT(IntPtr queue, [MarshalAs(UnmanagedType.LPArray)]VkDebugUtilsLabelEXT[] pLabelInfo) { throw new NotImplementedException(); }
-		public static void vkCmdBeginDebugUtilsLabelEXT(IntPtr commandBuffer, [MarshalAs(UnmanagedType.LPArray)]VkDebugUtilsLabelEXT[] pLabelInfo) { throw new NotImplementedException(); }
+		public static void vkQueueInsertDebugUtilsLabelEXT(IntPtr queue, IntPtr pLabelInfo) { throw new NotImplementedException(); }
+		public static void vkCmdBeginDebugUtilsLabelEXT(IntPtr commandBuffer, IntPtr pLabelInfo) { throw new NotImplementedException(); }
 		public static void vkCmdEndDebugUtilsLabelEXT(IntPtr commandBuffer) { throw new NotImplementedException(); }
-		public static void vkCmdInsertDebugUtilsLabelEXT(IntPtr commandBuffer, [MarshalAs(UnmanagedType.LPArray)]VkDebugUtilsLabelEXT[] pLabelInfo) { throw new NotImplementedException(); }
-		public static VkResult vkCreateDebugUtilsMessengerEXT(IntPtr instance, [MarshalAs(UnmanagedType.LPArray)]VkDebugUtilsMessengerCreateInfoEXT[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pMessenger) { throw new NotImplementedException(); }
-		public static void vkDestroyDebugUtilsMessengerEXT(IntPtr instance, IntPtr messenger, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
-		public static void vkSubmitDebugUtilsMessageEXT(IntPtr instance, VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity, uint messageTypes, [MarshalAs(UnmanagedType.LPArray)]VkDebugUtilsMessengerCallbackDataEXT[] pCallbackData) { throw new NotImplementedException(); }
-		public static void vkCmdSetSampleLocationsEXT(IntPtr commandBuffer, [MarshalAs(UnmanagedType.LPArray)]VkSampleLocationsInfoEXT[] pSampleLocationsInfo) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceMultisamplePropertiesEXT(IntPtr physicalDevice, VkSampleCountFlagBits samples, [MarshalAs(UnmanagedType.LPArray)]VkMultisamplePropertiesEXT[] pMultisampleProperties) { throw new NotImplementedException(); }
-		public static VkResult vkGetImageDrmFormatModifierPropertiesEXT(IntPtr device, IntPtr image, [MarshalAs(UnmanagedType.LPArray)]VkImageDrmFormatModifierPropertiesEXT[] pProperties) { throw new NotImplementedException(); }
-		public static VkResult vkCreateValidationCacheEXT(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkValidationCacheCreateInfoEXT[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pValidationCache) { throw new NotImplementedException(); }
-		public static void vkDestroyValidationCacheEXT(IntPtr device, IntPtr validationCache, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
+		public static void vkCmdInsertDebugUtilsLabelEXT(IntPtr commandBuffer, IntPtr pLabelInfo) { throw new NotImplementedException(); }
+		public static VkResult vkCreateDebugUtilsMessengerEXT(IntPtr instance, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pMessenger) { throw new NotImplementedException(); }
+		public static void vkDestroyDebugUtilsMessengerEXT(IntPtr instance, IntPtr messenger, IntPtr pAllocator) { throw new NotImplementedException(); }
+		public static void vkSubmitDebugUtilsMessageEXT(IntPtr instance, VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity, uint messageTypes, IntPtr pCallbackData) { throw new NotImplementedException(); }
+		public static void vkCmdSetSampleLocationsEXT(IntPtr commandBuffer, IntPtr pSampleLocationsInfo) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceMultisamplePropertiesEXT(IntPtr physicalDevice, VkSampleCountFlagBits samples, IntPtr pMultisampleProperties) { throw new NotImplementedException(); }
+		public static VkResult vkGetImageDrmFormatModifierPropertiesEXT(IntPtr device, IntPtr image, IntPtr pProperties) { throw new NotImplementedException(); }
+		public static VkResult vkCreateValidationCacheEXT(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pValidationCache) { throw new NotImplementedException(); }
+		public static void vkDestroyValidationCacheEXT(IntPtr device, IntPtr validationCache, IntPtr pAllocator) { throw new NotImplementedException(); }
 		public static VkResult vkMergeValidationCachesEXT(IntPtr device, IntPtr dstCache, uint srcCacheCount, IntPtr* pSrcCaches) { throw new NotImplementedException(); }
 		public static VkResult vkGetValidationCacheDataEXT(IntPtr device, IntPtr validationCache, ulong* pDataSize, IntPtr pData) { throw new NotImplementedException(); }
 		public static void vkCmdBindShadingRateImageNV(IntPtr commandBuffer, IntPtr imageView, VkImageLayout imageLayout) { throw new NotImplementedException(); }
-		public static void vkCmdSetViewportShadingRatePaletteNV(IntPtr commandBuffer, uint firstViewport, uint viewportCount, [MarshalAs(UnmanagedType.LPArray)]VkShadingRatePaletteNV[] pShadingRatePalettes) { throw new NotImplementedException(); }
-		public static void vkCmdSetCoarseSampleOrderNV(IntPtr commandBuffer, VkCoarseSampleOrderTypeNV sampleOrderType, uint customSampleOrderCount, [MarshalAs(UnmanagedType.LPArray)]VkCoarseSampleOrderCustomNV[] pCustomSampleOrders) { throw new NotImplementedException(); }
-		public static VkResult vkCreateAccelerationStructureNV(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkAccelerationStructureCreateInfoNV[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pAccelerationStructure) { throw new NotImplementedException(); }
-		public static void vkDestroyAccelerationStructureNV(IntPtr device, IntPtr accelerationStructure, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator) { throw new NotImplementedException(); }
-		public static void vkGetAccelerationStructureMemoryRequirementsNV(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkAccelerationStructureMemoryRequirementsInfoNV[] pInfo, [MarshalAs(UnmanagedType.LPArray)]VkMemoryRequirements2[] pMemoryRequirements) { throw new NotImplementedException(); }
-		public static VkResult vkBindAccelerationStructureMemoryNV(IntPtr device, uint bindInfoCount, [MarshalAs(UnmanagedType.LPArray)]VkBindAccelerationStructureMemoryInfoNV[] pBindInfos) { throw new NotImplementedException(); }
-		public static void vkCmdBuildAccelerationStructureNV(IntPtr commandBuffer, [MarshalAs(UnmanagedType.LPArray)]VkAccelerationStructureInfoNV[] pInfo, IntPtr instanceData, ulong instanceOffset, uint update, IntPtr dst, IntPtr src, IntPtr scratch, ulong scratchOffset) { throw new NotImplementedException(); }
+		public static void vkCmdSetViewportShadingRatePaletteNV(IntPtr commandBuffer, uint firstViewport, uint viewportCount, IntPtr pShadingRatePalettes) { throw new NotImplementedException(); }
+		public static void vkCmdSetCoarseSampleOrderNV(IntPtr commandBuffer, VkCoarseSampleOrderTypeNV sampleOrderType, uint customSampleOrderCount, IntPtr pCustomSampleOrders) { throw new NotImplementedException(); }
+		public static VkResult vkCreateAccelerationStructureNV(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pAccelerationStructure) { throw new NotImplementedException(); }
+		public static void vkDestroyAccelerationStructureNV(IntPtr device, IntPtr accelerationStructure, IntPtr pAllocator) { throw new NotImplementedException(); }
+		public static void vkGetAccelerationStructureMemoryRequirementsNV(IntPtr device, IntPtr pInfo, IntPtr pMemoryRequirements) { throw new NotImplementedException(); }
+		public static VkResult vkBindAccelerationStructureMemoryNV(IntPtr device, uint bindInfoCount, IntPtr pBindInfos) { throw new NotImplementedException(); }
+		public static void vkCmdBuildAccelerationStructureNV(IntPtr commandBuffer, IntPtr pInfo, IntPtr instanceData, ulong instanceOffset, uint update, IntPtr dst, IntPtr src, IntPtr scratch, ulong scratchOffset) { throw new NotImplementedException(); }
 		public static void vkCmdCopyAccelerationStructureNV(IntPtr commandBuffer, IntPtr dst, IntPtr src, VkCopyAccelerationStructureModeNV mode) { throw new NotImplementedException(); }
 		public static void vkCmdTraceRaysNV(IntPtr commandBuffer, IntPtr raygenShaderBindingTableBuffer, ulong raygenShaderBindingOffset, IntPtr missShaderBindingTableBuffer, ulong missShaderBindingOffset, ulong missShaderBindingStride, IntPtr hitShaderBindingTableBuffer, ulong hitShaderBindingOffset, ulong hitShaderBindingStride, IntPtr callableShaderBindingTableBuffer, ulong callableShaderBindingOffset, ulong callableShaderBindingStride, uint width, uint height, uint depth) { throw new NotImplementedException(); }
-		public static VkResult vkCreateRayTracingPipelinesNV(IntPtr device, IntPtr pipelineCache, uint createInfoCount, [MarshalAs(UnmanagedType.LPArray)]VkRayTracingPipelineCreateInfoNV[] pCreateInfos, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pPipelines) { throw new NotImplementedException(); }
+		public static VkResult vkCreateRayTracingPipelinesNV(IntPtr device, IntPtr pipelineCache, uint createInfoCount, IntPtr pCreateInfos, IntPtr pAllocator, IntPtr* pPipelines) { throw new NotImplementedException(); }
 		public static VkResult vkGetRayTracingShaderGroupHandlesNV(IntPtr device, IntPtr pipeline, uint firstGroup, uint groupCount, ulong dataSize, IntPtr pData) { throw new NotImplementedException(); }
 		public static VkResult vkGetAccelerationStructureHandleNV(IntPtr device, IntPtr accelerationStructure, ulong dataSize, IntPtr pData) { throw new NotImplementedException(); }
 		public static void vkCmdWriteAccelerationStructuresPropertiesNV(IntPtr commandBuffer, uint accelerationStructureCount, IntPtr* pAccelerationStructures, VkQueryType queryType, IntPtr queryPool, uint firstQuery) { throw new NotImplementedException(); }
 		public static VkResult vkCompileDeferredNV(IntPtr device, IntPtr pipeline, uint shader) { throw new NotImplementedException(); }
-		public static VkResult vkGetMemoryHostPointerPropertiesEXT(IntPtr device, VkExternalMemoryHandleTypeFlagBits handleType, IntPtr pHostPointer, [MarshalAs(UnmanagedType.LPArray)]VkMemoryHostPointerPropertiesEXT[] pMemoryHostPointerProperties) { throw new NotImplementedException(); }
+		public static VkResult vkGetMemoryHostPointerPropertiesEXT(IntPtr device, VkExternalMemoryHandleTypeFlagBits handleType, IntPtr pHostPointer, IntPtr pMemoryHostPointerProperties) { throw new NotImplementedException(); }
 		public static void vkCmdWriteBufferMarkerAMD(IntPtr commandBuffer, VkPipelineStageFlagBits pipelineStage, IntPtr dstBuffer, ulong dstOffset, uint marker) { throw new NotImplementedException(); }
 		public static VkResult vkGetPhysicalDeviceCalibrateableTimeDomainsEXT(IntPtr physicalDevice, uint* pTimeDomainCount, VkTimeDomainEXT* pTimeDomains) { throw new NotImplementedException(); }
-		public static VkResult vkGetCalibratedTimestampsEXT(IntPtr device, uint timestampCount, [MarshalAs(UnmanagedType.LPArray)]VkCalibratedTimestampInfoEXT[] pTimestampInfos, ulong* pTimestamps, ulong* pMaxDeviation) { throw new NotImplementedException(); }
+		public static VkResult vkGetCalibratedTimestampsEXT(IntPtr device, uint timestampCount, IntPtr pTimestampInfos, ulong* pTimestamps, ulong* pMaxDeviation) { throw new NotImplementedException(); }
 		public static void vkCmdDrawMeshTasksNV(IntPtr commandBuffer, uint taskCount, uint firstTask) { throw new NotImplementedException(); }
 		public static void vkCmdDrawMeshTasksIndirectNV(IntPtr commandBuffer, IntPtr buffer, ulong offset, uint drawCount, uint stride) { throw new NotImplementedException(); }
 		public static void vkCmdDrawMeshTasksIndirectCountNV(IntPtr commandBuffer, IntPtr buffer, ulong offset, IntPtr countBuffer, ulong countBufferOffset, uint maxDrawCount, uint stride) { throw new NotImplementedException(); }
-		public static void vkCmdSetExclusiveScissorNV(IntPtr commandBuffer, uint firstExclusiveScissor, uint exclusiveScissorCount, [MarshalAs(UnmanagedType.LPArray)]VkRect2D[] pExclusiveScissors) { throw new NotImplementedException(); }
+		public static void vkCmdSetExclusiveScissorNV(IntPtr commandBuffer, uint firstExclusiveScissor, uint exclusiveScissorCount, IntPtr pExclusiveScissors) { throw new NotImplementedException(); }
 		public static void vkCmdSetCheckpointNV(IntPtr commandBuffer, IntPtr pCheckpointMarker) { throw new NotImplementedException(); }
-		public static void vkGetQueueCheckpointDataNV(IntPtr queue, uint* pCheckpointDataCount, [MarshalAs(UnmanagedType.LPArray)]VkCheckpointDataNV[] pCheckpointData) { throw new NotImplementedException(); }
-		public static VkResult vkInitializePerformanceApiINTEL(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkInitializePerformanceApiInfoINTEL[] pInitializeInfo) { throw new NotImplementedException(); }
+		public static void vkGetQueueCheckpointDataNV(IntPtr queue, uint* pCheckpointDataCount, IntPtr pCheckpointData) { throw new NotImplementedException(); }
+		public static VkResult vkInitializePerformanceApiINTEL(IntPtr device, IntPtr pInitializeInfo) { throw new NotImplementedException(); }
 		public static void vkUninitializePerformanceApiINTEL(IntPtr device) { throw new NotImplementedException(); }
-		public static VkResult vkCmdSetPerformanceMarkerINTEL(IntPtr commandBuffer, [MarshalAs(UnmanagedType.LPArray)]VkPerformanceMarkerInfoINTEL[] pMarkerInfo) { throw new NotImplementedException(); }
-		public static VkResult vkCmdSetPerformanceStreamMarkerINTEL(IntPtr commandBuffer, [MarshalAs(UnmanagedType.LPArray)]VkPerformanceStreamMarkerInfoINTEL[] pMarkerInfo) { throw new NotImplementedException(); }
-		public static VkResult vkCmdSetPerformanceOverrideINTEL(IntPtr commandBuffer, [MarshalAs(UnmanagedType.LPArray)]VkPerformanceOverrideInfoINTEL[] pOverrideInfo) { throw new NotImplementedException(); }
-		public static VkResult vkAcquirePerformanceConfigurationINTEL(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkPerformanceConfigurationAcquireInfoINTEL[] pAcquireInfo, IntPtr* pConfiguration) { throw new NotImplementedException(); }
+		public static VkResult vkCmdSetPerformanceMarkerINTEL(IntPtr commandBuffer, IntPtr pMarkerInfo) { throw new NotImplementedException(); }
+		public static VkResult vkCmdSetPerformanceStreamMarkerINTEL(IntPtr commandBuffer, IntPtr pMarkerInfo) { throw new NotImplementedException(); }
+		public static VkResult vkCmdSetPerformanceOverrideINTEL(IntPtr commandBuffer, IntPtr pOverrideInfo) { throw new NotImplementedException(); }
+		public static VkResult vkAcquirePerformanceConfigurationINTEL(IntPtr device, IntPtr pAcquireInfo, IntPtr* pConfiguration) { throw new NotImplementedException(); }
 		public static VkResult vkReleasePerformanceConfigurationINTEL(IntPtr device, IntPtr configuration) { throw new NotImplementedException(); }
 		public static VkResult vkQueueSetPerformanceConfigurationINTEL(IntPtr queue, IntPtr configuration) { throw new NotImplementedException(); }
-		public static VkResult vkGetPerformanceParameterINTEL(IntPtr device, VkPerformanceParameterTypeINTEL parameter, [MarshalAs(UnmanagedType.LPArray)]VkPerformanceValueINTEL[] pValue) { throw new NotImplementedException(); }
+		public static VkResult vkGetPerformanceParameterINTEL(IntPtr device, VkPerformanceParameterTypeINTEL parameter, IntPtr pValue) { throw new NotImplementedException(); }
 		public static void vkSetLocalDimmingAMD(IntPtr device, IntPtr swapChain, uint localDimmingEnable) { throw new NotImplementedException(); }
-		public static ulong vkGetBufferDeviceAddressEXT(IntPtr device, [MarshalAs(UnmanagedType.LPArray)]VkBufferDeviceAddressInfo[] pInfo) { throw new NotImplementedException(); }
-		public static VkResult vkGetPhysicalDeviceToolPropertiesEXT(IntPtr physicalDevice, uint* pToolCount, [MarshalAs(UnmanagedType.LPArray)]VkPhysicalDeviceToolPropertiesEXT[] pToolProperties) { throw new NotImplementedException(); }
-		public static VkResult vkGetPhysicalDeviceCooperativeMatrixPropertiesNV(IntPtr physicalDevice, uint* pPropertyCount, [MarshalAs(UnmanagedType.LPArray)]VkCooperativeMatrixPropertiesNV[] pProperties) { throw new NotImplementedException(); }
-		public static VkResult vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV(IntPtr physicalDevice, uint* pCombinationCount, [MarshalAs(UnmanagedType.LPArray)]VkFramebufferMixedSamplesCombinationNV[] pCombinations) { throw new NotImplementedException(); }
-		public static VkResult vkCreateHeadlessSurfaceEXT(IntPtr instance, [MarshalAs(UnmanagedType.LPArray)]VkHeadlessSurfaceCreateInfoEXT[] pCreateInfo, [MarshalAs(UnmanagedType.LPArray)]VkAllocationCallbacks[] pAllocator, IntPtr* pSurface) { throw new NotImplementedException(); }
+		public static ulong vkGetBufferDeviceAddressEXT(IntPtr device, IntPtr pInfo) { throw new NotImplementedException(); }
+		public static VkResult vkGetPhysicalDeviceToolPropertiesEXT(IntPtr physicalDevice, uint* pToolCount, IntPtr pToolProperties) { throw new NotImplementedException(); }
+		public static VkResult vkGetPhysicalDeviceCooperativeMatrixPropertiesNV(IntPtr physicalDevice, uint* pPropertyCount, IntPtr pProperties) { throw new NotImplementedException(); }
+		public static VkResult vkGetPhysicalDeviceSupportedFramebufferMixedSamplesCombinationsNV(IntPtr physicalDevice, uint* pCombinationCount, IntPtr pCombinations) { throw new NotImplementedException(); }
+		public static VkResult vkCreateHeadlessSurfaceEXT(IntPtr instance, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pSurface) { throw new NotImplementedException(); }
 		public static void vkCmdSetLineStippleEXT(IntPtr commandBuffer, uint lineStippleFactor, ushort lineStipplePattern) { throw new NotImplementedException(); }
 		public static void vkResetQueryPoolEXT(IntPtr device, IntPtr queryPool, uint firstQuery, uint queryCount) { throw new NotImplementedException(); }
 		internal static IntPtr vkCreateWin32SurfaceKHR_hndl;

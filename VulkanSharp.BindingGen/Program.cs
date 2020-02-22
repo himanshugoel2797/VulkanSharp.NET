@@ -46,7 +46,7 @@ namespace VulkanSharp.BindingGen
             foreach (TypeDefinition type in mod.Types)
                 if (type.Name == "Vk")
                     foreach (MethodDefinition mthd in type.Methods)
-                        if (!mthd.IsConstructor && mthd.IsStatic && mthd.Name != "InitPtrs")
+                        if (!mthd.IsConstructor && mthd.IsStatic && mthd.Name != "InitPtrs" && mthd.Name != "Pointer")
                         {
 
                             FieldReference f = null;

@@ -20,12 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="GlfwSharp.NET">
-      <HintPath>..\GlfwSharp.NET.dll</HintPath>
-    </Reference>
-    <Reference Include="VulkanSharp.NET">
-      <HintPath>..\VulkanSharp.NET.dll</HintPath>
-    </Reference>
+    <PackageReference Include="GlfwSharp.NET" Version="0.0.2" />
+    <PackageReference Include="VulkanSharp.NET" Version="0.0.2" />
   </ItemGroup>
 
 </Project>

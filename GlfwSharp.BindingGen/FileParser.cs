@@ -220,12 +220,14 @@ namespace GlfwSharp.BindingGen
                     var p = s.Split(' ').Where(a => !string.IsNullOrWhiteSpace(a)).ToArray();
                     var d = new GlfwDefineDef();
                     d.Name = p[1];
-                    if (p.Length > 3)
+                    if (p.Length >= 3)
+                    {
                         d.Value = p[2];
+                        for (int j = 3; j < p.Length; j++)
+                            d.Value += " " + p[j];
+                    }
                     else
                         d.Value = "1";
-                    for (int j = 3; j < p.Length; j++)
-                        d.Value += " " + p[j];
                     while (d.Value.StartsWith("(") && d.Value.EndsWith(")"))
                         d.Value = d.Value.Substring(1, d.Value.Length - 2);
                     defines.Add(d);
@@ -526,7 +528,7 @@ namespace GlfwSharp.BindingGen
                     tn = "string";
                     break;
                 case "char**":
-                    tn = "string[]";
+                    tn = "IntPtr*";
                     break;
                 case "HANDLE":
                 case "HWND":
@@ -813,6 +815,12 @@ namespace GlfwSharp.BindingGen
                 {
                     //~0U-N
                     constFile += $"\t\t\tpublic const uint {ConvertConstName(d.Name)} = {d.Value};\n";
+                    d.ValType = typeof(uint);
+                }
+                else if (d.Value.StartsWith("0x"))
+                {
+                    //Hex value
+                    constFile += $"\t\t\tpublic const int {ConvertConstName(d.Name)} = {d.Value};\n";
                     d.ValType = typeof(uint);
                 }
                 else if (d.Value.Contains('|'))

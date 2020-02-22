@@ -8,7 +8,7 @@ namespace VulkanSharp.Raw {
 		public static void glfwInitHint(int hint, int value) { throw new NotImplementedException(); }
 		public static void glfwGetVersion(int* major, int* minor, int* rev) { throw new NotImplementedException(); }
 		public static string glfwGetVersionString() { throw new NotImplementedException(); }
-		public static int glfwGetError(string[] description) { throw new NotImplementedException(); }
+		public static int glfwGetError(IntPtr* description) { throw new NotImplementedException(); }
 		public static IntPtr glfwSetErrorCallback(IntPtr callback) { throw new NotImplementedException(); }
 		public static IntPtr** glfwGetMonitors(int* count) { throw new NotImplementedException(); }
 		public static IntPtr* glfwGetPrimaryMonitor() { throw new NotImplementedException(); }
@@ -118,7 +118,7 @@ namespace VulkanSharp.Raw {
 		public static int glfwExtensionSupported(string extension) { throw new NotImplementedException(); }
 		public static IntPtr glfwGetProcAddress(string procname) { throw new NotImplementedException(); }
 		public static int glfwVulkanSupported() { throw new NotImplementedException(); }
-		public static string[] glfwGetRequiredInstanceExtensions(uint* count) { throw new NotImplementedException(); }
+		public static IntPtr* glfwGetRequiredInstanceExtensions(uint* count) { throw new NotImplementedException(); }
 		public static IntPtr glfwGetInstanceProcAddress(IntPtr instance, string procname) { throw new NotImplementedException(); }
 		public static int glfwGetPhysicalDevicePresentationSupport(IntPtr instance, IntPtr device, uint queuefamily) { throw new NotImplementedException(); }
 		public static VkResult glfwCreateWindowSurface(IntPtr instance, IntPtr* window, IntPtr* allocator, IntPtr* surface) { throw new NotImplementedException(); }
