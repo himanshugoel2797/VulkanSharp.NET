@@ -44,7 +44,7 @@ namespace VulkanSharp.BindingGen
 
             //generate interface implementation
             foreach (TypeDefinition type in mod.Types)
-                if (type.Name == "Vk")
+                if (type.Name == "Vk" || type.Name == "Vma")
                     foreach (MethodDefinition mthd in type.Methods)
                         if (!mthd.IsConstructor && mthd.IsStatic && mthd.Name != "InitPtrs" && mthd.Name != "Pointer")
                         {

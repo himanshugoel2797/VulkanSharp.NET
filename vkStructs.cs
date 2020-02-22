@@ -12,18 +12,18 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkWin32SurfaceCreateInfoKHR> Pointer(this VkWin32SurfaceCreateInfoKHR i) => new ManagedPtr<VkWin32SurfaceCreateInfoKHR>(i);
-        public static ManagedPtr<VkWin32SurfaceCreateInfoKHR[]> Pointer(this VkWin32SurfaceCreateInfoKHR[] i) => new ManagedPtr<VkWin32SurfaceCreateInfoKHR[]>(i);
+        public static ManagedPtrArray<VkWin32SurfaceCreateInfoKHR> Pointer(this VkWin32SurfaceCreateInfoKHR[] i) => new ManagedPtrArray<VkWin32SurfaceCreateInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Unicode)]
 		public unsafe struct VkImportMemoryWin32HandleInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public VkExternalMemoryHandleTypeFlagBits handleType;
+			[FieldOffset(16)]public VkExternalMemoryHandleTypeFlags handleType;
 			[FieldOffset(24)]public IntPtr handle;
 			[FieldOffset(32)]public string name;
 		}
 
         public static ManagedPtr<VkImportMemoryWin32HandleInfoKHR> Pointer(this VkImportMemoryWin32HandleInfoKHR i) => new ManagedPtr<VkImportMemoryWin32HandleInfoKHR>(i);
-        public static ManagedPtr<VkImportMemoryWin32HandleInfoKHR[]> Pointer(this VkImportMemoryWin32HandleInfoKHR[] i) => new ManagedPtr<VkImportMemoryWin32HandleInfoKHR[]>(i);
+        public static ManagedPtrArray<VkImportMemoryWin32HandleInfoKHR> Pointer(this VkImportMemoryWin32HandleInfoKHR[] i) => new ManagedPtrArray<VkImportMemoryWin32HandleInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Unicode)]
 		public unsafe struct VkExportMemoryWin32HandleInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -34,7 +34,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkExportMemoryWin32HandleInfoKHR> Pointer(this VkExportMemoryWin32HandleInfoKHR i) => new ManagedPtr<VkExportMemoryWin32HandleInfoKHR>(i);
-        public static ManagedPtr<VkExportMemoryWin32HandleInfoKHR[]> Pointer(this VkExportMemoryWin32HandleInfoKHR[] i) => new ManagedPtr<VkExportMemoryWin32HandleInfoKHR[]>(i);
+        public static ManagedPtrArray<VkExportMemoryWin32HandleInfoKHR> Pointer(this VkExportMemoryWin32HandleInfoKHR[] i) => new ManagedPtrArray<VkExportMemoryWin32HandleInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Unicode)]
 		public unsafe struct VkMemoryWin32HandlePropertiesKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -43,17 +43,17 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkMemoryWin32HandlePropertiesKHR> Pointer(this VkMemoryWin32HandlePropertiesKHR i) => new ManagedPtr<VkMemoryWin32HandlePropertiesKHR>(i);
-        public static ManagedPtr<VkMemoryWin32HandlePropertiesKHR[]> Pointer(this VkMemoryWin32HandlePropertiesKHR[] i) => new ManagedPtr<VkMemoryWin32HandlePropertiesKHR[]>(i);
+        public static ManagedPtrArray<VkMemoryWin32HandlePropertiesKHR> Pointer(this VkMemoryWin32HandlePropertiesKHR[] i) => new ManagedPtrArray<VkMemoryWin32HandlePropertiesKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Unicode)]
 		public unsafe struct VkMemoryGetWin32HandleInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public IntPtr memory;
-			[FieldOffset(24)]public VkExternalMemoryHandleTypeFlagBits handleType;
+			[FieldOffset(24)]public VkExternalMemoryHandleTypeFlags handleType;
 		}
 
         public static ManagedPtr<VkMemoryGetWin32HandleInfoKHR> Pointer(this VkMemoryGetWin32HandleInfoKHR i) => new ManagedPtr<VkMemoryGetWin32HandleInfoKHR>(i);
-        public static ManagedPtr<VkMemoryGetWin32HandleInfoKHR[]> Pointer(this VkMemoryGetWin32HandleInfoKHR[] i) => new ManagedPtr<VkMemoryGetWin32HandleInfoKHR[]>(i);
+        public static ManagedPtrArray<VkMemoryGetWin32HandleInfoKHR> Pointer(this VkMemoryGetWin32HandleInfoKHR[] i) => new ManagedPtrArray<VkMemoryGetWin32HandleInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Unicode)]
 		public unsafe struct VkWin32KeyedMutexAcquireReleaseInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -68,20 +68,20 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkWin32KeyedMutexAcquireReleaseInfoKHR> Pointer(this VkWin32KeyedMutexAcquireReleaseInfoKHR i) => new ManagedPtr<VkWin32KeyedMutexAcquireReleaseInfoKHR>(i);
-        public static ManagedPtr<VkWin32KeyedMutexAcquireReleaseInfoKHR[]> Pointer(this VkWin32KeyedMutexAcquireReleaseInfoKHR[] i) => new ManagedPtr<VkWin32KeyedMutexAcquireReleaseInfoKHR[]>(i);
+        public static ManagedPtrArray<VkWin32KeyedMutexAcquireReleaseInfoKHR> Pointer(this VkWin32KeyedMutexAcquireReleaseInfoKHR[] i) => new ManagedPtrArray<VkWin32KeyedMutexAcquireReleaseInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Unicode)]
 		public unsafe struct VkImportSemaphoreWin32HandleInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public IntPtr semaphore;
-			[FieldOffset(24)]public uint flags;
-			[FieldOffset(28)]public VkExternalSemaphoreHandleTypeFlagBits handleType;
+			[FieldOffset(24)]public VkSemaphoreImportFlags flags;
+			[FieldOffset(28)]public VkExternalSemaphoreHandleTypeFlags handleType;
 			[FieldOffset(32)]public IntPtr handle;
 			[FieldOffset(40)]public string name;
 		}
 
         public static ManagedPtr<VkImportSemaphoreWin32HandleInfoKHR> Pointer(this VkImportSemaphoreWin32HandleInfoKHR i) => new ManagedPtr<VkImportSemaphoreWin32HandleInfoKHR>(i);
-        public static ManagedPtr<VkImportSemaphoreWin32HandleInfoKHR[]> Pointer(this VkImportSemaphoreWin32HandleInfoKHR[] i) => new ManagedPtr<VkImportSemaphoreWin32HandleInfoKHR[]>(i);
+        public static ManagedPtrArray<VkImportSemaphoreWin32HandleInfoKHR> Pointer(this VkImportSemaphoreWin32HandleInfoKHR[] i) => new ManagedPtrArray<VkImportSemaphoreWin32HandleInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Unicode)]
 		public unsafe struct VkExportSemaphoreWin32HandleInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -92,7 +92,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkExportSemaphoreWin32HandleInfoKHR> Pointer(this VkExportSemaphoreWin32HandleInfoKHR i) => new ManagedPtr<VkExportSemaphoreWin32HandleInfoKHR>(i);
-        public static ManagedPtr<VkExportSemaphoreWin32HandleInfoKHR[]> Pointer(this VkExportSemaphoreWin32HandleInfoKHR[] i) => new ManagedPtr<VkExportSemaphoreWin32HandleInfoKHR[]>(i);
+        public static ManagedPtrArray<VkExportSemaphoreWin32HandleInfoKHR> Pointer(this VkExportSemaphoreWin32HandleInfoKHR[] i) => new ManagedPtrArray<VkExportSemaphoreWin32HandleInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkD3D12FenceSubmitInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -104,30 +104,30 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkD3D12FenceSubmitInfoKHR> Pointer(this VkD3D12FenceSubmitInfoKHR i) => new ManagedPtr<VkD3D12FenceSubmitInfoKHR>(i);
-        public static ManagedPtr<VkD3D12FenceSubmitInfoKHR[]> Pointer(this VkD3D12FenceSubmitInfoKHR[] i) => new ManagedPtr<VkD3D12FenceSubmitInfoKHR[]>(i);
+        public static ManagedPtrArray<VkD3D12FenceSubmitInfoKHR> Pointer(this VkD3D12FenceSubmitInfoKHR[] i) => new ManagedPtrArray<VkD3D12FenceSubmitInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Unicode)]
 		public unsafe struct VkSemaphoreGetWin32HandleInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public IntPtr semaphore;
-			[FieldOffset(24)]public VkExternalSemaphoreHandleTypeFlagBits handleType;
+			[FieldOffset(24)]public VkExternalSemaphoreHandleTypeFlags handleType;
 		}
 
         public static ManagedPtr<VkSemaphoreGetWin32HandleInfoKHR> Pointer(this VkSemaphoreGetWin32HandleInfoKHR i) => new ManagedPtr<VkSemaphoreGetWin32HandleInfoKHR>(i);
-        public static ManagedPtr<VkSemaphoreGetWin32HandleInfoKHR[]> Pointer(this VkSemaphoreGetWin32HandleInfoKHR[] i) => new ManagedPtr<VkSemaphoreGetWin32HandleInfoKHR[]>(i);
+        public static ManagedPtrArray<VkSemaphoreGetWin32HandleInfoKHR> Pointer(this VkSemaphoreGetWin32HandleInfoKHR[] i) => new ManagedPtrArray<VkSemaphoreGetWin32HandleInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Unicode)]
 		public unsafe struct VkImportFenceWin32HandleInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public IntPtr fence;
-			[FieldOffset(24)]public uint flags;
-			[FieldOffset(28)]public VkExternalFenceHandleTypeFlagBits handleType;
+			[FieldOffset(24)]public VkFenceImportFlags flags;
+			[FieldOffset(28)]public VkExternalFenceHandleTypeFlags handleType;
 			[FieldOffset(32)]public IntPtr handle;
 			[FieldOffset(40)]public string name;
 		}
 
         public static ManagedPtr<VkImportFenceWin32HandleInfoKHR> Pointer(this VkImportFenceWin32HandleInfoKHR i) => new ManagedPtr<VkImportFenceWin32HandleInfoKHR>(i);
-        public static ManagedPtr<VkImportFenceWin32HandleInfoKHR[]> Pointer(this VkImportFenceWin32HandleInfoKHR[] i) => new ManagedPtr<VkImportFenceWin32HandleInfoKHR[]>(i);
+        public static ManagedPtrArray<VkImportFenceWin32HandleInfoKHR> Pointer(this VkImportFenceWin32HandleInfoKHR[] i) => new ManagedPtrArray<VkImportFenceWin32HandleInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Unicode)]
 		public unsafe struct VkExportFenceWin32HandleInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -138,27 +138,27 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkExportFenceWin32HandleInfoKHR> Pointer(this VkExportFenceWin32HandleInfoKHR i) => new ManagedPtr<VkExportFenceWin32HandleInfoKHR>(i);
-        public static ManagedPtr<VkExportFenceWin32HandleInfoKHR[]> Pointer(this VkExportFenceWin32HandleInfoKHR[] i) => new ManagedPtr<VkExportFenceWin32HandleInfoKHR[]>(i);
+        public static ManagedPtrArray<VkExportFenceWin32HandleInfoKHR> Pointer(this VkExportFenceWin32HandleInfoKHR[] i) => new ManagedPtrArray<VkExportFenceWin32HandleInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Unicode)]
 		public unsafe struct VkFenceGetWin32HandleInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public IntPtr fence;
-			[FieldOffset(24)]public VkExternalFenceHandleTypeFlagBits handleType;
+			[FieldOffset(24)]public VkExternalFenceHandleTypeFlags handleType;
 		}
 
         public static ManagedPtr<VkFenceGetWin32HandleInfoKHR> Pointer(this VkFenceGetWin32HandleInfoKHR i) => new ManagedPtr<VkFenceGetWin32HandleInfoKHR>(i);
-        public static ManagedPtr<VkFenceGetWin32HandleInfoKHR[]> Pointer(this VkFenceGetWin32HandleInfoKHR[] i) => new ManagedPtr<VkFenceGetWin32HandleInfoKHR[]>(i);
+        public static ManagedPtrArray<VkFenceGetWin32HandleInfoKHR> Pointer(this VkFenceGetWin32HandleInfoKHR[] i) => new ManagedPtrArray<VkFenceGetWin32HandleInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Unicode)]
 		public unsafe struct VkImportMemoryWin32HandleInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint handleType;
+			[FieldOffset(16)]public VkExternalMemoryHandleTypeFlagsNV handleType;
 			[FieldOffset(24)]public IntPtr handle;
 		}
 
         public static ManagedPtr<VkImportMemoryWin32HandleInfoNV> Pointer(this VkImportMemoryWin32HandleInfoNV i) => new ManagedPtr<VkImportMemoryWin32HandleInfoNV>(i);
-        public static ManagedPtr<VkImportMemoryWin32HandleInfoNV[]> Pointer(this VkImportMemoryWin32HandleInfoNV[] i) => new ManagedPtr<VkImportMemoryWin32HandleInfoNV[]>(i);
+        public static ManagedPtrArray<VkImportMemoryWin32HandleInfoNV> Pointer(this VkImportMemoryWin32HandleInfoNV[] i) => new ManagedPtrArray<VkImportMemoryWin32HandleInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Unicode)]
 		public unsafe struct VkExportMemoryWin32HandleInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -168,7 +168,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkExportMemoryWin32HandleInfoNV> Pointer(this VkExportMemoryWin32HandleInfoNV i) => new ManagedPtr<VkExportMemoryWin32HandleInfoNV>(i);
-        public static ManagedPtr<VkExportMemoryWin32HandleInfoNV[]> Pointer(this VkExportMemoryWin32HandleInfoNV[] i) => new ManagedPtr<VkExportMemoryWin32HandleInfoNV[]>(i);
+        public static ManagedPtrArray<VkExportMemoryWin32HandleInfoNV> Pointer(this VkExportMemoryWin32HandleInfoNV[] i) => new ManagedPtrArray<VkExportMemoryWin32HandleInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Unicode)]
 		public unsafe struct VkWin32KeyedMutexAcquireReleaseInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -183,7 +183,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkWin32KeyedMutexAcquireReleaseInfoNV> Pointer(this VkWin32KeyedMutexAcquireReleaseInfoNV i) => new ManagedPtr<VkWin32KeyedMutexAcquireReleaseInfoNV>(i);
-        public static ManagedPtr<VkWin32KeyedMutexAcquireReleaseInfoNV[]> Pointer(this VkWin32KeyedMutexAcquireReleaseInfoNV[] i) => new ManagedPtr<VkWin32KeyedMutexAcquireReleaseInfoNV[]>(i);
+        public static ManagedPtrArray<VkWin32KeyedMutexAcquireReleaseInfoNV> Pointer(this VkWin32KeyedMutexAcquireReleaseInfoNV[] i) => new ManagedPtrArray<VkWin32KeyedMutexAcquireReleaseInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSurfaceFullScreenExclusiveInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -192,7 +192,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSurfaceFullScreenExclusiveInfoEXT> Pointer(this VkSurfaceFullScreenExclusiveInfoEXT i) => new ManagedPtr<VkSurfaceFullScreenExclusiveInfoEXT>(i);
-        public static ManagedPtr<VkSurfaceFullScreenExclusiveInfoEXT[]> Pointer(this VkSurfaceFullScreenExclusiveInfoEXT[] i) => new ManagedPtr<VkSurfaceFullScreenExclusiveInfoEXT[]>(i);
+        public static ManagedPtrArray<VkSurfaceFullScreenExclusiveInfoEXT> Pointer(this VkSurfaceFullScreenExclusiveInfoEXT[] i) => new ManagedPtrArray<VkSurfaceFullScreenExclusiveInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSurfaceCapabilitiesFullScreenExclusiveEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -201,7 +201,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSurfaceCapabilitiesFullScreenExclusiveEXT> Pointer(this VkSurfaceCapabilitiesFullScreenExclusiveEXT i) => new ManagedPtr<VkSurfaceCapabilitiesFullScreenExclusiveEXT>(i);
-        public static ManagedPtr<VkSurfaceCapabilitiesFullScreenExclusiveEXT[]> Pointer(this VkSurfaceCapabilitiesFullScreenExclusiveEXT[] i) => new ManagedPtr<VkSurfaceCapabilitiesFullScreenExclusiveEXT[]>(i);
+        public static ManagedPtrArray<VkSurfaceCapabilitiesFullScreenExclusiveEXT> Pointer(this VkSurfaceCapabilitiesFullScreenExclusiveEXT[] i) => new ManagedPtrArray<VkSurfaceCapabilitiesFullScreenExclusiveEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Unicode)]
 		public unsafe struct VkSurfaceFullScreenExclusiveWin32InfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -210,7 +210,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSurfaceFullScreenExclusiveWin32InfoEXT> Pointer(this VkSurfaceFullScreenExclusiveWin32InfoEXT i) => new ManagedPtr<VkSurfaceFullScreenExclusiveWin32InfoEXT>(i);
-        public static ManagedPtr<VkSurfaceFullScreenExclusiveWin32InfoEXT[]> Pointer(this VkSurfaceFullScreenExclusiveWin32InfoEXT[] i) => new ManagedPtr<VkSurfaceFullScreenExclusiveWin32InfoEXT[]>(i);
+        public static ManagedPtrArray<VkSurfaceFullScreenExclusiveWin32InfoEXT> Pointer(this VkSurfaceFullScreenExclusiveWin32InfoEXT[] i) => new ManagedPtrArray<VkSurfaceFullScreenExclusiveWin32InfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkWaylandSurfaceCreateInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -221,7 +221,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkWaylandSurfaceCreateInfoKHR> Pointer(this VkWaylandSurfaceCreateInfoKHR i) => new ManagedPtr<VkWaylandSurfaceCreateInfoKHR>(i);
-        public static ManagedPtr<VkWaylandSurfaceCreateInfoKHR[]> Pointer(this VkWaylandSurfaceCreateInfoKHR[] i) => new ManagedPtr<VkWaylandSurfaceCreateInfoKHR[]>(i);
+        public static ManagedPtrArray<VkWaylandSurfaceCreateInfoKHR> Pointer(this VkWaylandSurfaceCreateInfoKHR[] i) => new ManagedPtrArray<VkWaylandSurfaceCreateInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkXlibSurfaceCreateInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -232,7 +232,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkXlibSurfaceCreateInfoKHR> Pointer(this VkXlibSurfaceCreateInfoKHR i) => new ManagedPtr<VkXlibSurfaceCreateInfoKHR>(i);
-        public static ManagedPtr<VkXlibSurfaceCreateInfoKHR[]> Pointer(this VkXlibSurfaceCreateInfoKHR[] i) => new ManagedPtr<VkXlibSurfaceCreateInfoKHR[]>(i);
+        public static ManagedPtrArray<VkXlibSurfaceCreateInfoKHR> Pointer(this VkXlibSurfaceCreateInfoKHR[] i) => new ManagedPtrArray<VkXlibSurfaceCreateInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkApplicationInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -245,7 +245,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkApplicationInfo> Pointer(this VkApplicationInfo i) => new ManagedPtr<VkApplicationInfo>(i);
-        public static ManagedPtr<VkApplicationInfo[]> Pointer(this VkApplicationInfo[] i) => new ManagedPtr<VkApplicationInfo[]>(i);
+        public static ManagedPtrArray<VkApplicationInfo> Pointer(this VkApplicationInfo[] i) => new ManagedPtrArray<VkApplicationInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkInstanceCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -259,7 +259,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkInstanceCreateInfo> Pointer(this VkInstanceCreateInfo i) => new ManagedPtr<VkInstanceCreateInfo>(i);
-        public static ManagedPtr<VkInstanceCreateInfo[]> Pointer(this VkInstanceCreateInfo[] i) => new ManagedPtr<VkInstanceCreateInfo[]>(i);
+        public static ManagedPtrArray<VkInstanceCreateInfo> Pointer(this VkInstanceCreateInfo[] i) => new ManagedPtrArray<VkInstanceCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkAllocationCallbacks {
 			[FieldOffset(0)]public IntPtr pUserData;
@@ -271,7 +271,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkAllocationCallbacks> Pointer(this VkAllocationCallbacks i) => new ManagedPtr<VkAllocationCallbacks>(i);
-        public static ManagedPtr<VkAllocationCallbacks[]> Pointer(this VkAllocationCallbacks[] i) => new ManagedPtr<VkAllocationCallbacks[]>(i);
+        public static ManagedPtrArray<VkAllocationCallbacks> Pointer(this VkAllocationCallbacks[] i) => new ManagedPtrArray<VkAllocationCallbacks>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceFeatures {
 			[FieldOffset(0)]public bool robustBufferAccess;
@@ -332,16 +332,16 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceFeatures> Pointer(this VkPhysicalDeviceFeatures i) => new ManagedPtr<VkPhysicalDeviceFeatures>(i);
-        public static ManagedPtr<VkPhysicalDeviceFeatures[]> Pointer(this VkPhysicalDeviceFeatures[] i) => new ManagedPtr<VkPhysicalDeviceFeatures[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceFeatures> Pointer(this VkPhysicalDeviceFeatures[] i) => new ManagedPtrArray<VkPhysicalDeviceFeatures>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkFormatProperties {
-			[FieldOffset(0)]public uint linearTilingFeatures;
-			[FieldOffset(4)]public uint optimalTilingFeatures;
-			[FieldOffset(8)]public uint bufferFeatures;
+			[FieldOffset(0)]public VkFormatFeatureFlags linearTilingFeatures;
+			[FieldOffset(4)]public VkFormatFeatureFlags optimalTilingFeatures;
+			[FieldOffset(8)]public VkFormatFeatureFlags bufferFeatures;
 		}
 
         public static ManagedPtr<VkFormatProperties> Pointer(this VkFormatProperties i) => new ManagedPtr<VkFormatProperties>(i);
-        public static ManagedPtr<VkFormatProperties[]> Pointer(this VkFormatProperties[] i) => new ManagedPtr<VkFormatProperties[]>(i);
+        public static ManagedPtrArray<VkFormatProperties> Pointer(this VkFormatProperties[] i) => new ManagedPtrArray<VkFormatProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkExtent3D {
 			[FieldOffset(0)]public uint width;
@@ -350,18 +350,18 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkExtent3D> Pointer(this VkExtent3D i) => new ManagedPtr<VkExtent3D>(i);
-        public static ManagedPtr<VkExtent3D[]> Pointer(this VkExtent3D[] i) => new ManagedPtr<VkExtent3D[]>(i);
+        public static ManagedPtrArray<VkExtent3D> Pointer(this VkExtent3D[] i) => new ManagedPtrArray<VkExtent3D>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImageFormatProperties {
 			[FieldOffset(0)]public VkExtent3D maxExtent;
 			[FieldOffset(12)]public uint maxMipLevels;
 			[FieldOffset(16)]public uint maxArrayLayers;
-			[FieldOffset(20)]public uint sampleCounts;
+			[FieldOffset(20)]public VkSampleCountFlags sampleCounts;
 			[FieldOffset(24)]public ulong maxResourceSize;
 		}
 
         public static ManagedPtr<VkImageFormatProperties> Pointer(this VkImageFormatProperties i) => new ManagedPtr<VkImageFormatProperties>(i);
-        public static ManagedPtr<VkImageFormatProperties[]> Pointer(this VkImageFormatProperties[] i) => new ManagedPtr<VkImageFormatProperties[]>(i);
+        public static ManagedPtrArray<VkImageFormatProperties> Pointer(this VkImageFormatProperties[] i) => new ManagedPtrArray<VkImageFormatProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceLimits {
 			[FieldOffset(0)]public uint maxImageDimension1D;
@@ -417,8 +417,10 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(212)]public uint maxFragmentCombinedOutputResources;
 			[FieldOffset(216)]public uint maxComputeSharedMemorySize;
 			[FieldOffset(220)]public fixed uint maxComputeWorkGroupCount[3];
+			public const int maxComputeWorkGroupCount_len = 3;
 			[FieldOffset(232)]public uint maxComputeWorkGroupInvocations;
 			[FieldOffset(236)]public fixed uint maxComputeWorkGroupSize[3];
+			public const int maxComputeWorkGroupSize_len = 3;
 			[FieldOffset(248)]public uint subPixelPrecisionBits;
 			[FieldOffset(252)]public uint subTexelPrecisionBits;
 			[FieldOffset(256)]public uint mipmapPrecisionBits;
@@ -428,7 +430,9 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(272)]public float maxSamplerAnisotropy;
 			[FieldOffset(276)]public uint maxViewports;
 			[FieldOffset(280)]public fixed uint maxViewportDimensions[2];
+			public const int maxViewportDimensions_len = 2;
 			[FieldOffset(288)]public fixed float viewportBoundsRange[2];
+			public const int viewportBoundsRange_len = 2;
 			[FieldOffset(296)]public uint viewportSubPixelBits;
 			[FieldOffset(304)]public ulong minMemoryMapAlignment;
 			[FieldOffset(312)]public ulong minTexelBufferOffsetAlignment;
@@ -444,16 +448,16 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(364)]public uint maxFramebufferWidth;
 			[FieldOffset(368)]public uint maxFramebufferHeight;
 			[FieldOffset(372)]public uint maxFramebufferLayers;
-			[FieldOffset(376)]public uint framebufferColorSampleCounts;
-			[FieldOffset(380)]public uint framebufferDepthSampleCounts;
-			[FieldOffset(384)]public uint framebufferStencilSampleCounts;
-			[FieldOffset(388)]public uint framebufferNoAttachmentsSampleCounts;
+			[FieldOffset(376)]public VkSampleCountFlags framebufferColorSampleCounts;
+			[FieldOffset(380)]public VkSampleCountFlags framebufferDepthSampleCounts;
+			[FieldOffset(384)]public VkSampleCountFlags framebufferStencilSampleCounts;
+			[FieldOffset(388)]public VkSampleCountFlags framebufferNoAttachmentsSampleCounts;
 			[FieldOffset(392)]public uint maxColorAttachments;
-			[FieldOffset(396)]public uint sampledImageColorSampleCounts;
-			[FieldOffset(400)]public uint sampledImageIntegerSampleCounts;
-			[FieldOffset(404)]public uint sampledImageDepthSampleCounts;
-			[FieldOffset(408)]public uint sampledImageStencilSampleCounts;
-			[FieldOffset(412)]public uint storageImageSampleCounts;
+			[FieldOffset(396)]public VkSampleCountFlags sampledImageColorSampleCounts;
+			[FieldOffset(400)]public VkSampleCountFlags sampledImageIntegerSampleCounts;
+			[FieldOffset(404)]public VkSampleCountFlags sampledImageDepthSampleCounts;
+			[FieldOffset(408)]public VkSampleCountFlags sampledImageStencilSampleCounts;
+			[FieldOffset(412)]public VkSampleCountFlags storageImageSampleCounts;
 			[FieldOffset(416)]public uint maxSampleMaskWords;
 			[FieldOffset(420)]public bool timestampComputeAndGraphics;
 			[FieldOffset(424)]public float timestampPeriod;
@@ -462,7 +466,9 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(436)]public uint maxCombinedClipAndCullDistances;
 			[FieldOffset(440)]public uint discreteQueuePriorities;
 			[FieldOffset(444)]public fixed float pointSizeRange[2];
+			public const int pointSizeRange_len = 2;
 			[FieldOffset(452)]public fixed float lineWidthRange[2];
+			public const int lineWidthRange_len = 2;
 			[FieldOffset(460)]public float pointSizeGranularity;
 			[FieldOffset(464)]public float lineWidthGranularity;
 			[FieldOffset(468)]public bool strictLines;
@@ -473,7 +479,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceLimits> Pointer(this VkPhysicalDeviceLimits i) => new ManagedPtr<VkPhysicalDeviceLimits>(i);
-        public static ManagedPtr<VkPhysicalDeviceLimits[]> Pointer(this VkPhysicalDeviceLimits[] i) => new ManagedPtr<VkPhysicalDeviceLimits[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceLimits> Pointer(this VkPhysicalDeviceLimits[] i) => new ManagedPtrArray<VkPhysicalDeviceLimits>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceSparseProperties {
 			[FieldOffset(0)]public bool residencyStandard2DBlockShape;
@@ -484,7 +490,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceSparseProperties> Pointer(this VkPhysicalDeviceSparseProperties i) => new ManagedPtr<VkPhysicalDeviceSparseProperties>(i);
-        public static ManagedPtr<VkPhysicalDeviceSparseProperties[]> Pointer(this VkPhysicalDeviceSparseProperties[] i) => new ManagedPtr<VkPhysicalDeviceSparseProperties[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceSparseProperties> Pointer(this VkPhysicalDeviceSparseProperties[] i) => new ManagedPtrArray<VkPhysicalDeviceSparseProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceProperties {
 			[FieldOffset(0)]public uint apiVersion;
@@ -493,61 +499,65 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(12)]public uint deviceID;
 			[FieldOffset(16)]public VkPhysicalDeviceType deviceType;
 			[FieldOffset(20)]public fixed byte deviceName[256];
+			public const int deviceName_len = 256;
 			[FieldOffset(276)]public fixed byte pipelineCacheUUID[16];
+			public const int pipelineCacheUUID_len = 16;
 			[FieldOffset(296)]public VkPhysicalDeviceLimits limits;
 			[FieldOffset(800)]public VkPhysicalDeviceSparseProperties sparseProperties;
 		}
 
         public static ManagedPtr<VkPhysicalDeviceProperties> Pointer(this VkPhysicalDeviceProperties i) => new ManagedPtr<VkPhysicalDeviceProperties>(i);
-        public static ManagedPtr<VkPhysicalDeviceProperties[]> Pointer(this VkPhysicalDeviceProperties[] i) => new ManagedPtr<VkPhysicalDeviceProperties[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceProperties> Pointer(this VkPhysicalDeviceProperties[] i) => new ManagedPtrArray<VkPhysicalDeviceProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkQueueFamilyProperties {
-			[FieldOffset(0)]public uint queueFlags;
+			[FieldOffset(0)]public VkQueueFlags queueFlags;
 			[FieldOffset(4)]public uint queueCount;
 			[FieldOffset(8)]public uint timestampValidBits;
 			[FieldOffset(12)]public VkExtent3D minImageTransferGranularity;
 		}
 
         public static ManagedPtr<VkQueueFamilyProperties> Pointer(this VkQueueFamilyProperties i) => new ManagedPtr<VkQueueFamilyProperties>(i);
-        public static ManagedPtr<VkQueueFamilyProperties[]> Pointer(this VkQueueFamilyProperties[] i) => new ManagedPtr<VkQueueFamilyProperties[]>(i);
+        public static ManagedPtrArray<VkQueueFamilyProperties> Pointer(this VkQueueFamilyProperties[] i) => new ManagedPtrArray<VkQueueFamilyProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkMemoryType {
-			[FieldOffset(0)]public uint propertyFlags;
+			[FieldOffset(0)]public VkMemoryPropertyFlags propertyFlags;
 			[FieldOffset(4)]public uint heapIndex;
 		}
 
         public static ManagedPtr<VkMemoryType> Pointer(this VkMemoryType i) => new ManagedPtr<VkMemoryType>(i);
-        public static ManagedPtr<VkMemoryType[]> Pointer(this VkMemoryType[] i) => new ManagedPtr<VkMemoryType[]>(i);
+        public static ManagedPtrArray<VkMemoryType> Pointer(this VkMemoryType[] i) => new ManagedPtrArray<VkMemoryType>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkMemoryHeap {
 			[FieldOffset(0)]public ulong size;
-			[FieldOffset(8)]public uint flags;
+			[FieldOffset(8)]public VkMemoryHeapFlags flags;
 		}
 
         public static ManagedPtr<VkMemoryHeap> Pointer(this VkMemoryHeap i) => new ManagedPtr<VkMemoryHeap>(i);
-        public static ManagedPtr<VkMemoryHeap[]> Pointer(this VkMemoryHeap[] i) => new ManagedPtr<VkMemoryHeap[]>(i);
+        public static ManagedPtrArray<VkMemoryHeap> Pointer(this VkMemoryHeap[] i) => new ManagedPtrArray<VkMemoryHeap>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceMemoryProperties {
 			[FieldOffset(0)]public uint memoryTypeCount;
 			[FieldOffset(4)][MarshalAs(UnmanagedType.ByValArray, SizeConst=32)] public VkMemoryType[] memoryTypes;
+			public const int memoryTypes_len = 32;
 			[FieldOffset(260)]public uint memoryHeapCount;
 			[FieldOffset(264)][MarshalAs(UnmanagedType.ByValArray, SizeConst=16)] public VkMemoryHeap[] memoryHeaps;
+			public const int memoryHeaps_len = 16;
 		}
 
         public static ManagedPtr<VkPhysicalDeviceMemoryProperties> Pointer(this VkPhysicalDeviceMemoryProperties i) => new ManagedPtr<VkPhysicalDeviceMemoryProperties>(i);
-        public static ManagedPtr<VkPhysicalDeviceMemoryProperties[]> Pointer(this VkPhysicalDeviceMemoryProperties[] i) => new ManagedPtr<VkPhysicalDeviceMemoryProperties[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceMemoryProperties> Pointer(this VkPhysicalDeviceMemoryProperties[] i) => new ManagedPtrArray<VkPhysicalDeviceMemoryProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDeviceQueueCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkDeviceQueueCreateFlags flags;
 			[FieldOffset(20)]public uint queueFamilyIndex;
 			[FieldOffset(24)]public uint queueCount;
 			[FieldOffset(32)]public float* pQueuePriorities;
 		}
 
         public static ManagedPtr<VkDeviceQueueCreateInfo> Pointer(this VkDeviceQueueCreateInfo i) => new ManagedPtr<VkDeviceQueueCreateInfo>(i);
-        public static ManagedPtr<VkDeviceQueueCreateInfo[]> Pointer(this VkDeviceQueueCreateInfo[] i) => new ManagedPtr<VkDeviceQueueCreateInfo[]>(i);
+        public static ManagedPtrArray<VkDeviceQueueCreateInfo> Pointer(this VkDeviceQueueCreateInfo[] i) => new ManagedPtrArray<VkDeviceQueueCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDeviceCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -563,32 +573,35 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDeviceCreateInfo> Pointer(this VkDeviceCreateInfo i) => new ManagedPtr<VkDeviceCreateInfo>(i);
-        public static ManagedPtr<VkDeviceCreateInfo[]> Pointer(this VkDeviceCreateInfo[] i) => new ManagedPtr<VkDeviceCreateInfo[]>(i);
+        public static ManagedPtrArray<VkDeviceCreateInfo> Pointer(this VkDeviceCreateInfo[] i) => new ManagedPtrArray<VkDeviceCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkExtensionProperties {
 			[FieldOffset(0)]public fixed byte extensionName[256];
+			public const int extensionName_len = 256;
 			[FieldOffset(256)]public uint specVersion;
 		}
 
         public static ManagedPtr<VkExtensionProperties> Pointer(this VkExtensionProperties i) => new ManagedPtr<VkExtensionProperties>(i);
-        public static ManagedPtr<VkExtensionProperties[]> Pointer(this VkExtensionProperties[] i) => new ManagedPtr<VkExtensionProperties[]>(i);
+        public static ManagedPtrArray<VkExtensionProperties> Pointer(this VkExtensionProperties[] i) => new ManagedPtrArray<VkExtensionProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkLayerProperties {
 			[FieldOffset(0)]public fixed byte layerName[256];
+			public const int layerName_len = 256;
 			[FieldOffset(256)]public uint specVersion;
 			[FieldOffset(260)]public uint implementationVersion;
 			[FieldOffset(264)]public fixed byte description[256];
+			public const int description_len = 256;
 		}
 
         public static ManagedPtr<VkLayerProperties> Pointer(this VkLayerProperties i) => new ManagedPtr<VkLayerProperties>(i);
-        public static ManagedPtr<VkLayerProperties[]> Pointer(this VkLayerProperties[] i) => new ManagedPtr<VkLayerProperties[]>(i);
+        public static ManagedPtrArray<VkLayerProperties> Pointer(this VkLayerProperties[] i) => new ManagedPtrArray<VkLayerProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSubmitInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public uint waitSemaphoreCount;
 			[FieldOffset(24)]public IntPtr* pWaitSemaphores;
-			[FieldOffset(32)]public uint* pWaitDstStageMask;
+			[FieldOffset(32)]public VkPipelineStageFlags* pWaitDstStageMask;
 			[FieldOffset(40)]public uint commandBufferCount;
 			[FieldOffset(48)]public IntPtr* pCommandBuffers;
 			[FieldOffset(56)]public uint signalSemaphoreCount;
@@ -596,7 +609,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSubmitInfo> Pointer(this VkSubmitInfo i) => new ManagedPtr<VkSubmitInfo>(i);
-        public static ManagedPtr<VkSubmitInfo[]> Pointer(this VkSubmitInfo[] i) => new ManagedPtr<VkSubmitInfo[]>(i);
+        public static ManagedPtrArray<VkSubmitInfo> Pointer(this VkSubmitInfo[] i) => new ManagedPtrArray<VkSubmitInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkMemoryAllocateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -606,7 +619,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkMemoryAllocateInfo> Pointer(this VkMemoryAllocateInfo i) => new ManagedPtr<VkMemoryAllocateInfo>(i);
-        public static ManagedPtr<VkMemoryAllocateInfo[]> Pointer(this VkMemoryAllocateInfo[] i) => new ManagedPtr<VkMemoryAllocateInfo[]>(i);
+        public static ManagedPtrArray<VkMemoryAllocateInfo> Pointer(this VkMemoryAllocateInfo[] i) => new ManagedPtrArray<VkMemoryAllocateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkMappedMemoryRange {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -617,7 +630,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkMappedMemoryRange> Pointer(this VkMappedMemoryRange i) => new ManagedPtr<VkMappedMemoryRange>(i);
-        public static ManagedPtr<VkMappedMemoryRange[]> Pointer(this VkMappedMemoryRange[] i) => new ManagedPtr<VkMappedMemoryRange[]>(i);
+        public static ManagedPtrArray<VkMappedMemoryRange> Pointer(this VkMappedMemoryRange[] i) => new ManagedPtrArray<VkMappedMemoryRange>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkMemoryRequirements {
 			[FieldOffset(0)]public ulong size;
@@ -626,16 +639,16 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkMemoryRequirements> Pointer(this VkMemoryRequirements i) => new ManagedPtr<VkMemoryRequirements>(i);
-        public static ManagedPtr<VkMemoryRequirements[]> Pointer(this VkMemoryRequirements[] i) => new ManagedPtr<VkMemoryRequirements[]>(i);
+        public static ManagedPtrArray<VkMemoryRequirements> Pointer(this VkMemoryRequirements[] i) => new ManagedPtrArray<VkMemoryRequirements>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSparseImageFormatProperties {
-			[FieldOffset(0)]public uint aspectMask;
+			[FieldOffset(0)]public VkImageAspectFlags aspectMask;
 			[FieldOffset(4)]public VkExtent3D imageGranularity;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkSparseImageFormatFlags flags;
 		}
 
         public static ManagedPtr<VkSparseImageFormatProperties> Pointer(this VkSparseImageFormatProperties i) => new ManagedPtr<VkSparseImageFormatProperties>(i);
-        public static ManagedPtr<VkSparseImageFormatProperties[]> Pointer(this VkSparseImageFormatProperties[] i) => new ManagedPtr<VkSparseImageFormatProperties[]>(i);
+        public static ManagedPtrArray<VkSparseImageFormatProperties> Pointer(this VkSparseImageFormatProperties[] i) => new ManagedPtrArray<VkSparseImageFormatProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSparseImageMemoryRequirements {
 			[FieldOffset(0)]public VkSparseImageFormatProperties formatProperties;
@@ -646,18 +659,18 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSparseImageMemoryRequirements> Pointer(this VkSparseImageMemoryRequirements i) => new ManagedPtr<VkSparseImageMemoryRequirements>(i);
-        public static ManagedPtr<VkSparseImageMemoryRequirements[]> Pointer(this VkSparseImageMemoryRequirements[] i) => new ManagedPtr<VkSparseImageMemoryRequirements[]>(i);
+        public static ManagedPtrArray<VkSparseImageMemoryRequirements> Pointer(this VkSparseImageMemoryRequirements[] i) => new ManagedPtrArray<VkSparseImageMemoryRequirements>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSparseMemoryBind {
 			[FieldOffset(0)]public ulong resourceOffset;
 			[FieldOffset(8)]public ulong size;
 			[FieldOffset(16)]public IntPtr memory;
 			[FieldOffset(24)]public ulong memoryOffset;
-			[FieldOffset(32)]public uint flags;
+			[FieldOffset(32)]public VkSparseMemoryBindFlags flags;
 		}
 
         public static ManagedPtr<VkSparseMemoryBind> Pointer(this VkSparseMemoryBind i) => new ManagedPtr<VkSparseMemoryBind>(i);
-        public static ManagedPtr<VkSparseMemoryBind[]> Pointer(this VkSparseMemoryBind[] i) => new ManagedPtr<VkSparseMemoryBind[]>(i);
+        public static ManagedPtrArray<VkSparseMemoryBind> Pointer(this VkSparseMemoryBind[] i) => new ManagedPtrArray<VkSparseMemoryBind>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSparseBufferMemoryBindInfo {
 			[FieldOffset(0)]public IntPtr buffer;
@@ -666,7 +679,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSparseBufferMemoryBindInfo> Pointer(this VkSparseBufferMemoryBindInfo i) => new ManagedPtr<VkSparseBufferMemoryBindInfo>(i);
-        public static ManagedPtr<VkSparseBufferMemoryBindInfo[]> Pointer(this VkSparseBufferMemoryBindInfo[] i) => new ManagedPtr<VkSparseBufferMemoryBindInfo[]>(i);
+        public static ManagedPtrArray<VkSparseBufferMemoryBindInfo> Pointer(this VkSparseBufferMemoryBindInfo[] i) => new ManagedPtrArray<VkSparseBufferMemoryBindInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSparseImageOpaqueMemoryBindInfo {
 			[FieldOffset(0)]public IntPtr image;
@@ -675,16 +688,16 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSparseImageOpaqueMemoryBindInfo> Pointer(this VkSparseImageOpaqueMemoryBindInfo i) => new ManagedPtr<VkSparseImageOpaqueMemoryBindInfo>(i);
-        public static ManagedPtr<VkSparseImageOpaqueMemoryBindInfo[]> Pointer(this VkSparseImageOpaqueMemoryBindInfo[] i) => new ManagedPtr<VkSparseImageOpaqueMemoryBindInfo[]>(i);
+        public static ManagedPtrArray<VkSparseImageOpaqueMemoryBindInfo> Pointer(this VkSparseImageOpaqueMemoryBindInfo[] i) => new ManagedPtrArray<VkSparseImageOpaqueMemoryBindInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImageSubresource {
-			[FieldOffset(0)]public uint aspectMask;
+			[FieldOffset(0)]public VkImageAspectFlags aspectMask;
 			[FieldOffset(4)]public uint mipLevel;
 			[FieldOffset(8)]public uint arrayLayer;
 		}
 
         public static ManagedPtr<VkImageSubresource> Pointer(this VkImageSubresource i) => new ManagedPtr<VkImageSubresource>(i);
-        public static ManagedPtr<VkImageSubresource[]> Pointer(this VkImageSubresource[] i) => new ManagedPtr<VkImageSubresource[]>(i);
+        public static ManagedPtrArray<VkImageSubresource> Pointer(this VkImageSubresource[] i) => new ManagedPtrArray<VkImageSubresource>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkOffset3D {
 			[FieldOffset(0)]public int x;
@@ -693,7 +706,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkOffset3D> Pointer(this VkOffset3D i) => new ManagedPtr<VkOffset3D>(i);
-        public static ManagedPtr<VkOffset3D[]> Pointer(this VkOffset3D[] i) => new ManagedPtr<VkOffset3D[]>(i);
+        public static ManagedPtrArray<VkOffset3D> Pointer(this VkOffset3D[] i) => new ManagedPtrArray<VkOffset3D>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSparseImageMemoryBind {
 			[FieldOffset(0)]public VkImageSubresource subresource;
@@ -701,11 +714,11 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(24)]public VkExtent3D extent;
 			[FieldOffset(40)]public IntPtr memory;
 			[FieldOffset(48)]public ulong memoryOffset;
-			[FieldOffset(56)]public uint flags;
+			[FieldOffset(56)]public VkSparseMemoryBindFlags flags;
 		}
 
         public static ManagedPtr<VkSparseImageMemoryBind> Pointer(this VkSparseImageMemoryBind i) => new ManagedPtr<VkSparseImageMemoryBind>(i);
-        public static ManagedPtr<VkSparseImageMemoryBind[]> Pointer(this VkSparseImageMemoryBind[] i) => new ManagedPtr<VkSparseImageMemoryBind[]>(i);
+        public static ManagedPtrArray<VkSparseImageMemoryBind> Pointer(this VkSparseImageMemoryBind[] i) => new ManagedPtrArray<VkSparseImageMemoryBind>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSparseImageMemoryBindInfo {
 			[FieldOffset(0)]public IntPtr image;
@@ -714,7 +727,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSparseImageMemoryBindInfo> Pointer(this VkSparseImageMemoryBindInfo i) => new ManagedPtr<VkSparseImageMemoryBindInfo>(i);
-        public static ManagedPtr<VkSparseImageMemoryBindInfo[]> Pointer(this VkSparseImageMemoryBindInfo[] i) => new ManagedPtr<VkSparseImageMemoryBindInfo[]>(i);
+        public static ManagedPtrArray<VkSparseImageMemoryBindInfo> Pointer(this VkSparseImageMemoryBindInfo[] i) => new ManagedPtrArray<VkSparseImageMemoryBindInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkBindSparseInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -732,16 +745,16 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkBindSparseInfo> Pointer(this VkBindSparseInfo i) => new ManagedPtr<VkBindSparseInfo>(i);
-        public static ManagedPtr<VkBindSparseInfo[]> Pointer(this VkBindSparseInfo[] i) => new ManagedPtr<VkBindSparseInfo[]>(i);
+        public static ManagedPtrArray<VkBindSparseInfo> Pointer(this VkBindSparseInfo[] i) => new ManagedPtrArray<VkBindSparseInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkFenceCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkFenceCreateFlags flags;
 		}
 
         public static ManagedPtr<VkFenceCreateInfo> Pointer(this VkFenceCreateInfo i) => new ManagedPtr<VkFenceCreateInfo>(i);
-        public static ManagedPtr<VkFenceCreateInfo[]> Pointer(this VkFenceCreateInfo[] i) => new ManagedPtr<VkFenceCreateInfo[]>(i);
+        public static ManagedPtrArray<VkFenceCreateInfo> Pointer(this VkFenceCreateInfo[] i) => new ManagedPtrArray<VkFenceCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSemaphoreCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -750,7 +763,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSemaphoreCreateInfo> Pointer(this VkSemaphoreCreateInfo i) => new ManagedPtr<VkSemaphoreCreateInfo>(i);
-        public static ManagedPtr<VkSemaphoreCreateInfo[]> Pointer(this VkSemaphoreCreateInfo[] i) => new ManagedPtr<VkSemaphoreCreateInfo[]>(i);
+        public static ManagedPtrArray<VkSemaphoreCreateInfo> Pointer(this VkSemaphoreCreateInfo[] i) => new ManagedPtrArray<VkSemaphoreCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkEventCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -759,7 +772,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkEventCreateInfo> Pointer(this VkEventCreateInfo i) => new ManagedPtr<VkEventCreateInfo>(i);
-        public static ManagedPtr<VkEventCreateInfo[]> Pointer(this VkEventCreateInfo[] i) => new ManagedPtr<VkEventCreateInfo[]>(i);
+        public static ManagedPtrArray<VkEventCreateInfo> Pointer(this VkEventCreateInfo[] i) => new ManagedPtrArray<VkEventCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkQueryPoolCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -767,25 +780,25 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(16)]public uint flags;
 			[FieldOffset(20)]public VkQueryType queryType;
 			[FieldOffset(24)]public uint queryCount;
-			[FieldOffset(28)]public uint pipelineStatistics;
+			[FieldOffset(28)]public VkQueryPipelineStatisticFlags pipelineStatistics;
 		}
 
         public static ManagedPtr<VkQueryPoolCreateInfo> Pointer(this VkQueryPoolCreateInfo i) => new ManagedPtr<VkQueryPoolCreateInfo>(i);
-        public static ManagedPtr<VkQueryPoolCreateInfo[]> Pointer(this VkQueryPoolCreateInfo[] i) => new ManagedPtr<VkQueryPoolCreateInfo[]>(i);
+        public static ManagedPtrArray<VkQueryPoolCreateInfo> Pointer(this VkQueryPoolCreateInfo[] i) => new ManagedPtrArray<VkQueryPoolCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkBufferCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkBufferCreateFlags flags;
 			[FieldOffset(24)]public ulong size;
-			[FieldOffset(32)]public uint usage;
+			[FieldOffset(32)]public VkBufferUsageFlags usage;
 			[FieldOffset(36)]public VkSharingMode sharingMode;
 			[FieldOffset(40)]public uint queueFamilyIndexCount;
 			[FieldOffset(48)]public uint* pQueueFamilyIndices;
 		}
 
         public static ManagedPtr<VkBufferCreateInfo> Pointer(this VkBufferCreateInfo i) => new ManagedPtr<VkBufferCreateInfo>(i);
-        public static ManagedPtr<VkBufferCreateInfo[]> Pointer(this VkBufferCreateInfo[] i) => new ManagedPtr<VkBufferCreateInfo[]>(i);
+        public static ManagedPtrArray<VkBufferCreateInfo> Pointer(this VkBufferCreateInfo[] i) => new ManagedPtrArray<VkBufferCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkBufferViewCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -798,20 +811,20 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkBufferViewCreateInfo> Pointer(this VkBufferViewCreateInfo i) => new ManagedPtr<VkBufferViewCreateInfo>(i);
-        public static ManagedPtr<VkBufferViewCreateInfo[]> Pointer(this VkBufferViewCreateInfo[] i) => new ManagedPtr<VkBufferViewCreateInfo[]>(i);
+        public static ManagedPtrArray<VkBufferViewCreateInfo> Pointer(this VkBufferViewCreateInfo[] i) => new ManagedPtrArray<VkBufferViewCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImageCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkImageCreateFlags flags;
 			[FieldOffset(20)]public VkImageType imageType;
 			[FieldOffset(24)]public VkFormat format;
 			[FieldOffset(28)]public VkExtent3D extent;
 			[FieldOffset(40)]public uint mipLevels;
 			[FieldOffset(44)]public uint arrayLayers;
-			[FieldOffset(48)]public VkSampleCountFlagBits samples;
+			[FieldOffset(48)]public VkSampleCountFlags samples;
 			[FieldOffset(52)]public VkImageTiling tiling;
-			[FieldOffset(56)]public uint usage;
+			[FieldOffset(56)]public VkImageUsageFlags usage;
 			[FieldOffset(60)]public VkSharingMode sharingMode;
 			[FieldOffset(64)]public uint queueFamilyIndexCount;
 			[FieldOffset(72)]public uint* pQueueFamilyIndices;
@@ -819,7 +832,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkImageCreateInfo> Pointer(this VkImageCreateInfo i) => new ManagedPtr<VkImageCreateInfo>(i);
-        public static ManagedPtr<VkImageCreateInfo[]> Pointer(this VkImageCreateInfo[] i) => new ManagedPtr<VkImageCreateInfo[]>(i);
+        public static ManagedPtrArray<VkImageCreateInfo> Pointer(this VkImageCreateInfo[] i) => new ManagedPtrArray<VkImageCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSubresourceLayout {
 			[FieldOffset(0)]public ulong offset;
@@ -830,7 +843,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSubresourceLayout> Pointer(this VkSubresourceLayout i) => new ManagedPtr<VkSubresourceLayout>(i);
-        public static ManagedPtr<VkSubresourceLayout[]> Pointer(this VkSubresourceLayout[] i) => new ManagedPtr<VkSubresourceLayout[]>(i);
+        public static ManagedPtrArray<VkSubresourceLayout> Pointer(this VkSubresourceLayout[] i) => new ManagedPtrArray<VkSubresourceLayout>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkComponentMapping {
 			[FieldOffset(0)]public VkComponentSwizzle r;
@@ -840,10 +853,10 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkComponentMapping> Pointer(this VkComponentMapping i) => new ManagedPtr<VkComponentMapping>(i);
-        public static ManagedPtr<VkComponentMapping[]> Pointer(this VkComponentMapping[] i) => new ManagedPtr<VkComponentMapping[]>(i);
+        public static ManagedPtrArray<VkComponentMapping> Pointer(this VkComponentMapping[] i) => new ManagedPtrArray<VkComponentMapping>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImageSubresourceRange {
-			[FieldOffset(0)]public uint aspectMask;
+			[FieldOffset(0)]public VkImageAspectFlags aspectMask;
 			[FieldOffset(4)]public uint baseMipLevel;
 			[FieldOffset(8)]public uint levelCount;
 			[FieldOffset(12)]public uint baseArrayLayer;
@@ -851,12 +864,12 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkImageSubresourceRange> Pointer(this VkImageSubresourceRange i) => new ManagedPtr<VkImageSubresourceRange>(i);
-        public static ManagedPtr<VkImageSubresourceRange[]> Pointer(this VkImageSubresourceRange[] i) => new ManagedPtr<VkImageSubresourceRange[]>(i);
+        public static ManagedPtrArray<VkImageSubresourceRange> Pointer(this VkImageSubresourceRange[] i) => new ManagedPtrArray<VkImageSubresourceRange>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImageViewCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkImageViewCreateFlags flags;
 			[FieldOffset(24)]public IntPtr image;
 			[FieldOffset(32)]public VkImageViewType viewType;
 			[FieldOffset(36)]public VkFormat format;
@@ -865,18 +878,18 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkImageViewCreateInfo> Pointer(this VkImageViewCreateInfo i) => new ManagedPtr<VkImageViewCreateInfo>(i);
-        public static ManagedPtr<VkImageViewCreateInfo[]> Pointer(this VkImageViewCreateInfo[] i) => new ManagedPtr<VkImageViewCreateInfo[]>(i);
+        public static ManagedPtrArray<VkImageViewCreateInfo> Pointer(this VkImageViewCreateInfo[] i) => new ManagedPtrArray<VkImageViewCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkShaderModuleCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkShaderModuleCreateFlags flags;
 			[FieldOffset(24)]public ulong codeSize;
 			[FieldOffset(32)]public uint* pCode;
 		}
 
         public static ManagedPtr<VkShaderModuleCreateInfo> Pointer(this VkShaderModuleCreateInfo i) => new ManagedPtr<VkShaderModuleCreateInfo>(i);
-        public static ManagedPtr<VkShaderModuleCreateInfo[]> Pointer(this VkShaderModuleCreateInfo[] i) => new ManagedPtr<VkShaderModuleCreateInfo[]>(i);
+        public static ManagedPtrArray<VkShaderModuleCreateInfo> Pointer(this VkShaderModuleCreateInfo[] i) => new ManagedPtrArray<VkShaderModuleCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineCacheCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -887,7 +900,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineCacheCreateInfo> Pointer(this VkPipelineCacheCreateInfo i) => new ManagedPtr<VkPipelineCacheCreateInfo>(i);
-        public static ManagedPtr<VkPipelineCacheCreateInfo[]> Pointer(this VkPipelineCacheCreateInfo[] i) => new ManagedPtr<VkPipelineCacheCreateInfo[]>(i);
+        public static ManagedPtrArray<VkPipelineCacheCreateInfo> Pointer(this VkPipelineCacheCreateInfo[] i) => new ManagedPtrArray<VkPipelineCacheCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSpecializationMapEntry {
 			[FieldOffset(0)]public uint constantID;
@@ -896,7 +909,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSpecializationMapEntry> Pointer(this VkSpecializationMapEntry i) => new ManagedPtr<VkSpecializationMapEntry>(i);
-        public static ManagedPtr<VkSpecializationMapEntry[]> Pointer(this VkSpecializationMapEntry[] i) => new ManagedPtr<VkSpecializationMapEntry[]>(i);
+        public static ManagedPtrArray<VkSpecializationMapEntry> Pointer(this VkSpecializationMapEntry[] i) => new ManagedPtrArray<VkSpecializationMapEntry>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSpecializationInfo {
 			[FieldOffset(0)]public uint mapEntryCount;
@@ -906,20 +919,20 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSpecializationInfo> Pointer(this VkSpecializationInfo i) => new ManagedPtr<VkSpecializationInfo>(i);
-        public static ManagedPtr<VkSpecializationInfo[]> Pointer(this VkSpecializationInfo[] i) => new ManagedPtr<VkSpecializationInfo[]>(i);
+        public static ManagedPtrArray<VkSpecializationInfo> Pointer(this VkSpecializationInfo[] i) => new ManagedPtrArray<VkSpecializationInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineShaderStageCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
-			[FieldOffset(20)]public VkShaderStageFlagBits stage;
+			[FieldOffset(16)]public VkPipelineShaderStageCreateFlags flags;
+			[FieldOffset(20)]public VkShaderStageFlags stage;
 			[FieldOffset(24)]public IntPtr module;
 			[FieldOffset(32)]public string pName;
 			[FieldOffset(40)]public IntPtr pSpecializationInfo;
 		}
 
         public static ManagedPtr<VkPipelineShaderStageCreateInfo> Pointer(this VkPipelineShaderStageCreateInfo i) => new ManagedPtr<VkPipelineShaderStageCreateInfo>(i);
-        public static ManagedPtr<VkPipelineShaderStageCreateInfo[]> Pointer(this VkPipelineShaderStageCreateInfo[] i) => new ManagedPtr<VkPipelineShaderStageCreateInfo[]>(i);
+        public static ManagedPtrArray<VkPipelineShaderStageCreateInfo> Pointer(this VkPipelineShaderStageCreateInfo[] i) => new ManagedPtrArray<VkPipelineShaderStageCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkVertexInputBindingDescription {
 			[FieldOffset(0)]public uint binding;
@@ -928,7 +941,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkVertexInputBindingDescription> Pointer(this VkVertexInputBindingDescription i) => new ManagedPtr<VkVertexInputBindingDescription>(i);
-        public static ManagedPtr<VkVertexInputBindingDescription[]> Pointer(this VkVertexInputBindingDescription[] i) => new ManagedPtr<VkVertexInputBindingDescription[]>(i);
+        public static ManagedPtrArray<VkVertexInputBindingDescription> Pointer(this VkVertexInputBindingDescription[] i) => new ManagedPtrArray<VkVertexInputBindingDescription>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkVertexInputAttributeDescription {
 			[FieldOffset(0)]public uint location;
@@ -938,7 +951,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkVertexInputAttributeDescription> Pointer(this VkVertexInputAttributeDescription i) => new ManagedPtr<VkVertexInputAttributeDescription>(i);
-        public static ManagedPtr<VkVertexInputAttributeDescription[]> Pointer(this VkVertexInputAttributeDescription[] i) => new ManagedPtr<VkVertexInputAttributeDescription[]>(i);
+        public static ManagedPtrArray<VkVertexInputAttributeDescription> Pointer(this VkVertexInputAttributeDescription[] i) => new ManagedPtrArray<VkVertexInputAttributeDescription>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineVertexInputStateCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -951,7 +964,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineVertexInputStateCreateInfo> Pointer(this VkPipelineVertexInputStateCreateInfo i) => new ManagedPtr<VkPipelineVertexInputStateCreateInfo>(i);
-        public static ManagedPtr<VkPipelineVertexInputStateCreateInfo[]> Pointer(this VkPipelineVertexInputStateCreateInfo[] i) => new ManagedPtr<VkPipelineVertexInputStateCreateInfo[]>(i);
+        public static ManagedPtrArray<VkPipelineVertexInputStateCreateInfo> Pointer(this VkPipelineVertexInputStateCreateInfo[] i) => new ManagedPtrArray<VkPipelineVertexInputStateCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineInputAssemblyStateCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -962,7 +975,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineInputAssemblyStateCreateInfo> Pointer(this VkPipelineInputAssemblyStateCreateInfo i) => new ManagedPtr<VkPipelineInputAssemblyStateCreateInfo>(i);
-        public static ManagedPtr<VkPipelineInputAssemblyStateCreateInfo[]> Pointer(this VkPipelineInputAssemblyStateCreateInfo[] i) => new ManagedPtr<VkPipelineInputAssemblyStateCreateInfo[]>(i);
+        public static ManagedPtrArray<VkPipelineInputAssemblyStateCreateInfo> Pointer(this VkPipelineInputAssemblyStateCreateInfo[] i) => new ManagedPtrArray<VkPipelineInputAssemblyStateCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineTessellationStateCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -972,7 +985,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineTessellationStateCreateInfo> Pointer(this VkPipelineTessellationStateCreateInfo i) => new ManagedPtr<VkPipelineTessellationStateCreateInfo>(i);
-        public static ManagedPtr<VkPipelineTessellationStateCreateInfo[]> Pointer(this VkPipelineTessellationStateCreateInfo[] i) => new ManagedPtr<VkPipelineTessellationStateCreateInfo[]>(i);
+        public static ManagedPtrArray<VkPipelineTessellationStateCreateInfo> Pointer(this VkPipelineTessellationStateCreateInfo[] i) => new ManagedPtrArray<VkPipelineTessellationStateCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkViewport {
 			[FieldOffset(0)]public float x;
@@ -984,7 +997,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkViewport> Pointer(this VkViewport i) => new ManagedPtr<VkViewport>(i);
-        public static ManagedPtr<VkViewport[]> Pointer(this VkViewport[] i) => new ManagedPtr<VkViewport[]>(i);
+        public static ManagedPtrArray<VkViewport> Pointer(this VkViewport[] i) => new ManagedPtrArray<VkViewport>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkOffset2D {
 			[FieldOffset(0)]public int x;
@@ -992,7 +1005,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkOffset2D> Pointer(this VkOffset2D i) => new ManagedPtr<VkOffset2D>(i);
-        public static ManagedPtr<VkOffset2D[]> Pointer(this VkOffset2D[] i) => new ManagedPtr<VkOffset2D[]>(i);
+        public static ManagedPtrArray<VkOffset2D> Pointer(this VkOffset2D[] i) => new ManagedPtrArray<VkOffset2D>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkExtent2D {
 			[FieldOffset(0)]public uint width;
@@ -1000,7 +1013,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkExtent2D> Pointer(this VkExtent2D i) => new ManagedPtr<VkExtent2D>(i);
-        public static ManagedPtr<VkExtent2D[]> Pointer(this VkExtent2D[] i) => new ManagedPtr<VkExtent2D[]>(i);
+        public static ManagedPtrArray<VkExtent2D> Pointer(this VkExtent2D[] i) => new ManagedPtrArray<VkExtent2D>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkRect2D {
 			[FieldOffset(0)]public VkOffset2D offset;
@@ -1008,7 +1021,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkRect2D> Pointer(this VkRect2D i) => new ManagedPtr<VkRect2D>(i);
-        public static ManagedPtr<VkRect2D[]> Pointer(this VkRect2D[] i) => new ManagedPtr<VkRect2D[]>(i);
+        public static ManagedPtrArray<VkRect2D> Pointer(this VkRect2D[] i) => new ManagedPtrArray<VkRect2D>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineViewportStateCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1021,7 +1034,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineViewportStateCreateInfo> Pointer(this VkPipelineViewportStateCreateInfo i) => new ManagedPtr<VkPipelineViewportStateCreateInfo>(i);
-        public static ManagedPtr<VkPipelineViewportStateCreateInfo[]> Pointer(this VkPipelineViewportStateCreateInfo[] i) => new ManagedPtr<VkPipelineViewportStateCreateInfo[]>(i);
+        public static ManagedPtrArray<VkPipelineViewportStateCreateInfo> Pointer(this VkPipelineViewportStateCreateInfo[] i) => new ManagedPtrArray<VkPipelineViewportStateCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineRasterizationStateCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1030,7 +1043,7 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(20)]public bool depthClampEnable;
 			[FieldOffset(24)]public bool rasterizerDiscardEnable;
 			[FieldOffset(28)]public VkPolygonMode polygonMode;
-			[FieldOffset(32)]public uint cullMode;
+			[FieldOffset(32)]public VkCullModeFlags cullMode;
 			[FieldOffset(36)]public VkFrontFace frontFace;
 			[FieldOffset(40)]public bool depthBiasEnable;
 			[FieldOffset(44)]public float depthBiasConstantFactor;
@@ -1040,13 +1053,13 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineRasterizationStateCreateInfo> Pointer(this VkPipelineRasterizationStateCreateInfo i) => new ManagedPtr<VkPipelineRasterizationStateCreateInfo>(i);
-        public static ManagedPtr<VkPipelineRasterizationStateCreateInfo[]> Pointer(this VkPipelineRasterizationStateCreateInfo[] i) => new ManagedPtr<VkPipelineRasterizationStateCreateInfo[]>(i);
+        public static ManagedPtrArray<VkPipelineRasterizationStateCreateInfo> Pointer(this VkPipelineRasterizationStateCreateInfo[] i) => new ManagedPtrArray<VkPipelineRasterizationStateCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineMultisampleStateCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public uint flags;
-			[FieldOffset(20)]public VkSampleCountFlagBits rasterizationSamples;
+			[FieldOffset(20)]public VkSampleCountFlags rasterizationSamples;
 			[FieldOffset(24)]public bool sampleShadingEnable;
 			[FieldOffset(28)]public float minSampleShading;
 			[FieldOffset(32)]public uint* pSampleMask;
@@ -1055,7 +1068,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineMultisampleStateCreateInfo> Pointer(this VkPipelineMultisampleStateCreateInfo i) => new ManagedPtr<VkPipelineMultisampleStateCreateInfo>(i);
-        public static ManagedPtr<VkPipelineMultisampleStateCreateInfo[]> Pointer(this VkPipelineMultisampleStateCreateInfo[] i) => new ManagedPtr<VkPipelineMultisampleStateCreateInfo[]>(i);
+        public static ManagedPtrArray<VkPipelineMultisampleStateCreateInfo> Pointer(this VkPipelineMultisampleStateCreateInfo[] i) => new ManagedPtrArray<VkPipelineMultisampleStateCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkStencilOpState {
 			[FieldOffset(0)]public VkStencilOp failOp;
@@ -1068,7 +1081,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkStencilOpState> Pointer(this VkStencilOpState i) => new ManagedPtr<VkStencilOpState>(i);
-        public static ManagedPtr<VkStencilOpState[]> Pointer(this VkStencilOpState[] i) => new ManagedPtr<VkStencilOpState[]>(i);
+        public static ManagedPtrArray<VkStencilOpState> Pointer(this VkStencilOpState[] i) => new ManagedPtrArray<VkStencilOpState>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineDepthStencilStateCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1086,7 +1099,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineDepthStencilStateCreateInfo> Pointer(this VkPipelineDepthStencilStateCreateInfo i) => new ManagedPtr<VkPipelineDepthStencilStateCreateInfo>(i);
-        public static ManagedPtr<VkPipelineDepthStencilStateCreateInfo[]> Pointer(this VkPipelineDepthStencilStateCreateInfo[] i) => new ManagedPtr<VkPipelineDepthStencilStateCreateInfo[]>(i);
+        public static ManagedPtrArray<VkPipelineDepthStencilStateCreateInfo> Pointer(this VkPipelineDepthStencilStateCreateInfo[] i) => new ManagedPtrArray<VkPipelineDepthStencilStateCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineColorBlendAttachmentState {
 			[FieldOffset(0)]public bool blendEnable;
@@ -1096,11 +1109,11 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(16)]public VkBlendFactor srcAlphaBlendFactor;
 			[FieldOffset(20)]public VkBlendFactor dstAlphaBlendFactor;
 			[FieldOffset(24)]public VkBlendOp alphaBlendOp;
-			[FieldOffset(28)]public uint colorWriteMask;
+			[FieldOffset(28)]public VkColorComponentFlags colorWriteMask;
 		}
 
         public static ManagedPtr<VkPipelineColorBlendAttachmentState> Pointer(this VkPipelineColorBlendAttachmentState i) => new ManagedPtr<VkPipelineColorBlendAttachmentState>(i);
-        public static ManagedPtr<VkPipelineColorBlendAttachmentState[]> Pointer(this VkPipelineColorBlendAttachmentState[] i) => new ManagedPtr<VkPipelineColorBlendAttachmentState[]>(i);
+        public static ManagedPtrArray<VkPipelineColorBlendAttachmentState> Pointer(this VkPipelineColorBlendAttachmentState[] i) => new ManagedPtrArray<VkPipelineColorBlendAttachmentState>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineColorBlendStateCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1111,10 +1124,11 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(28)]public uint attachmentCount;
 			[FieldOffset(32)]public IntPtr pAttachments;
 			[FieldOffset(40)]public fixed float blendConstants[4];
+			public const int blendConstants_len = 4;
 		}
 
         public static ManagedPtr<VkPipelineColorBlendStateCreateInfo> Pointer(this VkPipelineColorBlendStateCreateInfo i) => new ManagedPtr<VkPipelineColorBlendStateCreateInfo>(i);
-        public static ManagedPtr<VkPipelineColorBlendStateCreateInfo[]> Pointer(this VkPipelineColorBlendStateCreateInfo[] i) => new ManagedPtr<VkPipelineColorBlendStateCreateInfo[]>(i);
+        public static ManagedPtrArray<VkPipelineColorBlendStateCreateInfo> Pointer(this VkPipelineColorBlendStateCreateInfo[] i) => new ManagedPtrArray<VkPipelineColorBlendStateCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineDynamicStateCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1125,12 +1139,12 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineDynamicStateCreateInfo> Pointer(this VkPipelineDynamicStateCreateInfo i) => new ManagedPtr<VkPipelineDynamicStateCreateInfo>(i);
-        public static ManagedPtr<VkPipelineDynamicStateCreateInfo[]> Pointer(this VkPipelineDynamicStateCreateInfo[] i) => new ManagedPtr<VkPipelineDynamicStateCreateInfo[]>(i);
+        public static ManagedPtrArray<VkPipelineDynamicStateCreateInfo> Pointer(this VkPipelineDynamicStateCreateInfo[] i) => new ManagedPtrArray<VkPipelineDynamicStateCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkGraphicsPipelineCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkPipelineCreateFlags flags;
 			[FieldOffset(20)]public uint stageCount;
 			[FieldOffset(24)]public IntPtr pStages;
 			[FieldOffset(32)]public IntPtr pVertexInputState;
@@ -1150,12 +1164,12 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkGraphicsPipelineCreateInfo> Pointer(this VkGraphicsPipelineCreateInfo i) => new ManagedPtr<VkGraphicsPipelineCreateInfo>(i);
-        public static ManagedPtr<VkGraphicsPipelineCreateInfo[]> Pointer(this VkGraphicsPipelineCreateInfo[] i) => new ManagedPtr<VkGraphicsPipelineCreateInfo[]>(i);
+        public static ManagedPtrArray<VkGraphicsPipelineCreateInfo> Pointer(this VkGraphicsPipelineCreateInfo[] i) => new ManagedPtrArray<VkGraphicsPipelineCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkComputePipelineCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkPipelineCreateFlags flags;
 			[FieldOffset(24)]public VkPipelineShaderStageCreateInfo stage;
 			[FieldOffset(72)]public IntPtr layout;
 			[FieldOffset(80)]public IntPtr basePipelineHandle;
@@ -1163,16 +1177,16 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkComputePipelineCreateInfo> Pointer(this VkComputePipelineCreateInfo i) => new ManagedPtr<VkComputePipelineCreateInfo>(i);
-        public static ManagedPtr<VkComputePipelineCreateInfo[]> Pointer(this VkComputePipelineCreateInfo[] i) => new ManagedPtr<VkComputePipelineCreateInfo[]>(i);
+        public static ManagedPtrArray<VkComputePipelineCreateInfo> Pointer(this VkComputePipelineCreateInfo[] i) => new ManagedPtrArray<VkComputePipelineCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPushConstantRange {
-			[FieldOffset(0)]public uint stageFlags;
+			[FieldOffset(0)]public VkShaderStageFlags stageFlags;
 			[FieldOffset(4)]public uint offset;
 			[FieldOffset(8)]public uint size;
 		}
 
         public static ManagedPtr<VkPushConstantRange> Pointer(this VkPushConstantRange i) => new ManagedPtr<VkPushConstantRange>(i);
-        public static ManagedPtr<VkPushConstantRange[]> Pointer(this VkPushConstantRange[] i) => new ManagedPtr<VkPushConstantRange[]>(i);
+        public static ManagedPtrArray<VkPushConstantRange> Pointer(this VkPushConstantRange[] i) => new ManagedPtrArray<VkPushConstantRange>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineLayoutCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1185,12 +1199,12 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineLayoutCreateInfo> Pointer(this VkPipelineLayoutCreateInfo i) => new ManagedPtr<VkPipelineLayoutCreateInfo>(i);
-        public static ManagedPtr<VkPipelineLayoutCreateInfo[]> Pointer(this VkPipelineLayoutCreateInfo[] i) => new ManagedPtr<VkPipelineLayoutCreateInfo[]>(i);
+        public static ManagedPtrArray<VkPipelineLayoutCreateInfo> Pointer(this VkPipelineLayoutCreateInfo[] i) => new ManagedPtrArray<VkPipelineLayoutCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSamplerCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkSamplerCreateFlags flags;
 			[FieldOffset(20)]public VkFilter magFilter;
 			[FieldOffset(24)]public VkFilter minFilter;
 			[FieldOffset(28)]public VkSamplerMipmapMode mipmapMode;
@@ -1209,29 +1223,29 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSamplerCreateInfo> Pointer(this VkSamplerCreateInfo i) => new ManagedPtr<VkSamplerCreateInfo>(i);
-        public static ManagedPtr<VkSamplerCreateInfo[]> Pointer(this VkSamplerCreateInfo[] i) => new ManagedPtr<VkSamplerCreateInfo[]>(i);
+        public static ManagedPtrArray<VkSamplerCreateInfo> Pointer(this VkSamplerCreateInfo[] i) => new ManagedPtrArray<VkSamplerCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDescriptorSetLayoutBinding {
 			[FieldOffset(0)]public uint binding;
 			[FieldOffset(4)]public VkDescriptorType descriptorType;
 			[FieldOffset(8)]public uint descriptorCount;
-			[FieldOffset(12)]public uint stageFlags;
+			[FieldOffset(12)]public VkShaderStageFlags stageFlags;
 			[FieldOffset(16)]public IntPtr* pImmutableSamplers;
 		}
 
         public static ManagedPtr<VkDescriptorSetLayoutBinding> Pointer(this VkDescriptorSetLayoutBinding i) => new ManagedPtr<VkDescriptorSetLayoutBinding>(i);
-        public static ManagedPtr<VkDescriptorSetLayoutBinding[]> Pointer(this VkDescriptorSetLayoutBinding[] i) => new ManagedPtr<VkDescriptorSetLayoutBinding[]>(i);
+        public static ManagedPtrArray<VkDescriptorSetLayoutBinding> Pointer(this VkDescriptorSetLayoutBinding[] i) => new ManagedPtrArray<VkDescriptorSetLayoutBinding>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDescriptorSetLayoutCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkDescriptorSetLayoutCreateFlags flags;
 			[FieldOffset(20)]public uint bindingCount;
 			[FieldOffset(24)]public IntPtr pBindings;
 		}
 
         public static ManagedPtr<VkDescriptorSetLayoutCreateInfo> Pointer(this VkDescriptorSetLayoutCreateInfo i) => new ManagedPtr<VkDescriptorSetLayoutCreateInfo>(i);
-        public static ManagedPtr<VkDescriptorSetLayoutCreateInfo[]> Pointer(this VkDescriptorSetLayoutCreateInfo[] i) => new ManagedPtr<VkDescriptorSetLayoutCreateInfo[]>(i);
+        public static ManagedPtrArray<VkDescriptorSetLayoutCreateInfo> Pointer(this VkDescriptorSetLayoutCreateInfo[] i) => new ManagedPtrArray<VkDescriptorSetLayoutCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDescriptorPoolSize {
 			[FieldOffset(0)]public VkDescriptorType type;
@@ -1239,19 +1253,19 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDescriptorPoolSize> Pointer(this VkDescriptorPoolSize i) => new ManagedPtr<VkDescriptorPoolSize>(i);
-        public static ManagedPtr<VkDescriptorPoolSize[]> Pointer(this VkDescriptorPoolSize[] i) => new ManagedPtr<VkDescriptorPoolSize[]>(i);
+        public static ManagedPtrArray<VkDescriptorPoolSize> Pointer(this VkDescriptorPoolSize[] i) => new ManagedPtrArray<VkDescriptorPoolSize>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDescriptorPoolCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkDescriptorPoolCreateFlags flags;
 			[FieldOffset(20)]public uint maxSets;
 			[FieldOffset(24)]public uint poolSizeCount;
 			[FieldOffset(32)]public IntPtr pPoolSizes;
 		}
 
         public static ManagedPtr<VkDescriptorPoolCreateInfo> Pointer(this VkDescriptorPoolCreateInfo i) => new ManagedPtr<VkDescriptorPoolCreateInfo>(i);
-        public static ManagedPtr<VkDescriptorPoolCreateInfo[]> Pointer(this VkDescriptorPoolCreateInfo[] i) => new ManagedPtr<VkDescriptorPoolCreateInfo[]>(i);
+        public static ManagedPtrArray<VkDescriptorPoolCreateInfo> Pointer(this VkDescriptorPoolCreateInfo[] i) => new ManagedPtrArray<VkDescriptorPoolCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDescriptorSetAllocateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1262,7 +1276,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDescriptorSetAllocateInfo> Pointer(this VkDescriptorSetAllocateInfo i) => new ManagedPtr<VkDescriptorSetAllocateInfo>(i);
-        public static ManagedPtr<VkDescriptorSetAllocateInfo[]> Pointer(this VkDescriptorSetAllocateInfo[] i) => new ManagedPtr<VkDescriptorSetAllocateInfo[]>(i);
+        public static ManagedPtrArray<VkDescriptorSetAllocateInfo> Pointer(this VkDescriptorSetAllocateInfo[] i) => new ManagedPtrArray<VkDescriptorSetAllocateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDescriptorImageInfo {
 			[FieldOffset(0)]public IntPtr sampler;
@@ -1271,7 +1285,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDescriptorImageInfo> Pointer(this VkDescriptorImageInfo i) => new ManagedPtr<VkDescriptorImageInfo>(i);
-        public static ManagedPtr<VkDescriptorImageInfo[]> Pointer(this VkDescriptorImageInfo[] i) => new ManagedPtr<VkDescriptorImageInfo[]>(i);
+        public static ManagedPtrArray<VkDescriptorImageInfo> Pointer(this VkDescriptorImageInfo[] i) => new ManagedPtrArray<VkDescriptorImageInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDescriptorBufferInfo {
 			[FieldOffset(0)]public IntPtr buffer;
@@ -1280,7 +1294,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDescriptorBufferInfo> Pointer(this VkDescriptorBufferInfo i) => new ManagedPtr<VkDescriptorBufferInfo>(i);
-        public static ManagedPtr<VkDescriptorBufferInfo[]> Pointer(this VkDescriptorBufferInfo[] i) => new ManagedPtr<VkDescriptorBufferInfo[]>(i);
+        public static ManagedPtrArray<VkDescriptorBufferInfo> Pointer(this VkDescriptorBufferInfo[] i) => new ManagedPtrArray<VkDescriptorBufferInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkWriteDescriptorSet {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1296,7 +1310,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkWriteDescriptorSet> Pointer(this VkWriteDescriptorSet i) => new ManagedPtr<VkWriteDescriptorSet>(i);
-        public static ManagedPtr<VkWriteDescriptorSet[]> Pointer(this VkWriteDescriptorSet[] i) => new ManagedPtr<VkWriteDescriptorSet[]>(i);
+        public static ManagedPtrArray<VkWriteDescriptorSet> Pointer(this VkWriteDescriptorSet[] i) => new ManagedPtrArray<VkWriteDescriptorSet>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkCopyDescriptorSet {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1311,12 +1325,12 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkCopyDescriptorSet> Pointer(this VkCopyDescriptorSet i) => new ManagedPtr<VkCopyDescriptorSet>(i);
-        public static ManagedPtr<VkCopyDescriptorSet[]> Pointer(this VkCopyDescriptorSet[] i) => new ManagedPtr<VkCopyDescriptorSet[]>(i);
+        public static ManagedPtrArray<VkCopyDescriptorSet> Pointer(this VkCopyDescriptorSet[] i) => new ManagedPtrArray<VkCopyDescriptorSet>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkFramebufferCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkFramebufferCreateFlags flags;
 			[FieldOffset(24)]public IntPtr renderPass;
 			[FieldOffset(32)]public uint attachmentCount;
 			[FieldOffset(40)]public IntPtr* pAttachments;
@@ -1326,12 +1340,12 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkFramebufferCreateInfo> Pointer(this VkFramebufferCreateInfo i) => new ManagedPtr<VkFramebufferCreateInfo>(i);
-        public static ManagedPtr<VkFramebufferCreateInfo[]> Pointer(this VkFramebufferCreateInfo[] i) => new ManagedPtr<VkFramebufferCreateInfo[]>(i);
+        public static ManagedPtrArray<VkFramebufferCreateInfo> Pointer(this VkFramebufferCreateInfo[] i) => new ManagedPtrArray<VkFramebufferCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkAttachmentDescription {
-			[FieldOffset(0)]public uint flags;
+			[FieldOffset(0)]public VkAttachmentDescriptionFlags flags;
 			[FieldOffset(4)]public VkFormat format;
-			[FieldOffset(8)]public VkSampleCountFlagBits samples;
+			[FieldOffset(8)]public VkSampleCountFlags samples;
 			[FieldOffset(12)]public VkAttachmentLoadOp loadOp;
 			[FieldOffset(16)]public VkAttachmentStoreOp storeOp;
 			[FieldOffset(20)]public VkAttachmentLoadOp stencilLoadOp;
@@ -1341,7 +1355,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkAttachmentDescription> Pointer(this VkAttachmentDescription i) => new ManagedPtr<VkAttachmentDescription>(i);
-        public static ManagedPtr<VkAttachmentDescription[]> Pointer(this VkAttachmentDescription[] i) => new ManagedPtr<VkAttachmentDescription[]>(i);
+        public static ManagedPtrArray<VkAttachmentDescription> Pointer(this VkAttachmentDescription[] i) => new ManagedPtrArray<VkAttachmentDescription>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkAttachmentReference {
 			[FieldOffset(0)]public uint attachment;
@@ -1349,10 +1363,10 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkAttachmentReference> Pointer(this VkAttachmentReference i) => new ManagedPtr<VkAttachmentReference>(i);
-        public static ManagedPtr<VkAttachmentReference[]> Pointer(this VkAttachmentReference[] i) => new ManagedPtr<VkAttachmentReference[]>(i);
+        public static ManagedPtrArray<VkAttachmentReference> Pointer(this VkAttachmentReference[] i) => new ManagedPtrArray<VkAttachmentReference>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSubpassDescription {
-			[FieldOffset(0)]public uint flags;
+			[FieldOffset(0)]public VkSubpassDescriptionFlags flags;
 			[FieldOffset(4)]public VkPipelineBindPoint pipelineBindPoint;
 			[FieldOffset(8)]public uint inputAttachmentCount;
 			[FieldOffset(16)]public IntPtr pInputAttachments;
@@ -1365,25 +1379,25 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSubpassDescription> Pointer(this VkSubpassDescription i) => new ManagedPtr<VkSubpassDescription>(i);
-        public static ManagedPtr<VkSubpassDescription[]> Pointer(this VkSubpassDescription[] i) => new ManagedPtr<VkSubpassDescription[]>(i);
+        public static ManagedPtrArray<VkSubpassDescription> Pointer(this VkSubpassDescription[] i) => new ManagedPtrArray<VkSubpassDescription>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSubpassDependency {
 			[FieldOffset(0)]public uint srcSubpass;
 			[FieldOffset(4)]public uint dstSubpass;
-			[FieldOffset(8)]public uint srcStageMask;
-			[FieldOffset(12)]public uint dstStageMask;
-			[FieldOffset(16)]public uint srcAccessMask;
-			[FieldOffset(20)]public uint dstAccessMask;
-			[FieldOffset(24)]public uint dependencyFlags;
+			[FieldOffset(8)]public VkPipelineStageFlags srcStageMask;
+			[FieldOffset(12)]public VkPipelineStageFlags dstStageMask;
+			[FieldOffset(16)]public VkAccessFlags srcAccessMask;
+			[FieldOffset(20)]public VkAccessFlags dstAccessMask;
+			[FieldOffset(24)]public VkDependencyFlags dependencyFlags;
 		}
 
         public static ManagedPtr<VkSubpassDependency> Pointer(this VkSubpassDependency i) => new ManagedPtr<VkSubpassDependency>(i);
-        public static ManagedPtr<VkSubpassDependency[]> Pointer(this VkSubpassDependency[] i) => new ManagedPtr<VkSubpassDependency[]>(i);
+        public static ManagedPtrArray<VkSubpassDependency> Pointer(this VkSubpassDependency[] i) => new ManagedPtrArray<VkSubpassDependency>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkRenderPassCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkRenderPassCreateFlags flags;
 			[FieldOffset(20)]public uint attachmentCount;
 			[FieldOffset(24)]public IntPtr pAttachments;
 			[FieldOffset(32)]public uint subpassCount;
@@ -1393,17 +1407,17 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkRenderPassCreateInfo> Pointer(this VkRenderPassCreateInfo i) => new ManagedPtr<VkRenderPassCreateInfo>(i);
-        public static ManagedPtr<VkRenderPassCreateInfo[]> Pointer(this VkRenderPassCreateInfo[] i) => new ManagedPtr<VkRenderPassCreateInfo[]>(i);
+        public static ManagedPtrArray<VkRenderPassCreateInfo> Pointer(this VkRenderPassCreateInfo[] i) => new ManagedPtrArray<VkRenderPassCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkCommandPoolCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkCommandPoolCreateFlags flags;
 			[FieldOffset(20)]public uint queueFamilyIndex;
 		}
 
         public static ManagedPtr<VkCommandPoolCreateInfo> Pointer(this VkCommandPoolCreateInfo i) => new ManagedPtr<VkCommandPoolCreateInfo>(i);
-        public static ManagedPtr<VkCommandPoolCreateInfo[]> Pointer(this VkCommandPoolCreateInfo[] i) => new ManagedPtr<VkCommandPoolCreateInfo[]>(i);
+        public static ManagedPtrArray<VkCommandPoolCreateInfo> Pointer(this VkCommandPoolCreateInfo[] i) => new ManagedPtrArray<VkCommandPoolCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkCommandBufferAllocateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1414,7 +1428,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkCommandBufferAllocateInfo> Pointer(this VkCommandBufferAllocateInfo i) => new ManagedPtr<VkCommandBufferAllocateInfo>(i);
-        public static ManagedPtr<VkCommandBufferAllocateInfo[]> Pointer(this VkCommandBufferAllocateInfo[] i) => new ManagedPtr<VkCommandBufferAllocateInfo[]>(i);
+        public static ManagedPtrArray<VkCommandBufferAllocateInfo> Pointer(this VkCommandBufferAllocateInfo[] i) => new ManagedPtrArray<VkCommandBufferAllocateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkCommandBufferInheritanceInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1423,22 +1437,22 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(24)]public uint subpass;
 			[FieldOffset(32)]public IntPtr framebuffer;
 			[FieldOffset(40)]public bool occlusionQueryEnable;
-			[FieldOffset(44)]public uint queryFlags;
-			[FieldOffset(48)]public uint pipelineStatistics;
+			[FieldOffset(44)]public VkQueryControlFlags queryFlags;
+			[FieldOffset(48)]public VkQueryPipelineStatisticFlags pipelineStatistics;
 		}
 
         public static ManagedPtr<VkCommandBufferInheritanceInfo> Pointer(this VkCommandBufferInheritanceInfo i) => new ManagedPtr<VkCommandBufferInheritanceInfo>(i);
-        public static ManagedPtr<VkCommandBufferInheritanceInfo[]> Pointer(this VkCommandBufferInheritanceInfo[] i) => new ManagedPtr<VkCommandBufferInheritanceInfo[]>(i);
+        public static ManagedPtrArray<VkCommandBufferInheritanceInfo> Pointer(this VkCommandBufferInheritanceInfo[] i) => new ManagedPtrArray<VkCommandBufferInheritanceInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkCommandBufferBeginInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkCommandBufferUsageFlags flags;
 			[FieldOffset(24)]public IntPtr pInheritanceInfo;
 		}
 
         public static ManagedPtr<VkCommandBufferBeginInfo> Pointer(this VkCommandBufferBeginInfo i) => new ManagedPtr<VkCommandBufferBeginInfo>(i);
-        public static ManagedPtr<VkCommandBufferBeginInfo[]> Pointer(this VkCommandBufferBeginInfo[] i) => new ManagedPtr<VkCommandBufferBeginInfo[]>(i);
+        public static ManagedPtrArray<VkCommandBufferBeginInfo> Pointer(this VkCommandBufferBeginInfo[] i) => new ManagedPtrArray<VkCommandBufferBeginInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkBufferCopy {
 			[FieldOffset(0)]public ulong srcOffset;
@@ -1447,17 +1461,17 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkBufferCopy> Pointer(this VkBufferCopy i) => new ManagedPtr<VkBufferCopy>(i);
-        public static ManagedPtr<VkBufferCopy[]> Pointer(this VkBufferCopy[] i) => new ManagedPtr<VkBufferCopy[]>(i);
+        public static ManagedPtrArray<VkBufferCopy> Pointer(this VkBufferCopy[] i) => new ManagedPtrArray<VkBufferCopy>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImageSubresourceLayers {
-			[FieldOffset(0)]public uint aspectMask;
+			[FieldOffset(0)]public VkImageAspectFlags aspectMask;
 			[FieldOffset(4)]public uint mipLevel;
 			[FieldOffset(8)]public uint baseArrayLayer;
 			[FieldOffset(12)]public uint layerCount;
 		}
 
         public static ManagedPtr<VkImageSubresourceLayers> Pointer(this VkImageSubresourceLayers i) => new ManagedPtr<VkImageSubresourceLayers>(i);
-        public static ManagedPtr<VkImageSubresourceLayers[]> Pointer(this VkImageSubresourceLayers[] i) => new ManagedPtr<VkImageSubresourceLayers[]>(i);
+        public static ManagedPtrArray<VkImageSubresourceLayers> Pointer(this VkImageSubresourceLayers[] i) => new ManagedPtrArray<VkImageSubresourceLayers>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImageCopy {
 			[FieldOffset(0)]public VkImageSubresourceLayers srcSubresource;
@@ -1468,17 +1482,19 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkImageCopy> Pointer(this VkImageCopy i) => new ManagedPtr<VkImageCopy>(i);
-        public static ManagedPtr<VkImageCopy[]> Pointer(this VkImageCopy[] i) => new ManagedPtr<VkImageCopy[]>(i);
+        public static ManagedPtrArray<VkImageCopy> Pointer(this VkImageCopy[] i) => new ManagedPtrArray<VkImageCopy>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImageBlit {
 			[FieldOffset(0)]public VkImageSubresourceLayers srcSubresource;
 			[FieldOffset(16)][MarshalAs(UnmanagedType.ByValArray, SizeConst=2)] public VkOffset3D[] srcOffsets;
+			public const int srcOffsets_len = 2;
 			[FieldOffset(40)]public VkImageSubresourceLayers dstSubresource;
 			[FieldOffset(56)][MarshalAs(UnmanagedType.ByValArray, SizeConst=2)] public VkOffset3D[] dstOffsets;
+			public const int dstOffsets_len = 2;
 		}
 
         public static ManagedPtr<VkImageBlit> Pointer(this VkImageBlit i) => new ManagedPtr<VkImageBlit>(i);
-        public static ManagedPtr<VkImageBlit[]> Pointer(this VkImageBlit[] i) => new ManagedPtr<VkImageBlit[]>(i);
+        public static ManagedPtrArray<VkImageBlit> Pointer(this VkImageBlit[] i) => new ManagedPtrArray<VkImageBlit>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkBufferImageCopy {
 			[FieldOffset(0)]public ulong bufferOffset;
@@ -1490,7 +1506,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkBufferImageCopy> Pointer(this VkBufferImageCopy i) => new ManagedPtr<VkBufferImageCopy>(i);
-        public static ManagedPtr<VkBufferImageCopy[]> Pointer(this VkBufferImageCopy[] i) => new ManagedPtr<VkBufferImageCopy[]>(i);
+        public static ManagedPtrArray<VkBufferImageCopy> Pointer(this VkBufferImageCopy[] i) => new ManagedPtrArray<VkBufferImageCopy>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkClearDepthStencilValue {
 			[FieldOffset(0)]public float depth;
@@ -1498,16 +1514,16 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkClearDepthStencilValue> Pointer(this VkClearDepthStencilValue i) => new ManagedPtr<VkClearDepthStencilValue>(i);
-        public static ManagedPtr<VkClearDepthStencilValue[]> Pointer(this VkClearDepthStencilValue[] i) => new ManagedPtr<VkClearDepthStencilValue[]>(i);
+        public static ManagedPtrArray<VkClearDepthStencilValue> Pointer(this VkClearDepthStencilValue[] i) => new ManagedPtrArray<VkClearDepthStencilValue>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkClearAttachment {
-			[FieldOffset(0)]public uint aspectMask;
+			[FieldOffset(0)]public VkImageAspectFlags aspectMask;
 			[FieldOffset(4)]public uint colorAttachment;
 			[FieldOffset(8)]public VkClearValue clearValue;
 		}
 
         public static ManagedPtr<VkClearAttachment> Pointer(this VkClearAttachment i) => new ManagedPtr<VkClearAttachment>(i);
-        public static ManagedPtr<VkClearAttachment[]> Pointer(this VkClearAttachment[] i) => new ManagedPtr<VkClearAttachment[]>(i);
+        public static ManagedPtrArray<VkClearAttachment> Pointer(this VkClearAttachment[] i) => new ManagedPtrArray<VkClearAttachment>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkClearRect {
 			[FieldOffset(0)]public VkRect2D rect;
@@ -1516,7 +1532,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkClearRect> Pointer(this VkClearRect i) => new ManagedPtr<VkClearRect>(i);
-        public static ManagedPtr<VkClearRect[]> Pointer(this VkClearRect[] i) => new ManagedPtr<VkClearRect[]>(i);
+        public static ManagedPtrArray<VkClearRect> Pointer(this VkClearRect[] i) => new ManagedPtrArray<VkClearRect>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImageResolve {
 			[FieldOffset(0)]public VkImageSubresourceLayers srcSubresource;
@@ -1527,23 +1543,23 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkImageResolve> Pointer(this VkImageResolve i) => new ManagedPtr<VkImageResolve>(i);
-        public static ManagedPtr<VkImageResolve[]> Pointer(this VkImageResolve[] i) => new ManagedPtr<VkImageResolve[]>(i);
+        public static ManagedPtrArray<VkImageResolve> Pointer(this VkImageResolve[] i) => new ManagedPtrArray<VkImageResolve>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkMemoryBarrier {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint srcAccessMask;
-			[FieldOffset(20)]public uint dstAccessMask;
+			[FieldOffset(16)]public VkAccessFlags srcAccessMask;
+			[FieldOffset(20)]public VkAccessFlags dstAccessMask;
 		}
 
         public static ManagedPtr<VkMemoryBarrier> Pointer(this VkMemoryBarrier i) => new ManagedPtr<VkMemoryBarrier>(i);
-        public static ManagedPtr<VkMemoryBarrier[]> Pointer(this VkMemoryBarrier[] i) => new ManagedPtr<VkMemoryBarrier[]>(i);
+        public static ManagedPtrArray<VkMemoryBarrier> Pointer(this VkMemoryBarrier[] i) => new ManagedPtrArray<VkMemoryBarrier>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkBufferMemoryBarrier {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint srcAccessMask;
-			[FieldOffset(20)]public uint dstAccessMask;
+			[FieldOffset(16)]public VkAccessFlags srcAccessMask;
+			[FieldOffset(20)]public VkAccessFlags dstAccessMask;
 			[FieldOffset(24)]public uint srcQueueFamilyIndex;
 			[FieldOffset(28)]public uint dstQueueFamilyIndex;
 			[FieldOffset(32)]public IntPtr buffer;
@@ -1552,13 +1568,13 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkBufferMemoryBarrier> Pointer(this VkBufferMemoryBarrier i) => new ManagedPtr<VkBufferMemoryBarrier>(i);
-        public static ManagedPtr<VkBufferMemoryBarrier[]> Pointer(this VkBufferMemoryBarrier[] i) => new ManagedPtr<VkBufferMemoryBarrier[]>(i);
+        public static ManagedPtrArray<VkBufferMemoryBarrier> Pointer(this VkBufferMemoryBarrier[] i) => new ManagedPtrArray<VkBufferMemoryBarrier>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImageMemoryBarrier {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint srcAccessMask;
-			[FieldOffset(20)]public uint dstAccessMask;
+			[FieldOffset(16)]public VkAccessFlags srcAccessMask;
+			[FieldOffset(20)]public VkAccessFlags dstAccessMask;
 			[FieldOffset(24)]public VkImageLayout oldLayout;
 			[FieldOffset(28)]public VkImageLayout newLayout;
 			[FieldOffset(32)]public uint srcQueueFamilyIndex;
@@ -1568,7 +1584,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkImageMemoryBarrier> Pointer(this VkImageMemoryBarrier i) => new ManagedPtr<VkImageMemoryBarrier>(i);
-        public static ManagedPtr<VkImageMemoryBarrier[]> Pointer(this VkImageMemoryBarrier[] i) => new ManagedPtr<VkImageMemoryBarrier[]>(i);
+        public static ManagedPtrArray<VkImageMemoryBarrier> Pointer(this VkImageMemoryBarrier[] i) => new ManagedPtrArray<VkImageMemoryBarrier>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkRenderPassBeginInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1581,7 +1597,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkRenderPassBeginInfo> Pointer(this VkRenderPassBeginInfo i) => new ManagedPtr<VkRenderPassBeginInfo>(i);
-        public static ManagedPtr<VkRenderPassBeginInfo[]> Pointer(this VkRenderPassBeginInfo[] i) => new ManagedPtr<VkRenderPassBeginInfo[]>(i);
+        public static ManagedPtrArray<VkRenderPassBeginInfo> Pointer(this VkRenderPassBeginInfo[] i) => new ManagedPtrArray<VkRenderPassBeginInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDispatchIndirectCommand {
 			[FieldOffset(0)]public uint x;
@@ -1590,7 +1606,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDispatchIndirectCommand> Pointer(this VkDispatchIndirectCommand i) => new ManagedPtr<VkDispatchIndirectCommand>(i);
-        public static ManagedPtr<VkDispatchIndirectCommand[]> Pointer(this VkDispatchIndirectCommand[] i) => new ManagedPtr<VkDispatchIndirectCommand[]>(i);
+        public static ManagedPtrArray<VkDispatchIndirectCommand> Pointer(this VkDispatchIndirectCommand[] i) => new ManagedPtrArray<VkDispatchIndirectCommand>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDrawIndexedIndirectCommand {
 			[FieldOffset(0)]public uint indexCount;
@@ -1601,7 +1617,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDrawIndexedIndirectCommand> Pointer(this VkDrawIndexedIndirectCommand i) => new ManagedPtr<VkDrawIndexedIndirectCommand>(i);
-        public static ManagedPtr<VkDrawIndexedIndirectCommand[]> Pointer(this VkDrawIndexedIndirectCommand[] i) => new ManagedPtr<VkDrawIndexedIndirectCommand[]>(i);
+        public static ManagedPtrArray<VkDrawIndexedIndirectCommand> Pointer(this VkDrawIndexedIndirectCommand[] i) => new ManagedPtrArray<VkDrawIndexedIndirectCommand>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDrawIndirectCommand {
 			[FieldOffset(0)]public uint vertexCount;
@@ -1611,7 +1627,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDrawIndirectCommand> Pointer(this VkDrawIndirectCommand i) => new ManagedPtr<VkDrawIndirectCommand>(i);
-        public static ManagedPtr<VkDrawIndirectCommand[]> Pointer(this VkDrawIndirectCommand[] i) => new ManagedPtr<VkDrawIndirectCommand[]>(i);
+        public static ManagedPtrArray<VkDrawIndirectCommand> Pointer(this VkDrawIndirectCommand[] i) => new ManagedPtrArray<VkDrawIndirectCommand>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkBaseOutStructure {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1619,7 +1635,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkBaseOutStructure> Pointer(this VkBaseOutStructure i) => new ManagedPtr<VkBaseOutStructure>(i);
-        public static ManagedPtr<VkBaseOutStructure[]> Pointer(this VkBaseOutStructure[] i) => new ManagedPtr<VkBaseOutStructure[]>(i);
+        public static ManagedPtrArray<VkBaseOutStructure> Pointer(this VkBaseOutStructure[] i) => new ManagedPtrArray<VkBaseOutStructure>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkBaseInStructure {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1627,19 +1643,19 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkBaseInStructure> Pointer(this VkBaseInStructure i) => new ManagedPtr<VkBaseInStructure>(i);
-        public static ManagedPtr<VkBaseInStructure[]> Pointer(this VkBaseInStructure[] i) => new ManagedPtr<VkBaseInStructure[]>(i);
+        public static ManagedPtrArray<VkBaseInStructure> Pointer(this VkBaseInStructure[] i) => new ManagedPtrArray<VkBaseInStructure>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceSubgroupProperties {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public uint subgroupSize;
-			[FieldOffset(20)]public uint supportedStages;
-			[FieldOffset(24)]public uint supportedOperations;
+			[FieldOffset(20)]public VkShaderStageFlags supportedStages;
+			[FieldOffset(24)]public VkSubgroupFeatureFlags supportedOperations;
 			[FieldOffset(28)]public bool quadOperationsInAllStages;
 		}
 
         public static ManagedPtr<VkPhysicalDeviceSubgroupProperties> Pointer(this VkPhysicalDeviceSubgroupProperties i) => new ManagedPtr<VkPhysicalDeviceSubgroupProperties>(i);
-        public static ManagedPtr<VkPhysicalDeviceSubgroupProperties[]> Pointer(this VkPhysicalDeviceSubgroupProperties[] i) => new ManagedPtr<VkPhysicalDeviceSubgroupProperties[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceSubgroupProperties> Pointer(this VkPhysicalDeviceSubgroupProperties[] i) => new ManagedPtrArray<VkPhysicalDeviceSubgroupProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkBindBufferMemoryInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1650,7 +1666,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkBindBufferMemoryInfo> Pointer(this VkBindBufferMemoryInfo i) => new ManagedPtr<VkBindBufferMemoryInfo>(i);
-        public static ManagedPtr<VkBindBufferMemoryInfo[]> Pointer(this VkBindBufferMemoryInfo[] i) => new ManagedPtr<VkBindBufferMemoryInfo[]>(i);
+        public static ManagedPtrArray<VkBindBufferMemoryInfo> Pointer(this VkBindBufferMemoryInfo[] i) => new ManagedPtrArray<VkBindBufferMemoryInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkBindImageMemoryInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1661,7 +1677,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkBindImageMemoryInfo> Pointer(this VkBindImageMemoryInfo i) => new ManagedPtr<VkBindImageMemoryInfo>(i);
-        public static ManagedPtr<VkBindImageMemoryInfo[]> Pointer(this VkBindImageMemoryInfo[] i) => new ManagedPtr<VkBindImageMemoryInfo[]>(i);
+        public static ManagedPtrArray<VkBindImageMemoryInfo> Pointer(this VkBindImageMemoryInfo[] i) => new ManagedPtrArray<VkBindImageMemoryInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDevice16BitStorageFeatures {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1673,7 +1689,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDevice16BitStorageFeatures> Pointer(this VkPhysicalDevice16BitStorageFeatures i) => new ManagedPtr<VkPhysicalDevice16BitStorageFeatures>(i);
-        public static ManagedPtr<VkPhysicalDevice16BitStorageFeatures[]> Pointer(this VkPhysicalDevice16BitStorageFeatures[] i) => new ManagedPtr<VkPhysicalDevice16BitStorageFeatures[]>(i);
+        public static ManagedPtrArray<VkPhysicalDevice16BitStorageFeatures> Pointer(this VkPhysicalDevice16BitStorageFeatures[] i) => new ManagedPtrArray<VkPhysicalDevice16BitStorageFeatures>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkMemoryDedicatedRequirements {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1683,7 +1699,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkMemoryDedicatedRequirements> Pointer(this VkMemoryDedicatedRequirements i) => new ManagedPtr<VkMemoryDedicatedRequirements>(i);
-        public static ManagedPtr<VkMemoryDedicatedRequirements[]> Pointer(this VkMemoryDedicatedRequirements[] i) => new ManagedPtr<VkMemoryDedicatedRequirements[]>(i);
+        public static ManagedPtrArray<VkMemoryDedicatedRequirements> Pointer(this VkMemoryDedicatedRequirements[] i) => new ManagedPtrArray<VkMemoryDedicatedRequirements>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkMemoryDedicatedAllocateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1693,17 +1709,17 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkMemoryDedicatedAllocateInfo> Pointer(this VkMemoryDedicatedAllocateInfo i) => new ManagedPtr<VkMemoryDedicatedAllocateInfo>(i);
-        public static ManagedPtr<VkMemoryDedicatedAllocateInfo[]> Pointer(this VkMemoryDedicatedAllocateInfo[] i) => new ManagedPtr<VkMemoryDedicatedAllocateInfo[]>(i);
+        public static ManagedPtrArray<VkMemoryDedicatedAllocateInfo> Pointer(this VkMemoryDedicatedAllocateInfo[] i) => new ManagedPtrArray<VkMemoryDedicatedAllocateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkMemoryAllocateFlagsInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkMemoryAllocateFlags flags;
 			[FieldOffset(20)]public uint deviceMask;
 		}
 
         public static ManagedPtr<VkMemoryAllocateFlagsInfo> Pointer(this VkMemoryAllocateFlagsInfo i) => new ManagedPtr<VkMemoryAllocateFlagsInfo>(i);
-        public static ManagedPtr<VkMemoryAllocateFlagsInfo[]> Pointer(this VkMemoryAllocateFlagsInfo[] i) => new ManagedPtr<VkMemoryAllocateFlagsInfo[]>(i);
+        public static ManagedPtrArray<VkMemoryAllocateFlagsInfo> Pointer(this VkMemoryAllocateFlagsInfo[] i) => new ManagedPtrArray<VkMemoryAllocateFlagsInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDeviceGroupRenderPassBeginInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1714,7 +1730,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDeviceGroupRenderPassBeginInfo> Pointer(this VkDeviceGroupRenderPassBeginInfo i) => new ManagedPtr<VkDeviceGroupRenderPassBeginInfo>(i);
-        public static ManagedPtr<VkDeviceGroupRenderPassBeginInfo[]> Pointer(this VkDeviceGroupRenderPassBeginInfo[] i) => new ManagedPtr<VkDeviceGroupRenderPassBeginInfo[]>(i);
+        public static ManagedPtrArray<VkDeviceGroupRenderPassBeginInfo> Pointer(this VkDeviceGroupRenderPassBeginInfo[] i) => new ManagedPtrArray<VkDeviceGroupRenderPassBeginInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDeviceGroupCommandBufferBeginInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1723,7 +1739,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDeviceGroupCommandBufferBeginInfo> Pointer(this VkDeviceGroupCommandBufferBeginInfo i) => new ManagedPtr<VkDeviceGroupCommandBufferBeginInfo>(i);
-        public static ManagedPtr<VkDeviceGroupCommandBufferBeginInfo[]> Pointer(this VkDeviceGroupCommandBufferBeginInfo[] i) => new ManagedPtr<VkDeviceGroupCommandBufferBeginInfo[]>(i);
+        public static ManagedPtrArray<VkDeviceGroupCommandBufferBeginInfo> Pointer(this VkDeviceGroupCommandBufferBeginInfo[] i) => new ManagedPtrArray<VkDeviceGroupCommandBufferBeginInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDeviceGroupSubmitInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1737,7 +1753,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDeviceGroupSubmitInfo> Pointer(this VkDeviceGroupSubmitInfo i) => new ManagedPtr<VkDeviceGroupSubmitInfo>(i);
-        public static ManagedPtr<VkDeviceGroupSubmitInfo[]> Pointer(this VkDeviceGroupSubmitInfo[] i) => new ManagedPtr<VkDeviceGroupSubmitInfo[]>(i);
+        public static ManagedPtrArray<VkDeviceGroupSubmitInfo> Pointer(this VkDeviceGroupSubmitInfo[] i) => new ManagedPtrArray<VkDeviceGroupSubmitInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDeviceGroupBindSparseInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1747,7 +1763,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDeviceGroupBindSparseInfo> Pointer(this VkDeviceGroupBindSparseInfo i) => new ManagedPtr<VkDeviceGroupBindSparseInfo>(i);
-        public static ManagedPtr<VkDeviceGroupBindSparseInfo[]> Pointer(this VkDeviceGroupBindSparseInfo[] i) => new ManagedPtr<VkDeviceGroupBindSparseInfo[]>(i);
+        public static ManagedPtrArray<VkDeviceGroupBindSparseInfo> Pointer(this VkDeviceGroupBindSparseInfo[] i) => new ManagedPtrArray<VkDeviceGroupBindSparseInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkBindBufferMemoryDeviceGroupInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1757,7 +1773,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkBindBufferMemoryDeviceGroupInfo> Pointer(this VkBindBufferMemoryDeviceGroupInfo i) => new ManagedPtr<VkBindBufferMemoryDeviceGroupInfo>(i);
-        public static ManagedPtr<VkBindBufferMemoryDeviceGroupInfo[]> Pointer(this VkBindBufferMemoryDeviceGroupInfo[] i) => new ManagedPtr<VkBindBufferMemoryDeviceGroupInfo[]>(i);
+        public static ManagedPtrArray<VkBindBufferMemoryDeviceGroupInfo> Pointer(this VkBindBufferMemoryDeviceGroupInfo[] i) => new ManagedPtrArray<VkBindBufferMemoryDeviceGroupInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkBindImageMemoryDeviceGroupInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1769,18 +1785,19 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkBindImageMemoryDeviceGroupInfo> Pointer(this VkBindImageMemoryDeviceGroupInfo i) => new ManagedPtr<VkBindImageMemoryDeviceGroupInfo>(i);
-        public static ManagedPtr<VkBindImageMemoryDeviceGroupInfo[]> Pointer(this VkBindImageMemoryDeviceGroupInfo[] i) => new ManagedPtr<VkBindImageMemoryDeviceGroupInfo[]>(i);
+        public static ManagedPtrArray<VkBindImageMemoryDeviceGroupInfo> Pointer(this VkBindImageMemoryDeviceGroupInfo[] i) => new ManagedPtrArray<VkBindImageMemoryDeviceGroupInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceGroupProperties {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public uint physicalDeviceCount;
 			[FieldOffset(24)][MarshalAs(UnmanagedType.ByValArray, SizeConst=32)] public IntPtr[] physicalDevices;
+			public const int physicalDevices_len = 32;
 			[FieldOffset(280)]public bool subsetAllocation;
 		}
 
         public static ManagedPtr<VkPhysicalDeviceGroupProperties> Pointer(this VkPhysicalDeviceGroupProperties i) => new ManagedPtr<VkPhysicalDeviceGroupProperties>(i);
-        public static ManagedPtr<VkPhysicalDeviceGroupProperties[]> Pointer(this VkPhysicalDeviceGroupProperties[] i) => new ManagedPtr<VkPhysicalDeviceGroupProperties[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceGroupProperties> Pointer(this VkPhysicalDeviceGroupProperties[] i) => new ManagedPtrArray<VkPhysicalDeviceGroupProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDeviceGroupDeviceCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1790,7 +1807,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDeviceGroupDeviceCreateInfo> Pointer(this VkDeviceGroupDeviceCreateInfo i) => new ManagedPtr<VkDeviceGroupDeviceCreateInfo>(i);
-        public static ManagedPtr<VkDeviceGroupDeviceCreateInfo[]> Pointer(this VkDeviceGroupDeviceCreateInfo[] i) => new ManagedPtr<VkDeviceGroupDeviceCreateInfo[]>(i);
+        public static ManagedPtrArray<VkDeviceGroupDeviceCreateInfo> Pointer(this VkDeviceGroupDeviceCreateInfo[] i) => new ManagedPtrArray<VkDeviceGroupDeviceCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkBufferMemoryRequirementsInfo2 {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1799,7 +1816,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkBufferMemoryRequirementsInfo2> Pointer(this VkBufferMemoryRequirementsInfo2 i) => new ManagedPtr<VkBufferMemoryRequirementsInfo2>(i);
-        public static ManagedPtr<VkBufferMemoryRequirementsInfo2[]> Pointer(this VkBufferMemoryRequirementsInfo2[] i) => new ManagedPtr<VkBufferMemoryRequirementsInfo2[]>(i);
+        public static ManagedPtrArray<VkBufferMemoryRequirementsInfo2> Pointer(this VkBufferMemoryRequirementsInfo2[] i) => new ManagedPtrArray<VkBufferMemoryRequirementsInfo2>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImageMemoryRequirementsInfo2 {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1808,7 +1825,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkImageMemoryRequirementsInfo2> Pointer(this VkImageMemoryRequirementsInfo2 i) => new ManagedPtr<VkImageMemoryRequirementsInfo2>(i);
-        public static ManagedPtr<VkImageMemoryRequirementsInfo2[]> Pointer(this VkImageMemoryRequirementsInfo2[] i) => new ManagedPtr<VkImageMemoryRequirementsInfo2[]>(i);
+        public static ManagedPtrArray<VkImageMemoryRequirementsInfo2> Pointer(this VkImageMemoryRequirementsInfo2[] i) => new ManagedPtrArray<VkImageMemoryRequirementsInfo2>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImageSparseMemoryRequirementsInfo2 {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1817,7 +1834,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkImageSparseMemoryRequirementsInfo2> Pointer(this VkImageSparseMemoryRequirementsInfo2 i) => new ManagedPtr<VkImageSparseMemoryRequirementsInfo2>(i);
-        public static ManagedPtr<VkImageSparseMemoryRequirementsInfo2[]> Pointer(this VkImageSparseMemoryRequirementsInfo2[] i) => new ManagedPtr<VkImageSparseMemoryRequirementsInfo2[]>(i);
+        public static ManagedPtrArray<VkImageSparseMemoryRequirementsInfo2> Pointer(this VkImageSparseMemoryRequirementsInfo2[] i) => new ManagedPtrArray<VkImageSparseMemoryRequirementsInfo2>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkMemoryRequirements2 {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1826,7 +1843,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkMemoryRequirements2> Pointer(this VkMemoryRequirements2 i) => new ManagedPtr<VkMemoryRequirements2>(i);
-        public static ManagedPtr<VkMemoryRequirements2[]> Pointer(this VkMemoryRequirements2[] i) => new ManagedPtr<VkMemoryRequirements2[]>(i);
+        public static ManagedPtrArray<VkMemoryRequirements2> Pointer(this VkMemoryRequirements2[] i) => new ManagedPtrArray<VkMemoryRequirements2>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSparseImageMemoryRequirements2 {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1835,7 +1852,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSparseImageMemoryRequirements2> Pointer(this VkSparseImageMemoryRequirements2 i) => new ManagedPtr<VkSparseImageMemoryRequirements2>(i);
-        public static ManagedPtr<VkSparseImageMemoryRequirements2[]> Pointer(this VkSparseImageMemoryRequirements2[] i) => new ManagedPtr<VkSparseImageMemoryRequirements2[]>(i);
+        public static ManagedPtrArray<VkSparseImageMemoryRequirements2> Pointer(this VkSparseImageMemoryRequirements2[] i) => new ManagedPtrArray<VkSparseImageMemoryRequirements2>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceFeatures2 {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1844,7 +1861,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceFeatures2> Pointer(this VkPhysicalDeviceFeatures2 i) => new ManagedPtr<VkPhysicalDeviceFeatures2>(i);
-        public static ManagedPtr<VkPhysicalDeviceFeatures2[]> Pointer(this VkPhysicalDeviceFeatures2[] i) => new ManagedPtr<VkPhysicalDeviceFeatures2[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceFeatures2> Pointer(this VkPhysicalDeviceFeatures2[] i) => new ManagedPtrArray<VkPhysicalDeviceFeatures2>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceProperties2 {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1853,7 +1870,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceProperties2> Pointer(this VkPhysicalDeviceProperties2 i) => new ManagedPtr<VkPhysicalDeviceProperties2>(i);
-        public static ManagedPtr<VkPhysicalDeviceProperties2[]> Pointer(this VkPhysicalDeviceProperties2[] i) => new ManagedPtr<VkPhysicalDeviceProperties2[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceProperties2> Pointer(this VkPhysicalDeviceProperties2[] i) => new ManagedPtrArray<VkPhysicalDeviceProperties2>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkFormatProperties2 {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1862,7 +1879,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkFormatProperties2> Pointer(this VkFormatProperties2 i) => new ManagedPtr<VkFormatProperties2>(i);
-        public static ManagedPtr<VkFormatProperties2[]> Pointer(this VkFormatProperties2[] i) => new ManagedPtr<VkFormatProperties2[]>(i);
+        public static ManagedPtrArray<VkFormatProperties2> Pointer(this VkFormatProperties2[] i) => new ManagedPtrArray<VkFormatProperties2>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImageFormatProperties2 {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1871,7 +1888,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkImageFormatProperties2> Pointer(this VkImageFormatProperties2 i) => new ManagedPtr<VkImageFormatProperties2>(i);
-        public static ManagedPtr<VkImageFormatProperties2[]> Pointer(this VkImageFormatProperties2[] i) => new ManagedPtr<VkImageFormatProperties2[]>(i);
+        public static ManagedPtrArray<VkImageFormatProperties2> Pointer(this VkImageFormatProperties2[] i) => new ManagedPtrArray<VkImageFormatProperties2>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceImageFormatInfo2 {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1879,12 +1896,12 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(16)]public VkFormat format;
 			[FieldOffset(20)]public VkImageType type;
 			[FieldOffset(24)]public VkImageTiling tiling;
-			[FieldOffset(28)]public uint usage;
-			[FieldOffset(32)]public uint flags;
+			[FieldOffset(28)]public VkImageUsageFlags usage;
+			[FieldOffset(32)]public VkImageCreateFlags flags;
 		}
 
         public static ManagedPtr<VkPhysicalDeviceImageFormatInfo2> Pointer(this VkPhysicalDeviceImageFormatInfo2 i) => new ManagedPtr<VkPhysicalDeviceImageFormatInfo2>(i);
-        public static ManagedPtr<VkPhysicalDeviceImageFormatInfo2[]> Pointer(this VkPhysicalDeviceImageFormatInfo2[] i) => new ManagedPtr<VkPhysicalDeviceImageFormatInfo2[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceImageFormatInfo2> Pointer(this VkPhysicalDeviceImageFormatInfo2[] i) => new ManagedPtrArray<VkPhysicalDeviceImageFormatInfo2>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkQueueFamilyProperties2 {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1893,7 +1910,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkQueueFamilyProperties2> Pointer(this VkQueueFamilyProperties2 i) => new ManagedPtr<VkQueueFamilyProperties2>(i);
-        public static ManagedPtr<VkQueueFamilyProperties2[]> Pointer(this VkQueueFamilyProperties2[] i) => new ManagedPtr<VkQueueFamilyProperties2[]>(i);
+        public static ManagedPtrArray<VkQueueFamilyProperties2> Pointer(this VkQueueFamilyProperties2[] i) => new ManagedPtrArray<VkQueueFamilyProperties2>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceMemoryProperties2 {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1902,7 +1919,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceMemoryProperties2> Pointer(this VkPhysicalDeviceMemoryProperties2 i) => new ManagedPtr<VkPhysicalDeviceMemoryProperties2>(i);
-        public static ManagedPtr<VkPhysicalDeviceMemoryProperties2[]> Pointer(this VkPhysicalDeviceMemoryProperties2[] i) => new ManagedPtr<VkPhysicalDeviceMemoryProperties2[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceMemoryProperties2> Pointer(this VkPhysicalDeviceMemoryProperties2[] i) => new ManagedPtrArray<VkPhysicalDeviceMemoryProperties2>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSparseImageFormatProperties2 {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1911,20 +1928,20 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSparseImageFormatProperties2> Pointer(this VkSparseImageFormatProperties2 i) => new ManagedPtr<VkSparseImageFormatProperties2>(i);
-        public static ManagedPtr<VkSparseImageFormatProperties2[]> Pointer(this VkSparseImageFormatProperties2[] i) => new ManagedPtr<VkSparseImageFormatProperties2[]>(i);
+        public static ManagedPtrArray<VkSparseImageFormatProperties2> Pointer(this VkSparseImageFormatProperties2[] i) => new ManagedPtrArray<VkSparseImageFormatProperties2>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceSparseImageFormatInfo2 {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public VkFormat format;
 			[FieldOffset(20)]public VkImageType type;
-			[FieldOffset(24)]public VkSampleCountFlagBits samples;
-			[FieldOffset(28)]public uint usage;
+			[FieldOffset(24)]public VkSampleCountFlags samples;
+			[FieldOffset(28)]public VkImageUsageFlags usage;
 			[FieldOffset(32)]public VkImageTiling tiling;
 		}
 
         public static ManagedPtr<VkPhysicalDeviceSparseImageFormatInfo2> Pointer(this VkPhysicalDeviceSparseImageFormatInfo2 i) => new ManagedPtr<VkPhysicalDeviceSparseImageFormatInfo2>(i);
-        public static ManagedPtr<VkPhysicalDeviceSparseImageFormatInfo2[]> Pointer(this VkPhysicalDeviceSparseImageFormatInfo2[] i) => new ManagedPtr<VkPhysicalDeviceSparseImageFormatInfo2[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceSparseImageFormatInfo2> Pointer(this VkPhysicalDeviceSparseImageFormatInfo2[] i) => new ManagedPtrArray<VkPhysicalDeviceSparseImageFormatInfo2>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDevicePointClippingProperties {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1933,16 +1950,16 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDevicePointClippingProperties> Pointer(this VkPhysicalDevicePointClippingProperties i) => new ManagedPtr<VkPhysicalDevicePointClippingProperties>(i);
-        public static ManagedPtr<VkPhysicalDevicePointClippingProperties[]> Pointer(this VkPhysicalDevicePointClippingProperties[] i) => new ManagedPtr<VkPhysicalDevicePointClippingProperties[]>(i);
+        public static ManagedPtrArray<VkPhysicalDevicePointClippingProperties> Pointer(this VkPhysicalDevicePointClippingProperties[] i) => new ManagedPtrArray<VkPhysicalDevicePointClippingProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkInputAttachmentAspectReference {
 			[FieldOffset(0)]public uint subpass;
 			[FieldOffset(4)]public uint inputAttachmentIndex;
-			[FieldOffset(8)]public uint aspectMask;
+			[FieldOffset(8)]public VkImageAspectFlags aspectMask;
 		}
 
         public static ManagedPtr<VkInputAttachmentAspectReference> Pointer(this VkInputAttachmentAspectReference i) => new ManagedPtr<VkInputAttachmentAspectReference>(i);
-        public static ManagedPtr<VkInputAttachmentAspectReference[]> Pointer(this VkInputAttachmentAspectReference[] i) => new ManagedPtr<VkInputAttachmentAspectReference[]>(i);
+        public static ManagedPtrArray<VkInputAttachmentAspectReference> Pointer(this VkInputAttachmentAspectReference[] i) => new ManagedPtrArray<VkInputAttachmentAspectReference>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkRenderPassInputAttachmentAspectCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1952,16 +1969,16 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkRenderPassInputAttachmentAspectCreateInfo> Pointer(this VkRenderPassInputAttachmentAspectCreateInfo i) => new ManagedPtr<VkRenderPassInputAttachmentAspectCreateInfo>(i);
-        public static ManagedPtr<VkRenderPassInputAttachmentAspectCreateInfo[]> Pointer(this VkRenderPassInputAttachmentAspectCreateInfo[] i) => new ManagedPtr<VkRenderPassInputAttachmentAspectCreateInfo[]>(i);
+        public static ManagedPtrArray<VkRenderPassInputAttachmentAspectCreateInfo> Pointer(this VkRenderPassInputAttachmentAspectCreateInfo[] i) => new ManagedPtrArray<VkRenderPassInputAttachmentAspectCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImageViewUsageCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint usage;
+			[FieldOffset(16)]public VkImageUsageFlags usage;
 		}
 
         public static ManagedPtr<VkImageViewUsageCreateInfo> Pointer(this VkImageViewUsageCreateInfo i) => new ManagedPtr<VkImageViewUsageCreateInfo>(i);
-        public static ManagedPtr<VkImageViewUsageCreateInfo[]> Pointer(this VkImageViewUsageCreateInfo[] i) => new ManagedPtr<VkImageViewUsageCreateInfo[]>(i);
+        public static ManagedPtrArray<VkImageViewUsageCreateInfo> Pointer(this VkImageViewUsageCreateInfo[] i) => new ManagedPtrArray<VkImageViewUsageCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineTessellationDomainOriginStateCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1970,7 +1987,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineTessellationDomainOriginStateCreateInfo> Pointer(this VkPipelineTessellationDomainOriginStateCreateInfo i) => new ManagedPtr<VkPipelineTessellationDomainOriginStateCreateInfo>(i);
-        public static ManagedPtr<VkPipelineTessellationDomainOriginStateCreateInfo[]> Pointer(this VkPipelineTessellationDomainOriginStateCreateInfo[] i) => new ManagedPtr<VkPipelineTessellationDomainOriginStateCreateInfo[]>(i);
+        public static ManagedPtrArray<VkPipelineTessellationDomainOriginStateCreateInfo> Pointer(this VkPipelineTessellationDomainOriginStateCreateInfo[] i) => new ManagedPtrArray<VkPipelineTessellationDomainOriginStateCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkRenderPassMultiviewCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1984,7 +2001,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkRenderPassMultiviewCreateInfo> Pointer(this VkRenderPassMultiviewCreateInfo i) => new ManagedPtr<VkRenderPassMultiviewCreateInfo>(i);
-        public static ManagedPtr<VkRenderPassMultiviewCreateInfo[]> Pointer(this VkRenderPassMultiviewCreateInfo[] i) => new ManagedPtr<VkRenderPassMultiviewCreateInfo[]>(i);
+        public static ManagedPtrArray<VkRenderPassMultiviewCreateInfo> Pointer(this VkRenderPassMultiviewCreateInfo[] i) => new ManagedPtrArray<VkRenderPassMultiviewCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceMultiviewFeatures {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -1995,7 +2012,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceMultiviewFeatures> Pointer(this VkPhysicalDeviceMultiviewFeatures i) => new ManagedPtr<VkPhysicalDeviceMultiviewFeatures>(i);
-        public static ManagedPtr<VkPhysicalDeviceMultiviewFeatures[]> Pointer(this VkPhysicalDeviceMultiviewFeatures[] i) => new ManagedPtr<VkPhysicalDeviceMultiviewFeatures[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceMultiviewFeatures> Pointer(this VkPhysicalDeviceMultiviewFeatures[] i) => new ManagedPtrArray<VkPhysicalDeviceMultiviewFeatures>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceMultiviewProperties {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2005,7 +2022,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceMultiviewProperties> Pointer(this VkPhysicalDeviceMultiviewProperties i) => new ManagedPtr<VkPhysicalDeviceMultiviewProperties>(i);
-        public static ManagedPtr<VkPhysicalDeviceMultiviewProperties[]> Pointer(this VkPhysicalDeviceMultiviewProperties[] i) => new ManagedPtr<VkPhysicalDeviceMultiviewProperties[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceMultiviewProperties> Pointer(this VkPhysicalDeviceMultiviewProperties[] i) => new ManagedPtrArray<VkPhysicalDeviceMultiviewProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceVariablePointersFeatures {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2015,7 +2032,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceVariablePointersFeatures> Pointer(this VkPhysicalDeviceVariablePointersFeatures i) => new ManagedPtr<VkPhysicalDeviceVariablePointersFeatures>(i);
-        public static ManagedPtr<VkPhysicalDeviceVariablePointersFeatures[]> Pointer(this VkPhysicalDeviceVariablePointersFeatures[] i) => new ManagedPtr<VkPhysicalDeviceVariablePointersFeatures[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceVariablePointersFeatures> Pointer(this VkPhysicalDeviceVariablePointersFeatures[] i) => new ManagedPtrArray<VkPhysicalDeviceVariablePointersFeatures>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceProtectedMemoryFeatures {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2024,7 +2041,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceProtectedMemoryFeatures> Pointer(this VkPhysicalDeviceProtectedMemoryFeatures i) => new ManagedPtr<VkPhysicalDeviceProtectedMemoryFeatures>(i);
-        public static ManagedPtr<VkPhysicalDeviceProtectedMemoryFeatures[]> Pointer(this VkPhysicalDeviceProtectedMemoryFeatures[] i) => new ManagedPtr<VkPhysicalDeviceProtectedMemoryFeatures[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceProtectedMemoryFeatures> Pointer(this VkPhysicalDeviceProtectedMemoryFeatures[] i) => new ManagedPtrArray<VkPhysicalDeviceProtectedMemoryFeatures>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceProtectedMemoryProperties {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2033,18 +2050,18 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceProtectedMemoryProperties> Pointer(this VkPhysicalDeviceProtectedMemoryProperties i) => new ManagedPtr<VkPhysicalDeviceProtectedMemoryProperties>(i);
-        public static ManagedPtr<VkPhysicalDeviceProtectedMemoryProperties[]> Pointer(this VkPhysicalDeviceProtectedMemoryProperties[] i) => new ManagedPtr<VkPhysicalDeviceProtectedMemoryProperties[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceProtectedMemoryProperties> Pointer(this VkPhysicalDeviceProtectedMemoryProperties[] i) => new ManagedPtrArray<VkPhysicalDeviceProtectedMemoryProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDeviceQueueInfo2 {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkDeviceQueueCreateFlags flags;
 			[FieldOffset(20)]public uint queueFamilyIndex;
 			[FieldOffset(24)]public uint queueIndex;
 		}
 
         public static ManagedPtr<VkDeviceQueueInfo2> Pointer(this VkDeviceQueueInfo2 i) => new ManagedPtr<VkDeviceQueueInfo2>(i);
-        public static ManagedPtr<VkDeviceQueueInfo2[]> Pointer(this VkDeviceQueueInfo2[] i) => new ManagedPtr<VkDeviceQueueInfo2[]>(i);
+        public static ManagedPtrArray<VkDeviceQueueInfo2> Pointer(this VkDeviceQueueInfo2[] i) => new ManagedPtrArray<VkDeviceQueueInfo2>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkProtectedSubmitInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2053,7 +2070,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkProtectedSubmitInfo> Pointer(this VkProtectedSubmitInfo i) => new ManagedPtr<VkProtectedSubmitInfo>(i);
-        public static ManagedPtr<VkProtectedSubmitInfo[]> Pointer(this VkProtectedSubmitInfo[] i) => new ManagedPtr<VkProtectedSubmitInfo[]>(i);
+        public static ManagedPtrArray<VkProtectedSubmitInfo> Pointer(this VkProtectedSubmitInfo[] i) => new ManagedPtrArray<VkProtectedSubmitInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSamplerYcbcrConversionCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2069,7 +2086,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSamplerYcbcrConversionCreateInfo> Pointer(this VkSamplerYcbcrConversionCreateInfo i) => new ManagedPtr<VkSamplerYcbcrConversionCreateInfo>(i);
-        public static ManagedPtr<VkSamplerYcbcrConversionCreateInfo[]> Pointer(this VkSamplerYcbcrConversionCreateInfo[] i) => new ManagedPtr<VkSamplerYcbcrConversionCreateInfo[]>(i);
+        public static ManagedPtrArray<VkSamplerYcbcrConversionCreateInfo> Pointer(this VkSamplerYcbcrConversionCreateInfo[] i) => new ManagedPtrArray<VkSamplerYcbcrConversionCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSamplerYcbcrConversionInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2078,25 +2095,25 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSamplerYcbcrConversionInfo> Pointer(this VkSamplerYcbcrConversionInfo i) => new ManagedPtr<VkSamplerYcbcrConversionInfo>(i);
-        public static ManagedPtr<VkSamplerYcbcrConversionInfo[]> Pointer(this VkSamplerYcbcrConversionInfo[] i) => new ManagedPtr<VkSamplerYcbcrConversionInfo[]>(i);
+        public static ManagedPtrArray<VkSamplerYcbcrConversionInfo> Pointer(this VkSamplerYcbcrConversionInfo[] i) => new ManagedPtrArray<VkSamplerYcbcrConversionInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkBindImagePlaneMemoryInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public VkImageAspectFlagBits planeAspect;
+			[FieldOffset(16)]public VkImageAspectFlags planeAspect;
 		}
 
         public static ManagedPtr<VkBindImagePlaneMemoryInfo> Pointer(this VkBindImagePlaneMemoryInfo i) => new ManagedPtr<VkBindImagePlaneMemoryInfo>(i);
-        public static ManagedPtr<VkBindImagePlaneMemoryInfo[]> Pointer(this VkBindImagePlaneMemoryInfo[] i) => new ManagedPtr<VkBindImagePlaneMemoryInfo[]>(i);
+        public static ManagedPtrArray<VkBindImagePlaneMemoryInfo> Pointer(this VkBindImagePlaneMemoryInfo[] i) => new ManagedPtrArray<VkBindImagePlaneMemoryInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImagePlaneMemoryRequirementsInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public VkImageAspectFlagBits planeAspect;
+			[FieldOffset(16)]public VkImageAspectFlags planeAspect;
 		}
 
         public static ManagedPtr<VkImagePlaneMemoryRequirementsInfo> Pointer(this VkImagePlaneMemoryRequirementsInfo i) => new ManagedPtr<VkImagePlaneMemoryRequirementsInfo>(i);
-        public static ManagedPtr<VkImagePlaneMemoryRequirementsInfo[]> Pointer(this VkImagePlaneMemoryRequirementsInfo[] i) => new ManagedPtr<VkImagePlaneMemoryRequirementsInfo[]>(i);
+        public static ManagedPtrArray<VkImagePlaneMemoryRequirementsInfo> Pointer(this VkImagePlaneMemoryRequirementsInfo[] i) => new ManagedPtrArray<VkImagePlaneMemoryRequirementsInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceSamplerYcbcrConversionFeatures {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2105,7 +2122,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceSamplerYcbcrConversionFeatures> Pointer(this VkPhysicalDeviceSamplerYcbcrConversionFeatures i) => new ManagedPtr<VkPhysicalDeviceSamplerYcbcrConversionFeatures>(i);
-        public static ManagedPtr<VkPhysicalDeviceSamplerYcbcrConversionFeatures[]> Pointer(this VkPhysicalDeviceSamplerYcbcrConversionFeatures[] i) => new ManagedPtr<VkPhysicalDeviceSamplerYcbcrConversionFeatures[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceSamplerYcbcrConversionFeatures> Pointer(this VkPhysicalDeviceSamplerYcbcrConversionFeatures[] i) => new ManagedPtrArray<VkPhysicalDeviceSamplerYcbcrConversionFeatures>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSamplerYcbcrConversionImageFormatProperties {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2114,7 +2131,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSamplerYcbcrConversionImageFormatProperties> Pointer(this VkSamplerYcbcrConversionImageFormatProperties i) => new ManagedPtr<VkSamplerYcbcrConversionImageFormatProperties>(i);
-        public static ManagedPtr<VkSamplerYcbcrConversionImageFormatProperties[]> Pointer(this VkSamplerYcbcrConversionImageFormatProperties[] i) => new ManagedPtr<VkSamplerYcbcrConversionImageFormatProperties[]>(i);
+        public static ManagedPtrArray<VkSamplerYcbcrConversionImageFormatProperties> Pointer(this VkSamplerYcbcrConversionImageFormatProperties[] i) => new ManagedPtrArray<VkSamplerYcbcrConversionImageFormatProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDescriptorUpdateTemplateEntry {
 			[FieldOffset(0)]public uint dstBinding;
@@ -2126,7 +2143,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDescriptorUpdateTemplateEntry> Pointer(this VkDescriptorUpdateTemplateEntry i) => new ManagedPtr<VkDescriptorUpdateTemplateEntry>(i);
-        public static ManagedPtr<VkDescriptorUpdateTemplateEntry[]> Pointer(this VkDescriptorUpdateTemplateEntry[] i) => new ManagedPtr<VkDescriptorUpdateTemplateEntry[]>(i);
+        public static ManagedPtrArray<VkDescriptorUpdateTemplateEntry> Pointer(this VkDescriptorUpdateTemplateEntry[] i) => new ManagedPtrArray<VkDescriptorUpdateTemplateEntry>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDescriptorUpdateTemplateCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2142,25 +2159,25 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDescriptorUpdateTemplateCreateInfo> Pointer(this VkDescriptorUpdateTemplateCreateInfo i) => new ManagedPtr<VkDescriptorUpdateTemplateCreateInfo>(i);
-        public static ManagedPtr<VkDescriptorUpdateTemplateCreateInfo[]> Pointer(this VkDescriptorUpdateTemplateCreateInfo[] i) => new ManagedPtr<VkDescriptorUpdateTemplateCreateInfo[]>(i);
+        public static ManagedPtrArray<VkDescriptorUpdateTemplateCreateInfo> Pointer(this VkDescriptorUpdateTemplateCreateInfo[] i) => new ManagedPtrArray<VkDescriptorUpdateTemplateCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkExternalMemoryProperties {
-			[FieldOffset(0)]public uint externalMemoryFeatures;
-			[FieldOffset(4)]public uint exportFromImportedHandleTypes;
-			[FieldOffset(8)]public uint compatibleHandleTypes;
+			[FieldOffset(0)]public VkExternalMemoryFeatureFlags externalMemoryFeatures;
+			[FieldOffset(4)]public VkExternalMemoryHandleTypeFlags exportFromImportedHandleTypes;
+			[FieldOffset(8)]public VkExternalMemoryHandleTypeFlags compatibleHandleTypes;
 		}
 
         public static ManagedPtr<VkExternalMemoryProperties> Pointer(this VkExternalMemoryProperties i) => new ManagedPtr<VkExternalMemoryProperties>(i);
-        public static ManagedPtr<VkExternalMemoryProperties[]> Pointer(this VkExternalMemoryProperties[] i) => new ManagedPtr<VkExternalMemoryProperties[]>(i);
+        public static ManagedPtrArray<VkExternalMemoryProperties> Pointer(this VkExternalMemoryProperties[] i) => new ManagedPtrArray<VkExternalMemoryProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceExternalImageFormatInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public VkExternalMemoryHandleTypeFlagBits handleType;
+			[FieldOffset(16)]public VkExternalMemoryHandleTypeFlags handleType;
 		}
 
         public static ManagedPtr<VkPhysicalDeviceExternalImageFormatInfo> Pointer(this VkPhysicalDeviceExternalImageFormatInfo i) => new ManagedPtr<VkPhysicalDeviceExternalImageFormatInfo>(i);
-        public static ManagedPtr<VkPhysicalDeviceExternalImageFormatInfo[]> Pointer(this VkPhysicalDeviceExternalImageFormatInfo[] i) => new ManagedPtr<VkPhysicalDeviceExternalImageFormatInfo[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceExternalImageFormatInfo> Pointer(this VkPhysicalDeviceExternalImageFormatInfo[] i) => new ManagedPtrArray<VkPhysicalDeviceExternalImageFormatInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkExternalImageFormatProperties {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2169,18 +2186,18 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkExternalImageFormatProperties> Pointer(this VkExternalImageFormatProperties i) => new ManagedPtr<VkExternalImageFormatProperties>(i);
-        public static ManagedPtr<VkExternalImageFormatProperties[]> Pointer(this VkExternalImageFormatProperties[] i) => new ManagedPtr<VkExternalImageFormatProperties[]>(i);
+        public static ManagedPtrArray<VkExternalImageFormatProperties> Pointer(this VkExternalImageFormatProperties[] i) => new ManagedPtrArray<VkExternalImageFormatProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceExternalBufferInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
-			[FieldOffset(20)]public uint usage;
-			[FieldOffset(24)]public VkExternalMemoryHandleTypeFlagBits handleType;
+			[FieldOffset(16)]public VkBufferCreateFlags flags;
+			[FieldOffset(20)]public VkBufferUsageFlags usage;
+			[FieldOffset(24)]public VkExternalMemoryHandleTypeFlags handleType;
 		}
 
         public static ManagedPtr<VkPhysicalDeviceExternalBufferInfo> Pointer(this VkPhysicalDeviceExternalBufferInfo i) => new ManagedPtr<VkPhysicalDeviceExternalBufferInfo>(i);
-        public static ManagedPtr<VkPhysicalDeviceExternalBufferInfo[]> Pointer(this VkPhysicalDeviceExternalBufferInfo[] i) => new ManagedPtr<VkPhysicalDeviceExternalBufferInfo[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceExternalBufferInfo> Pointer(this VkPhysicalDeviceExternalBufferInfo[] i) => new ManagedPtrArray<VkPhysicalDeviceExternalBufferInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkExternalBufferProperties {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2189,105 +2206,108 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkExternalBufferProperties> Pointer(this VkExternalBufferProperties i) => new ManagedPtr<VkExternalBufferProperties>(i);
-        public static ManagedPtr<VkExternalBufferProperties[]> Pointer(this VkExternalBufferProperties[] i) => new ManagedPtr<VkExternalBufferProperties[]>(i);
+        public static ManagedPtrArray<VkExternalBufferProperties> Pointer(this VkExternalBufferProperties[] i) => new ManagedPtrArray<VkExternalBufferProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceIDProperties {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public fixed byte deviceUUID[16];
+			public const int deviceUUID_len = 16;
 			[FieldOffset(32)]public fixed byte driverUUID[16];
+			public const int driverUUID_len = 16;
 			[FieldOffset(48)]public fixed byte deviceLUID[8];
+			public const int deviceLUID_len = 8;
 			[FieldOffset(56)]public uint deviceNodeMask;
 			[FieldOffset(60)]public bool deviceLUIDValid;
 		}
 
         public static ManagedPtr<VkPhysicalDeviceIDProperties> Pointer(this VkPhysicalDeviceIDProperties i) => new ManagedPtr<VkPhysicalDeviceIDProperties>(i);
-        public static ManagedPtr<VkPhysicalDeviceIDProperties[]> Pointer(this VkPhysicalDeviceIDProperties[] i) => new ManagedPtr<VkPhysicalDeviceIDProperties[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceIDProperties> Pointer(this VkPhysicalDeviceIDProperties[] i) => new ManagedPtrArray<VkPhysicalDeviceIDProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkExternalMemoryImageCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint handleTypes;
+			[FieldOffset(16)]public VkExternalMemoryHandleTypeFlags handleTypes;
 		}
 
         public static ManagedPtr<VkExternalMemoryImageCreateInfo> Pointer(this VkExternalMemoryImageCreateInfo i) => new ManagedPtr<VkExternalMemoryImageCreateInfo>(i);
-        public static ManagedPtr<VkExternalMemoryImageCreateInfo[]> Pointer(this VkExternalMemoryImageCreateInfo[] i) => new ManagedPtr<VkExternalMemoryImageCreateInfo[]>(i);
+        public static ManagedPtrArray<VkExternalMemoryImageCreateInfo> Pointer(this VkExternalMemoryImageCreateInfo[] i) => new ManagedPtrArray<VkExternalMemoryImageCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkExternalMemoryBufferCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint handleTypes;
+			[FieldOffset(16)]public VkExternalMemoryHandleTypeFlags handleTypes;
 		}
 
         public static ManagedPtr<VkExternalMemoryBufferCreateInfo> Pointer(this VkExternalMemoryBufferCreateInfo i) => new ManagedPtr<VkExternalMemoryBufferCreateInfo>(i);
-        public static ManagedPtr<VkExternalMemoryBufferCreateInfo[]> Pointer(this VkExternalMemoryBufferCreateInfo[] i) => new ManagedPtr<VkExternalMemoryBufferCreateInfo[]>(i);
+        public static ManagedPtrArray<VkExternalMemoryBufferCreateInfo> Pointer(this VkExternalMemoryBufferCreateInfo[] i) => new ManagedPtrArray<VkExternalMemoryBufferCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkExportMemoryAllocateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint handleTypes;
+			[FieldOffset(16)]public VkExternalMemoryHandleTypeFlags handleTypes;
 		}
 
         public static ManagedPtr<VkExportMemoryAllocateInfo> Pointer(this VkExportMemoryAllocateInfo i) => new ManagedPtr<VkExportMemoryAllocateInfo>(i);
-        public static ManagedPtr<VkExportMemoryAllocateInfo[]> Pointer(this VkExportMemoryAllocateInfo[] i) => new ManagedPtr<VkExportMemoryAllocateInfo[]>(i);
+        public static ManagedPtrArray<VkExportMemoryAllocateInfo> Pointer(this VkExportMemoryAllocateInfo[] i) => new ManagedPtrArray<VkExportMemoryAllocateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceExternalFenceInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public VkExternalFenceHandleTypeFlagBits handleType;
+			[FieldOffset(16)]public VkExternalFenceHandleTypeFlags handleType;
 		}
 
         public static ManagedPtr<VkPhysicalDeviceExternalFenceInfo> Pointer(this VkPhysicalDeviceExternalFenceInfo i) => new ManagedPtr<VkPhysicalDeviceExternalFenceInfo>(i);
-        public static ManagedPtr<VkPhysicalDeviceExternalFenceInfo[]> Pointer(this VkPhysicalDeviceExternalFenceInfo[] i) => new ManagedPtr<VkPhysicalDeviceExternalFenceInfo[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceExternalFenceInfo> Pointer(this VkPhysicalDeviceExternalFenceInfo[] i) => new ManagedPtrArray<VkPhysicalDeviceExternalFenceInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkExternalFenceProperties {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint exportFromImportedHandleTypes;
-			[FieldOffset(20)]public uint compatibleHandleTypes;
-			[FieldOffset(24)]public uint externalFenceFeatures;
+			[FieldOffset(16)]public VkExternalFenceHandleTypeFlags exportFromImportedHandleTypes;
+			[FieldOffset(20)]public VkExternalFenceHandleTypeFlags compatibleHandleTypes;
+			[FieldOffset(24)]public VkExternalFenceFeatureFlags externalFenceFeatures;
 		}
 
         public static ManagedPtr<VkExternalFenceProperties> Pointer(this VkExternalFenceProperties i) => new ManagedPtr<VkExternalFenceProperties>(i);
-        public static ManagedPtr<VkExternalFenceProperties[]> Pointer(this VkExternalFenceProperties[] i) => new ManagedPtr<VkExternalFenceProperties[]>(i);
+        public static ManagedPtrArray<VkExternalFenceProperties> Pointer(this VkExternalFenceProperties[] i) => new ManagedPtrArray<VkExternalFenceProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkExportFenceCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint handleTypes;
+			[FieldOffset(16)]public VkExternalFenceHandleTypeFlags handleTypes;
 		}
 
         public static ManagedPtr<VkExportFenceCreateInfo> Pointer(this VkExportFenceCreateInfo i) => new ManagedPtr<VkExportFenceCreateInfo>(i);
-        public static ManagedPtr<VkExportFenceCreateInfo[]> Pointer(this VkExportFenceCreateInfo[] i) => new ManagedPtr<VkExportFenceCreateInfo[]>(i);
+        public static ManagedPtrArray<VkExportFenceCreateInfo> Pointer(this VkExportFenceCreateInfo[] i) => new ManagedPtrArray<VkExportFenceCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkExportSemaphoreCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint handleTypes;
+			[FieldOffset(16)]public VkExternalSemaphoreHandleTypeFlags handleTypes;
 		}
 
         public static ManagedPtr<VkExportSemaphoreCreateInfo> Pointer(this VkExportSemaphoreCreateInfo i) => new ManagedPtr<VkExportSemaphoreCreateInfo>(i);
-        public static ManagedPtr<VkExportSemaphoreCreateInfo[]> Pointer(this VkExportSemaphoreCreateInfo[] i) => new ManagedPtr<VkExportSemaphoreCreateInfo[]>(i);
+        public static ManagedPtrArray<VkExportSemaphoreCreateInfo> Pointer(this VkExportSemaphoreCreateInfo[] i) => new ManagedPtrArray<VkExportSemaphoreCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceExternalSemaphoreInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public VkExternalSemaphoreHandleTypeFlagBits handleType;
+			[FieldOffset(16)]public VkExternalSemaphoreHandleTypeFlags handleType;
 		}
 
         public static ManagedPtr<VkPhysicalDeviceExternalSemaphoreInfo> Pointer(this VkPhysicalDeviceExternalSemaphoreInfo i) => new ManagedPtr<VkPhysicalDeviceExternalSemaphoreInfo>(i);
-        public static ManagedPtr<VkPhysicalDeviceExternalSemaphoreInfo[]> Pointer(this VkPhysicalDeviceExternalSemaphoreInfo[] i) => new ManagedPtr<VkPhysicalDeviceExternalSemaphoreInfo[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceExternalSemaphoreInfo> Pointer(this VkPhysicalDeviceExternalSemaphoreInfo[] i) => new ManagedPtrArray<VkPhysicalDeviceExternalSemaphoreInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkExternalSemaphoreProperties {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint exportFromImportedHandleTypes;
-			[FieldOffset(20)]public uint compatibleHandleTypes;
-			[FieldOffset(24)]public uint externalSemaphoreFeatures;
+			[FieldOffset(16)]public VkExternalSemaphoreHandleTypeFlags exportFromImportedHandleTypes;
+			[FieldOffset(20)]public VkExternalSemaphoreHandleTypeFlags compatibleHandleTypes;
+			[FieldOffset(24)]public VkExternalSemaphoreFeatureFlags externalSemaphoreFeatures;
 		}
 
         public static ManagedPtr<VkExternalSemaphoreProperties> Pointer(this VkExternalSemaphoreProperties i) => new ManagedPtr<VkExternalSemaphoreProperties>(i);
-        public static ManagedPtr<VkExternalSemaphoreProperties[]> Pointer(this VkExternalSemaphoreProperties[] i) => new ManagedPtr<VkExternalSemaphoreProperties[]>(i);
+        public static ManagedPtrArray<VkExternalSemaphoreProperties> Pointer(this VkExternalSemaphoreProperties[] i) => new ManagedPtrArray<VkExternalSemaphoreProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceMaintenance3Properties {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2297,7 +2317,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceMaintenance3Properties> Pointer(this VkPhysicalDeviceMaintenance3Properties i) => new ManagedPtr<VkPhysicalDeviceMaintenance3Properties>(i);
-        public static ManagedPtr<VkPhysicalDeviceMaintenance3Properties[]> Pointer(this VkPhysicalDeviceMaintenance3Properties[] i) => new ManagedPtr<VkPhysicalDeviceMaintenance3Properties[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceMaintenance3Properties> Pointer(this VkPhysicalDeviceMaintenance3Properties[] i) => new ManagedPtrArray<VkPhysicalDeviceMaintenance3Properties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDescriptorSetLayoutSupport {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2306,7 +2326,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDescriptorSetLayoutSupport> Pointer(this VkDescriptorSetLayoutSupport i) => new ManagedPtr<VkDescriptorSetLayoutSupport>(i);
-        public static ManagedPtr<VkDescriptorSetLayoutSupport[]> Pointer(this VkDescriptorSetLayoutSupport[] i) => new ManagedPtr<VkDescriptorSetLayoutSupport[]>(i);
+        public static ManagedPtrArray<VkDescriptorSetLayoutSupport> Pointer(this VkDescriptorSetLayoutSupport[] i) => new ManagedPtrArray<VkDescriptorSetLayoutSupport>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceShaderDrawParametersFeatures {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2315,7 +2335,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceShaderDrawParametersFeatures> Pointer(this VkPhysicalDeviceShaderDrawParametersFeatures i) => new ManagedPtr<VkPhysicalDeviceShaderDrawParametersFeatures>(i);
-        public static ManagedPtr<VkPhysicalDeviceShaderDrawParametersFeatures[]> Pointer(this VkPhysicalDeviceShaderDrawParametersFeatures[] i) => new ManagedPtr<VkPhysicalDeviceShaderDrawParametersFeatures[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceShaderDrawParametersFeatures> Pointer(this VkPhysicalDeviceShaderDrawParametersFeatures[] i) => new ManagedPtrArray<VkPhysicalDeviceShaderDrawParametersFeatures>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceVulkan11Features {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2335,19 +2355,22 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceVulkan11Features> Pointer(this VkPhysicalDeviceVulkan11Features i) => new ManagedPtr<VkPhysicalDeviceVulkan11Features>(i);
-        public static ManagedPtr<VkPhysicalDeviceVulkan11Features[]> Pointer(this VkPhysicalDeviceVulkan11Features[] i) => new ManagedPtr<VkPhysicalDeviceVulkan11Features[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceVulkan11Features> Pointer(this VkPhysicalDeviceVulkan11Features[] i) => new ManagedPtrArray<VkPhysicalDeviceVulkan11Features>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceVulkan11Properties {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public fixed byte deviceUUID[16];
+			public const int deviceUUID_len = 16;
 			[FieldOffset(32)]public fixed byte driverUUID[16];
+			public const int driverUUID_len = 16;
 			[FieldOffset(48)]public fixed byte deviceLUID[8];
+			public const int deviceLUID_len = 8;
 			[FieldOffset(56)]public uint deviceNodeMask;
 			[FieldOffset(60)]public bool deviceLUIDValid;
 			[FieldOffset(64)]public uint subgroupSize;
-			[FieldOffset(68)]public uint subgroupSupportedStages;
-			[FieldOffset(72)]public uint subgroupSupportedOperations;
+			[FieldOffset(68)]public VkShaderStageFlags subgroupSupportedStages;
+			[FieldOffset(72)]public VkSubgroupFeatureFlags subgroupSupportedOperations;
 			[FieldOffset(76)]public bool subgroupQuadOperationsInAllStages;
 			[FieldOffset(80)]public VkPointClippingBehavior pointClippingBehavior;
 			[FieldOffset(84)]public uint maxMultiviewViewCount;
@@ -2358,7 +2381,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceVulkan11Properties> Pointer(this VkPhysicalDeviceVulkan11Properties i) => new ManagedPtr<VkPhysicalDeviceVulkan11Properties>(i);
-        public static ManagedPtr<VkPhysicalDeviceVulkan11Properties[]> Pointer(this VkPhysicalDeviceVulkan11Properties[] i) => new ManagedPtr<VkPhysicalDeviceVulkan11Properties[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceVulkan11Properties> Pointer(this VkPhysicalDeviceVulkan11Properties[] i) => new ManagedPtrArray<VkPhysicalDeviceVulkan11Properties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceVulkan12Features {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2413,7 +2436,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceVulkan12Features> Pointer(this VkPhysicalDeviceVulkan12Features i) => new ManagedPtr<VkPhysicalDeviceVulkan12Features>(i);
-        public static ManagedPtr<VkPhysicalDeviceVulkan12Features[]> Pointer(this VkPhysicalDeviceVulkan12Features[] i) => new ManagedPtr<VkPhysicalDeviceVulkan12Features[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceVulkan12Features> Pointer(this VkPhysicalDeviceVulkan12Features[] i) => new ManagedPtrArray<VkPhysicalDeviceVulkan12Features>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkConformanceVersion {
 			[FieldOffset(0)]public byte major;
@@ -2423,14 +2446,16 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkConformanceVersion> Pointer(this VkConformanceVersion i) => new ManagedPtr<VkConformanceVersion>(i);
-        public static ManagedPtr<VkConformanceVersion[]> Pointer(this VkConformanceVersion[] i) => new ManagedPtr<VkConformanceVersion[]>(i);
+        public static ManagedPtrArray<VkConformanceVersion> Pointer(this VkConformanceVersion[] i) => new ManagedPtrArray<VkConformanceVersion>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceVulkan12Properties {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public VkDriverId driverID;
 			[FieldOffset(20)]public fixed byte driverName[256];
+			public const int driverName_len = 256;
 			[FieldOffset(276)]public fixed byte driverInfo[256];
+			public const int driverInfo_len = 256;
 			[FieldOffset(532)]public VkConformanceVersion conformanceVersion;
 			[FieldOffset(536)]public VkShaderFloatControlsIndependence denormBehaviorIndependence;
 			[FieldOffset(540)]public VkShaderFloatControlsIndependence roundingModeIndependence;
@@ -2472,18 +2497,18 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(684)]public uint maxDescriptorSetUpdateAfterBindSampledImages;
 			[FieldOffset(688)]public uint maxDescriptorSetUpdateAfterBindStorageImages;
 			[FieldOffset(692)]public uint maxDescriptorSetUpdateAfterBindInputAttachments;
-			[FieldOffset(696)]public uint supportedDepthResolveModes;
-			[FieldOffset(700)]public uint supportedStencilResolveModes;
+			[FieldOffset(696)]public VkResolveModeFlags supportedDepthResolveModes;
+			[FieldOffset(700)]public VkResolveModeFlags supportedStencilResolveModes;
 			[FieldOffset(704)]public bool independentResolveNone;
 			[FieldOffset(708)]public bool independentResolve;
 			[FieldOffset(712)]public bool filterMinmaxSingleComponentFormats;
 			[FieldOffset(716)]public bool filterMinmaxImageComponentMapping;
 			[FieldOffset(720)]public ulong maxTimelineSemaphoreValueDifference;
-			[FieldOffset(728)]public uint framebufferIntegerColorSampleCounts;
+			[FieldOffset(728)]public VkSampleCountFlags framebufferIntegerColorSampleCounts;
 		}
 
         public static ManagedPtr<VkPhysicalDeviceVulkan12Properties> Pointer(this VkPhysicalDeviceVulkan12Properties i) => new ManagedPtr<VkPhysicalDeviceVulkan12Properties>(i);
-        public static ManagedPtr<VkPhysicalDeviceVulkan12Properties[]> Pointer(this VkPhysicalDeviceVulkan12Properties[] i) => new ManagedPtr<VkPhysicalDeviceVulkan12Properties[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceVulkan12Properties> Pointer(this VkPhysicalDeviceVulkan12Properties[] i) => new ManagedPtrArray<VkPhysicalDeviceVulkan12Properties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImageFormatListCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2493,14 +2518,14 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkImageFormatListCreateInfo> Pointer(this VkImageFormatListCreateInfo i) => new ManagedPtr<VkImageFormatListCreateInfo>(i);
-        public static ManagedPtr<VkImageFormatListCreateInfo[]> Pointer(this VkImageFormatListCreateInfo[] i) => new ManagedPtr<VkImageFormatListCreateInfo[]>(i);
+        public static ManagedPtrArray<VkImageFormatListCreateInfo> Pointer(this VkImageFormatListCreateInfo[] i) => new ManagedPtrArray<VkImageFormatListCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkAttachmentDescription2 {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkAttachmentDescriptionFlags flags;
 			[FieldOffset(20)]public VkFormat format;
-			[FieldOffset(24)]public VkSampleCountFlagBits samples;
+			[FieldOffset(24)]public VkSampleCountFlags samples;
 			[FieldOffset(28)]public VkAttachmentLoadOp loadOp;
 			[FieldOffset(32)]public VkAttachmentStoreOp storeOp;
 			[FieldOffset(36)]public VkAttachmentLoadOp stencilLoadOp;
@@ -2510,23 +2535,23 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkAttachmentDescription2> Pointer(this VkAttachmentDescription2 i) => new ManagedPtr<VkAttachmentDescription2>(i);
-        public static ManagedPtr<VkAttachmentDescription2[]> Pointer(this VkAttachmentDescription2[] i) => new ManagedPtr<VkAttachmentDescription2[]>(i);
+        public static ManagedPtrArray<VkAttachmentDescription2> Pointer(this VkAttachmentDescription2[] i) => new ManagedPtrArray<VkAttachmentDescription2>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkAttachmentReference2 {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public uint attachment;
 			[FieldOffset(20)]public VkImageLayout layout;
-			[FieldOffset(24)]public uint aspectMask;
+			[FieldOffset(24)]public VkImageAspectFlags aspectMask;
 		}
 
         public static ManagedPtr<VkAttachmentReference2> Pointer(this VkAttachmentReference2 i) => new ManagedPtr<VkAttachmentReference2>(i);
-        public static ManagedPtr<VkAttachmentReference2[]> Pointer(this VkAttachmentReference2[] i) => new ManagedPtr<VkAttachmentReference2[]>(i);
+        public static ManagedPtrArray<VkAttachmentReference2> Pointer(this VkAttachmentReference2[] i) => new ManagedPtrArray<VkAttachmentReference2>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSubpassDescription2 {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkSubpassDescriptionFlags flags;
 			[FieldOffset(20)]public VkPipelineBindPoint pipelineBindPoint;
 			[FieldOffset(24)]public uint viewMask;
 			[FieldOffset(28)]public uint inputAttachmentCount;
@@ -2540,28 +2565,28 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSubpassDescription2> Pointer(this VkSubpassDescription2 i) => new ManagedPtr<VkSubpassDescription2>(i);
-        public static ManagedPtr<VkSubpassDescription2[]> Pointer(this VkSubpassDescription2[] i) => new ManagedPtr<VkSubpassDescription2[]>(i);
+        public static ManagedPtrArray<VkSubpassDescription2> Pointer(this VkSubpassDescription2[] i) => new ManagedPtrArray<VkSubpassDescription2>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSubpassDependency2 {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public uint srcSubpass;
 			[FieldOffset(20)]public uint dstSubpass;
-			[FieldOffset(24)]public uint srcStageMask;
-			[FieldOffset(28)]public uint dstStageMask;
-			[FieldOffset(32)]public uint srcAccessMask;
-			[FieldOffset(36)]public uint dstAccessMask;
-			[FieldOffset(40)]public uint dependencyFlags;
+			[FieldOffset(24)]public VkPipelineStageFlags srcStageMask;
+			[FieldOffset(28)]public VkPipelineStageFlags dstStageMask;
+			[FieldOffset(32)]public VkAccessFlags srcAccessMask;
+			[FieldOffset(36)]public VkAccessFlags dstAccessMask;
+			[FieldOffset(40)]public VkDependencyFlags dependencyFlags;
 			[FieldOffset(44)]public int viewOffset;
 		}
 
         public static ManagedPtr<VkSubpassDependency2> Pointer(this VkSubpassDependency2 i) => new ManagedPtr<VkSubpassDependency2>(i);
-        public static ManagedPtr<VkSubpassDependency2[]> Pointer(this VkSubpassDependency2[] i) => new ManagedPtr<VkSubpassDependency2[]>(i);
+        public static ManagedPtrArray<VkSubpassDependency2> Pointer(this VkSubpassDependency2[] i) => new ManagedPtrArray<VkSubpassDependency2>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkRenderPassCreateInfo2 {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkRenderPassCreateFlags flags;
 			[FieldOffset(20)]public uint attachmentCount;
 			[FieldOffset(24)]public IntPtr pAttachments;
 			[FieldOffset(32)]public uint subpassCount;
@@ -2573,7 +2598,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkRenderPassCreateInfo2> Pointer(this VkRenderPassCreateInfo2 i) => new ManagedPtr<VkRenderPassCreateInfo2>(i);
-        public static ManagedPtr<VkRenderPassCreateInfo2[]> Pointer(this VkRenderPassCreateInfo2[] i) => new ManagedPtr<VkRenderPassCreateInfo2[]>(i);
+        public static ManagedPtrArray<VkRenderPassCreateInfo2> Pointer(this VkRenderPassCreateInfo2[] i) => new ManagedPtrArray<VkRenderPassCreateInfo2>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSubpassBeginInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2582,7 +2607,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSubpassBeginInfo> Pointer(this VkSubpassBeginInfo i) => new ManagedPtr<VkSubpassBeginInfo>(i);
-        public static ManagedPtr<VkSubpassBeginInfo[]> Pointer(this VkSubpassBeginInfo[] i) => new ManagedPtr<VkSubpassBeginInfo[]>(i);
+        public static ManagedPtrArray<VkSubpassBeginInfo> Pointer(this VkSubpassBeginInfo[] i) => new ManagedPtrArray<VkSubpassBeginInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSubpassEndInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2590,7 +2615,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSubpassEndInfo> Pointer(this VkSubpassEndInfo i) => new ManagedPtr<VkSubpassEndInfo>(i);
-        public static ManagedPtr<VkSubpassEndInfo[]> Pointer(this VkSubpassEndInfo[] i) => new ManagedPtr<VkSubpassEndInfo[]>(i);
+        public static ManagedPtrArray<VkSubpassEndInfo> Pointer(this VkSubpassEndInfo[] i) => new ManagedPtrArray<VkSubpassEndInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDevice8BitStorageFeatures {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2601,19 +2626,21 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDevice8BitStorageFeatures> Pointer(this VkPhysicalDevice8BitStorageFeatures i) => new ManagedPtr<VkPhysicalDevice8BitStorageFeatures>(i);
-        public static ManagedPtr<VkPhysicalDevice8BitStorageFeatures[]> Pointer(this VkPhysicalDevice8BitStorageFeatures[] i) => new ManagedPtr<VkPhysicalDevice8BitStorageFeatures[]>(i);
+        public static ManagedPtrArray<VkPhysicalDevice8BitStorageFeatures> Pointer(this VkPhysicalDevice8BitStorageFeatures[] i) => new ManagedPtrArray<VkPhysicalDevice8BitStorageFeatures>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceDriverProperties {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public VkDriverId driverID;
 			[FieldOffset(20)]public fixed byte driverName[256];
+			public const int driverName_len = 256;
 			[FieldOffset(276)]public fixed byte driverInfo[256];
+			public const int driverInfo_len = 256;
 			[FieldOffset(532)]public VkConformanceVersion conformanceVersion;
 		}
 
         public static ManagedPtr<VkPhysicalDeviceDriverProperties> Pointer(this VkPhysicalDeviceDriverProperties i) => new ManagedPtr<VkPhysicalDeviceDriverProperties>(i);
-        public static ManagedPtr<VkPhysicalDeviceDriverProperties[]> Pointer(this VkPhysicalDeviceDriverProperties[] i) => new ManagedPtr<VkPhysicalDeviceDriverProperties[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceDriverProperties> Pointer(this VkPhysicalDeviceDriverProperties[] i) => new ManagedPtrArray<VkPhysicalDeviceDriverProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceShaderAtomicInt64Features {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2623,7 +2650,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceShaderAtomicInt64Features> Pointer(this VkPhysicalDeviceShaderAtomicInt64Features i) => new ManagedPtr<VkPhysicalDeviceShaderAtomicInt64Features>(i);
-        public static ManagedPtr<VkPhysicalDeviceShaderAtomicInt64Features[]> Pointer(this VkPhysicalDeviceShaderAtomicInt64Features[] i) => new ManagedPtr<VkPhysicalDeviceShaderAtomicInt64Features[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceShaderAtomicInt64Features> Pointer(this VkPhysicalDeviceShaderAtomicInt64Features[] i) => new ManagedPtrArray<VkPhysicalDeviceShaderAtomicInt64Features>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceShaderFloat16Int8Features {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2633,7 +2660,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceShaderFloat16Int8Features> Pointer(this VkPhysicalDeviceShaderFloat16Int8Features i) => new ManagedPtr<VkPhysicalDeviceShaderFloat16Int8Features>(i);
-        public static ManagedPtr<VkPhysicalDeviceShaderFloat16Int8Features[]> Pointer(this VkPhysicalDeviceShaderFloat16Int8Features[] i) => new ManagedPtr<VkPhysicalDeviceShaderFloat16Int8Features[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceShaderFloat16Int8Features> Pointer(this VkPhysicalDeviceShaderFloat16Int8Features[] i) => new ManagedPtrArray<VkPhysicalDeviceShaderFloat16Int8Features>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceFloatControlsProperties {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2658,17 +2685,17 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceFloatControlsProperties> Pointer(this VkPhysicalDeviceFloatControlsProperties i) => new ManagedPtr<VkPhysicalDeviceFloatControlsProperties>(i);
-        public static ManagedPtr<VkPhysicalDeviceFloatControlsProperties[]> Pointer(this VkPhysicalDeviceFloatControlsProperties[] i) => new ManagedPtr<VkPhysicalDeviceFloatControlsProperties[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceFloatControlsProperties> Pointer(this VkPhysicalDeviceFloatControlsProperties[] i) => new ManagedPtrArray<VkPhysicalDeviceFloatControlsProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDescriptorSetLayoutBindingFlagsCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public uint bindingCount;
-			[FieldOffset(24)]public uint* pBindingFlags;
+			[FieldOffset(24)]public VkDescriptorBindingFlags* pBindingFlags;
 		}
 
         public static ManagedPtr<VkDescriptorSetLayoutBindingFlagsCreateInfo> Pointer(this VkDescriptorSetLayoutBindingFlagsCreateInfo i) => new ManagedPtr<VkDescriptorSetLayoutBindingFlagsCreateInfo>(i);
-        public static ManagedPtr<VkDescriptorSetLayoutBindingFlagsCreateInfo[]> Pointer(this VkDescriptorSetLayoutBindingFlagsCreateInfo[] i) => new ManagedPtr<VkDescriptorSetLayoutBindingFlagsCreateInfo[]>(i);
+        public static ManagedPtrArray<VkDescriptorSetLayoutBindingFlagsCreateInfo> Pointer(this VkDescriptorSetLayoutBindingFlagsCreateInfo[] i) => new ManagedPtrArray<VkDescriptorSetLayoutBindingFlagsCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceDescriptorIndexingFeatures {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2696,7 +2723,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceDescriptorIndexingFeatures> Pointer(this VkPhysicalDeviceDescriptorIndexingFeatures i) => new ManagedPtr<VkPhysicalDeviceDescriptorIndexingFeatures>(i);
-        public static ManagedPtr<VkPhysicalDeviceDescriptorIndexingFeatures[]> Pointer(this VkPhysicalDeviceDescriptorIndexingFeatures[] i) => new ManagedPtr<VkPhysicalDeviceDescriptorIndexingFeatures[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceDescriptorIndexingFeatures> Pointer(this VkPhysicalDeviceDescriptorIndexingFeatures[] i) => new ManagedPtrArray<VkPhysicalDeviceDescriptorIndexingFeatures>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceDescriptorIndexingProperties {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2727,7 +2754,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceDescriptorIndexingProperties> Pointer(this VkPhysicalDeviceDescriptorIndexingProperties i) => new ManagedPtr<VkPhysicalDeviceDescriptorIndexingProperties>(i);
-        public static ManagedPtr<VkPhysicalDeviceDescriptorIndexingProperties[]> Pointer(this VkPhysicalDeviceDescriptorIndexingProperties[] i) => new ManagedPtr<VkPhysicalDeviceDescriptorIndexingProperties[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceDescriptorIndexingProperties> Pointer(this VkPhysicalDeviceDescriptorIndexingProperties[] i) => new ManagedPtrArray<VkPhysicalDeviceDescriptorIndexingProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDescriptorSetVariableDescriptorCountAllocateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2737,7 +2764,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDescriptorSetVariableDescriptorCountAllocateInfo> Pointer(this VkDescriptorSetVariableDescriptorCountAllocateInfo i) => new ManagedPtr<VkDescriptorSetVariableDescriptorCountAllocateInfo>(i);
-        public static ManagedPtr<VkDescriptorSetVariableDescriptorCountAllocateInfo[]> Pointer(this VkDescriptorSetVariableDescriptorCountAllocateInfo[] i) => new ManagedPtr<VkDescriptorSetVariableDescriptorCountAllocateInfo[]>(i);
+        public static ManagedPtrArray<VkDescriptorSetVariableDescriptorCountAllocateInfo> Pointer(this VkDescriptorSetVariableDescriptorCountAllocateInfo[] i) => new ManagedPtrArray<VkDescriptorSetVariableDescriptorCountAllocateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDescriptorSetVariableDescriptorCountLayoutSupport {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2746,30 +2773,30 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDescriptorSetVariableDescriptorCountLayoutSupport> Pointer(this VkDescriptorSetVariableDescriptorCountLayoutSupport i) => new ManagedPtr<VkDescriptorSetVariableDescriptorCountLayoutSupport>(i);
-        public static ManagedPtr<VkDescriptorSetVariableDescriptorCountLayoutSupport[]> Pointer(this VkDescriptorSetVariableDescriptorCountLayoutSupport[] i) => new ManagedPtr<VkDescriptorSetVariableDescriptorCountLayoutSupport[]>(i);
+        public static ManagedPtrArray<VkDescriptorSetVariableDescriptorCountLayoutSupport> Pointer(this VkDescriptorSetVariableDescriptorCountLayoutSupport[] i) => new ManagedPtrArray<VkDescriptorSetVariableDescriptorCountLayoutSupport>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSubpassDescriptionDepthStencilResolve {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public VkResolveModeFlagBits depthResolveMode;
-			[FieldOffset(20)]public VkResolveModeFlagBits stencilResolveMode;
+			[FieldOffset(16)]public VkResolveModeFlags depthResolveMode;
+			[FieldOffset(20)]public VkResolveModeFlags stencilResolveMode;
 			[FieldOffset(24)]public IntPtr pDepthStencilResolveAttachment;
 		}
 
         public static ManagedPtr<VkSubpassDescriptionDepthStencilResolve> Pointer(this VkSubpassDescriptionDepthStencilResolve i) => new ManagedPtr<VkSubpassDescriptionDepthStencilResolve>(i);
-        public static ManagedPtr<VkSubpassDescriptionDepthStencilResolve[]> Pointer(this VkSubpassDescriptionDepthStencilResolve[] i) => new ManagedPtr<VkSubpassDescriptionDepthStencilResolve[]>(i);
+        public static ManagedPtrArray<VkSubpassDescriptionDepthStencilResolve> Pointer(this VkSubpassDescriptionDepthStencilResolve[] i) => new ManagedPtrArray<VkSubpassDescriptionDepthStencilResolve>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceDepthStencilResolveProperties {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint supportedDepthResolveModes;
-			[FieldOffset(20)]public uint supportedStencilResolveModes;
+			[FieldOffset(16)]public VkResolveModeFlags supportedDepthResolveModes;
+			[FieldOffset(20)]public VkResolveModeFlags supportedStencilResolveModes;
 			[FieldOffset(24)]public bool independentResolveNone;
 			[FieldOffset(28)]public bool independentResolve;
 		}
 
         public static ManagedPtr<VkPhysicalDeviceDepthStencilResolveProperties> Pointer(this VkPhysicalDeviceDepthStencilResolveProperties i) => new ManagedPtr<VkPhysicalDeviceDepthStencilResolveProperties>(i);
-        public static ManagedPtr<VkPhysicalDeviceDepthStencilResolveProperties[]> Pointer(this VkPhysicalDeviceDepthStencilResolveProperties[] i) => new ManagedPtr<VkPhysicalDeviceDepthStencilResolveProperties[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceDepthStencilResolveProperties> Pointer(this VkPhysicalDeviceDepthStencilResolveProperties[] i) => new ManagedPtrArray<VkPhysicalDeviceDepthStencilResolveProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceScalarBlockLayoutFeatures {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2778,16 +2805,16 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceScalarBlockLayoutFeatures> Pointer(this VkPhysicalDeviceScalarBlockLayoutFeatures i) => new ManagedPtr<VkPhysicalDeviceScalarBlockLayoutFeatures>(i);
-        public static ManagedPtr<VkPhysicalDeviceScalarBlockLayoutFeatures[]> Pointer(this VkPhysicalDeviceScalarBlockLayoutFeatures[] i) => new ManagedPtr<VkPhysicalDeviceScalarBlockLayoutFeatures[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceScalarBlockLayoutFeatures> Pointer(this VkPhysicalDeviceScalarBlockLayoutFeatures[] i) => new ManagedPtrArray<VkPhysicalDeviceScalarBlockLayoutFeatures>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImageStencilUsageCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint stencilUsage;
+			[FieldOffset(16)]public VkImageUsageFlags stencilUsage;
 		}
 
         public static ManagedPtr<VkImageStencilUsageCreateInfo> Pointer(this VkImageStencilUsageCreateInfo i) => new ManagedPtr<VkImageStencilUsageCreateInfo>(i);
-        public static ManagedPtr<VkImageStencilUsageCreateInfo[]> Pointer(this VkImageStencilUsageCreateInfo[] i) => new ManagedPtr<VkImageStencilUsageCreateInfo[]>(i);
+        public static ManagedPtrArray<VkImageStencilUsageCreateInfo> Pointer(this VkImageStencilUsageCreateInfo[] i) => new ManagedPtrArray<VkImageStencilUsageCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSamplerReductionModeCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2796,7 +2823,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSamplerReductionModeCreateInfo> Pointer(this VkSamplerReductionModeCreateInfo i) => new ManagedPtr<VkSamplerReductionModeCreateInfo>(i);
-        public static ManagedPtr<VkSamplerReductionModeCreateInfo[]> Pointer(this VkSamplerReductionModeCreateInfo[] i) => new ManagedPtr<VkSamplerReductionModeCreateInfo[]>(i);
+        public static ManagedPtrArray<VkSamplerReductionModeCreateInfo> Pointer(this VkSamplerReductionModeCreateInfo[] i) => new ManagedPtrArray<VkSamplerReductionModeCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceSamplerFilterMinmaxProperties {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2806,7 +2833,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceSamplerFilterMinmaxProperties> Pointer(this VkPhysicalDeviceSamplerFilterMinmaxProperties i) => new ManagedPtr<VkPhysicalDeviceSamplerFilterMinmaxProperties>(i);
-        public static ManagedPtr<VkPhysicalDeviceSamplerFilterMinmaxProperties[]> Pointer(this VkPhysicalDeviceSamplerFilterMinmaxProperties[] i) => new ManagedPtr<VkPhysicalDeviceSamplerFilterMinmaxProperties[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceSamplerFilterMinmaxProperties> Pointer(this VkPhysicalDeviceSamplerFilterMinmaxProperties[] i) => new ManagedPtrArray<VkPhysicalDeviceSamplerFilterMinmaxProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceVulkanMemoryModelFeatures {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2817,7 +2844,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceVulkanMemoryModelFeatures> Pointer(this VkPhysicalDeviceVulkanMemoryModelFeatures i) => new ManagedPtr<VkPhysicalDeviceVulkanMemoryModelFeatures>(i);
-        public static ManagedPtr<VkPhysicalDeviceVulkanMemoryModelFeatures[]> Pointer(this VkPhysicalDeviceVulkanMemoryModelFeatures[] i) => new ManagedPtr<VkPhysicalDeviceVulkanMemoryModelFeatures[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceVulkanMemoryModelFeatures> Pointer(this VkPhysicalDeviceVulkanMemoryModelFeatures[] i) => new ManagedPtrArray<VkPhysicalDeviceVulkanMemoryModelFeatures>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceImagelessFramebufferFeatures {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2826,13 +2853,13 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceImagelessFramebufferFeatures> Pointer(this VkPhysicalDeviceImagelessFramebufferFeatures i) => new ManagedPtr<VkPhysicalDeviceImagelessFramebufferFeatures>(i);
-        public static ManagedPtr<VkPhysicalDeviceImagelessFramebufferFeatures[]> Pointer(this VkPhysicalDeviceImagelessFramebufferFeatures[] i) => new ManagedPtr<VkPhysicalDeviceImagelessFramebufferFeatures[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceImagelessFramebufferFeatures> Pointer(this VkPhysicalDeviceImagelessFramebufferFeatures[] i) => new ManagedPtrArray<VkPhysicalDeviceImagelessFramebufferFeatures>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkFramebufferAttachmentImageInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
-			[FieldOffset(20)]public uint usage;
+			[FieldOffset(16)]public VkImageCreateFlags flags;
+			[FieldOffset(20)]public VkImageUsageFlags usage;
 			[FieldOffset(24)]public uint width;
 			[FieldOffset(28)]public uint height;
 			[FieldOffset(32)]public uint layerCount;
@@ -2841,7 +2868,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkFramebufferAttachmentImageInfo> Pointer(this VkFramebufferAttachmentImageInfo i) => new ManagedPtr<VkFramebufferAttachmentImageInfo>(i);
-        public static ManagedPtr<VkFramebufferAttachmentImageInfo[]> Pointer(this VkFramebufferAttachmentImageInfo[] i) => new ManagedPtr<VkFramebufferAttachmentImageInfo[]>(i);
+        public static ManagedPtrArray<VkFramebufferAttachmentImageInfo> Pointer(this VkFramebufferAttachmentImageInfo[] i) => new ManagedPtrArray<VkFramebufferAttachmentImageInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkFramebufferAttachmentsCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2851,7 +2878,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkFramebufferAttachmentsCreateInfo> Pointer(this VkFramebufferAttachmentsCreateInfo i) => new ManagedPtr<VkFramebufferAttachmentsCreateInfo>(i);
-        public static ManagedPtr<VkFramebufferAttachmentsCreateInfo[]> Pointer(this VkFramebufferAttachmentsCreateInfo[] i) => new ManagedPtr<VkFramebufferAttachmentsCreateInfo[]>(i);
+        public static ManagedPtrArray<VkFramebufferAttachmentsCreateInfo> Pointer(this VkFramebufferAttachmentsCreateInfo[] i) => new ManagedPtrArray<VkFramebufferAttachmentsCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkRenderPassAttachmentBeginInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2861,7 +2888,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkRenderPassAttachmentBeginInfo> Pointer(this VkRenderPassAttachmentBeginInfo i) => new ManagedPtr<VkRenderPassAttachmentBeginInfo>(i);
-        public static ManagedPtr<VkRenderPassAttachmentBeginInfo[]> Pointer(this VkRenderPassAttachmentBeginInfo[] i) => new ManagedPtr<VkRenderPassAttachmentBeginInfo[]>(i);
+        public static ManagedPtrArray<VkRenderPassAttachmentBeginInfo> Pointer(this VkRenderPassAttachmentBeginInfo[] i) => new ManagedPtrArray<VkRenderPassAttachmentBeginInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceUniformBufferStandardLayoutFeatures {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2870,7 +2897,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceUniformBufferStandardLayoutFeatures> Pointer(this VkPhysicalDeviceUniformBufferStandardLayoutFeatures i) => new ManagedPtr<VkPhysicalDeviceUniformBufferStandardLayoutFeatures>(i);
-        public static ManagedPtr<VkPhysicalDeviceUniformBufferStandardLayoutFeatures[]> Pointer(this VkPhysicalDeviceUniformBufferStandardLayoutFeatures[] i) => new ManagedPtr<VkPhysicalDeviceUniformBufferStandardLayoutFeatures[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceUniformBufferStandardLayoutFeatures> Pointer(this VkPhysicalDeviceUniformBufferStandardLayoutFeatures[] i) => new ManagedPtrArray<VkPhysicalDeviceUniformBufferStandardLayoutFeatures>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2879,7 +2906,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures> Pointer(this VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures i) => new ManagedPtr<VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures>(i);
-        public static ManagedPtr<VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures[]> Pointer(this VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures[] i) => new ManagedPtr<VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures> Pointer(this VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures[] i) => new ManagedPtrArray<VkPhysicalDeviceShaderSubgroupExtendedTypesFeatures>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2888,7 +2915,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures> Pointer(this VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures i) => new ManagedPtr<VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures>(i);
-        public static ManagedPtr<VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures[]> Pointer(this VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures[] i) => new ManagedPtr<VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures> Pointer(this VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures[] i) => new ManagedPtrArray<VkPhysicalDeviceSeparateDepthStencilLayoutsFeatures>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkAttachmentReferenceStencilLayout {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2897,7 +2924,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkAttachmentReferenceStencilLayout> Pointer(this VkAttachmentReferenceStencilLayout i) => new ManagedPtr<VkAttachmentReferenceStencilLayout>(i);
-        public static ManagedPtr<VkAttachmentReferenceStencilLayout[]> Pointer(this VkAttachmentReferenceStencilLayout[] i) => new ManagedPtr<VkAttachmentReferenceStencilLayout[]>(i);
+        public static ManagedPtrArray<VkAttachmentReferenceStencilLayout> Pointer(this VkAttachmentReferenceStencilLayout[] i) => new ManagedPtrArray<VkAttachmentReferenceStencilLayout>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkAttachmentDescriptionStencilLayout {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2907,7 +2934,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkAttachmentDescriptionStencilLayout> Pointer(this VkAttachmentDescriptionStencilLayout i) => new ManagedPtr<VkAttachmentDescriptionStencilLayout>(i);
-        public static ManagedPtr<VkAttachmentDescriptionStencilLayout[]> Pointer(this VkAttachmentDescriptionStencilLayout[] i) => new ManagedPtr<VkAttachmentDescriptionStencilLayout[]>(i);
+        public static ManagedPtrArray<VkAttachmentDescriptionStencilLayout> Pointer(this VkAttachmentDescriptionStencilLayout[] i) => new ManagedPtrArray<VkAttachmentDescriptionStencilLayout>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceHostQueryResetFeatures {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2916,7 +2943,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceHostQueryResetFeatures> Pointer(this VkPhysicalDeviceHostQueryResetFeatures i) => new ManagedPtr<VkPhysicalDeviceHostQueryResetFeatures>(i);
-        public static ManagedPtr<VkPhysicalDeviceHostQueryResetFeatures[]> Pointer(this VkPhysicalDeviceHostQueryResetFeatures[] i) => new ManagedPtr<VkPhysicalDeviceHostQueryResetFeatures[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceHostQueryResetFeatures> Pointer(this VkPhysicalDeviceHostQueryResetFeatures[] i) => new ManagedPtrArray<VkPhysicalDeviceHostQueryResetFeatures>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceTimelineSemaphoreFeatures {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2925,7 +2952,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceTimelineSemaphoreFeatures> Pointer(this VkPhysicalDeviceTimelineSemaphoreFeatures i) => new ManagedPtr<VkPhysicalDeviceTimelineSemaphoreFeatures>(i);
-        public static ManagedPtr<VkPhysicalDeviceTimelineSemaphoreFeatures[]> Pointer(this VkPhysicalDeviceTimelineSemaphoreFeatures[] i) => new ManagedPtr<VkPhysicalDeviceTimelineSemaphoreFeatures[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceTimelineSemaphoreFeatures> Pointer(this VkPhysicalDeviceTimelineSemaphoreFeatures[] i) => new ManagedPtrArray<VkPhysicalDeviceTimelineSemaphoreFeatures>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceTimelineSemaphoreProperties {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2934,7 +2961,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceTimelineSemaphoreProperties> Pointer(this VkPhysicalDeviceTimelineSemaphoreProperties i) => new ManagedPtr<VkPhysicalDeviceTimelineSemaphoreProperties>(i);
-        public static ManagedPtr<VkPhysicalDeviceTimelineSemaphoreProperties[]> Pointer(this VkPhysicalDeviceTimelineSemaphoreProperties[] i) => new ManagedPtr<VkPhysicalDeviceTimelineSemaphoreProperties[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceTimelineSemaphoreProperties> Pointer(this VkPhysicalDeviceTimelineSemaphoreProperties[] i) => new ManagedPtrArray<VkPhysicalDeviceTimelineSemaphoreProperties>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSemaphoreTypeCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2944,7 +2971,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSemaphoreTypeCreateInfo> Pointer(this VkSemaphoreTypeCreateInfo i) => new ManagedPtr<VkSemaphoreTypeCreateInfo>(i);
-        public static ManagedPtr<VkSemaphoreTypeCreateInfo[]> Pointer(this VkSemaphoreTypeCreateInfo[] i) => new ManagedPtr<VkSemaphoreTypeCreateInfo[]>(i);
+        public static ManagedPtrArray<VkSemaphoreTypeCreateInfo> Pointer(this VkSemaphoreTypeCreateInfo[] i) => new ManagedPtrArray<VkSemaphoreTypeCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkTimelineSemaphoreSubmitInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2956,19 +2983,19 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkTimelineSemaphoreSubmitInfo> Pointer(this VkTimelineSemaphoreSubmitInfo i) => new ManagedPtr<VkTimelineSemaphoreSubmitInfo>(i);
-        public static ManagedPtr<VkTimelineSemaphoreSubmitInfo[]> Pointer(this VkTimelineSemaphoreSubmitInfo[] i) => new ManagedPtr<VkTimelineSemaphoreSubmitInfo[]>(i);
+        public static ManagedPtrArray<VkTimelineSemaphoreSubmitInfo> Pointer(this VkTimelineSemaphoreSubmitInfo[] i) => new ManagedPtrArray<VkTimelineSemaphoreSubmitInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSemaphoreWaitInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkSemaphoreWaitFlags flags;
 			[FieldOffset(20)]public uint semaphoreCount;
 			[FieldOffset(24)]public IntPtr* pSemaphores;
 			[FieldOffset(32)]public ulong* pValues;
 		}
 
         public static ManagedPtr<VkSemaphoreWaitInfo> Pointer(this VkSemaphoreWaitInfo i) => new ManagedPtr<VkSemaphoreWaitInfo>(i);
-        public static ManagedPtr<VkSemaphoreWaitInfo[]> Pointer(this VkSemaphoreWaitInfo[] i) => new ManagedPtr<VkSemaphoreWaitInfo[]>(i);
+        public static ManagedPtrArray<VkSemaphoreWaitInfo> Pointer(this VkSemaphoreWaitInfo[] i) => new ManagedPtrArray<VkSemaphoreWaitInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSemaphoreSignalInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2978,7 +3005,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSemaphoreSignalInfo> Pointer(this VkSemaphoreSignalInfo i) => new ManagedPtr<VkSemaphoreSignalInfo>(i);
-        public static ManagedPtr<VkSemaphoreSignalInfo[]> Pointer(this VkSemaphoreSignalInfo[] i) => new ManagedPtr<VkSemaphoreSignalInfo[]>(i);
+        public static ManagedPtrArray<VkSemaphoreSignalInfo> Pointer(this VkSemaphoreSignalInfo[] i) => new ManagedPtrArray<VkSemaphoreSignalInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceBufferDeviceAddressFeatures {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2989,7 +3016,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceBufferDeviceAddressFeatures> Pointer(this VkPhysicalDeviceBufferDeviceAddressFeatures i) => new ManagedPtr<VkPhysicalDeviceBufferDeviceAddressFeatures>(i);
-        public static ManagedPtr<VkPhysicalDeviceBufferDeviceAddressFeatures[]> Pointer(this VkPhysicalDeviceBufferDeviceAddressFeatures[] i) => new ManagedPtr<VkPhysicalDeviceBufferDeviceAddressFeatures[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceBufferDeviceAddressFeatures> Pointer(this VkPhysicalDeviceBufferDeviceAddressFeatures[] i) => new ManagedPtrArray<VkPhysicalDeviceBufferDeviceAddressFeatures>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkBufferDeviceAddressInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -2998,7 +3025,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkBufferDeviceAddressInfo> Pointer(this VkBufferDeviceAddressInfo i) => new ManagedPtr<VkBufferDeviceAddressInfo>(i);
-        public static ManagedPtr<VkBufferDeviceAddressInfo[]> Pointer(this VkBufferDeviceAddressInfo[] i) => new ManagedPtr<VkBufferDeviceAddressInfo[]>(i);
+        public static ManagedPtrArray<VkBufferDeviceAddressInfo> Pointer(this VkBufferDeviceAddressInfo[] i) => new ManagedPtrArray<VkBufferDeviceAddressInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkBufferOpaqueCaptureAddressCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3007,7 +3034,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkBufferOpaqueCaptureAddressCreateInfo> Pointer(this VkBufferOpaqueCaptureAddressCreateInfo i) => new ManagedPtr<VkBufferOpaqueCaptureAddressCreateInfo>(i);
-        public static ManagedPtr<VkBufferOpaqueCaptureAddressCreateInfo[]> Pointer(this VkBufferOpaqueCaptureAddressCreateInfo[] i) => new ManagedPtr<VkBufferOpaqueCaptureAddressCreateInfo[]>(i);
+        public static ManagedPtrArray<VkBufferOpaqueCaptureAddressCreateInfo> Pointer(this VkBufferOpaqueCaptureAddressCreateInfo[] i) => new ManagedPtrArray<VkBufferOpaqueCaptureAddressCreateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkMemoryOpaqueCaptureAddressAllocateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3016,7 +3043,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkMemoryOpaqueCaptureAddressAllocateInfo> Pointer(this VkMemoryOpaqueCaptureAddressAllocateInfo i) => new ManagedPtr<VkMemoryOpaqueCaptureAddressAllocateInfo>(i);
-        public static ManagedPtr<VkMemoryOpaqueCaptureAddressAllocateInfo[]> Pointer(this VkMemoryOpaqueCaptureAddressAllocateInfo[] i) => new ManagedPtr<VkMemoryOpaqueCaptureAddressAllocateInfo[]>(i);
+        public static ManagedPtrArray<VkMemoryOpaqueCaptureAddressAllocateInfo> Pointer(this VkMemoryOpaqueCaptureAddressAllocateInfo[] i) => new ManagedPtrArray<VkMemoryOpaqueCaptureAddressAllocateInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDeviceMemoryOpaqueCaptureAddressInfo {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3025,7 +3052,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDeviceMemoryOpaqueCaptureAddressInfo> Pointer(this VkDeviceMemoryOpaqueCaptureAddressInfo i) => new ManagedPtr<VkDeviceMemoryOpaqueCaptureAddressInfo>(i);
-        public static ManagedPtr<VkDeviceMemoryOpaqueCaptureAddressInfo[]> Pointer(this VkDeviceMemoryOpaqueCaptureAddressInfo[] i) => new ManagedPtr<VkDeviceMemoryOpaqueCaptureAddressInfo[]>(i);
+        public static ManagedPtrArray<VkDeviceMemoryOpaqueCaptureAddressInfo> Pointer(this VkDeviceMemoryOpaqueCaptureAddressInfo[] i) => new ManagedPtrArray<VkDeviceMemoryOpaqueCaptureAddressInfo>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSurfaceCapabilitiesKHR {
 			[FieldOffset(0)]public uint minImageCount;
@@ -3034,14 +3061,14 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(16)]public VkExtent2D minImageExtent;
 			[FieldOffset(24)]public VkExtent2D maxImageExtent;
 			[FieldOffset(32)]public uint maxImageArrayLayers;
-			[FieldOffset(36)]public uint supportedTransforms;
-			[FieldOffset(40)]public VkSurfaceTransformFlagBitsKHR currentTransform;
-			[FieldOffset(44)]public uint supportedCompositeAlpha;
-			[FieldOffset(48)]public uint supportedUsageFlags;
+			[FieldOffset(36)]public VkSurfaceTransformFlagsKHR supportedTransforms;
+			[FieldOffset(40)]public VkSurfaceTransformFlagsKHR currentTransform;
+			[FieldOffset(44)]public VkCompositeAlphaFlagsKHR supportedCompositeAlpha;
+			[FieldOffset(48)]public VkImageUsageFlags supportedUsageFlags;
 		}
 
         public static ManagedPtr<VkSurfaceCapabilitiesKHR> Pointer(this VkSurfaceCapabilitiesKHR i) => new ManagedPtr<VkSurfaceCapabilitiesKHR>(i);
-        public static ManagedPtr<VkSurfaceCapabilitiesKHR[]> Pointer(this VkSurfaceCapabilitiesKHR[] i) => new ManagedPtr<VkSurfaceCapabilitiesKHR[]>(i);
+        public static ManagedPtrArray<VkSurfaceCapabilitiesKHR> Pointer(this VkSurfaceCapabilitiesKHR[] i) => new ManagedPtrArray<VkSurfaceCapabilitiesKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSurfaceFormatKHR {
 			[FieldOffset(0)]public VkFormat format;
@@ -3049,31 +3076,31 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSurfaceFormatKHR> Pointer(this VkSurfaceFormatKHR i) => new ManagedPtr<VkSurfaceFormatKHR>(i);
-        public static ManagedPtr<VkSurfaceFormatKHR[]> Pointer(this VkSurfaceFormatKHR[] i) => new ManagedPtr<VkSurfaceFormatKHR[]>(i);
+        public static ManagedPtrArray<VkSurfaceFormatKHR> Pointer(this VkSurfaceFormatKHR[] i) => new ManagedPtrArray<VkSurfaceFormatKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSwapchainCreateInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkSwapchainCreateFlagsKHR flags;
 			[FieldOffset(24)]public IntPtr surface;
 			[FieldOffset(32)]public uint minImageCount;
 			[FieldOffset(36)]public VkFormat imageFormat;
 			[FieldOffset(40)]public VkColorSpaceKHR imageColorSpace;
 			[FieldOffset(44)]public VkExtent2D imageExtent;
 			[FieldOffset(52)]public uint imageArrayLayers;
-			[FieldOffset(56)]public uint imageUsage;
+			[FieldOffset(56)]public VkImageUsageFlags imageUsage;
 			[FieldOffset(60)]public VkSharingMode imageSharingMode;
 			[FieldOffset(64)]public uint queueFamilyIndexCount;
 			[FieldOffset(72)]public uint* pQueueFamilyIndices;
-			[FieldOffset(80)]public VkSurfaceTransformFlagBitsKHR preTransform;
-			[FieldOffset(84)]public VkCompositeAlphaFlagBitsKHR compositeAlpha;
+			[FieldOffset(80)]public VkSurfaceTransformFlagsKHR preTransform;
+			[FieldOffset(84)]public VkCompositeAlphaFlagsKHR compositeAlpha;
 			[FieldOffset(88)]public VkPresentModeKHR presentMode;
 			[FieldOffset(92)]public bool clipped;
 			[FieldOffset(96)]public IntPtr oldSwapchain;
 		}
 
         public static ManagedPtr<VkSwapchainCreateInfoKHR> Pointer(this VkSwapchainCreateInfoKHR i) => new ManagedPtr<VkSwapchainCreateInfoKHR>(i);
-        public static ManagedPtr<VkSwapchainCreateInfoKHR[]> Pointer(this VkSwapchainCreateInfoKHR[] i) => new ManagedPtr<VkSwapchainCreateInfoKHR[]>(i);
+        public static ManagedPtrArray<VkSwapchainCreateInfoKHR> Pointer(this VkSwapchainCreateInfoKHR[] i) => new ManagedPtrArray<VkSwapchainCreateInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPresentInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3087,7 +3114,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPresentInfoKHR> Pointer(this VkPresentInfoKHR i) => new ManagedPtr<VkPresentInfoKHR>(i);
-        public static ManagedPtr<VkPresentInfoKHR[]> Pointer(this VkPresentInfoKHR[] i) => new ManagedPtr<VkPresentInfoKHR[]>(i);
+        public static ManagedPtrArray<VkPresentInfoKHR> Pointer(this VkPresentInfoKHR[] i) => new ManagedPtrArray<VkPresentInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImageSwapchainCreateInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3096,7 +3123,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkImageSwapchainCreateInfoKHR> Pointer(this VkImageSwapchainCreateInfoKHR i) => new ManagedPtr<VkImageSwapchainCreateInfoKHR>(i);
-        public static ManagedPtr<VkImageSwapchainCreateInfoKHR[]> Pointer(this VkImageSwapchainCreateInfoKHR[] i) => new ManagedPtr<VkImageSwapchainCreateInfoKHR[]>(i);
+        public static ManagedPtrArray<VkImageSwapchainCreateInfoKHR> Pointer(this VkImageSwapchainCreateInfoKHR[] i) => new ManagedPtrArray<VkImageSwapchainCreateInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkBindImageMemorySwapchainInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3106,7 +3133,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkBindImageMemorySwapchainInfoKHR> Pointer(this VkBindImageMemorySwapchainInfoKHR i) => new ManagedPtr<VkBindImageMemorySwapchainInfoKHR>(i);
-        public static ManagedPtr<VkBindImageMemorySwapchainInfoKHR[]> Pointer(this VkBindImageMemorySwapchainInfoKHR[] i) => new ManagedPtr<VkBindImageMemorySwapchainInfoKHR[]>(i);
+        public static ManagedPtrArray<VkBindImageMemorySwapchainInfoKHR> Pointer(this VkBindImageMemorySwapchainInfoKHR[] i) => new ManagedPtrArray<VkBindImageMemorySwapchainInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkAcquireNextImageInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3119,50 +3146,51 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkAcquireNextImageInfoKHR> Pointer(this VkAcquireNextImageInfoKHR i) => new ManagedPtr<VkAcquireNextImageInfoKHR>(i);
-        public static ManagedPtr<VkAcquireNextImageInfoKHR[]> Pointer(this VkAcquireNextImageInfoKHR[] i) => new ManagedPtr<VkAcquireNextImageInfoKHR[]>(i);
+        public static ManagedPtrArray<VkAcquireNextImageInfoKHR> Pointer(this VkAcquireNextImageInfoKHR[] i) => new ManagedPtrArray<VkAcquireNextImageInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDeviceGroupPresentCapabilitiesKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public fixed uint presentMask[32];
-			[FieldOffset(144)]public uint modes;
+			public const int presentMask_len = 32;
+			[FieldOffset(144)]public VkDeviceGroupPresentModeFlagsKHR modes;
 		}
 
         public static ManagedPtr<VkDeviceGroupPresentCapabilitiesKHR> Pointer(this VkDeviceGroupPresentCapabilitiesKHR i) => new ManagedPtr<VkDeviceGroupPresentCapabilitiesKHR>(i);
-        public static ManagedPtr<VkDeviceGroupPresentCapabilitiesKHR[]> Pointer(this VkDeviceGroupPresentCapabilitiesKHR[] i) => new ManagedPtr<VkDeviceGroupPresentCapabilitiesKHR[]>(i);
+        public static ManagedPtrArray<VkDeviceGroupPresentCapabilitiesKHR> Pointer(this VkDeviceGroupPresentCapabilitiesKHR[] i) => new ManagedPtrArray<VkDeviceGroupPresentCapabilitiesKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDeviceGroupPresentInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public uint swapchainCount;
 			[FieldOffset(24)]public uint* pDeviceMasks;
-			[FieldOffset(32)]public VkDeviceGroupPresentModeFlagBitsKHR mode;
+			[FieldOffset(32)]public VkDeviceGroupPresentModeFlagsKHR mode;
 		}
 
         public static ManagedPtr<VkDeviceGroupPresentInfoKHR> Pointer(this VkDeviceGroupPresentInfoKHR i) => new ManagedPtr<VkDeviceGroupPresentInfoKHR>(i);
-        public static ManagedPtr<VkDeviceGroupPresentInfoKHR[]> Pointer(this VkDeviceGroupPresentInfoKHR[] i) => new ManagedPtr<VkDeviceGroupPresentInfoKHR[]>(i);
+        public static ManagedPtrArray<VkDeviceGroupPresentInfoKHR> Pointer(this VkDeviceGroupPresentInfoKHR[] i) => new ManagedPtrArray<VkDeviceGroupPresentInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDeviceGroupSwapchainCreateInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint modes;
+			[FieldOffset(16)]public VkDeviceGroupPresentModeFlagsKHR modes;
 		}
 
         public static ManagedPtr<VkDeviceGroupSwapchainCreateInfoKHR> Pointer(this VkDeviceGroupSwapchainCreateInfoKHR i) => new ManagedPtr<VkDeviceGroupSwapchainCreateInfoKHR>(i);
-        public static ManagedPtr<VkDeviceGroupSwapchainCreateInfoKHR[]> Pointer(this VkDeviceGroupSwapchainCreateInfoKHR[] i) => new ManagedPtr<VkDeviceGroupSwapchainCreateInfoKHR[]>(i);
+        public static ManagedPtrArray<VkDeviceGroupSwapchainCreateInfoKHR> Pointer(this VkDeviceGroupSwapchainCreateInfoKHR[] i) => new ManagedPtrArray<VkDeviceGroupSwapchainCreateInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDisplayPropertiesKHR {
 			[FieldOffset(0)]public IntPtr display;
 			[FieldOffset(8)]public string displayName;
 			[FieldOffset(16)]public VkExtent2D physicalDimensions;
 			[FieldOffset(24)]public VkExtent2D physicalResolution;
-			[FieldOffset(32)]public uint supportedTransforms;
+			[FieldOffset(32)]public VkSurfaceTransformFlagsKHR supportedTransforms;
 			[FieldOffset(36)]public bool planeReorderPossible;
 			[FieldOffset(40)]public bool persistentContent;
 		}
 
         public static ManagedPtr<VkDisplayPropertiesKHR> Pointer(this VkDisplayPropertiesKHR i) => new ManagedPtr<VkDisplayPropertiesKHR>(i);
-        public static ManagedPtr<VkDisplayPropertiesKHR[]> Pointer(this VkDisplayPropertiesKHR[] i) => new ManagedPtr<VkDisplayPropertiesKHR[]>(i);
+        public static ManagedPtrArray<VkDisplayPropertiesKHR> Pointer(this VkDisplayPropertiesKHR[] i) => new ManagedPtrArray<VkDisplayPropertiesKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDisplayModeParametersKHR {
 			[FieldOffset(0)]public VkExtent2D visibleRegion;
@@ -3170,7 +3198,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDisplayModeParametersKHR> Pointer(this VkDisplayModeParametersKHR i) => new ManagedPtr<VkDisplayModeParametersKHR>(i);
-        public static ManagedPtr<VkDisplayModeParametersKHR[]> Pointer(this VkDisplayModeParametersKHR[] i) => new ManagedPtr<VkDisplayModeParametersKHR[]>(i);
+        public static ManagedPtrArray<VkDisplayModeParametersKHR> Pointer(this VkDisplayModeParametersKHR[] i) => new ManagedPtrArray<VkDisplayModeParametersKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDisplayModePropertiesKHR {
 			[FieldOffset(0)]public IntPtr displayMode;
@@ -3178,7 +3206,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDisplayModePropertiesKHR> Pointer(this VkDisplayModePropertiesKHR i) => new ManagedPtr<VkDisplayModePropertiesKHR>(i);
-        public static ManagedPtr<VkDisplayModePropertiesKHR[]> Pointer(this VkDisplayModePropertiesKHR[] i) => new ManagedPtr<VkDisplayModePropertiesKHR[]>(i);
+        public static ManagedPtrArray<VkDisplayModePropertiesKHR> Pointer(this VkDisplayModePropertiesKHR[] i) => new ManagedPtrArray<VkDisplayModePropertiesKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDisplayModeCreateInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3188,10 +3216,10 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDisplayModeCreateInfoKHR> Pointer(this VkDisplayModeCreateInfoKHR i) => new ManagedPtr<VkDisplayModeCreateInfoKHR>(i);
-        public static ManagedPtr<VkDisplayModeCreateInfoKHR[]> Pointer(this VkDisplayModeCreateInfoKHR[] i) => new ManagedPtr<VkDisplayModeCreateInfoKHR[]>(i);
+        public static ManagedPtrArray<VkDisplayModeCreateInfoKHR> Pointer(this VkDisplayModeCreateInfoKHR[] i) => new ManagedPtrArray<VkDisplayModeCreateInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDisplayPlaneCapabilitiesKHR {
-			[FieldOffset(0)]public uint supportedAlpha;
+			[FieldOffset(0)]public VkDisplayPlaneAlphaFlagsKHR supportedAlpha;
 			[FieldOffset(4)]public VkOffset2D minSrcPosition;
 			[FieldOffset(12)]public VkOffset2D maxSrcPosition;
 			[FieldOffset(20)]public VkExtent2D minSrcExtent;
@@ -3203,7 +3231,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDisplayPlaneCapabilitiesKHR> Pointer(this VkDisplayPlaneCapabilitiesKHR i) => new ManagedPtr<VkDisplayPlaneCapabilitiesKHR>(i);
-        public static ManagedPtr<VkDisplayPlaneCapabilitiesKHR[]> Pointer(this VkDisplayPlaneCapabilitiesKHR[] i) => new ManagedPtr<VkDisplayPlaneCapabilitiesKHR[]>(i);
+        public static ManagedPtrArray<VkDisplayPlaneCapabilitiesKHR> Pointer(this VkDisplayPlaneCapabilitiesKHR[] i) => new ManagedPtrArray<VkDisplayPlaneCapabilitiesKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDisplayPlanePropertiesKHR {
 			[FieldOffset(0)]public IntPtr currentDisplay;
@@ -3211,7 +3239,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDisplayPlanePropertiesKHR> Pointer(this VkDisplayPlanePropertiesKHR i) => new ManagedPtr<VkDisplayPlanePropertiesKHR>(i);
-        public static ManagedPtr<VkDisplayPlanePropertiesKHR[]> Pointer(this VkDisplayPlanePropertiesKHR[] i) => new ManagedPtr<VkDisplayPlanePropertiesKHR[]>(i);
+        public static ManagedPtrArray<VkDisplayPlanePropertiesKHR> Pointer(this VkDisplayPlanePropertiesKHR[] i) => new ManagedPtrArray<VkDisplayPlanePropertiesKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDisplaySurfaceCreateInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3220,14 +3248,14 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(24)]public IntPtr displayMode;
 			[FieldOffset(32)]public uint planeIndex;
 			[FieldOffset(36)]public uint planeStackIndex;
-			[FieldOffset(40)]public VkSurfaceTransformFlagBitsKHR transform;
+			[FieldOffset(40)]public VkSurfaceTransformFlagsKHR transform;
 			[FieldOffset(44)]public float globalAlpha;
-			[FieldOffset(48)]public VkDisplayPlaneAlphaFlagBitsKHR alphaMode;
+			[FieldOffset(48)]public VkDisplayPlaneAlphaFlagsKHR alphaMode;
 			[FieldOffset(52)]public VkExtent2D imageExtent;
 		}
 
         public static ManagedPtr<VkDisplaySurfaceCreateInfoKHR> Pointer(this VkDisplaySurfaceCreateInfoKHR i) => new ManagedPtr<VkDisplaySurfaceCreateInfoKHR>(i);
-        public static ManagedPtr<VkDisplaySurfaceCreateInfoKHR[]> Pointer(this VkDisplaySurfaceCreateInfoKHR[] i) => new ManagedPtr<VkDisplaySurfaceCreateInfoKHR[]>(i);
+        public static ManagedPtrArray<VkDisplaySurfaceCreateInfoKHR> Pointer(this VkDisplaySurfaceCreateInfoKHR[] i) => new ManagedPtrArray<VkDisplaySurfaceCreateInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDisplayPresentInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3238,17 +3266,17 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDisplayPresentInfoKHR> Pointer(this VkDisplayPresentInfoKHR i) => new ManagedPtr<VkDisplayPresentInfoKHR>(i);
-        public static ManagedPtr<VkDisplayPresentInfoKHR[]> Pointer(this VkDisplayPresentInfoKHR[] i) => new ManagedPtr<VkDisplayPresentInfoKHR[]>(i);
+        public static ManagedPtrArray<VkDisplayPresentInfoKHR> Pointer(this VkDisplayPresentInfoKHR[] i) => new ManagedPtrArray<VkDisplayPresentInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImportMemoryFdInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public VkExternalMemoryHandleTypeFlagBits handleType;
+			[FieldOffset(16)]public VkExternalMemoryHandleTypeFlags handleType;
 			[FieldOffset(20)]public int fd;
 		}
 
         public static ManagedPtr<VkImportMemoryFdInfoKHR> Pointer(this VkImportMemoryFdInfoKHR i) => new ManagedPtr<VkImportMemoryFdInfoKHR>(i);
-        public static ManagedPtr<VkImportMemoryFdInfoKHR[]> Pointer(this VkImportMemoryFdInfoKHR[] i) => new ManagedPtr<VkImportMemoryFdInfoKHR[]>(i);
+        public static ManagedPtrArray<VkImportMemoryFdInfoKHR> Pointer(this VkImportMemoryFdInfoKHR[] i) => new ManagedPtrArray<VkImportMemoryFdInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkMemoryFdPropertiesKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3257,39 +3285,39 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkMemoryFdPropertiesKHR> Pointer(this VkMemoryFdPropertiesKHR i) => new ManagedPtr<VkMemoryFdPropertiesKHR>(i);
-        public static ManagedPtr<VkMemoryFdPropertiesKHR[]> Pointer(this VkMemoryFdPropertiesKHR[] i) => new ManagedPtr<VkMemoryFdPropertiesKHR[]>(i);
+        public static ManagedPtrArray<VkMemoryFdPropertiesKHR> Pointer(this VkMemoryFdPropertiesKHR[] i) => new ManagedPtrArray<VkMemoryFdPropertiesKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkMemoryGetFdInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public IntPtr memory;
-			[FieldOffset(24)]public VkExternalMemoryHandleTypeFlagBits handleType;
+			[FieldOffset(24)]public VkExternalMemoryHandleTypeFlags handleType;
 		}
 
         public static ManagedPtr<VkMemoryGetFdInfoKHR> Pointer(this VkMemoryGetFdInfoKHR i) => new ManagedPtr<VkMemoryGetFdInfoKHR>(i);
-        public static ManagedPtr<VkMemoryGetFdInfoKHR[]> Pointer(this VkMemoryGetFdInfoKHR[] i) => new ManagedPtr<VkMemoryGetFdInfoKHR[]>(i);
+        public static ManagedPtrArray<VkMemoryGetFdInfoKHR> Pointer(this VkMemoryGetFdInfoKHR[] i) => new ManagedPtrArray<VkMemoryGetFdInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImportSemaphoreFdInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public IntPtr semaphore;
-			[FieldOffset(24)]public uint flags;
-			[FieldOffset(28)]public VkExternalSemaphoreHandleTypeFlagBits handleType;
+			[FieldOffset(24)]public VkSemaphoreImportFlags flags;
+			[FieldOffset(28)]public VkExternalSemaphoreHandleTypeFlags handleType;
 			[FieldOffset(32)]public int fd;
 		}
 
         public static ManagedPtr<VkImportSemaphoreFdInfoKHR> Pointer(this VkImportSemaphoreFdInfoKHR i) => new ManagedPtr<VkImportSemaphoreFdInfoKHR>(i);
-        public static ManagedPtr<VkImportSemaphoreFdInfoKHR[]> Pointer(this VkImportSemaphoreFdInfoKHR[] i) => new ManagedPtr<VkImportSemaphoreFdInfoKHR[]>(i);
+        public static ManagedPtrArray<VkImportSemaphoreFdInfoKHR> Pointer(this VkImportSemaphoreFdInfoKHR[] i) => new ManagedPtrArray<VkImportSemaphoreFdInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSemaphoreGetFdInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public IntPtr semaphore;
-			[FieldOffset(24)]public VkExternalSemaphoreHandleTypeFlagBits handleType;
+			[FieldOffset(24)]public VkExternalSemaphoreHandleTypeFlags handleType;
 		}
 
         public static ManagedPtr<VkSemaphoreGetFdInfoKHR> Pointer(this VkSemaphoreGetFdInfoKHR i) => new ManagedPtr<VkSemaphoreGetFdInfoKHR>(i);
-        public static ManagedPtr<VkSemaphoreGetFdInfoKHR[]> Pointer(this VkSemaphoreGetFdInfoKHR[] i) => new ManagedPtr<VkSemaphoreGetFdInfoKHR[]>(i);
+        public static ManagedPtrArray<VkSemaphoreGetFdInfoKHR> Pointer(this VkSemaphoreGetFdInfoKHR[] i) => new ManagedPtrArray<VkSemaphoreGetFdInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDevicePushDescriptorPropertiesKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3298,7 +3326,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDevicePushDescriptorPropertiesKHR> Pointer(this VkPhysicalDevicePushDescriptorPropertiesKHR i) => new ManagedPtr<VkPhysicalDevicePushDescriptorPropertiesKHR>(i);
-        public static ManagedPtr<VkPhysicalDevicePushDescriptorPropertiesKHR[]> Pointer(this VkPhysicalDevicePushDescriptorPropertiesKHR[] i) => new ManagedPtr<VkPhysicalDevicePushDescriptorPropertiesKHR[]>(i);
+        public static ManagedPtrArray<VkPhysicalDevicePushDescriptorPropertiesKHR> Pointer(this VkPhysicalDevicePushDescriptorPropertiesKHR[] i) => new ManagedPtrArray<VkPhysicalDevicePushDescriptorPropertiesKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkRectLayerKHR {
 			[FieldOffset(0)]public VkOffset2D offset;
@@ -3307,7 +3335,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkRectLayerKHR> Pointer(this VkRectLayerKHR i) => new ManagedPtr<VkRectLayerKHR>(i);
-        public static ManagedPtr<VkRectLayerKHR[]> Pointer(this VkRectLayerKHR[] i) => new ManagedPtr<VkRectLayerKHR[]>(i);
+        public static ManagedPtrArray<VkRectLayerKHR> Pointer(this VkRectLayerKHR[] i) => new ManagedPtrArray<VkRectLayerKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPresentRegionKHR {
 			[FieldOffset(0)]public uint rectangleCount;
@@ -3315,7 +3343,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPresentRegionKHR> Pointer(this VkPresentRegionKHR i) => new ManagedPtr<VkPresentRegionKHR>(i);
-        public static ManagedPtr<VkPresentRegionKHR[]> Pointer(this VkPresentRegionKHR[] i) => new ManagedPtr<VkPresentRegionKHR[]>(i);
+        public static ManagedPtrArray<VkPresentRegionKHR> Pointer(this VkPresentRegionKHR[] i) => new ManagedPtrArray<VkPresentRegionKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPresentRegionsKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3325,38 +3353,38 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPresentRegionsKHR> Pointer(this VkPresentRegionsKHR i) => new ManagedPtr<VkPresentRegionsKHR>(i);
-        public static ManagedPtr<VkPresentRegionsKHR[]> Pointer(this VkPresentRegionsKHR[] i) => new ManagedPtr<VkPresentRegionsKHR[]>(i);
+        public static ManagedPtrArray<VkPresentRegionsKHR> Pointer(this VkPresentRegionsKHR[] i) => new ManagedPtrArray<VkPresentRegionsKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSharedPresentSurfaceCapabilitiesKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint sharedPresentSupportedUsageFlags;
+			[FieldOffset(16)]public VkImageUsageFlags sharedPresentSupportedUsageFlags;
 		}
 
         public static ManagedPtr<VkSharedPresentSurfaceCapabilitiesKHR> Pointer(this VkSharedPresentSurfaceCapabilitiesKHR i) => new ManagedPtr<VkSharedPresentSurfaceCapabilitiesKHR>(i);
-        public static ManagedPtr<VkSharedPresentSurfaceCapabilitiesKHR[]> Pointer(this VkSharedPresentSurfaceCapabilitiesKHR[] i) => new ManagedPtr<VkSharedPresentSurfaceCapabilitiesKHR[]>(i);
+        public static ManagedPtrArray<VkSharedPresentSurfaceCapabilitiesKHR> Pointer(this VkSharedPresentSurfaceCapabilitiesKHR[] i) => new ManagedPtrArray<VkSharedPresentSurfaceCapabilitiesKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImportFenceFdInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public IntPtr fence;
-			[FieldOffset(24)]public uint flags;
-			[FieldOffset(28)]public VkExternalFenceHandleTypeFlagBits handleType;
+			[FieldOffset(24)]public VkFenceImportFlags flags;
+			[FieldOffset(28)]public VkExternalFenceHandleTypeFlags handleType;
 			[FieldOffset(32)]public int fd;
 		}
 
         public static ManagedPtr<VkImportFenceFdInfoKHR> Pointer(this VkImportFenceFdInfoKHR i) => new ManagedPtr<VkImportFenceFdInfoKHR>(i);
-        public static ManagedPtr<VkImportFenceFdInfoKHR[]> Pointer(this VkImportFenceFdInfoKHR[] i) => new ManagedPtr<VkImportFenceFdInfoKHR[]>(i);
+        public static ManagedPtrArray<VkImportFenceFdInfoKHR> Pointer(this VkImportFenceFdInfoKHR[] i) => new ManagedPtrArray<VkImportFenceFdInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkFenceGetFdInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public IntPtr fence;
-			[FieldOffset(24)]public VkExternalFenceHandleTypeFlagBits handleType;
+			[FieldOffset(24)]public VkExternalFenceHandleTypeFlags handleType;
 		}
 
         public static ManagedPtr<VkFenceGetFdInfoKHR> Pointer(this VkFenceGetFdInfoKHR i) => new ManagedPtr<VkFenceGetFdInfoKHR>(i);
-        public static ManagedPtr<VkFenceGetFdInfoKHR[]> Pointer(this VkFenceGetFdInfoKHR[] i) => new ManagedPtr<VkFenceGetFdInfoKHR[]>(i);
+        public static ManagedPtrArray<VkFenceGetFdInfoKHR> Pointer(this VkFenceGetFdInfoKHR[] i) => new ManagedPtrArray<VkFenceGetFdInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDevicePerformanceQueryFeaturesKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3366,7 +3394,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDevicePerformanceQueryFeaturesKHR> Pointer(this VkPhysicalDevicePerformanceQueryFeaturesKHR i) => new ManagedPtr<VkPhysicalDevicePerformanceQueryFeaturesKHR>(i);
-        public static ManagedPtr<VkPhysicalDevicePerformanceQueryFeaturesKHR[]> Pointer(this VkPhysicalDevicePerformanceQueryFeaturesKHR[] i) => new ManagedPtr<VkPhysicalDevicePerformanceQueryFeaturesKHR[]>(i);
+        public static ManagedPtrArray<VkPhysicalDevicePerformanceQueryFeaturesKHR> Pointer(this VkPhysicalDevicePerformanceQueryFeaturesKHR[] i) => new ManagedPtrArray<VkPhysicalDevicePerformanceQueryFeaturesKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDevicePerformanceQueryPropertiesKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3375,7 +3403,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDevicePerformanceQueryPropertiesKHR> Pointer(this VkPhysicalDevicePerformanceQueryPropertiesKHR i) => new ManagedPtr<VkPhysicalDevicePerformanceQueryPropertiesKHR>(i);
-        public static ManagedPtr<VkPhysicalDevicePerformanceQueryPropertiesKHR[]> Pointer(this VkPhysicalDevicePerformanceQueryPropertiesKHR[] i) => new ManagedPtr<VkPhysicalDevicePerformanceQueryPropertiesKHR[]>(i);
+        public static ManagedPtrArray<VkPhysicalDevicePerformanceQueryPropertiesKHR> Pointer(this VkPhysicalDevicePerformanceQueryPropertiesKHR[] i) => new ManagedPtrArray<VkPhysicalDevicePerformanceQueryPropertiesKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPerformanceCounterKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3384,22 +3412,26 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(20)]public VkPerformanceCounterScopeKHR scope;
 			[FieldOffset(24)]public VkPerformanceCounterStorageKHR storage;
 			[FieldOffset(28)]public fixed byte uuid[16];
+			public const int uuid_len = 16;
 		}
 
         public static ManagedPtr<VkPerformanceCounterKHR> Pointer(this VkPerformanceCounterKHR i) => new ManagedPtr<VkPerformanceCounterKHR>(i);
-        public static ManagedPtr<VkPerformanceCounterKHR[]> Pointer(this VkPerformanceCounterKHR[] i) => new ManagedPtr<VkPerformanceCounterKHR[]>(i);
+        public static ManagedPtrArray<VkPerformanceCounterKHR> Pointer(this VkPerformanceCounterKHR[] i) => new ManagedPtrArray<VkPerformanceCounterKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPerformanceCounterDescriptionKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkPerformanceCounterDescriptionFlagsKHR flags;
 			[FieldOffset(20)]public fixed byte name[256];
+			public const int name_len = 256;
 			[FieldOffset(276)]public fixed byte category[256];
+			public const int category_len = 256;
 			[FieldOffset(532)]public fixed byte description[256];
+			public const int description_len = 256;
 		}
 
         public static ManagedPtr<VkPerformanceCounterDescriptionKHR> Pointer(this VkPerformanceCounterDescriptionKHR i) => new ManagedPtr<VkPerformanceCounterDescriptionKHR>(i);
-        public static ManagedPtr<VkPerformanceCounterDescriptionKHR[]> Pointer(this VkPerformanceCounterDescriptionKHR[] i) => new ManagedPtr<VkPerformanceCounterDescriptionKHR[]>(i);
+        public static ManagedPtrArray<VkPerformanceCounterDescriptionKHR> Pointer(this VkPerformanceCounterDescriptionKHR[] i) => new ManagedPtrArray<VkPerformanceCounterDescriptionKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkQueryPoolPerformanceCreateInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3410,17 +3442,17 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkQueryPoolPerformanceCreateInfoKHR> Pointer(this VkQueryPoolPerformanceCreateInfoKHR i) => new ManagedPtr<VkQueryPoolPerformanceCreateInfoKHR>(i);
-        public static ManagedPtr<VkQueryPoolPerformanceCreateInfoKHR[]> Pointer(this VkQueryPoolPerformanceCreateInfoKHR[] i) => new ManagedPtr<VkQueryPoolPerformanceCreateInfoKHR[]>(i);
+        public static ManagedPtrArray<VkQueryPoolPerformanceCreateInfoKHR> Pointer(this VkQueryPoolPerformanceCreateInfoKHR[] i) => new ManagedPtrArray<VkQueryPoolPerformanceCreateInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkAcquireProfilingLockInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkAcquireProfilingLockFlagsKHR flags;
 			[FieldOffset(24)]public ulong timeout;
 		}
 
         public static ManagedPtr<VkAcquireProfilingLockInfoKHR> Pointer(this VkAcquireProfilingLockInfoKHR i) => new ManagedPtr<VkAcquireProfilingLockInfoKHR>(i);
-        public static ManagedPtr<VkAcquireProfilingLockInfoKHR[]> Pointer(this VkAcquireProfilingLockInfoKHR[] i) => new ManagedPtr<VkAcquireProfilingLockInfoKHR[]>(i);
+        public static ManagedPtrArray<VkAcquireProfilingLockInfoKHR> Pointer(this VkAcquireProfilingLockInfoKHR[] i) => new ManagedPtrArray<VkAcquireProfilingLockInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPerformanceQuerySubmitInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3429,7 +3461,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPerformanceQuerySubmitInfoKHR> Pointer(this VkPerformanceQuerySubmitInfoKHR i) => new ManagedPtr<VkPerformanceQuerySubmitInfoKHR>(i);
-        public static ManagedPtr<VkPerformanceQuerySubmitInfoKHR[]> Pointer(this VkPerformanceQuerySubmitInfoKHR[] i) => new ManagedPtr<VkPerformanceQuerySubmitInfoKHR[]>(i);
+        public static ManagedPtrArray<VkPerformanceQuerySubmitInfoKHR> Pointer(this VkPerformanceQuerySubmitInfoKHR[] i) => new ManagedPtrArray<VkPerformanceQuerySubmitInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceSurfaceInfo2KHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3438,7 +3470,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceSurfaceInfo2KHR> Pointer(this VkPhysicalDeviceSurfaceInfo2KHR i) => new ManagedPtr<VkPhysicalDeviceSurfaceInfo2KHR>(i);
-        public static ManagedPtr<VkPhysicalDeviceSurfaceInfo2KHR[]> Pointer(this VkPhysicalDeviceSurfaceInfo2KHR[] i) => new ManagedPtr<VkPhysicalDeviceSurfaceInfo2KHR[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceSurfaceInfo2KHR> Pointer(this VkPhysicalDeviceSurfaceInfo2KHR[] i) => new ManagedPtrArray<VkPhysicalDeviceSurfaceInfo2KHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSurfaceCapabilities2KHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3447,7 +3479,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSurfaceCapabilities2KHR> Pointer(this VkSurfaceCapabilities2KHR i) => new ManagedPtr<VkSurfaceCapabilities2KHR>(i);
-        public static ManagedPtr<VkSurfaceCapabilities2KHR[]> Pointer(this VkSurfaceCapabilities2KHR[] i) => new ManagedPtr<VkSurfaceCapabilities2KHR[]>(i);
+        public static ManagedPtrArray<VkSurfaceCapabilities2KHR> Pointer(this VkSurfaceCapabilities2KHR[] i) => new ManagedPtrArray<VkSurfaceCapabilities2KHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSurfaceFormat2KHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3456,7 +3488,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSurfaceFormat2KHR> Pointer(this VkSurfaceFormat2KHR i) => new ManagedPtr<VkSurfaceFormat2KHR>(i);
-        public static ManagedPtr<VkSurfaceFormat2KHR[]> Pointer(this VkSurfaceFormat2KHR[] i) => new ManagedPtr<VkSurfaceFormat2KHR[]>(i);
+        public static ManagedPtrArray<VkSurfaceFormat2KHR> Pointer(this VkSurfaceFormat2KHR[] i) => new ManagedPtrArray<VkSurfaceFormat2KHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDisplayProperties2KHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3465,7 +3497,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDisplayProperties2KHR> Pointer(this VkDisplayProperties2KHR i) => new ManagedPtr<VkDisplayProperties2KHR>(i);
-        public static ManagedPtr<VkDisplayProperties2KHR[]> Pointer(this VkDisplayProperties2KHR[] i) => new ManagedPtr<VkDisplayProperties2KHR[]>(i);
+        public static ManagedPtrArray<VkDisplayProperties2KHR> Pointer(this VkDisplayProperties2KHR[] i) => new ManagedPtrArray<VkDisplayProperties2KHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDisplayPlaneProperties2KHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3474,7 +3506,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDisplayPlaneProperties2KHR> Pointer(this VkDisplayPlaneProperties2KHR i) => new ManagedPtr<VkDisplayPlaneProperties2KHR>(i);
-        public static ManagedPtr<VkDisplayPlaneProperties2KHR[]> Pointer(this VkDisplayPlaneProperties2KHR[] i) => new ManagedPtr<VkDisplayPlaneProperties2KHR[]>(i);
+        public static ManagedPtrArray<VkDisplayPlaneProperties2KHR> Pointer(this VkDisplayPlaneProperties2KHR[] i) => new ManagedPtrArray<VkDisplayPlaneProperties2KHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDisplayModeProperties2KHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3483,7 +3515,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDisplayModeProperties2KHR> Pointer(this VkDisplayModeProperties2KHR i) => new ManagedPtr<VkDisplayModeProperties2KHR>(i);
-        public static ManagedPtr<VkDisplayModeProperties2KHR[]> Pointer(this VkDisplayModeProperties2KHR[] i) => new ManagedPtr<VkDisplayModeProperties2KHR[]>(i);
+        public static ManagedPtrArray<VkDisplayModeProperties2KHR> Pointer(this VkDisplayModeProperties2KHR[] i) => new ManagedPtrArray<VkDisplayModeProperties2KHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDisplayPlaneInfo2KHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3493,7 +3525,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDisplayPlaneInfo2KHR> Pointer(this VkDisplayPlaneInfo2KHR i) => new ManagedPtr<VkDisplayPlaneInfo2KHR>(i);
-        public static ManagedPtr<VkDisplayPlaneInfo2KHR[]> Pointer(this VkDisplayPlaneInfo2KHR[] i) => new ManagedPtr<VkDisplayPlaneInfo2KHR[]>(i);
+        public static ManagedPtrArray<VkDisplayPlaneInfo2KHR> Pointer(this VkDisplayPlaneInfo2KHR[] i) => new ManagedPtrArray<VkDisplayPlaneInfo2KHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDisplayPlaneCapabilities2KHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3502,7 +3534,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDisplayPlaneCapabilities2KHR> Pointer(this VkDisplayPlaneCapabilities2KHR i) => new ManagedPtr<VkDisplayPlaneCapabilities2KHR>(i);
-        public static ManagedPtr<VkDisplayPlaneCapabilities2KHR[]> Pointer(this VkDisplayPlaneCapabilities2KHR[] i) => new ManagedPtr<VkDisplayPlaneCapabilities2KHR[]>(i);
+        public static ManagedPtrArray<VkDisplayPlaneCapabilities2KHR> Pointer(this VkDisplayPlaneCapabilities2KHR[] i) => new ManagedPtrArray<VkDisplayPlaneCapabilities2KHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceShaderClockFeaturesKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3512,7 +3544,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceShaderClockFeaturesKHR> Pointer(this VkPhysicalDeviceShaderClockFeaturesKHR i) => new ManagedPtr<VkPhysicalDeviceShaderClockFeaturesKHR>(i);
-        public static ManagedPtr<VkPhysicalDeviceShaderClockFeaturesKHR[]> Pointer(this VkPhysicalDeviceShaderClockFeaturesKHR[] i) => new ManagedPtr<VkPhysicalDeviceShaderClockFeaturesKHR[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceShaderClockFeaturesKHR> Pointer(this VkPhysicalDeviceShaderClockFeaturesKHR[] i) => new ManagedPtrArray<VkPhysicalDeviceShaderClockFeaturesKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSurfaceProtectedCapabilitiesKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3521,7 +3553,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSurfaceProtectedCapabilitiesKHR> Pointer(this VkSurfaceProtectedCapabilitiesKHR i) => new ManagedPtr<VkSurfaceProtectedCapabilitiesKHR>(i);
-        public static ManagedPtr<VkSurfaceProtectedCapabilitiesKHR[]> Pointer(this VkSurfaceProtectedCapabilitiesKHR[] i) => new ManagedPtr<VkSurfaceProtectedCapabilitiesKHR[]>(i);
+        public static ManagedPtrArray<VkSurfaceProtectedCapabilitiesKHR> Pointer(this VkSurfaceProtectedCapabilitiesKHR[] i) => new ManagedPtrArray<VkSurfaceProtectedCapabilitiesKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3530,7 +3562,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR> Pointer(this VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR i) => new ManagedPtr<VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR>(i);
-        public static ManagedPtr<VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR[]> Pointer(this VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR[] i) => new ManagedPtr<VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR[]>(i);
+        public static ManagedPtrArray<VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR> Pointer(this VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR[] i) => new ManagedPtrArray<VkPhysicalDevicePipelineExecutablePropertiesFeaturesKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3539,19 +3571,21 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineInfoKHR> Pointer(this VkPipelineInfoKHR i) => new ManagedPtr<VkPipelineInfoKHR>(i);
-        public static ManagedPtr<VkPipelineInfoKHR[]> Pointer(this VkPipelineInfoKHR[] i) => new ManagedPtr<VkPipelineInfoKHR[]>(i);
+        public static ManagedPtrArray<VkPipelineInfoKHR> Pointer(this VkPipelineInfoKHR[] i) => new ManagedPtrArray<VkPipelineInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineExecutablePropertiesKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint stages;
+			[FieldOffset(16)]public VkShaderStageFlags stages;
 			[FieldOffset(20)]public fixed byte name[256];
+			public const int name_len = 256;
 			[FieldOffset(276)]public fixed byte description[256];
+			public const int description_len = 256;
 			[FieldOffset(532)]public uint subgroupSize;
 		}
 
         public static ManagedPtr<VkPipelineExecutablePropertiesKHR> Pointer(this VkPipelineExecutablePropertiesKHR i) => new ManagedPtr<VkPipelineExecutablePropertiesKHR>(i);
-        public static ManagedPtr<VkPipelineExecutablePropertiesKHR[]> Pointer(this VkPipelineExecutablePropertiesKHR[] i) => new ManagedPtr<VkPipelineExecutablePropertiesKHR[]>(i);
+        public static ManagedPtrArray<VkPipelineExecutablePropertiesKHR> Pointer(this VkPipelineExecutablePropertiesKHR[] i) => new ManagedPtrArray<VkPipelineExecutablePropertiesKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineExecutableInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3561,43 +3595,47 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineExecutableInfoKHR> Pointer(this VkPipelineExecutableInfoKHR i) => new ManagedPtr<VkPipelineExecutableInfoKHR>(i);
-        public static ManagedPtr<VkPipelineExecutableInfoKHR[]> Pointer(this VkPipelineExecutableInfoKHR[] i) => new ManagedPtr<VkPipelineExecutableInfoKHR[]>(i);
+        public static ManagedPtrArray<VkPipelineExecutableInfoKHR> Pointer(this VkPipelineExecutableInfoKHR[] i) => new ManagedPtrArray<VkPipelineExecutableInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineExecutableStatisticKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public fixed byte name[256];
+			public const int name_len = 256;
 			[FieldOffset(272)]public fixed byte description[256];
+			public const int description_len = 256;
 			[FieldOffset(528)]public VkPipelineExecutableStatisticFormatKHR format;
 			[FieldOffset(536)]public VkPipelineExecutableStatisticValueKHR value;
 		}
 
         public static ManagedPtr<VkPipelineExecutableStatisticKHR> Pointer(this VkPipelineExecutableStatisticKHR i) => new ManagedPtr<VkPipelineExecutableStatisticKHR>(i);
-        public static ManagedPtr<VkPipelineExecutableStatisticKHR[]> Pointer(this VkPipelineExecutableStatisticKHR[] i) => new ManagedPtr<VkPipelineExecutableStatisticKHR[]>(i);
+        public static ManagedPtrArray<VkPipelineExecutableStatisticKHR> Pointer(this VkPipelineExecutableStatisticKHR[] i) => new ManagedPtrArray<VkPipelineExecutableStatisticKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineExecutableInternalRepresentationKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public fixed byte name[256];
+			public const int name_len = 256;
 			[FieldOffset(272)]public fixed byte description[256];
+			public const int description_len = 256;
 			[FieldOffset(528)]public bool isText;
 			[FieldOffset(536)]public ulong dataSize;
 			[FieldOffset(544)]public IntPtr pData;
 		}
 
         public static ManagedPtr<VkPipelineExecutableInternalRepresentationKHR> Pointer(this VkPipelineExecutableInternalRepresentationKHR i) => new ManagedPtr<VkPipelineExecutableInternalRepresentationKHR>(i);
-        public static ManagedPtr<VkPipelineExecutableInternalRepresentationKHR[]> Pointer(this VkPipelineExecutableInternalRepresentationKHR[] i) => new ManagedPtr<VkPipelineExecutableInternalRepresentationKHR[]>(i);
+        public static ManagedPtrArray<VkPipelineExecutableInternalRepresentationKHR> Pointer(this VkPipelineExecutableInternalRepresentationKHR[] i) => new ManagedPtrArray<VkPipelineExecutableInternalRepresentationKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDebugReportCallbackCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkDebugReportFlagsEXT flags;
 			[FieldOffset(24)]public IntPtr pfnCallback;
 			[FieldOffset(32)]public IntPtr pUserData;
 		}
 
         public static ManagedPtr<VkDebugReportCallbackCreateInfoEXT> Pointer(this VkDebugReportCallbackCreateInfoEXT i) => new ManagedPtr<VkDebugReportCallbackCreateInfoEXT>(i);
-        public static ManagedPtr<VkDebugReportCallbackCreateInfoEXT[]> Pointer(this VkDebugReportCallbackCreateInfoEXT[] i) => new ManagedPtr<VkDebugReportCallbackCreateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkDebugReportCallbackCreateInfoEXT> Pointer(this VkDebugReportCallbackCreateInfoEXT[] i) => new ManagedPtrArray<VkDebugReportCallbackCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineRasterizationStateRasterizationOrderAMD {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3606,7 +3644,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineRasterizationStateRasterizationOrderAMD> Pointer(this VkPipelineRasterizationStateRasterizationOrderAMD i) => new ManagedPtr<VkPipelineRasterizationStateRasterizationOrderAMD>(i);
-        public static ManagedPtr<VkPipelineRasterizationStateRasterizationOrderAMD[]> Pointer(this VkPipelineRasterizationStateRasterizationOrderAMD[] i) => new ManagedPtr<VkPipelineRasterizationStateRasterizationOrderAMD[]>(i);
+        public static ManagedPtrArray<VkPipelineRasterizationStateRasterizationOrderAMD> Pointer(this VkPipelineRasterizationStateRasterizationOrderAMD[] i) => new ManagedPtrArray<VkPipelineRasterizationStateRasterizationOrderAMD>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDebugMarkerObjectNameInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3617,7 +3655,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDebugMarkerObjectNameInfoEXT> Pointer(this VkDebugMarkerObjectNameInfoEXT i) => new ManagedPtr<VkDebugMarkerObjectNameInfoEXT>(i);
-        public static ManagedPtr<VkDebugMarkerObjectNameInfoEXT[]> Pointer(this VkDebugMarkerObjectNameInfoEXT[] i) => new ManagedPtr<VkDebugMarkerObjectNameInfoEXT[]>(i);
+        public static ManagedPtrArray<VkDebugMarkerObjectNameInfoEXT> Pointer(this VkDebugMarkerObjectNameInfoEXT[] i) => new ManagedPtrArray<VkDebugMarkerObjectNameInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDebugMarkerObjectTagInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3630,17 +3668,18 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDebugMarkerObjectTagInfoEXT> Pointer(this VkDebugMarkerObjectTagInfoEXT i) => new ManagedPtr<VkDebugMarkerObjectTagInfoEXT>(i);
-        public static ManagedPtr<VkDebugMarkerObjectTagInfoEXT[]> Pointer(this VkDebugMarkerObjectTagInfoEXT[] i) => new ManagedPtr<VkDebugMarkerObjectTagInfoEXT[]>(i);
+        public static ManagedPtrArray<VkDebugMarkerObjectTagInfoEXT> Pointer(this VkDebugMarkerObjectTagInfoEXT[] i) => new ManagedPtrArray<VkDebugMarkerObjectTagInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDebugMarkerMarkerInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public string pMarkerName;
 			[FieldOffset(24)]public fixed float color[4];
+			public const int color_len = 4;
 		}
 
         public static ManagedPtr<VkDebugMarkerMarkerInfoEXT> Pointer(this VkDebugMarkerMarkerInfoEXT i) => new ManagedPtr<VkDebugMarkerMarkerInfoEXT>(i);
-        public static ManagedPtr<VkDebugMarkerMarkerInfoEXT[]> Pointer(this VkDebugMarkerMarkerInfoEXT[] i) => new ManagedPtr<VkDebugMarkerMarkerInfoEXT[]>(i);
+        public static ManagedPtrArray<VkDebugMarkerMarkerInfoEXT> Pointer(this VkDebugMarkerMarkerInfoEXT[] i) => new ManagedPtrArray<VkDebugMarkerMarkerInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDedicatedAllocationImageCreateInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3649,7 +3688,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDedicatedAllocationImageCreateInfoNV> Pointer(this VkDedicatedAllocationImageCreateInfoNV i) => new ManagedPtr<VkDedicatedAllocationImageCreateInfoNV>(i);
-        public static ManagedPtr<VkDedicatedAllocationImageCreateInfoNV[]> Pointer(this VkDedicatedAllocationImageCreateInfoNV[] i) => new ManagedPtr<VkDedicatedAllocationImageCreateInfoNV[]>(i);
+        public static ManagedPtrArray<VkDedicatedAllocationImageCreateInfoNV> Pointer(this VkDedicatedAllocationImageCreateInfoNV[] i) => new ManagedPtrArray<VkDedicatedAllocationImageCreateInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDedicatedAllocationBufferCreateInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3658,7 +3697,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDedicatedAllocationBufferCreateInfoNV> Pointer(this VkDedicatedAllocationBufferCreateInfoNV i) => new ManagedPtr<VkDedicatedAllocationBufferCreateInfoNV>(i);
-        public static ManagedPtr<VkDedicatedAllocationBufferCreateInfoNV[]> Pointer(this VkDedicatedAllocationBufferCreateInfoNV[] i) => new ManagedPtr<VkDedicatedAllocationBufferCreateInfoNV[]>(i);
+        public static ManagedPtrArray<VkDedicatedAllocationBufferCreateInfoNV> Pointer(this VkDedicatedAllocationBufferCreateInfoNV[] i) => new ManagedPtrArray<VkDedicatedAllocationBufferCreateInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDedicatedAllocationMemoryAllocateInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3668,7 +3707,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDedicatedAllocationMemoryAllocateInfoNV> Pointer(this VkDedicatedAllocationMemoryAllocateInfoNV i) => new ManagedPtr<VkDedicatedAllocationMemoryAllocateInfoNV>(i);
-        public static ManagedPtr<VkDedicatedAllocationMemoryAllocateInfoNV[]> Pointer(this VkDedicatedAllocationMemoryAllocateInfoNV[] i) => new ManagedPtr<VkDedicatedAllocationMemoryAllocateInfoNV[]>(i);
+        public static ManagedPtrArray<VkDedicatedAllocationMemoryAllocateInfoNV> Pointer(this VkDedicatedAllocationMemoryAllocateInfoNV[] i) => new ManagedPtrArray<VkDedicatedAllocationMemoryAllocateInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceTransformFeedbackFeaturesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3678,7 +3717,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceTransformFeedbackFeaturesEXT> Pointer(this VkPhysicalDeviceTransformFeedbackFeaturesEXT i) => new ManagedPtr<VkPhysicalDeviceTransformFeedbackFeaturesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceTransformFeedbackFeaturesEXT[]> Pointer(this VkPhysicalDeviceTransformFeedbackFeaturesEXT[] i) => new ManagedPtr<VkPhysicalDeviceTransformFeedbackFeaturesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceTransformFeedbackFeaturesEXT> Pointer(this VkPhysicalDeviceTransformFeedbackFeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceTransformFeedbackFeaturesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceTransformFeedbackPropertiesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3696,7 +3735,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceTransformFeedbackPropertiesEXT> Pointer(this VkPhysicalDeviceTransformFeedbackPropertiesEXT i) => new ManagedPtr<VkPhysicalDeviceTransformFeedbackPropertiesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceTransformFeedbackPropertiesEXT[]> Pointer(this VkPhysicalDeviceTransformFeedbackPropertiesEXT[] i) => new ManagedPtr<VkPhysicalDeviceTransformFeedbackPropertiesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceTransformFeedbackPropertiesEXT> Pointer(this VkPhysicalDeviceTransformFeedbackPropertiesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceTransformFeedbackPropertiesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineRasterizationStateStreamCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3706,7 +3745,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineRasterizationStateStreamCreateInfoEXT> Pointer(this VkPipelineRasterizationStateStreamCreateInfoEXT i) => new ManagedPtr<VkPipelineRasterizationStateStreamCreateInfoEXT>(i);
-        public static ManagedPtr<VkPipelineRasterizationStateStreamCreateInfoEXT[]> Pointer(this VkPipelineRasterizationStateStreamCreateInfoEXT[] i) => new ManagedPtr<VkPipelineRasterizationStateStreamCreateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkPipelineRasterizationStateStreamCreateInfoEXT> Pointer(this VkPipelineRasterizationStateStreamCreateInfoEXT[] i) => new ManagedPtrArray<VkPipelineRasterizationStateStreamCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImageViewHandleInfoNVX {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3717,7 +3756,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkImageViewHandleInfoNVX> Pointer(this VkImageViewHandleInfoNVX i) => new ManagedPtr<VkImageViewHandleInfoNVX>(i);
-        public static ManagedPtr<VkImageViewHandleInfoNVX[]> Pointer(this VkImageViewHandleInfoNVX[] i) => new ManagedPtr<VkImageViewHandleInfoNVX[]>(i);
+        public static ManagedPtrArray<VkImageViewHandleInfoNVX> Pointer(this VkImageViewHandleInfoNVX[] i) => new ManagedPtrArray<VkImageViewHandleInfoNVX>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkTextureLODGatherFormatPropertiesAMD {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3726,7 +3765,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkTextureLODGatherFormatPropertiesAMD> Pointer(this VkTextureLODGatherFormatPropertiesAMD i) => new ManagedPtr<VkTextureLODGatherFormatPropertiesAMD>(i);
-        public static ManagedPtr<VkTextureLODGatherFormatPropertiesAMD[]> Pointer(this VkTextureLODGatherFormatPropertiesAMD[] i) => new ManagedPtr<VkTextureLODGatherFormatPropertiesAMD[]>(i);
+        public static ManagedPtrArray<VkTextureLODGatherFormatPropertiesAMD> Pointer(this VkTextureLODGatherFormatPropertiesAMD[] i) => new ManagedPtrArray<VkTextureLODGatherFormatPropertiesAMD>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkShaderResourceUsageAMD {
 			[FieldOffset(0)]public uint numUsedVgprs;
@@ -3737,20 +3776,21 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkShaderResourceUsageAMD> Pointer(this VkShaderResourceUsageAMD i) => new ManagedPtr<VkShaderResourceUsageAMD>(i);
-        public static ManagedPtr<VkShaderResourceUsageAMD[]> Pointer(this VkShaderResourceUsageAMD[] i) => new ManagedPtr<VkShaderResourceUsageAMD[]>(i);
+        public static ManagedPtrArray<VkShaderResourceUsageAMD> Pointer(this VkShaderResourceUsageAMD[] i) => new ManagedPtrArray<VkShaderResourceUsageAMD>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkShaderStatisticsInfoAMD {
-			[FieldOffset(0)]public uint shaderStageMask;
+			[FieldOffset(0)]public VkShaderStageFlags shaderStageMask;
 			[FieldOffset(8)]public VkShaderResourceUsageAMD resourceUsage;
 			[FieldOffset(40)]public uint numPhysicalVgprs;
 			[FieldOffset(44)]public uint numPhysicalSgprs;
 			[FieldOffset(48)]public uint numAvailableVgprs;
 			[FieldOffset(52)]public uint numAvailableSgprs;
 			[FieldOffset(56)]public fixed uint computeWorkGroupSize[3];
+			public const int computeWorkGroupSize_len = 3;
 		}
 
         public static ManagedPtr<VkShaderStatisticsInfoAMD> Pointer(this VkShaderStatisticsInfoAMD i) => new ManagedPtr<VkShaderStatisticsInfoAMD>(i);
-        public static ManagedPtr<VkShaderStatisticsInfoAMD[]> Pointer(this VkShaderStatisticsInfoAMD[] i) => new ManagedPtr<VkShaderStatisticsInfoAMD[]>(i);
+        public static ManagedPtrArray<VkShaderStatisticsInfoAMD> Pointer(this VkShaderStatisticsInfoAMD[] i) => new ManagedPtrArray<VkShaderStatisticsInfoAMD>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceCornerSampledImageFeaturesNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3759,35 +3799,35 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceCornerSampledImageFeaturesNV> Pointer(this VkPhysicalDeviceCornerSampledImageFeaturesNV i) => new ManagedPtr<VkPhysicalDeviceCornerSampledImageFeaturesNV>(i);
-        public static ManagedPtr<VkPhysicalDeviceCornerSampledImageFeaturesNV[]> Pointer(this VkPhysicalDeviceCornerSampledImageFeaturesNV[] i) => new ManagedPtr<VkPhysicalDeviceCornerSampledImageFeaturesNV[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceCornerSampledImageFeaturesNV> Pointer(this VkPhysicalDeviceCornerSampledImageFeaturesNV[] i) => new ManagedPtrArray<VkPhysicalDeviceCornerSampledImageFeaturesNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkExternalImageFormatPropertiesNV {
 			[FieldOffset(0)]public VkImageFormatProperties imageFormatProperties;
-			[FieldOffset(32)]public uint externalMemoryFeatures;
-			[FieldOffset(36)]public uint exportFromImportedHandleTypes;
-			[FieldOffset(40)]public uint compatibleHandleTypes;
+			[FieldOffset(32)]public VkExternalMemoryFeatureFlagsNV externalMemoryFeatures;
+			[FieldOffset(36)]public VkExternalMemoryHandleTypeFlagsNV exportFromImportedHandleTypes;
+			[FieldOffset(40)]public VkExternalMemoryHandleTypeFlagsNV compatibleHandleTypes;
 		}
 
         public static ManagedPtr<VkExternalImageFormatPropertiesNV> Pointer(this VkExternalImageFormatPropertiesNV i) => new ManagedPtr<VkExternalImageFormatPropertiesNV>(i);
-        public static ManagedPtr<VkExternalImageFormatPropertiesNV[]> Pointer(this VkExternalImageFormatPropertiesNV[] i) => new ManagedPtr<VkExternalImageFormatPropertiesNV[]>(i);
+        public static ManagedPtrArray<VkExternalImageFormatPropertiesNV> Pointer(this VkExternalImageFormatPropertiesNV[] i) => new ManagedPtrArray<VkExternalImageFormatPropertiesNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkExternalMemoryImageCreateInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint handleTypes;
+			[FieldOffset(16)]public VkExternalMemoryHandleTypeFlagsNV handleTypes;
 		}
 
         public static ManagedPtr<VkExternalMemoryImageCreateInfoNV> Pointer(this VkExternalMemoryImageCreateInfoNV i) => new ManagedPtr<VkExternalMemoryImageCreateInfoNV>(i);
-        public static ManagedPtr<VkExternalMemoryImageCreateInfoNV[]> Pointer(this VkExternalMemoryImageCreateInfoNV[] i) => new ManagedPtr<VkExternalMemoryImageCreateInfoNV[]>(i);
+        public static ManagedPtrArray<VkExternalMemoryImageCreateInfoNV> Pointer(this VkExternalMemoryImageCreateInfoNV[] i) => new ManagedPtrArray<VkExternalMemoryImageCreateInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkExportMemoryAllocateInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint handleTypes;
+			[FieldOffset(16)]public VkExternalMemoryHandleTypeFlagsNV handleTypes;
 		}
 
         public static ManagedPtr<VkExportMemoryAllocateInfoNV> Pointer(this VkExportMemoryAllocateInfoNV i) => new ManagedPtr<VkExportMemoryAllocateInfoNV>(i);
-        public static ManagedPtr<VkExportMemoryAllocateInfoNV[]> Pointer(this VkExportMemoryAllocateInfoNV[] i) => new ManagedPtr<VkExportMemoryAllocateInfoNV[]>(i);
+        public static ManagedPtrArray<VkExportMemoryAllocateInfoNV> Pointer(this VkExportMemoryAllocateInfoNV[] i) => new ManagedPtrArray<VkExportMemoryAllocateInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkValidationFlagsEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3797,7 +3837,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkValidationFlagsEXT> Pointer(this VkValidationFlagsEXT i) => new ManagedPtr<VkValidationFlagsEXT>(i);
-        public static ManagedPtr<VkValidationFlagsEXT[]> Pointer(this VkValidationFlagsEXT[] i) => new ManagedPtr<VkValidationFlagsEXT[]>(i);
+        public static ManagedPtrArray<VkValidationFlagsEXT> Pointer(this VkValidationFlagsEXT[] i) => new ManagedPtrArray<VkValidationFlagsEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3806,7 +3846,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT> Pointer(this VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT i) => new ManagedPtr<VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT[]> Pointer(this VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT[] i) => new ManagedPtr<VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT> Pointer(this VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceTextureCompressionASTCHDRFeaturesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImageViewASTCDecodeModeEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3815,7 +3855,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkImageViewASTCDecodeModeEXT> Pointer(this VkImageViewASTCDecodeModeEXT i) => new ManagedPtr<VkImageViewASTCDecodeModeEXT>(i);
-        public static ManagedPtr<VkImageViewASTCDecodeModeEXT[]> Pointer(this VkImageViewASTCDecodeModeEXT[] i) => new ManagedPtr<VkImageViewASTCDecodeModeEXT[]>(i);
+        public static ManagedPtrArray<VkImageViewASTCDecodeModeEXT> Pointer(this VkImageViewASTCDecodeModeEXT[] i) => new ManagedPtrArray<VkImageViewASTCDecodeModeEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceASTCDecodeFeaturesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3824,18 +3864,18 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceASTCDecodeFeaturesEXT> Pointer(this VkPhysicalDeviceASTCDecodeFeaturesEXT i) => new ManagedPtr<VkPhysicalDeviceASTCDecodeFeaturesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceASTCDecodeFeaturesEXT[]> Pointer(this VkPhysicalDeviceASTCDecodeFeaturesEXT[] i) => new ManagedPtr<VkPhysicalDeviceASTCDecodeFeaturesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceASTCDecodeFeaturesEXT> Pointer(this VkPhysicalDeviceASTCDecodeFeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceASTCDecodeFeaturesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkConditionalRenderingBeginInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public IntPtr buffer;
 			[FieldOffset(24)]public ulong offset;
-			[FieldOffset(32)]public uint flags;
+			[FieldOffset(32)]public VkConditionalRenderingFlagsEXT flags;
 		}
 
         public static ManagedPtr<VkConditionalRenderingBeginInfoEXT> Pointer(this VkConditionalRenderingBeginInfoEXT i) => new ManagedPtr<VkConditionalRenderingBeginInfoEXT>(i);
-        public static ManagedPtr<VkConditionalRenderingBeginInfoEXT[]> Pointer(this VkConditionalRenderingBeginInfoEXT[] i) => new ManagedPtr<VkConditionalRenderingBeginInfoEXT[]>(i);
+        public static ManagedPtrArray<VkConditionalRenderingBeginInfoEXT> Pointer(this VkConditionalRenderingBeginInfoEXT[] i) => new ManagedPtrArray<VkConditionalRenderingBeginInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceConditionalRenderingFeaturesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3845,7 +3885,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceConditionalRenderingFeaturesEXT> Pointer(this VkPhysicalDeviceConditionalRenderingFeaturesEXT i) => new ManagedPtr<VkPhysicalDeviceConditionalRenderingFeaturesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceConditionalRenderingFeaturesEXT[]> Pointer(this VkPhysicalDeviceConditionalRenderingFeaturesEXT[] i) => new ManagedPtr<VkPhysicalDeviceConditionalRenderingFeaturesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceConditionalRenderingFeaturesEXT> Pointer(this VkPhysicalDeviceConditionalRenderingFeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceConditionalRenderingFeaturesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkCommandBufferInheritanceConditionalRenderingInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3854,7 +3894,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkCommandBufferInheritanceConditionalRenderingInfoEXT> Pointer(this VkCommandBufferInheritanceConditionalRenderingInfoEXT i) => new ManagedPtr<VkCommandBufferInheritanceConditionalRenderingInfoEXT>(i);
-        public static ManagedPtr<VkCommandBufferInheritanceConditionalRenderingInfoEXT[]> Pointer(this VkCommandBufferInheritanceConditionalRenderingInfoEXT[] i) => new ManagedPtr<VkCommandBufferInheritanceConditionalRenderingInfoEXT[]>(i);
+        public static ManagedPtrArray<VkCommandBufferInheritanceConditionalRenderingInfoEXT> Pointer(this VkCommandBufferInheritanceConditionalRenderingInfoEXT[] i) => new ManagedPtrArray<VkCommandBufferInheritanceConditionalRenderingInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDeviceGeneratedCommandsFeaturesNVX {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3863,7 +3903,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDeviceGeneratedCommandsFeaturesNVX> Pointer(this VkDeviceGeneratedCommandsFeaturesNVX i) => new ManagedPtr<VkDeviceGeneratedCommandsFeaturesNVX>(i);
-        public static ManagedPtr<VkDeviceGeneratedCommandsFeaturesNVX[]> Pointer(this VkDeviceGeneratedCommandsFeaturesNVX[] i) => new ManagedPtr<VkDeviceGeneratedCommandsFeaturesNVX[]>(i);
+        public static ManagedPtrArray<VkDeviceGeneratedCommandsFeaturesNVX> Pointer(this VkDeviceGeneratedCommandsFeaturesNVX[] i) => new ManagedPtrArray<VkDeviceGeneratedCommandsFeaturesNVX>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDeviceGeneratedCommandsLimitsNVX {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3876,7 +3916,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDeviceGeneratedCommandsLimitsNVX> Pointer(this VkDeviceGeneratedCommandsLimitsNVX i) => new ManagedPtr<VkDeviceGeneratedCommandsLimitsNVX>(i);
-        public static ManagedPtr<VkDeviceGeneratedCommandsLimitsNVX[]> Pointer(this VkDeviceGeneratedCommandsLimitsNVX[] i) => new ManagedPtr<VkDeviceGeneratedCommandsLimitsNVX[]>(i);
+        public static ManagedPtrArray<VkDeviceGeneratedCommandsLimitsNVX> Pointer(this VkDeviceGeneratedCommandsLimitsNVX[] i) => new ManagedPtrArray<VkDeviceGeneratedCommandsLimitsNVX>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkIndirectCommandsTokenNVX {
 			[FieldOffset(0)]public VkIndirectCommandsTokenTypeNVX tokenType;
@@ -3885,7 +3925,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkIndirectCommandsTokenNVX> Pointer(this VkIndirectCommandsTokenNVX i) => new ManagedPtr<VkIndirectCommandsTokenNVX>(i);
-        public static ManagedPtr<VkIndirectCommandsTokenNVX[]> Pointer(this VkIndirectCommandsTokenNVX[] i) => new ManagedPtr<VkIndirectCommandsTokenNVX[]>(i);
+        public static ManagedPtrArray<VkIndirectCommandsTokenNVX> Pointer(this VkIndirectCommandsTokenNVX[] i) => new ManagedPtrArray<VkIndirectCommandsTokenNVX>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkIndirectCommandsLayoutTokenNVX {
 			[FieldOffset(0)]public VkIndirectCommandsTokenTypeNVX tokenType;
@@ -3895,19 +3935,19 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkIndirectCommandsLayoutTokenNVX> Pointer(this VkIndirectCommandsLayoutTokenNVX i) => new ManagedPtr<VkIndirectCommandsLayoutTokenNVX>(i);
-        public static ManagedPtr<VkIndirectCommandsLayoutTokenNVX[]> Pointer(this VkIndirectCommandsLayoutTokenNVX[] i) => new ManagedPtr<VkIndirectCommandsLayoutTokenNVX[]>(i);
+        public static ManagedPtrArray<VkIndirectCommandsLayoutTokenNVX> Pointer(this VkIndirectCommandsLayoutTokenNVX[] i) => new ManagedPtrArray<VkIndirectCommandsLayoutTokenNVX>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkIndirectCommandsLayoutCreateInfoNVX {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public VkPipelineBindPoint pipelineBindPoint;
-			[FieldOffset(20)]public uint flags;
+			[FieldOffset(20)]public VkIndirectCommandsLayoutUsageFlagsNVX flags;
 			[FieldOffset(24)]public uint tokenCount;
 			[FieldOffset(32)]public IntPtr pTokens;
 		}
 
         public static ManagedPtr<VkIndirectCommandsLayoutCreateInfoNVX> Pointer(this VkIndirectCommandsLayoutCreateInfoNVX i) => new ManagedPtr<VkIndirectCommandsLayoutCreateInfoNVX>(i);
-        public static ManagedPtr<VkIndirectCommandsLayoutCreateInfoNVX[]> Pointer(this VkIndirectCommandsLayoutCreateInfoNVX[] i) => new ManagedPtr<VkIndirectCommandsLayoutCreateInfoNVX[]>(i);
+        public static ManagedPtrArray<VkIndirectCommandsLayoutCreateInfoNVX> Pointer(this VkIndirectCommandsLayoutCreateInfoNVX[] i) => new ManagedPtrArray<VkIndirectCommandsLayoutCreateInfoNVX>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkCmdProcessCommandsInfoNVX {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3925,7 +3965,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkCmdProcessCommandsInfoNVX> Pointer(this VkCmdProcessCommandsInfoNVX i) => new ManagedPtr<VkCmdProcessCommandsInfoNVX>(i);
-        public static ManagedPtr<VkCmdProcessCommandsInfoNVX[]> Pointer(this VkCmdProcessCommandsInfoNVX[] i) => new ManagedPtr<VkCmdProcessCommandsInfoNVX[]>(i);
+        public static ManagedPtrArray<VkCmdProcessCommandsInfoNVX> Pointer(this VkCmdProcessCommandsInfoNVX[] i) => new ManagedPtrArray<VkCmdProcessCommandsInfoNVX>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkCmdReserveSpaceForCommandsInfoNVX {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3936,7 +3976,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkCmdReserveSpaceForCommandsInfoNVX> Pointer(this VkCmdReserveSpaceForCommandsInfoNVX i) => new ManagedPtr<VkCmdReserveSpaceForCommandsInfoNVX>(i);
-        public static ManagedPtr<VkCmdReserveSpaceForCommandsInfoNVX[]> Pointer(this VkCmdReserveSpaceForCommandsInfoNVX[] i) => new ManagedPtr<VkCmdReserveSpaceForCommandsInfoNVX[]>(i);
+        public static ManagedPtrArray<VkCmdReserveSpaceForCommandsInfoNVX> Pointer(this VkCmdReserveSpaceForCommandsInfoNVX[] i) => new ManagedPtrArray<VkCmdReserveSpaceForCommandsInfoNVX>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkObjectTableCreateInfoNVX {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -3944,7 +3984,7 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(16)]public uint objectCount;
 			[FieldOffset(24)]public VkObjectEntryTypeNVX* pObjectEntryTypes;
 			[FieldOffset(32)]public uint* pObjectEntryCounts;
-			[FieldOffset(40)]public uint* pObjectEntryUsageFlags;
+			[FieldOffset(40)]public VkObjectEntryUsageFlagsNVX* pObjectEntryUsageFlags;
 			[FieldOffset(48)]public uint maxUniformBuffersPerDescriptor;
 			[FieldOffset(52)]public uint maxStorageBuffersPerDescriptor;
 			[FieldOffset(56)]public uint maxStorageImagesPerDescriptor;
@@ -3953,63 +3993,63 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkObjectTableCreateInfoNVX> Pointer(this VkObjectTableCreateInfoNVX i) => new ManagedPtr<VkObjectTableCreateInfoNVX>(i);
-        public static ManagedPtr<VkObjectTableCreateInfoNVX[]> Pointer(this VkObjectTableCreateInfoNVX[] i) => new ManagedPtr<VkObjectTableCreateInfoNVX[]>(i);
+        public static ManagedPtrArray<VkObjectTableCreateInfoNVX> Pointer(this VkObjectTableCreateInfoNVX[] i) => new ManagedPtrArray<VkObjectTableCreateInfoNVX>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkObjectTableEntryNVX {
 			[FieldOffset(0)]public VkObjectEntryTypeNVX type;
-			[FieldOffset(4)]public uint flags;
+			[FieldOffset(4)]public VkObjectEntryUsageFlagsNVX flags;
 		}
 
         public static ManagedPtr<VkObjectTableEntryNVX> Pointer(this VkObjectTableEntryNVX i) => new ManagedPtr<VkObjectTableEntryNVX>(i);
-        public static ManagedPtr<VkObjectTableEntryNVX[]> Pointer(this VkObjectTableEntryNVX[] i) => new ManagedPtr<VkObjectTableEntryNVX[]>(i);
+        public static ManagedPtrArray<VkObjectTableEntryNVX> Pointer(this VkObjectTableEntryNVX[] i) => new ManagedPtrArray<VkObjectTableEntryNVX>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkObjectTablePipelineEntryNVX {
 			[FieldOffset(0)]public VkObjectEntryTypeNVX type;
-			[FieldOffset(4)]public uint flags;
+			[FieldOffset(4)]public VkObjectEntryUsageFlagsNVX flags;
 			[FieldOffset(8)]public IntPtr pipeline;
 		}
 
         public static ManagedPtr<VkObjectTablePipelineEntryNVX> Pointer(this VkObjectTablePipelineEntryNVX i) => new ManagedPtr<VkObjectTablePipelineEntryNVX>(i);
-        public static ManagedPtr<VkObjectTablePipelineEntryNVX[]> Pointer(this VkObjectTablePipelineEntryNVX[] i) => new ManagedPtr<VkObjectTablePipelineEntryNVX[]>(i);
+        public static ManagedPtrArray<VkObjectTablePipelineEntryNVX> Pointer(this VkObjectTablePipelineEntryNVX[] i) => new ManagedPtrArray<VkObjectTablePipelineEntryNVX>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkObjectTableDescriptorSetEntryNVX {
 			[FieldOffset(0)]public VkObjectEntryTypeNVX type;
-			[FieldOffset(4)]public uint flags;
+			[FieldOffset(4)]public VkObjectEntryUsageFlagsNVX flags;
 			[FieldOffset(8)]public IntPtr pipelineLayout;
 			[FieldOffset(16)]public IntPtr descriptorSet;
 		}
 
         public static ManagedPtr<VkObjectTableDescriptorSetEntryNVX> Pointer(this VkObjectTableDescriptorSetEntryNVX i) => new ManagedPtr<VkObjectTableDescriptorSetEntryNVX>(i);
-        public static ManagedPtr<VkObjectTableDescriptorSetEntryNVX[]> Pointer(this VkObjectTableDescriptorSetEntryNVX[] i) => new ManagedPtr<VkObjectTableDescriptorSetEntryNVX[]>(i);
+        public static ManagedPtrArray<VkObjectTableDescriptorSetEntryNVX> Pointer(this VkObjectTableDescriptorSetEntryNVX[] i) => new ManagedPtrArray<VkObjectTableDescriptorSetEntryNVX>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkObjectTableVertexBufferEntryNVX {
 			[FieldOffset(0)]public VkObjectEntryTypeNVX type;
-			[FieldOffset(4)]public uint flags;
+			[FieldOffset(4)]public VkObjectEntryUsageFlagsNVX flags;
 			[FieldOffset(8)]public IntPtr buffer;
 		}
 
         public static ManagedPtr<VkObjectTableVertexBufferEntryNVX> Pointer(this VkObjectTableVertexBufferEntryNVX i) => new ManagedPtr<VkObjectTableVertexBufferEntryNVX>(i);
-        public static ManagedPtr<VkObjectTableVertexBufferEntryNVX[]> Pointer(this VkObjectTableVertexBufferEntryNVX[] i) => new ManagedPtr<VkObjectTableVertexBufferEntryNVX[]>(i);
+        public static ManagedPtrArray<VkObjectTableVertexBufferEntryNVX> Pointer(this VkObjectTableVertexBufferEntryNVX[] i) => new ManagedPtrArray<VkObjectTableVertexBufferEntryNVX>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkObjectTableIndexBufferEntryNVX {
 			[FieldOffset(0)]public VkObjectEntryTypeNVX type;
-			[FieldOffset(4)]public uint flags;
+			[FieldOffset(4)]public VkObjectEntryUsageFlagsNVX flags;
 			[FieldOffset(8)]public IntPtr buffer;
 			[FieldOffset(16)]public VkIndexType indexType;
 		}
 
         public static ManagedPtr<VkObjectTableIndexBufferEntryNVX> Pointer(this VkObjectTableIndexBufferEntryNVX i) => new ManagedPtr<VkObjectTableIndexBufferEntryNVX>(i);
-        public static ManagedPtr<VkObjectTableIndexBufferEntryNVX[]> Pointer(this VkObjectTableIndexBufferEntryNVX[] i) => new ManagedPtr<VkObjectTableIndexBufferEntryNVX[]>(i);
+        public static ManagedPtrArray<VkObjectTableIndexBufferEntryNVX> Pointer(this VkObjectTableIndexBufferEntryNVX[] i) => new ManagedPtrArray<VkObjectTableIndexBufferEntryNVX>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkObjectTablePushConstantEntryNVX {
 			[FieldOffset(0)]public VkObjectEntryTypeNVX type;
-			[FieldOffset(4)]public uint flags;
+			[FieldOffset(4)]public VkObjectEntryUsageFlagsNVX flags;
 			[FieldOffset(8)]public IntPtr pipelineLayout;
-			[FieldOffset(16)]public uint stageFlags;
+			[FieldOffset(16)]public VkShaderStageFlags stageFlags;
 		}
 
         public static ManagedPtr<VkObjectTablePushConstantEntryNVX> Pointer(this VkObjectTablePushConstantEntryNVX i) => new ManagedPtr<VkObjectTablePushConstantEntryNVX>(i);
-        public static ManagedPtr<VkObjectTablePushConstantEntryNVX[]> Pointer(this VkObjectTablePushConstantEntryNVX[] i) => new ManagedPtr<VkObjectTablePushConstantEntryNVX[]>(i);
+        public static ManagedPtrArray<VkObjectTablePushConstantEntryNVX> Pointer(this VkObjectTablePushConstantEntryNVX[] i) => new ManagedPtrArray<VkObjectTablePushConstantEntryNVX>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkViewportWScalingNV {
 			[FieldOffset(0)]public float xcoeff;
@@ -4017,7 +4057,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkViewportWScalingNV> Pointer(this VkViewportWScalingNV i) => new ManagedPtr<VkViewportWScalingNV>(i);
-        public static ManagedPtr<VkViewportWScalingNV[]> Pointer(this VkViewportWScalingNV[] i) => new ManagedPtr<VkViewportWScalingNV[]>(i);
+        public static ManagedPtrArray<VkViewportWScalingNV> Pointer(this VkViewportWScalingNV[] i) => new ManagedPtrArray<VkViewportWScalingNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineViewportWScalingStateCreateInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4028,7 +4068,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineViewportWScalingStateCreateInfoNV> Pointer(this VkPipelineViewportWScalingStateCreateInfoNV i) => new ManagedPtr<VkPipelineViewportWScalingStateCreateInfoNV>(i);
-        public static ManagedPtr<VkPipelineViewportWScalingStateCreateInfoNV[]> Pointer(this VkPipelineViewportWScalingStateCreateInfoNV[] i) => new ManagedPtr<VkPipelineViewportWScalingStateCreateInfoNV[]>(i);
+        public static ManagedPtrArray<VkPipelineViewportWScalingStateCreateInfoNV> Pointer(this VkPipelineViewportWScalingStateCreateInfoNV[] i) => new ManagedPtrArray<VkPipelineViewportWScalingStateCreateInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSurfaceCapabilities2EXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4039,15 +4079,15 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(32)]public VkExtent2D minImageExtent;
 			[FieldOffset(40)]public VkExtent2D maxImageExtent;
 			[FieldOffset(48)]public uint maxImageArrayLayers;
-			[FieldOffset(52)]public uint supportedTransforms;
-			[FieldOffset(56)]public VkSurfaceTransformFlagBitsKHR currentTransform;
-			[FieldOffset(60)]public uint supportedCompositeAlpha;
-			[FieldOffset(64)]public uint supportedUsageFlags;
-			[FieldOffset(68)]public uint supportedSurfaceCounters;
+			[FieldOffset(52)]public VkSurfaceTransformFlagsKHR supportedTransforms;
+			[FieldOffset(56)]public VkSurfaceTransformFlagsKHR currentTransform;
+			[FieldOffset(60)]public VkCompositeAlphaFlagsKHR supportedCompositeAlpha;
+			[FieldOffset(64)]public VkImageUsageFlags supportedUsageFlags;
+			[FieldOffset(68)]public VkSurfaceCounterFlagsEXT supportedSurfaceCounters;
 		}
 
         public static ManagedPtr<VkSurfaceCapabilities2EXT> Pointer(this VkSurfaceCapabilities2EXT i) => new ManagedPtr<VkSurfaceCapabilities2EXT>(i);
-        public static ManagedPtr<VkSurfaceCapabilities2EXT[]> Pointer(this VkSurfaceCapabilities2EXT[] i) => new ManagedPtr<VkSurfaceCapabilities2EXT[]>(i);
+        public static ManagedPtrArray<VkSurfaceCapabilities2EXT> Pointer(this VkSurfaceCapabilities2EXT[] i) => new ManagedPtrArray<VkSurfaceCapabilities2EXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDisplayPowerInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4056,7 +4096,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDisplayPowerInfoEXT> Pointer(this VkDisplayPowerInfoEXT i) => new ManagedPtr<VkDisplayPowerInfoEXT>(i);
-        public static ManagedPtr<VkDisplayPowerInfoEXT[]> Pointer(this VkDisplayPowerInfoEXT[] i) => new ManagedPtr<VkDisplayPowerInfoEXT[]>(i);
+        public static ManagedPtrArray<VkDisplayPowerInfoEXT> Pointer(this VkDisplayPowerInfoEXT[] i) => new ManagedPtrArray<VkDisplayPowerInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDeviceEventInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4065,7 +4105,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDeviceEventInfoEXT> Pointer(this VkDeviceEventInfoEXT i) => new ManagedPtr<VkDeviceEventInfoEXT>(i);
-        public static ManagedPtr<VkDeviceEventInfoEXT[]> Pointer(this VkDeviceEventInfoEXT[] i) => new ManagedPtr<VkDeviceEventInfoEXT[]>(i);
+        public static ManagedPtrArray<VkDeviceEventInfoEXT> Pointer(this VkDeviceEventInfoEXT[] i) => new ManagedPtrArray<VkDeviceEventInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDisplayEventInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4074,23 +4114,23 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDisplayEventInfoEXT> Pointer(this VkDisplayEventInfoEXT i) => new ManagedPtr<VkDisplayEventInfoEXT>(i);
-        public static ManagedPtr<VkDisplayEventInfoEXT[]> Pointer(this VkDisplayEventInfoEXT[] i) => new ManagedPtr<VkDisplayEventInfoEXT[]>(i);
+        public static ManagedPtrArray<VkDisplayEventInfoEXT> Pointer(this VkDisplayEventInfoEXT[] i) => new ManagedPtrArray<VkDisplayEventInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSwapchainCounterCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint surfaceCounters;
+			[FieldOffset(16)]public VkSurfaceCounterFlagsEXT surfaceCounters;
 		}
 
         public static ManagedPtr<VkSwapchainCounterCreateInfoEXT> Pointer(this VkSwapchainCounterCreateInfoEXT i) => new ManagedPtr<VkSwapchainCounterCreateInfoEXT>(i);
-        public static ManagedPtr<VkSwapchainCounterCreateInfoEXT[]> Pointer(this VkSwapchainCounterCreateInfoEXT[] i) => new ManagedPtr<VkSwapchainCounterCreateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkSwapchainCounterCreateInfoEXT> Pointer(this VkSwapchainCounterCreateInfoEXT[] i) => new ManagedPtrArray<VkSwapchainCounterCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkRefreshCycleDurationGOOGLE {
 			[FieldOffset(0)]public ulong refreshDuration;
 		}
 
         public static ManagedPtr<VkRefreshCycleDurationGOOGLE> Pointer(this VkRefreshCycleDurationGOOGLE i) => new ManagedPtr<VkRefreshCycleDurationGOOGLE>(i);
-        public static ManagedPtr<VkRefreshCycleDurationGOOGLE[]> Pointer(this VkRefreshCycleDurationGOOGLE[] i) => new ManagedPtr<VkRefreshCycleDurationGOOGLE[]>(i);
+        public static ManagedPtrArray<VkRefreshCycleDurationGOOGLE> Pointer(this VkRefreshCycleDurationGOOGLE[] i) => new ManagedPtrArray<VkRefreshCycleDurationGOOGLE>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPastPresentationTimingGOOGLE {
 			[FieldOffset(0)]public uint presentID;
@@ -4101,7 +4141,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPastPresentationTimingGOOGLE> Pointer(this VkPastPresentationTimingGOOGLE i) => new ManagedPtr<VkPastPresentationTimingGOOGLE>(i);
-        public static ManagedPtr<VkPastPresentationTimingGOOGLE[]> Pointer(this VkPastPresentationTimingGOOGLE[] i) => new ManagedPtr<VkPastPresentationTimingGOOGLE[]>(i);
+        public static ManagedPtrArray<VkPastPresentationTimingGOOGLE> Pointer(this VkPastPresentationTimingGOOGLE[] i) => new ManagedPtrArray<VkPastPresentationTimingGOOGLE>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPresentTimeGOOGLE {
 			[FieldOffset(0)]public uint presentID;
@@ -4109,7 +4149,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPresentTimeGOOGLE> Pointer(this VkPresentTimeGOOGLE i) => new ManagedPtr<VkPresentTimeGOOGLE>(i);
-        public static ManagedPtr<VkPresentTimeGOOGLE[]> Pointer(this VkPresentTimeGOOGLE[] i) => new ManagedPtr<VkPresentTimeGOOGLE[]>(i);
+        public static ManagedPtrArray<VkPresentTimeGOOGLE> Pointer(this VkPresentTimeGOOGLE[] i) => new ManagedPtrArray<VkPresentTimeGOOGLE>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPresentTimesInfoGOOGLE {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4119,7 +4159,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPresentTimesInfoGOOGLE> Pointer(this VkPresentTimesInfoGOOGLE i) => new ManagedPtr<VkPresentTimesInfoGOOGLE>(i);
-        public static ManagedPtr<VkPresentTimesInfoGOOGLE[]> Pointer(this VkPresentTimesInfoGOOGLE[] i) => new ManagedPtr<VkPresentTimesInfoGOOGLE[]>(i);
+        public static ManagedPtrArray<VkPresentTimesInfoGOOGLE> Pointer(this VkPresentTimesInfoGOOGLE[] i) => new ManagedPtrArray<VkPresentTimesInfoGOOGLE>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4128,7 +4168,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX> Pointer(this VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX i) => new ManagedPtr<VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX>(i);
-        public static ManagedPtr<VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX[]> Pointer(this VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX[] i) => new ManagedPtr<VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX> Pointer(this VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX[] i) => new ManagedPtrArray<VkPhysicalDeviceMultiviewPerViewAttributesPropertiesNVX>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkViewportSwizzleNV {
 			[FieldOffset(0)]public VkViewportCoordinateSwizzleNV x;
@@ -4138,7 +4178,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkViewportSwizzleNV> Pointer(this VkViewportSwizzleNV i) => new ManagedPtr<VkViewportSwizzleNV>(i);
-        public static ManagedPtr<VkViewportSwizzleNV[]> Pointer(this VkViewportSwizzleNV[] i) => new ManagedPtr<VkViewportSwizzleNV[]>(i);
+        public static ManagedPtrArray<VkViewportSwizzleNV> Pointer(this VkViewportSwizzleNV[] i) => new ManagedPtrArray<VkViewportSwizzleNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineViewportSwizzleStateCreateInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4149,7 +4189,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineViewportSwizzleStateCreateInfoNV> Pointer(this VkPipelineViewportSwizzleStateCreateInfoNV i) => new ManagedPtr<VkPipelineViewportSwizzleStateCreateInfoNV>(i);
-        public static ManagedPtr<VkPipelineViewportSwizzleStateCreateInfoNV[]> Pointer(this VkPipelineViewportSwizzleStateCreateInfoNV[] i) => new ManagedPtr<VkPipelineViewportSwizzleStateCreateInfoNV[]>(i);
+        public static ManagedPtrArray<VkPipelineViewportSwizzleStateCreateInfoNV> Pointer(this VkPipelineViewportSwizzleStateCreateInfoNV[] i) => new ManagedPtrArray<VkPipelineViewportSwizzleStateCreateInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceDiscardRectanglePropertiesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4158,7 +4198,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceDiscardRectanglePropertiesEXT> Pointer(this VkPhysicalDeviceDiscardRectanglePropertiesEXT i) => new ManagedPtr<VkPhysicalDeviceDiscardRectanglePropertiesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceDiscardRectanglePropertiesEXT[]> Pointer(this VkPhysicalDeviceDiscardRectanglePropertiesEXT[] i) => new ManagedPtr<VkPhysicalDeviceDiscardRectanglePropertiesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceDiscardRectanglePropertiesEXT> Pointer(this VkPhysicalDeviceDiscardRectanglePropertiesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceDiscardRectanglePropertiesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineDiscardRectangleStateCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4170,7 +4210,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineDiscardRectangleStateCreateInfoEXT> Pointer(this VkPipelineDiscardRectangleStateCreateInfoEXT i) => new ManagedPtr<VkPipelineDiscardRectangleStateCreateInfoEXT>(i);
-        public static ManagedPtr<VkPipelineDiscardRectangleStateCreateInfoEXT[]> Pointer(this VkPipelineDiscardRectangleStateCreateInfoEXT[] i) => new ManagedPtr<VkPipelineDiscardRectangleStateCreateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkPipelineDiscardRectangleStateCreateInfoEXT> Pointer(this VkPipelineDiscardRectangleStateCreateInfoEXT[] i) => new ManagedPtrArray<VkPipelineDiscardRectangleStateCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceConservativeRasterizationPropertiesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4187,7 +4227,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceConservativeRasterizationPropertiesEXT> Pointer(this VkPhysicalDeviceConservativeRasterizationPropertiesEXT i) => new ManagedPtr<VkPhysicalDeviceConservativeRasterizationPropertiesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceConservativeRasterizationPropertiesEXT[]> Pointer(this VkPhysicalDeviceConservativeRasterizationPropertiesEXT[] i) => new ManagedPtr<VkPhysicalDeviceConservativeRasterizationPropertiesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceConservativeRasterizationPropertiesEXT> Pointer(this VkPhysicalDeviceConservativeRasterizationPropertiesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceConservativeRasterizationPropertiesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineRasterizationConservativeStateCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4198,7 +4238,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineRasterizationConservativeStateCreateInfoEXT> Pointer(this VkPipelineRasterizationConservativeStateCreateInfoEXT i) => new ManagedPtr<VkPipelineRasterizationConservativeStateCreateInfoEXT>(i);
-        public static ManagedPtr<VkPipelineRasterizationConservativeStateCreateInfoEXT[]> Pointer(this VkPipelineRasterizationConservativeStateCreateInfoEXT[] i) => new ManagedPtr<VkPipelineRasterizationConservativeStateCreateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkPipelineRasterizationConservativeStateCreateInfoEXT> Pointer(this VkPipelineRasterizationConservativeStateCreateInfoEXT[] i) => new ManagedPtrArray<VkPipelineRasterizationConservativeStateCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceDepthClipEnableFeaturesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4207,7 +4247,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceDepthClipEnableFeaturesEXT> Pointer(this VkPhysicalDeviceDepthClipEnableFeaturesEXT i) => new ManagedPtr<VkPhysicalDeviceDepthClipEnableFeaturesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceDepthClipEnableFeaturesEXT[]> Pointer(this VkPhysicalDeviceDepthClipEnableFeaturesEXT[] i) => new ManagedPtr<VkPhysicalDeviceDepthClipEnableFeaturesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceDepthClipEnableFeaturesEXT> Pointer(this VkPhysicalDeviceDepthClipEnableFeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceDepthClipEnableFeaturesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineRasterizationDepthClipStateCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4217,7 +4257,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineRasterizationDepthClipStateCreateInfoEXT> Pointer(this VkPipelineRasterizationDepthClipStateCreateInfoEXT i) => new ManagedPtr<VkPipelineRasterizationDepthClipStateCreateInfoEXT>(i);
-        public static ManagedPtr<VkPipelineRasterizationDepthClipStateCreateInfoEXT[]> Pointer(this VkPipelineRasterizationDepthClipStateCreateInfoEXT[] i) => new ManagedPtr<VkPipelineRasterizationDepthClipStateCreateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkPipelineRasterizationDepthClipStateCreateInfoEXT> Pointer(this VkPipelineRasterizationDepthClipStateCreateInfoEXT[] i) => new ManagedPtrArray<VkPipelineRasterizationDepthClipStateCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkXYColorEXT {
 			[FieldOffset(0)]public float x;
@@ -4225,7 +4265,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkXYColorEXT> Pointer(this VkXYColorEXT i) => new ManagedPtr<VkXYColorEXT>(i);
-        public static ManagedPtr<VkXYColorEXT[]> Pointer(this VkXYColorEXT[] i) => new ManagedPtr<VkXYColorEXT[]>(i);
+        public static ManagedPtrArray<VkXYColorEXT> Pointer(this VkXYColorEXT[] i) => new ManagedPtrArray<VkXYColorEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkHdrMetadataEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4241,7 +4281,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkHdrMetadataEXT> Pointer(this VkHdrMetadataEXT i) => new ManagedPtr<VkHdrMetadataEXT>(i);
-        public static ManagedPtr<VkHdrMetadataEXT[]> Pointer(this VkHdrMetadataEXT[] i) => new ManagedPtr<VkHdrMetadataEXT[]>(i);
+        public static ManagedPtrArray<VkHdrMetadataEXT> Pointer(this VkHdrMetadataEXT[] i) => new ManagedPtrArray<VkHdrMetadataEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDebugUtilsObjectNameInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4252,7 +4292,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDebugUtilsObjectNameInfoEXT> Pointer(this VkDebugUtilsObjectNameInfoEXT i) => new ManagedPtr<VkDebugUtilsObjectNameInfoEXT>(i);
-        public static ManagedPtr<VkDebugUtilsObjectNameInfoEXT[]> Pointer(this VkDebugUtilsObjectNameInfoEXT[] i) => new ManagedPtr<VkDebugUtilsObjectNameInfoEXT[]>(i);
+        public static ManagedPtrArray<VkDebugUtilsObjectNameInfoEXT> Pointer(this VkDebugUtilsObjectNameInfoEXT[] i) => new ManagedPtrArray<VkDebugUtilsObjectNameInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDebugUtilsObjectTagInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4265,17 +4305,18 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDebugUtilsObjectTagInfoEXT> Pointer(this VkDebugUtilsObjectTagInfoEXT i) => new ManagedPtr<VkDebugUtilsObjectTagInfoEXT>(i);
-        public static ManagedPtr<VkDebugUtilsObjectTagInfoEXT[]> Pointer(this VkDebugUtilsObjectTagInfoEXT[] i) => new ManagedPtr<VkDebugUtilsObjectTagInfoEXT[]>(i);
+        public static ManagedPtrArray<VkDebugUtilsObjectTagInfoEXT> Pointer(this VkDebugUtilsObjectTagInfoEXT[] i) => new ManagedPtrArray<VkDebugUtilsObjectTagInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDebugUtilsLabelEXT {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public string pLabelName;
 			[FieldOffset(24)]public fixed float color[4];
+			public const int color_len = 4;
 		}
 
         public static ManagedPtr<VkDebugUtilsLabelEXT> Pointer(this VkDebugUtilsLabelEXT i) => new ManagedPtr<VkDebugUtilsLabelEXT>(i);
-        public static ManagedPtr<VkDebugUtilsLabelEXT[]> Pointer(this VkDebugUtilsLabelEXT[] i) => new ManagedPtr<VkDebugUtilsLabelEXT[]>(i);
+        public static ManagedPtrArray<VkDebugUtilsLabelEXT> Pointer(this VkDebugUtilsLabelEXT[] i) => new ManagedPtrArray<VkDebugUtilsLabelEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDebugUtilsMessengerCallbackDataEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4293,20 +4334,20 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDebugUtilsMessengerCallbackDataEXT> Pointer(this VkDebugUtilsMessengerCallbackDataEXT i) => new ManagedPtr<VkDebugUtilsMessengerCallbackDataEXT>(i);
-        public static ManagedPtr<VkDebugUtilsMessengerCallbackDataEXT[]> Pointer(this VkDebugUtilsMessengerCallbackDataEXT[] i) => new ManagedPtr<VkDebugUtilsMessengerCallbackDataEXT[]>(i);
+        public static ManagedPtrArray<VkDebugUtilsMessengerCallbackDataEXT> Pointer(this VkDebugUtilsMessengerCallbackDataEXT[] i) => new ManagedPtrArray<VkDebugUtilsMessengerCallbackDataEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDebugUtilsMessengerCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public uint flags;
-			[FieldOffset(20)]public uint messageSeverity;
-			[FieldOffset(24)]public uint messageType;
+			[FieldOffset(20)]public VkDebugUtilsMessageSeverityFlagsEXT messageSeverity;
+			[FieldOffset(24)]public VkDebugUtilsMessageTypeFlagsEXT messageType;
 			[FieldOffset(32)]public IntPtr pfnUserCallback;
 			[FieldOffset(40)]public IntPtr pUserData;
 		}
 
         public static ManagedPtr<VkDebugUtilsMessengerCreateInfoEXT> Pointer(this VkDebugUtilsMessengerCreateInfoEXT i) => new ManagedPtr<VkDebugUtilsMessengerCreateInfoEXT>(i);
-        public static ManagedPtr<VkDebugUtilsMessengerCreateInfoEXT[]> Pointer(this VkDebugUtilsMessengerCreateInfoEXT[] i) => new ManagedPtr<VkDebugUtilsMessengerCreateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkDebugUtilsMessengerCreateInfoEXT> Pointer(this VkDebugUtilsMessengerCreateInfoEXT[] i) => new ManagedPtrArray<VkDebugUtilsMessengerCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceInlineUniformBlockFeaturesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4316,7 +4357,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceInlineUniformBlockFeaturesEXT> Pointer(this VkPhysicalDeviceInlineUniformBlockFeaturesEXT i) => new ManagedPtr<VkPhysicalDeviceInlineUniformBlockFeaturesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceInlineUniformBlockFeaturesEXT[]> Pointer(this VkPhysicalDeviceInlineUniformBlockFeaturesEXT[] i) => new ManagedPtr<VkPhysicalDeviceInlineUniformBlockFeaturesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceInlineUniformBlockFeaturesEXT> Pointer(this VkPhysicalDeviceInlineUniformBlockFeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceInlineUniformBlockFeaturesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceInlineUniformBlockPropertiesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4329,7 +4370,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceInlineUniformBlockPropertiesEXT> Pointer(this VkPhysicalDeviceInlineUniformBlockPropertiesEXT i) => new ManagedPtr<VkPhysicalDeviceInlineUniformBlockPropertiesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceInlineUniformBlockPropertiesEXT[]> Pointer(this VkPhysicalDeviceInlineUniformBlockPropertiesEXT[] i) => new ManagedPtr<VkPhysicalDeviceInlineUniformBlockPropertiesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceInlineUniformBlockPropertiesEXT> Pointer(this VkPhysicalDeviceInlineUniformBlockPropertiesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceInlineUniformBlockPropertiesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkWriteDescriptorSetInlineUniformBlockEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4339,7 +4380,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkWriteDescriptorSetInlineUniformBlockEXT> Pointer(this VkWriteDescriptorSetInlineUniformBlockEXT i) => new ManagedPtr<VkWriteDescriptorSetInlineUniformBlockEXT>(i);
-        public static ManagedPtr<VkWriteDescriptorSetInlineUniformBlockEXT[]> Pointer(this VkWriteDescriptorSetInlineUniformBlockEXT[] i) => new ManagedPtr<VkWriteDescriptorSetInlineUniformBlockEXT[]>(i);
+        public static ManagedPtrArray<VkWriteDescriptorSetInlineUniformBlockEXT> Pointer(this VkWriteDescriptorSetInlineUniformBlockEXT[] i) => new ManagedPtrArray<VkWriteDescriptorSetInlineUniformBlockEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDescriptorPoolInlineUniformBlockCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4348,7 +4389,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDescriptorPoolInlineUniformBlockCreateInfoEXT> Pointer(this VkDescriptorPoolInlineUniformBlockCreateInfoEXT i) => new ManagedPtr<VkDescriptorPoolInlineUniformBlockCreateInfoEXT>(i);
-        public static ManagedPtr<VkDescriptorPoolInlineUniformBlockCreateInfoEXT[]> Pointer(this VkDescriptorPoolInlineUniformBlockCreateInfoEXT[] i) => new ManagedPtr<VkDescriptorPoolInlineUniformBlockCreateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkDescriptorPoolInlineUniformBlockCreateInfoEXT> Pointer(this VkDescriptorPoolInlineUniformBlockCreateInfoEXT[] i) => new ManagedPtrArray<VkDescriptorPoolInlineUniformBlockCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSampleLocationEXT {
 			[FieldOffset(0)]public float x;
@@ -4356,19 +4397,19 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSampleLocationEXT> Pointer(this VkSampleLocationEXT i) => new ManagedPtr<VkSampleLocationEXT>(i);
-        public static ManagedPtr<VkSampleLocationEXT[]> Pointer(this VkSampleLocationEXT[] i) => new ManagedPtr<VkSampleLocationEXT[]>(i);
+        public static ManagedPtrArray<VkSampleLocationEXT> Pointer(this VkSampleLocationEXT[] i) => new ManagedPtrArray<VkSampleLocationEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSampleLocationsInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public VkSampleCountFlagBits sampleLocationsPerPixel;
+			[FieldOffset(16)]public VkSampleCountFlags sampleLocationsPerPixel;
 			[FieldOffset(20)]public VkExtent2D sampleLocationGridSize;
 			[FieldOffset(28)]public uint sampleLocationsCount;
 			[FieldOffset(32)]public IntPtr pSampleLocations;
 		}
 
         public static ManagedPtr<VkSampleLocationsInfoEXT> Pointer(this VkSampleLocationsInfoEXT i) => new ManagedPtr<VkSampleLocationsInfoEXT>(i);
-        public static ManagedPtr<VkSampleLocationsInfoEXT[]> Pointer(this VkSampleLocationsInfoEXT[] i) => new ManagedPtr<VkSampleLocationsInfoEXT[]>(i);
+        public static ManagedPtrArray<VkSampleLocationsInfoEXT> Pointer(this VkSampleLocationsInfoEXT[] i) => new ManagedPtrArray<VkSampleLocationsInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkAttachmentSampleLocationsEXT {
 			[FieldOffset(0)]public uint attachmentIndex;
@@ -4376,7 +4417,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkAttachmentSampleLocationsEXT> Pointer(this VkAttachmentSampleLocationsEXT i) => new ManagedPtr<VkAttachmentSampleLocationsEXT>(i);
-        public static ManagedPtr<VkAttachmentSampleLocationsEXT[]> Pointer(this VkAttachmentSampleLocationsEXT[] i) => new ManagedPtr<VkAttachmentSampleLocationsEXT[]>(i);
+        public static ManagedPtrArray<VkAttachmentSampleLocationsEXT> Pointer(this VkAttachmentSampleLocationsEXT[] i) => new ManagedPtrArray<VkAttachmentSampleLocationsEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSubpassSampleLocationsEXT {
 			[FieldOffset(0)]public uint subpassIndex;
@@ -4384,7 +4425,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSubpassSampleLocationsEXT> Pointer(this VkSubpassSampleLocationsEXT i) => new ManagedPtr<VkSubpassSampleLocationsEXT>(i);
-        public static ManagedPtr<VkSubpassSampleLocationsEXT[]> Pointer(this VkSubpassSampleLocationsEXT[] i) => new ManagedPtr<VkSubpassSampleLocationsEXT[]>(i);
+        public static ManagedPtrArray<VkSubpassSampleLocationsEXT> Pointer(this VkSubpassSampleLocationsEXT[] i) => new ManagedPtrArray<VkSubpassSampleLocationsEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkRenderPassSampleLocationsBeginInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4396,7 +4437,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkRenderPassSampleLocationsBeginInfoEXT> Pointer(this VkRenderPassSampleLocationsBeginInfoEXT i) => new ManagedPtr<VkRenderPassSampleLocationsBeginInfoEXT>(i);
-        public static ManagedPtr<VkRenderPassSampleLocationsBeginInfoEXT[]> Pointer(this VkRenderPassSampleLocationsBeginInfoEXT[] i) => new ManagedPtr<VkRenderPassSampleLocationsBeginInfoEXT[]>(i);
+        public static ManagedPtrArray<VkRenderPassSampleLocationsBeginInfoEXT> Pointer(this VkRenderPassSampleLocationsBeginInfoEXT[] i) => new ManagedPtrArray<VkRenderPassSampleLocationsBeginInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineSampleLocationsStateCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4406,20 +4447,21 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineSampleLocationsStateCreateInfoEXT> Pointer(this VkPipelineSampleLocationsStateCreateInfoEXT i) => new ManagedPtr<VkPipelineSampleLocationsStateCreateInfoEXT>(i);
-        public static ManagedPtr<VkPipelineSampleLocationsStateCreateInfoEXT[]> Pointer(this VkPipelineSampleLocationsStateCreateInfoEXT[] i) => new ManagedPtr<VkPipelineSampleLocationsStateCreateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkPipelineSampleLocationsStateCreateInfoEXT> Pointer(this VkPipelineSampleLocationsStateCreateInfoEXT[] i) => new ManagedPtrArray<VkPipelineSampleLocationsStateCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceSampleLocationsPropertiesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint sampleLocationSampleCounts;
+			[FieldOffset(16)]public VkSampleCountFlags sampleLocationSampleCounts;
 			[FieldOffset(20)]public VkExtent2D maxSampleLocationGridSize;
 			[FieldOffset(28)]public fixed float sampleLocationCoordinateRange[2];
+			public const int sampleLocationCoordinateRange_len = 2;
 			[FieldOffset(36)]public uint sampleLocationSubPixelBits;
 			[FieldOffset(40)]public bool variableSampleLocations;
 		}
 
         public static ManagedPtr<VkPhysicalDeviceSampleLocationsPropertiesEXT> Pointer(this VkPhysicalDeviceSampleLocationsPropertiesEXT i) => new ManagedPtr<VkPhysicalDeviceSampleLocationsPropertiesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceSampleLocationsPropertiesEXT[]> Pointer(this VkPhysicalDeviceSampleLocationsPropertiesEXT[] i) => new ManagedPtr<VkPhysicalDeviceSampleLocationsPropertiesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceSampleLocationsPropertiesEXT> Pointer(this VkPhysicalDeviceSampleLocationsPropertiesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceSampleLocationsPropertiesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkMultisamplePropertiesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4428,7 +4470,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkMultisamplePropertiesEXT> Pointer(this VkMultisamplePropertiesEXT i) => new ManagedPtr<VkMultisamplePropertiesEXT>(i);
-        public static ManagedPtr<VkMultisamplePropertiesEXT[]> Pointer(this VkMultisamplePropertiesEXT[] i) => new ManagedPtr<VkMultisamplePropertiesEXT[]>(i);
+        public static ManagedPtrArray<VkMultisamplePropertiesEXT> Pointer(this VkMultisamplePropertiesEXT[] i) => new ManagedPtrArray<VkMultisamplePropertiesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4437,7 +4479,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT> Pointer(this VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT i) => new ManagedPtr<VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT[]> Pointer(this VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT[] i) => new ManagedPtr<VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT> Pointer(this VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4451,7 +4493,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT> Pointer(this VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT i) => new ManagedPtr<VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT[]> Pointer(this VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT[] i) => new ManagedPtr<VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT> Pointer(this VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceBlendOperationAdvancedPropertiesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineColorBlendAdvancedStateCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4462,7 +4504,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineColorBlendAdvancedStateCreateInfoEXT> Pointer(this VkPipelineColorBlendAdvancedStateCreateInfoEXT i) => new ManagedPtr<VkPipelineColorBlendAdvancedStateCreateInfoEXT>(i);
-        public static ManagedPtr<VkPipelineColorBlendAdvancedStateCreateInfoEXT[]> Pointer(this VkPipelineColorBlendAdvancedStateCreateInfoEXT[] i) => new ManagedPtr<VkPipelineColorBlendAdvancedStateCreateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkPipelineColorBlendAdvancedStateCreateInfoEXT> Pointer(this VkPipelineColorBlendAdvancedStateCreateInfoEXT[] i) => new ManagedPtrArray<VkPipelineColorBlendAdvancedStateCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineCoverageToColorStateCreateInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4473,7 +4515,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineCoverageToColorStateCreateInfoNV> Pointer(this VkPipelineCoverageToColorStateCreateInfoNV i) => new ManagedPtr<VkPipelineCoverageToColorStateCreateInfoNV>(i);
-        public static ManagedPtr<VkPipelineCoverageToColorStateCreateInfoNV[]> Pointer(this VkPipelineCoverageToColorStateCreateInfoNV[] i) => new ManagedPtr<VkPipelineCoverageToColorStateCreateInfoNV[]>(i);
+        public static ManagedPtrArray<VkPipelineCoverageToColorStateCreateInfoNV> Pointer(this VkPipelineCoverageToColorStateCreateInfoNV[] i) => new ManagedPtrArray<VkPipelineCoverageToColorStateCreateInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineCoverageModulationStateCreateInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4486,7 +4528,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineCoverageModulationStateCreateInfoNV> Pointer(this VkPipelineCoverageModulationStateCreateInfoNV i) => new ManagedPtr<VkPipelineCoverageModulationStateCreateInfoNV>(i);
-        public static ManagedPtr<VkPipelineCoverageModulationStateCreateInfoNV[]> Pointer(this VkPipelineCoverageModulationStateCreateInfoNV[] i) => new ManagedPtr<VkPipelineCoverageModulationStateCreateInfoNV[]>(i);
+        public static ManagedPtrArray<VkPipelineCoverageModulationStateCreateInfoNV> Pointer(this VkPipelineCoverageModulationStateCreateInfoNV[] i) => new ManagedPtrArray<VkPipelineCoverageModulationStateCreateInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceShaderSMBuiltinsPropertiesNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4496,7 +4538,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceShaderSMBuiltinsPropertiesNV> Pointer(this VkPhysicalDeviceShaderSMBuiltinsPropertiesNV i) => new ManagedPtr<VkPhysicalDeviceShaderSMBuiltinsPropertiesNV>(i);
-        public static ManagedPtr<VkPhysicalDeviceShaderSMBuiltinsPropertiesNV[]> Pointer(this VkPhysicalDeviceShaderSMBuiltinsPropertiesNV[] i) => new ManagedPtr<VkPhysicalDeviceShaderSMBuiltinsPropertiesNV[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceShaderSMBuiltinsPropertiesNV> Pointer(this VkPhysicalDeviceShaderSMBuiltinsPropertiesNV[] i) => new ManagedPtrArray<VkPhysicalDeviceShaderSMBuiltinsPropertiesNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceShaderSMBuiltinsFeaturesNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4505,16 +4547,16 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceShaderSMBuiltinsFeaturesNV> Pointer(this VkPhysicalDeviceShaderSMBuiltinsFeaturesNV i) => new ManagedPtr<VkPhysicalDeviceShaderSMBuiltinsFeaturesNV>(i);
-        public static ManagedPtr<VkPhysicalDeviceShaderSMBuiltinsFeaturesNV[]> Pointer(this VkPhysicalDeviceShaderSMBuiltinsFeaturesNV[] i) => new ManagedPtr<VkPhysicalDeviceShaderSMBuiltinsFeaturesNV[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceShaderSMBuiltinsFeaturesNV> Pointer(this VkPhysicalDeviceShaderSMBuiltinsFeaturesNV[] i) => new ManagedPtrArray<VkPhysicalDeviceShaderSMBuiltinsFeaturesNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDrmFormatModifierPropertiesEXT {
 			[FieldOffset(0)]public ulong drmFormatModifier;
 			[FieldOffset(8)]public uint drmFormatModifierPlaneCount;
-			[FieldOffset(12)]public uint drmFormatModifierTilingFeatures;
+			[FieldOffset(12)]public VkFormatFeatureFlags drmFormatModifierTilingFeatures;
 		}
 
         public static ManagedPtr<VkDrmFormatModifierPropertiesEXT> Pointer(this VkDrmFormatModifierPropertiesEXT i) => new ManagedPtr<VkDrmFormatModifierPropertiesEXT>(i);
-        public static ManagedPtr<VkDrmFormatModifierPropertiesEXT[]> Pointer(this VkDrmFormatModifierPropertiesEXT[] i) => new ManagedPtr<VkDrmFormatModifierPropertiesEXT[]>(i);
+        public static ManagedPtrArray<VkDrmFormatModifierPropertiesEXT> Pointer(this VkDrmFormatModifierPropertiesEXT[] i) => new ManagedPtrArray<VkDrmFormatModifierPropertiesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDrmFormatModifierPropertiesListEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4524,7 +4566,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDrmFormatModifierPropertiesListEXT> Pointer(this VkDrmFormatModifierPropertiesListEXT i) => new ManagedPtr<VkDrmFormatModifierPropertiesListEXT>(i);
-        public static ManagedPtr<VkDrmFormatModifierPropertiesListEXT[]> Pointer(this VkDrmFormatModifierPropertiesListEXT[] i) => new ManagedPtr<VkDrmFormatModifierPropertiesListEXT[]>(i);
+        public static ManagedPtrArray<VkDrmFormatModifierPropertiesListEXT> Pointer(this VkDrmFormatModifierPropertiesListEXT[] i) => new ManagedPtrArray<VkDrmFormatModifierPropertiesListEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceImageDrmFormatModifierInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4536,7 +4578,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceImageDrmFormatModifierInfoEXT> Pointer(this VkPhysicalDeviceImageDrmFormatModifierInfoEXT i) => new ManagedPtr<VkPhysicalDeviceImageDrmFormatModifierInfoEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceImageDrmFormatModifierInfoEXT[]> Pointer(this VkPhysicalDeviceImageDrmFormatModifierInfoEXT[] i) => new ManagedPtr<VkPhysicalDeviceImageDrmFormatModifierInfoEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceImageDrmFormatModifierInfoEXT> Pointer(this VkPhysicalDeviceImageDrmFormatModifierInfoEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceImageDrmFormatModifierInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImageDrmFormatModifierListCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4546,7 +4588,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkImageDrmFormatModifierListCreateInfoEXT> Pointer(this VkImageDrmFormatModifierListCreateInfoEXT i) => new ManagedPtr<VkImageDrmFormatModifierListCreateInfoEXT>(i);
-        public static ManagedPtr<VkImageDrmFormatModifierListCreateInfoEXT[]> Pointer(this VkImageDrmFormatModifierListCreateInfoEXT[] i) => new ManagedPtr<VkImageDrmFormatModifierListCreateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkImageDrmFormatModifierListCreateInfoEXT> Pointer(this VkImageDrmFormatModifierListCreateInfoEXT[] i) => new ManagedPtrArray<VkImageDrmFormatModifierListCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImageDrmFormatModifierExplicitCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4557,7 +4599,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkImageDrmFormatModifierExplicitCreateInfoEXT> Pointer(this VkImageDrmFormatModifierExplicitCreateInfoEXT i) => new ManagedPtr<VkImageDrmFormatModifierExplicitCreateInfoEXT>(i);
-        public static ManagedPtr<VkImageDrmFormatModifierExplicitCreateInfoEXT[]> Pointer(this VkImageDrmFormatModifierExplicitCreateInfoEXT[] i) => new ManagedPtr<VkImageDrmFormatModifierExplicitCreateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkImageDrmFormatModifierExplicitCreateInfoEXT> Pointer(this VkImageDrmFormatModifierExplicitCreateInfoEXT[] i) => new ManagedPtrArray<VkImageDrmFormatModifierExplicitCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImageDrmFormatModifierPropertiesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4566,7 +4608,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkImageDrmFormatModifierPropertiesEXT> Pointer(this VkImageDrmFormatModifierPropertiesEXT i) => new ManagedPtr<VkImageDrmFormatModifierPropertiesEXT>(i);
-        public static ManagedPtr<VkImageDrmFormatModifierPropertiesEXT[]> Pointer(this VkImageDrmFormatModifierPropertiesEXT[] i) => new ManagedPtr<VkImageDrmFormatModifierPropertiesEXT[]>(i);
+        public static ManagedPtrArray<VkImageDrmFormatModifierPropertiesEXT> Pointer(this VkImageDrmFormatModifierPropertiesEXT[] i) => new ManagedPtrArray<VkImageDrmFormatModifierPropertiesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkValidationCacheCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4577,7 +4619,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkValidationCacheCreateInfoEXT> Pointer(this VkValidationCacheCreateInfoEXT i) => new ManagedPtr<VkValidationCacheCreateInfoEXT>(i);
-        public static ManagedPtr<VkValidationCacheCreateInfoEXT[]> Pointer(this VkValidationCacheCreateInfoEXT[] i) => new ManagedPtr<VkValidationCacheCreateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkValidationCacheCreateInfoEXT> Pointer(this VkValidationCacheCreateInfoEXT[] i) => new ManagedPtrArray<VkValidationCacheCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkShaderModuleValidationCacheCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4586,7 +4628,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkShaderModuleValidationCacheCreateInfoEXT> Pointer(this VkShaderModuleValidationCacheCreateInfoEXT i) => new ManagedPtr<VkShaderModuleValidationCacheCreateInfoEXT>(i);
-        public static ManagedPtr<VkShaderModuleValidationCacheCreateInfoEXT[]> Pointer(this VkShaderModuleValidationCacheCreateInfoEXT[] i) => new ManagedPtr<VkShaderModuleValidationCacheCreateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkShaderModuleValidationCacheCreateInfoEXT> Pointer(this VkShaderModuleValidationCacheCreateInfoEXT[] i) => new ManagedPtrArray<VkShaderModuleValidationCacheCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkShadingRatePaletteNV {
 			[FieldOffset(0)]public uint shadingRatePaletteEntryCount;
@@ -4594,7 +4636,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkShadingRatePaletteNV> Pointer(this VkShadingRatePaletteNV i) => new ManagedPtr<VkShadingRatePaletteNV>(i);
-        public static ManagedPtr<VkShadingRatePaletteNV[]> Pointer(this VkShadingRatePaletteNV[] i) => new ManagedPtr<VkShadingRatePaletteNV[]>(i);
+        public static ManagedPtrArray<VkShadingRatePaletteNV> Pointer(this VkShadingRatePaletteNV[] i) => new ManagedPtrArray<VkShadingRatePaletteNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineViewportShadingRateImageStateCreateInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4605,7 +4647,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineViewportShadingRateImageStateCreateInfoNV> Pointer(this VkPipelineViewportShadingRateImageStateCreateInfoNV i) => new ManagedPtr<VkPipelineViewportShadingRateImageStateCreateInfoNV>(i);
-        public static ManagedPtr<VkPipelineViewportShadingRateImageStateCreateInfoNV[]> Pointer(this VkPipelineViewportShadingRateImageStateCreateInfoNV[] i) => new ManagedPtr<VkPipelineViewportShadingRateImageStateCreateInfoNV[]>(i);
+        public static ManagedPtrArray<VkPipelineViewportShadingRateImageStateCreateInfoNV> Pointer(this VkPipelineViewportShadingRateImageStateCreateInfoNV[] i) => new ManagedPtrArray<VkPipelineViewportShadingRateImageStateCreateInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceShadingRateImageFeaturesNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4615,7 +4657,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceShadingRateImageFeaturesNV> Pointer(this VkPhysicalDeviceShadingRateImageFeaturesNV i) => new ManagedPtr<VkPhysicalDeviceShadingRateImageFeaturesNV>(i);
-        public static ManagedPtr<VkPhysicalDeviceShadingRateImageFeaturesNV[]> Pointer(this VkPhysicalDeviceShadingRateImageFeaturesNV[] i) => new ManagedPtr<VkPhysicalDeviceShadingRateImageFeaturesNV[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceShadingRateImageFeaturesNV> Pointer(this VkPhysicalDeviceShadingRateImageFeaturesNV[] i) => new ManagedPtrArray<VkPhysicalDeviceShadingRateImageFeaturesNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceShadingRateImagePropertiesNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4626,7 +4668,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceShadingRateImagePropertiesNV> Pointer(this VkPhysicalDeviceShadingRateImagePropertiesNV i) => new ManagedPtr<VkPhysicalDeviceShadingRateImagePropertiesNV>(i);
-        public static ManagedPtr<VkPhysicalDeviceShadingRateImagePropertiesNV[]> Pointer(this VkPhysicalDeviceShadingRateImagePropertiesNV[] i) => new ManagedPtr<VkPhysicalDeviceShadingRateImagePropertiesNV[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceShadingRateImagePropertiesNV> Pointer(this VkPhysicalDeviceShadingRateImagePropertiesNV[] i) => new ManagedPtrArray<VkPhysicalDeviceShadingRateImagePropertiesNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkCoarseSampleLocationNV {
 			[FieldOffset(0)]public uint pixelX;
@@ -4635,7 +4677,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkCoarseSampleLocationNV> Pointer(this VkCoarseSampleLocationNV i) => new ManagedPtr<VkCoarseSampleLocationNV>(i);
-        public static ManagedPtr<VkCoarseSampleLocationNV[]> Pointer(this VkCoarseSampleLocationNV[] i) => new ManagedPtr<VkCoarseSampleLocationNV[]>(i);
+        public static ManagedPtrArray<VkCoarseSampleLocationNV> Pointer(this VkCoarseSampleLocationNV[] i) => new ManagedPtrArray<VkCoarseSampleLocationNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkCoarseSampleOrderCustomNV {
 			[FieldOffset(0)]public VkShadingRatePaletteEntryNV shadingRate;
@@ -4645,7 +4687,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkCoarseSampleOrderCustomNV> Pointer(this VkCoarseSampleOrderCustomNV i) => new ManagedPtr<VkCoarseSampleOrderCustomNV>(i);
-        public static ManagedPtr<VkCoarseSampleOrderCustomNV[]> Pointer(this VkCoarseSampleOrderCustomNV[] i) => new ManagedPtr<VkCoarseSampleOrderCustomNV[]>(i);
+        public static ManagedPtrArray<VkCoarseSampleOrderCustomNV> Pointer(this VkCoarseSampleOrderCustomNV[] i) => new ManagedPtrArray<VkCoarseSampleOrderCustomNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineViewportCoarseSampleOrderStateCreateInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4656,7 +4698,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineViewportCoarseSampleOrderStateCreateInfoNV> Pointer(this VkPipelineViewportCoarseSampleOrderStateCreateInfoNV i) => new ManagedPtr<VkPipelineViewportCoarseSampleOrderStateCreateInfoNV>(i);
-        public static ManagedPtr<VkPipelineViewportCoarseSampleOrderStateCreateInfoNV[]> Pointer(this VkPipelineViewportCoarseSampleOrderStateCreateInfoNV[] i) => new ManagedPtr<VkPipelineViewportCoarseSampleOrderStateCreateInfoNV[]>(i);
+        public static ManagedPtrArray<VkPipelineViewportCoarseSampleOrderStateCreateInfoNV> Pointer(this VkPipelineViewportCoarseSampleOrderStateCreateInfoNV[] i) => new ManagedPtrArray<VkPipelineViewportCoarseSampleOrderStateCreateInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkRayTracingShaderGroupCreateInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4669,12 +4711,12 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkRayTracingShaderGroupCreateInfoNV> Pointer(this VkRayTracingShaderGroupCreateInfoNV i) => new ManagedPtr<VkRayTracingShaderGroupCreateInfoNV>(i);
-        public static ManagedPtr<VkRayTracingShaderGroupCreateInfoNV[]> Pointer(this VkRayTracingShaderGroupCreateInfoNV[] i) => new ManagedPtr<VkRayTracingShaderGroupCreateInfoNV[]>(i);
+        public static ManagedPtrArray<VkRayTracingShaderGroupCreateInfoNV> Pointer(this VkRayTracingShaderGroupCreateInfoNV[] i) => new ManagedPtrArray<VkRayTracingShaderGroupCreateInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkRayTracingPipelineCreateInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkPipelineCreateFlags flags;
 			[FieldOffset(20)]public uint stageCount;
 			[FieldOffset(24)]public IntPtr pStages;
 			[FieldOffset(32)]public uint groupCount;
@@ -4686,7 +4728,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkRayTracingPipelineCreateInfoNV> Pointer(this VkRayTracingPipelineCreateInfoNV i) => new ManagedPtr<VkRayTracingPipelineCreateInfoNV>(i);
-        public static ManagedPtr<VkRayTracingPipelineCreateInfoNV[]> Pointer(this VkRayTracingPipelineCreateInfoNV[] i) => new ManagedPtr<VkRayTracingPipelineCreateInfoNV[]>(i);
+        public static ManagedPtrArray<VkRayTracingPipelineCreateInfoNV> Pointer(this VkRayTracingPipelineCreateInfoNV[] i) => new ManagedPtrArray<VkRayTracingPipelineCreateInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkGeometryTrianglesNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4705,7 +4747,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkGeometryTrianglesNV> Pointer(this VkGeometryTrianglesNV i) => new ManagedPtr<VkGeometryTrianglesNV>(i);
-        public static ManagedPtr<VkGeometryTrianglesNV[]> Pointer(this VkGeometryTrianglesNV[] i) => new ManagedPtr<VkGeometryTrianglesNV[]>(i);
+        public static ManagedPtrArray<VkGeometryTrianglesNV> Pointer(this VkGeometryTrianglesNV[] i) => new ManagedPtrArray<VkGeometryTrianglesNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkGeometryAABBNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4717,7 +4759,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkGeometryAABBNV> Pointer(this VkGeometryAABBNV i) => new ManagedPtr<VkGeometryAABBNV>(i);
-        public static ManagedPtr<VkGeometryAABBNV[]> Pointer(this VkGeometryAABBNV[] i) => new ManagedPtr<VkGeometryAABBNV[]>(i);
+        public static ManagedPtrArray<VkGeometryAABBNV> Pointer(this VkGeometryAABBNV[] i) => new ManagedPtrArray<VkGeometryAABBNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkGeometryDataNV {
 			[FieldOffset(0)]public VkGeometryTrianglesNV triangles;
@@ -4725,31 +4767,31 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkGeometryDataNV> Pointer(this VkGeometryDataNV i) => new ManagedPtr<VkGeometryDataNV>(i);
-        public static ManagedPtr<VkGeometryDataNV[]> Pointer(this VkGeometryDataNV[] i) => new ManagedPtr<VkGeometryDataNV[]>(i);
+        public static ManagedPtrArray<VkGeometryDataNV> Pointer(this VkGeometryDataNV[] i) => new ManagedPtrArray<VkGeometryDataNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkGeometryNV {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public VkGeometryTypeNV geometryType;
 			[FieldOffset(24)]public VkGeometryDataNV geometry;
-			[FieldOffset(160)]public uint flags;
+			[FieldOffset(160)]public VkGeometryFlagsNV flags;
 		}
 
         public static ManagedPtr<VkGeometryNV> Pointer(this VkGeometryNV i) => new ManagedPtr<VkGeometryNV>(i);
-        public static ManagedPtr<VkGeometryNV[]> Pointer(this VkGeometryNV[] i) => new ManagedPtr<VkGeometryNV[]>(i);
+        public static ManagedPtrArray<VkGeometryNV> Pointer(this VkGeometryNV[] i) => new ManagedPtrArray<VkGeometryNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkAccelerationStructureInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public VkAccelerationStructureTypeNV type;
-			[FieldOffset(20)]public uint flags;
+			[FieldOffset(20)]public VkBuildAccelerationStructureFlagsNV flags;
 			[FieldOffset(24)]public uint instanceCount;
 			[FieldOffset(28)]public uint geometryCount;
 			[FieldOffset(32)]public IntPtr pGeometries;
 		}
 
         public static ManagedPtr<VkAccelerationStructureInfoNV> Pointer(this VkAccelerationStructureInfoNV i) => new ManagedPtr<VkAccelerationStructureInfoNV>(i);
-        public static ManagedPtr<VkAccelerationStructureInfoNV[]> Pointer(this VkAccelerationStructureInfoNV[] i) => new ManagedPtr<VkAccelerationStructureInfoNV[]>(i);
+        public static ManagedPtrArray<VkAccelerationStructureInfoNV> Pointer(this VkAccelerationStructureInfoNV[] i) => new ManagedPtrArray<VkAccelerationStructureInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkAccelerationStructureCreateInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4759,7 +4801,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkAccelerationStructureCreateInfoNV> Pointer(this VkAccelerationStructureCreateInfoNV i) => new ManagedPtr<VkAccelerationStructureCreateInfoNV>(i);
-        public static ManagedPtr<VkAccelerationStructureCreateInfoNV[]> Pointer(this VkAccelerationStructureCreateInfoNV[] i) => new ManagedPtr<VkAccelerationStructureCreateInfoNV[]>(i);
+        public static ManagedPtrArray<VkAccelerationStructureCreateInfoNV> Pointer(this VkAccelerationStructureCreateInfoNV[] i) => new ManagedPtrArray<VkAccelerationStructureCreateInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkBindAccelerationStructureMemoryInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4772,7 +4814,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkBindAccelerationStructureMemoryInfoNV> Pointer(this VkBindAccelerationStructureMemoryInfoNV i) => new ManagedPtr<VkBindAccelerationStructureMemoryInfoNV>(i);
-        public static ManagedPtr<VkBindAccelerationStructureMemoryInfoNV[]> Pointer(this VkBindAccelerationStructureMemoryInfoNV[] i) => new ManagedPtr<VkBindAccelerationStructureMemoryInfoNV[]>(i);
+        public static ManagedPtrArray<VkBindAccelerationStructureMemoryInfoNV> Pointer(this VkBindAccelerationStructureMemoryInfoNV[] i) => new ManagedPtrArray<VkBindAccelerationStructureMemoryInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkWriteDescriptorSetAccelerationStructureNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4782,7 +4824,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkWriteDescriptorSetAccelerationStructureNV> Pointer(this VkWriteDescriptorSetAccelerationStructureNV i) => new ManagedPtr<VkWriteDescriptorSetAccelerationStructureNV>(i);
-        public static ManagedPtr<VkWriteDescriptorSetAccelerationStructureNV[]> Pointer(this VkWriteDescriptorSetAccelerationStructureNV[] i) => new ManagedPtr<VkWriteDescriptorSetAccelerationStructureNV[]>(i);
+        public static ManagedPtrArray<VkWriteDescriptorSetAccelerationStructureNV> Pointer(this VkWriteDescriptorSetAccelerationStructureNV[] i) => new ManagedPtrArray<VkWriteDescriptorSetAccelerationStructureNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkAccelerationStructureMemoryRequirementsInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4792,7 +4834,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkAccelerationStructureMemoryRequirementsInfoNV> Pointer(this VkAccelerationStructureMemoryRequirementsInfoNV i) => new ManagedPtr<VkAccelerationStructureMemoryRequirementsInfoNV>(i);
-        public static ManagedPtr<VkAccelerationStructureMemoryRequirementsInfoNV[]> Pointer(this VkAccelerationStructureMemoryRequirementsInfoNV[] i) => new ManagedPtr<VkAccelerationStructureMemoryRequirementsInfoNV[]>(i);
+        public static ManagedPtrArray<VkAccelerationStructureMemoryRequirementsInfoNV> Pointer(this VkAccelerationStructureMemoryRequirementsInfoNV[] i) => new ManagedPtrArray<VkAccelerationStructureMemoryRequirementsInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceRayTracingPropertiesNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4808,7 +4850,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceRayTracingPropertiesNV> Pointer(this VkPhysicalDeviceRayTracingPropertiesNV i) => new ManagedPtr<VkPhysicalDeviceRayTracingPropertiesNV>(i);
-        public static ManagedPtr<VkPhysicalDeviceRayTracingPropertiesNV[]> Pointer(this VkPhysicalDeviceRayTracingPropertiesNV[] i) => new ManagedPtr<VkPhysicalDeviceRayTracingPropertiesNV[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceRayTracingPropertiesNV> Pointer(this VkPhysicalDeviceRayTracingPropertiesNV[] i) => new ManagedPtrArray<VkPhysicalDeviceRayTracingPropertiesNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4817,7 +4859,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV> Pointer(this VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV i) => new ManagedPtr<VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV>(i);
-        public static ManagedPtr<VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV[]> Pointer(this VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV[] i) => new ManagedPtr<VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV> Pointer(this VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV[] i) => new ManagedPtrArray<VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineRepresentativeFragmentTestStateCreateInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4826,7 +4868,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineRepresentativeFragmentTestStateCreateInfoNV> Pointer(this VkPipelineRepresentativeFragmentTestStateCreateInfoNV i) => new ManagedPtr<VkPipelineRepresentativeFragmentTestStateCreateInfoNV>(i);
-        public static ManagedPtr<VkPipelineRepresentativeFragmentTestStateCreateInfoNV[]> Pointer(this VkPipelineRepresentativeFragmentTestStateCreateInfoNV[] i) => new ManagedPtr<VkPipelineRepresentativeFragmentTestStateCreateInfoNV[]>(i);
+        public static ManagedPtrArray<VkPipelineRepresentativeFragmentTestStateCreateInfoNV> Pointer(this VkPipelineRepresentativeFragmentTestStateCreateInfoNV[] i) => new ManagedPtrArray<VkPipelineRepresentativeFragmentTestStateCreateInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceImageViewImageFormatInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4835,7 +4877,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceImageViewImageFormatInfoEXT> Pointer(this VkPhysicalDeviceImageViewImageFormatInfoEXT i) => new ManagedPtr<VkPhysicalDeviceImageViewImageFormatInfoEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceImageViewImageFormatInfoEXT[]> Pointer(this VkPhysicalDeviceImageViewImageFormatInfoEXT[] i) => new ManagedPtr<VkPhysicalDeviceImageViewImageFormatInfoEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceImageViewImageFormatInfoEXT> Pointer(this VkPhysicalDeviceImageViewImageFormatInfoEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceImageViewImageFormatInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkFilterCubicImageViewImageFormatPropertiesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4845,7 +4887,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkFilterCubicImageViewImageFormatPropertiesEXT> Pointer(this VkFilterCubicImageViewImageFormatPropertiesEXT i) => new ManagedPtr<VkFilterCubicImageViewImageFormatPropertiesEXT>(i);
-        public static ManagedPtr<VkFilterCubicImageViewImageFormatPropertiesEXT[]> Pointer(this VkFilterCubicImageViewImageFormatPropertiesEXT[] i) => new ManagedPtr<VkFilterCubicImageViewImageFormatPropertiesEXT[]>(i);
+        public static ManagedPtrArray<VkFilterCubicImageViewImageFormatPropertiesEXT> Pointer(this VkFilterCubicImageViewImageFormatPropertiesEXT[] i) => new ManagedPtrArray<VkFilterCubicImageViewImageFormatPropertiesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDeviceQueueGlobalPriorityCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4854,17 +4896,17 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDeviceQueueGlobalPriorityCreateInfoEXT> Pointer(this VkDeviceQueueGlobalPriorityCreateInfoEXT i) => new ManagedPtr<VkDeviceQueueGlobalPriorityCreateInfoEXT>(i);
-        public static ManagedPtr<VkDeviceQueueGlobalPriorityCreateInfoEXT[]> Pointer(this VkDeviceQueueGlobalPriorityCreateInfoEXT[] i) => new ManagedPtr<VkDeviceQueueGlobalPriorityCreateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkDeviceQueueGlobalPriorityCreateInfoEXT> Pointer(this VkDeviceQueueGlobalPriorityCreateInfoEXT[] i) => new ManagedPtrArray<VkDeviceQueueGlobalPriorityCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkImportMemoryHostPointerInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public VkExternalMemoryHandleTypeFlagBits handleType;
+			[FieldOffset(16)]public VkExternalMemoryHandleTypeFlags handleType;
 			[FieldOffset(24)]public IntPtr pHostPointer;
 		}
 
         public static ManagedPtr<VkImportMemoryHostPointerInfoEXT> Pointer(this VkImportMemoryHostPointerInfoEXT i) => new ManagedPtr<VkImportMemoryHostPointerInfoEXT>(i);
-        public static ManagedPtr<VkImportMemoryHostPointerInfoEXT[]> Pointer(this VkImportMemoryHostPointerInfoEXT[] i) => new ManagedPtr<VkImportMemoryHostPointerInfoEXT[]>(i);
+        public static ManagedPtrArray<VkImportMemoryHostPointerInfoEXT> Pointer(this VkImportMemoryHostPointerInfoEXT[] i) => new ManagedPtrArray<VkImportMemoryHostPointerInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkMemoryHostPointerPropertiesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4873,7 +4915,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkMemoryHostPointerPropertiesEXT> Pointer(this VkMemoryHostPointerPropertiesEXT i) => new ManagedPtr<VkMemoryHostPointerPropertiesEXT>(i);
-        public static ManagedPtr<VkMemoryHostPointerPropertiesEXT[]> Pointer(this VkMemoryHostPointerPropertiesEXT[] i) => new ManagedPtr<VkMemoryHostPointerPropertiesEXT[]>(i);
+        public static ManagedPtrArray<VkMemoryHostPointerPropertiesEXT> Pointer(this VkMemoryHostPointerPropertiesEXT[] i) => new ManagedPtrArray<VkMemoryHostPointerPropertiesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceExternalMemoryHostPropertiesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4882,16 +4924,16 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceExternalMemoryHostPropertiesEXT> Pointer(this VkPhysicalDeviceExternalMemoryHostPropertiesEXT i) => new ManagedPtr<VkPhysicalDeviceExternalMemoryHostPropertiesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceExternalMemoryHostPropertiesEXT[]> Pointer(this VkPhysicalDeviceExternalMemoryHostPropertiesEXT[] i) => new ManagedPtr<VkPhysicalDeviceExternalMemoryHostPropertiesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceExternalMemoryHostPropertiesEXT> Pointer(this VkPhysicalDeviceExternalMemoryHostPropertiesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceExternalMemoryHostPropertiesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineCompilerControlCreateInfoAMD {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint compilerControlFlags;
+			[FieldOffset(16)]public VkPipelineCompilerControlFlagsAMD compilerControlFlags;
 		}
 
         public static ManagedPtr<VkPipelineCompilerControlCreateInfoAMD> Pointer(this VkPipelineCompilerControlCreateInfoAMD i) => new ManagedPtr<VkPipelineCompilerControlCreateInfoAMD>(i);
-        public static ManagedPtr<VkPipelineCompilerControlCreateInfoAMD[]> Pointer(this VkPipelineCompilerControlCreateInfoAMD[] i) => new ManagedPtr<VkPipelineCompilerControlCreateInfoAMD[]>(i);
+        public static ManagedPtrArray<VkPipelineCompilerControlCreateInfoAMD> Pointer(this VkPipelineCompilerControlCreateInfoAMD[] i) => new ManagedPtrArray<VkPipelineCompilerControlCreateInfoAMD>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkCalibratedTimestampInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4900,7 +4942,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkCalibratedTimestampInfoEXT> Pointer(this VkCalibratedTimestampInfoEXT i) => new ManagedPtr<VkCalibratedTimestampInfoEXT>(i);
-        public static ManagedPtr<VkCalibratedTimestampInfoEXT[]> Pointer(this VkCalibratedTimestampInfoEXT[] i) => new ManagedPtr<VkCalibratedTimestampInfoEXT[]>(i);
+        public static ManagedPtrArray<VkCalibratedTimestampInfoEXT> Pointer(this VkCalibratedTimestampInfoEXT[] i) => new ManagedPtrArray<VkCalibratedTimestampInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceShaderCorePropertiesAMD {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4922,7 +4964,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceShaderCorePropertiesAMD> Pointer(this VkPhysicalDeviceShaderCorePropertiesAMD i) => new ManagedPtr<VkPhysicalDeviceShaderCorePropertiesAMD>(i);
-        public static ManagedPtr<VkPhysicalDeviceShaderCorePropertiesAMD[]> Pointer(this VkPhysicalDeviceShaderCorePropertiesAMD[] i) => new ManagedPtr<VkPhysicalDeviceShaderCorePropertiesAMD[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceShaderCorePropertiesAMD> Pointer(this VkPhysicalDeviceShaderCorePropertiesAMD[] i) => new ManagedPtrArray<VkPhysicalDeviceShaderCorePropertiesAMD>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDeviceMemoryOverallocationCreateInfoAMD {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4931,7 +4973,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDeviceMemoryOverallocationCreateInfoAMD> Pointer(this VkDeviceMemoryOverallocationCreateInfoAMD i) => new ManagedPtr<VkDeviceMemoryOverallocationCreateInfoAMD>(i);
-        public static ManagedPtr<VkDeviceMemoryOverallocationCreateInfoAMD[]> Pointer(this VkDeviceMemoryOverallocationCreateInfoAMD[] i) => new ManagedPtr<VkDeviceMemoryOverallocationCreateInfoAMD[]>(i);
+        public static ManagedPtrArray<VkDeviceMemoryOverallocationCreateInfoAMD> Pointer(this VkDeviceMemoryOverallocationCreateInfoAMD[] i) => new ManagedPtrArray<VkDeviceMemoryOverallocationCreateInfoAMD>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4940,7 +4982,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT> Pointer(this VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT i) => new ManagedPtr<VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT[]> Pointer(this VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT[] i) => new ManagedPtr<VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT> Pointer(this VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkVertexInputBindingDivisorDescriptionEXT {
 			[FieldOffset(0)]public uint binding;
@@ -4948,7 +4990,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkVertexInputBindingDivisorDescriptionEXT> Pointer(this VkVertexInputBindingDivisorDescriptionEXT i) => new ManagedPtr<VkVertexInputBindingDivisorDescriptionEXT>(i);
-        public static ManagedPtr<VkVertexInputBindingDivisorDescriptionEXT[]> Pointer(this VkVertexInputBindingDivisorDescriptionEXT[] i) => new ManagedPtr<VkVertexInputBindingDivisorDescriptionEXT[]>(i);
+        public static ManagedPtrArray<VkVertexInputBindingDivisorDescriptionEXT> Pointer(this VkVertexInputBindingDivisorDescriptionEXT[] i) => new ManagedPtrArray<VkVertexInputBindingDivisorDescriptionEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineVertexInputDivisorStateCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4958,7 +5000,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineVertexInputDivisorStateCreateInfoEXT> Pointer(this VkPipelineVertexInputDivisorStateCreateInfoEXT i) => new ManagedPtr<VkPipelineVertexInputDivisorStateCreateInfoEXT>(i);
-        public static ManagedPtr<VkPipelineVertexInputDivisorStateCreateInfoEXT[]> Pointer(this VkPipelineVertexInputDivisorStateCreateInfoEXT[] i) => new ManagedPtr<VkPipelineVertexInputDivisorStateCreateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkPipelineVertexInputDivisorStateCreateInfoEXT> Pointer(this VkPipelineVertexInputDivisorStateCreateInfoEXT[] i) => new ManagedPtrArray<VkPipelineVertexInputDivisorStateCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4968,15 +5010,15 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT> Pointer(this VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT i) => new ManagedPtr<VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT[]> Pointer(this VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT[] i) => new ManagedPtr<VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT> Pointer(this VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceVertexAttributeDivisorFeaturesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineCreationFeedbackEXT {
-			[FieldOffset(0)]public uint flags;
+			[FieldOffset(0)]public VkPipelineCreationFeedbackFlagsEXT flags;
 			[FieldOffset(8)]public ulong duration;
 		}
 
         public static ManagedPtr<VkPipelineCreationFeedbackEXT> Pointer(this VkPipelineCreationFeedbackEXT i) => new ManagedPtr<VkPipelineCreationFeedbackEXT>(i);
-        public static ManagedPtr<VkPipelineCreationFeedbackEXT[]> Pointer(this VkPipelineCreationFeedbackEXT[] i) => new ManagedPtr<VkPipelineCreationFeedbackEXT[]>(i);
+        public static ManagedPtrArray<VkPipelineCreationFeedbackEXT> Pointer(this VkPipelineCreationFeedbackEXT[] i) => new ManagedPtrArray<VkPipelineCreationFeedbackEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineCreationFeedbackCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4987,7 +5029,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineCreationFeedbackCreateInfoEXT> Pointer(this VkPipelineCreationFeedbackCreateInfoEXT i) => new ManagedPtr<VkPipelineCreationFeedbackCreateInfoEXT>(i);
-        public static ManagedPtr<VkPipelineCreationFeedbackCreateInfoEXT[]> Pointer(this VkPipelineCreationFeedbackCreateInfoEXT[] i) => new ManagedPtr<VkPipelineCreationFeedbackCreateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkPipelineCreationFeedbackCreateInfoEXT> Pointer(this VkPipelineCreationFeedbackCreateInfoEXT[] i) => new ManagedPtrArray<VkPipelineCreationFeedbackCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceComputeShaderDerivativesFeaturesNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4997,7 +5039,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceComputeShaderDerivativesFeaturesNV> Pointer(this VkPhysicalDeviceComputeShaderDerivativesFeaturesNV i) => new ManagedPtr<VkPhysicalDeviceComputeShaderDerivativesFeaturesNV>(i);
-        public static ManagedPtr<VkPhysicalDeviceComputeShaderDerivativesFeaturesNV[]> Pointer(this VkPhysicalDeviceComputeShaderDerivativesFeaturesNV[] i) => new ManagedPtr<VkPhysicalDeviceComputeShaderDerivativesFeaturesNV[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceComputeShaderDerivativesFeaturesNV> Pointer(this VkPhysicalDeviceComputeShaderDerivativesFeaturesNV[] i) => new ManagedPtrArray<VkPhysicalDeviceComputeShaderDerivativesFeaturesNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceMeshShaderFeaturesNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5007,7 +5049,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceMeshShaderFeaturesNV> Pointer(this VkPhysicalDeviceMeshShaderFeaturesNV i) => new ManagedPtr<VkPhysicalDeviceMeshShaderFeaturesNV>(i);
-        public static ManagedPtr<VkPhysicalDeviceMeshShaderFeaturesNV[]> Pointer(this VkPhysicalDeviceMeshShaderFeaturesNV[] i) => new ManagedPtr<VkPhysicalDeviceMeshShaderFeaturesNV[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceMeshShaderFeaturesNV> Pointer(this VkPhysicalDeviceMeshShaderFeaturesNV[] i) => new ManagedPtrArray<VkPhysicalDeviceMeshShaderFeaturesNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceMeshShaderPropertiesNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5015,10 +5057,12 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(16)]public uint maxDrawMeshTasksCount;
 			[FieldOffset(20)]public uint maxTaskWorkGroupInvocations;
 			[FieldOffset(24)]public fixed uint maxTaskWorkGroupSize[3];
+			public const int maxTaskWorkGroupSize_len = 3;
 			[FieldOffset(36)]public uint maxTaskTotalMemorySize;
 			[FieldOffset(40)]public uint maxTaskOutputCount;
 			[FieldOffset(44)]public uint maxMeshWorkGroupInvocations;
 			[FieldOffset(48)]public fixed uint maxMeshWorkGroupSize[3];
+			public const int maxMeshWorkGroupSize_len = 3;
 			[FieldOffset(60)]public uint maxMeshTotalMemorySize;
 			[FieldOffset(64)]public uint maxMeshOutputVertices;
 			[FieldOffset(68)]public uint maxMeshOutputPrimitives;
@@ -5028,7 +5072,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceMeshShaderPropertiesNV> Pointer(this VkPhysicalDeviceMeshShaderPropertiesNV i) => new ManagedPtr<VkPhysicalDeviceMeshShaderPropertiesNV>(i);
-        public static ManagedPtr<VkPhysicalDeviceMeshShaderPropertiesNV[]> Pointer(this VkPhysicalDeviceMeshShaderPropertiesNV[] i) => new ManagedPtr<VkPhysicalDeviceMeshShaderPropertiesNV[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceMeshShaderPropertiesNV> Pointer(this VkPhysicalDeviceMeshShaderPropertiesNV[] i) => new ManagedPtrArray<VkPhysicalDeviceMeshShaderPropertiesNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDrawMeshTasksIndirectCommandNV {
 			[FieldOffset(0)]public uint taskCount;
@@ -5036,7 +5080,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDrawMeshTasksIndirectCommandNV> Pointer(this VkDrawMeshTasksIndirectCommandNV i) => new ManagedPtr<VkDrawMeshTasksIndirectCommandNV>(i);
-        public static ManagedPtr<VkDrawMeshTasksIndirectCommandNV[]> Pointer(this VkDrawMeshTasksIndirectCommandNV[] i) => new ManagedPtr<VkDrawMeshTasksIndirectCommandNV[]>(i);
+        public static ManagedPtrArray<VkDrawMeshTasksIndirectCommandNV> Pointer(this VkDrawMeshTasksIndirectCommandNV[] i) => new ManagedPtrArray<VkDrawMeshTasksIndirectCommandNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5045,7 +5089,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV> Pointer(this VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV i) => new ManagedPtr<VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV>(i);
-        public static ManagedPtr<VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV[]> Pointer(this VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV[] i) => new ManagedPtr<VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV> Pointer(this VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV[] i) => new ManagedPtrArray<VkPhysicalDeviceFragmentShaderBarycentricFeaturesNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceShaderImageFootprintFeaturesNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5054,7 +5098,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceShaderImageFootprintFeaturesNV> Pointer(this VkPhysicalDeviceShaderImageFootprintFeaturesNV i) => new ManagedPtr<VkPhysicalDeviceShaderImageFootprintFeaturesNV>(i);
-        public static ManagedPtr<VkPhysicalDeviceShaderImageFootprintFeaturesNV[]> Pointer(this VkPhysicalDeviceShaderImageFootprintFeaturesNV[] i) => new ManagedPtr<VkPhysicalDeviceShaderImageFootprintFeaturesNV[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceShaderImageFootprintFeaturesNV> Pointer(this VkPhysicalDeviceShaderImageFootprintFeaturesNV[] i) => new ManagedPtrArray<VkPhysicalDeviceShaderImageFootprintFeaturesNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineViewportExclusiveScissorStateCreateInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5064,7 +5108,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineViewportExclusiveScissorStateCreateInfoNV> Pointer(this VkPipelineViewportExclusiveScissorStateCreateInfoNV i) => new ManagedPtr<VkPipelineViewportExclusiveScissorStateCreateInfoNV>(i);
-        public static ManagedPtr<VkPipelineViewportExclusiveScissorStateCreateInfoNV[]> Pointer(this VkPipelineViewportExclusiveScissorStateCreateInfoNV[] i) => new ManagedPtr<VkPipelineViewportExclusiveScissorStateCreateInfoNV[]>(i);
+        public static ManagedPtrArray<VkPipelineViewportExclusiveScissorStateCreateInfoNV> Pointer(this VkPipelineViewportExclusiveScissorStateCreateInfoNV[] i) => new ManagedPtrArray<VkPipelineViewportExclusiveScissorStateCreateInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceExclusiveScissorFeaturesNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5073,26 +5117,26 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceExclusiveScissorFeaturesNV> Pointer(this VkPhysicalDeviceExclusiveScissorFeaturesNV i) => new ManagedPtr<VkPhysicalDeviceExclusiveScissorFeaturesNV>(i);
-        public static ManagedPtr<VkPhysicalDeviceExclusiveScissorFeaturesNV[]> Pointer(this VkPhysicalDeviceExclusiveScissorFeaturesNV[] i) => new ManagedPtr<VkPhysicalDeviceExclusiveScissorFeaturesNV[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceExclusiveScissorFeaturesNV> Pointer(this VkPhysicalDeviceExclusiveScissorFeaturesNV[] i) => new ManagedPtrArray<VkPhysicalDeviceExclusiveScissorFeaturesNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkQueueFamilyCheckpointPropertiesNV {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint checkpointExecutionStageMask;
+			[FieldOffset(16)]public VkPipelineStageFlags checkpointExecutionStageMask;
 		}
 
         public static ManagedPtr<VkQueueFamilyCheckpointPropertiesNV> Pointer(this VkQueueFamilyCheckpointPropertiesNV i) => new ManagedPtr<VkQueueFamilyCheckpointPropertiesNV>(i);
-        public static ManagedPtr<VkQueueFamilyCheckpointPropertiesNV[]> Pointer(this VkQueueFamilyCheckpointPropertiesNV[] i) => new ManagedPtr<VkQueueFamilyCheckpointPropertiesNV[]>(i);
+        public static ManagedPtrArray<VkQueueFamilyCheckpointPropertiesNV> Pointer(this VkQueueFamilyCheckpointPropertiesNV[] i) => new ManagedPtrArray<VkQueueFamilyCheckpointPropertiesNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkCheckpointDataNV {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public VkPipelineStageFlagBits stage;
+			[FieldOffset(16)]public VkPipelineStageFlags stage;
 			[FieldOffset(24)]public IntPtr pCheckpointMarker;
 		}
 
         public static ManagedPtr<VkCheckpointDataNV> Pointer(this VkCheckpointDataNV i) => new ManagedPtr<VkCheckpointDataNV>(i);
-        public static ManagedPtr<VkCheckpointDataNV[]> Pointer(this VkCheckpointDataNV[] i) => new ManagedPtr<VkCheckpointDataNV[]>(i);
+        public static ManagedPtrArray<VkCheckpointDataNV> Pointer(this VkCheckpointDataNV[] i) => new ManagedPtrArray<VkCheckpointDataNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5101,7 +5145,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL> Pointer(this VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL i) => new ManagedPtr<VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL>(i);
-        public static ManagedPtr<VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL[]> Pointer(this VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL[] i) => new ManagedPtr<VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL> Pointer(this VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL[] i) => new ManagedPtrArray<VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPerformanceValueINTEL {
 			[FieldOffset(0)]public VkPerformanceValueTypeINTEL type;
@@ -5109,7 +5153,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPerformanceValueINTEL> Pointer(this VkPerformanceValueINTEL i) => new ManagedPtr<VkPerformanceValueINTEL>(i);
-        public static ManagedPtr<VkPerformanceValueINTEL[]> Pointer(this VkPerformanceValueINTEL[] i) => new ManagedPtr<VkPerformanceValueINTEL[]>(i);
+        public static ManagedPtrArray<VkPerformanceValueINTEL> Pointer(this VkPerformanceValueINTEL[] i) => new ManagedPtrArray<VkPerformanceValueINTEL>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkInitializePerformanceApiInfoINTEL {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5118,7 +5162,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkInitializePerformanceApiInfoINTEL> Pointer(this VkInitializePerformanceApiInfoINTEL i) => new ManagedPtr<VkInitializePerformanceApiInfoINTEL>(i);
-        public static ManagedPtr<VkInitializePerformanceApiInfoINTEL[]> Pointer(this VkInitializePerformanceApiInfoINTEL[] i) => new ManagedPtr<VkInitializePerformanceApiInfoINTEL[]>(i);
+        public static ManagedPtrArray<VkInitializePerformanceApiInfoINTEL> Pointer(this VkInitializePerformanceApiInfoINTEL[] i) => new ManagedPtrArray<VkInitializePerformanceApiInfoINTEL>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkQueryPoolCreateInfoINTEL {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5127,7 +5171,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkQueryPoolCreateInfoINTEL> Pointer(this VkQueryPoolCreateInfoINTEL i) => new ManagedPtr<VkQueryPoolCreateInfoINTEL>(i);
-        public static ManagedPtr<VkQueryPoolCreateInfoINTEL[]> Pointer(this VkQueryPoolCreateInfoINTEL[] i) => new ManagedPtr<VkQueryPoolCreateInfoINTEL[]>(i);
+        public static ManagedPtrArray<VkQueryPoolCreateInfoINTEL> Pointer(this VkQueryPoolCreateInfoINTEL[] i) => new ManagedPtrArray<VkQueryPoolCreateInfoINTEL>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPerformanceMarkerInfoINTEL {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5136,7 +5180,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPerformanceMarkerInfoINTEL> Pointer(this VkPerformanceMarkerInfoINTEL i) => new ManagedPtr<VkPerformanceMarkerInfoINTEL>(i);
-        public static ManagedPtr<VkPerformanceMarkerInfoINTEL[]> Pointer(this VkPerformanceMarkerInfoINTEL[] i) => new ManagedPtr<VkPerformanceMarkerInfoINTEL[]>(i);
+        public static ManagedPtrArray<VkPerformanceMarkerInfoINTEL> Pointer(this VkPerformanceMarkerInfoINTEL[] i) => new ManagedPtrArray<VkPerformanceMarkerInfoINTEL>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPerformanceStreamMarkerInfoINTEL {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5145,7 +5189,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPerformanceStreamMarkerInfoINTEL> Pointer(this VkPerformanceStreamMarkerInfoINTEL i) => new ManagedPtr<VkPerformanceStreamMarkerInfoINTEL>(i);
-        public static ManagedPtr<VkPerformanceStreamMarkerInfoINTEL[]> Pointer(this VkPerformanceStreamMarkerInfoINTEL[] i) => new ManagedPtr<VkPerformanceStreamMarkerInfoINTEL[]>(i);
+        public static ManagedPtrArray<VkPerformanceStreamMarkerInfoINTEL> Pointer(this VkPerformanceStreamMarkerInfoINTEL[] i) => new ManagedPtrArray<VkPerformanceStreamMarkerInfoINTEL>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPerformanceOverrideInfoINTEL {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5156,7 +5200,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPerformanceOverrideInfoINTEL> Pointer(this VkPerformanceOverrideInfoINTEL i) => new ManagedPtr<VkPerformanceOverrideInfoINTEL>(i);
-        public static ManagedPtr<VkPerformanceOverrideInfoINTEL[]> Pointer(this VkPerformanceOverrideInfoINTEL[] i) => new ManagedPtr<VkPerformanceOverrideInfoINTEL[]>(i);
+        public static ManagedPtrArray<VkPerformanceOverrideInfoINTEL> Pointer(this VkPerformanceOverrideInfoINTEL[] i) => new ManagedPtrArray<VkPerformanceOverrideInfoINTEL>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPerformanceConfigurationAcquireInfoINTEL {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5165,7 +5209,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPerformanceConfigurationAcquireInfoINTEL> Pointer(this VkPerformanceConfigurationAcquireInfoINTEL i) => new ManagedPtr<VkPerformanceConfigurationAcquireInfoINTEL>(i);
-        public static ManagedPtr<VkPerformanceConfigurationAcquireInfoINTEL[]> Pointer(this VkPerformanceConfigurationAcquireInfoINTEL[] i) => new ManagedPtr<VkPerformanceConfigurationAcquireInfoINTEL[]>(i);
+        public static ManagedPtrArray<VkPerformanceConfigurationAcquireInfoINTEL> Pointer(this VkPerformanceConfigurationAcquireInfoINTEL[] i) => new ManagedPtrArray<VkPerformanceConfigurationAcquireInfoINTEL>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDevicePCIBusInfoPropertiesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5177,7 +5221,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDevicePCIBusInfoPropertiesEXT> Pointer(this VkPhysicalDevicePCIBusInfoPropertiesEXT i) => new ManagedPtr<VkPhysicalDevicePCIBusInfoPropertiesEXT>(i);
-        public static ManagedPtr<VkPhysicalDevicePCIBusInfoPropertiesEXT[]> Pointer(this VkPhysicalDevicePCIBusInfoPropertiesEXT[] i) => new ManagedPtr<VkPhysicalDevicePCIBusInfoPropertiesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDevicePCIBusInfoPropertiesEXT> Pointer(this VkPhysicalDevicePCIBusInfoPropertiesEXT[] i) => new ManagedPtrArray<VkPhysicalDevicePCIBusInfoPropertiesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDisplayNativeHdrSurfaceCapabilitiesAMD {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5186,7 +5230,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkDisplayNativeHdrSurfaceCapabilitiesAMD> Pointer(this VkDisplayNativeHdrSurfaceCapabilitiesAMD i) => new ManagedPtr<VkDisplayNativeHdrSurfaceCapabilitiesAMD>(i);
-        public static ManagedPtr<VkDisplayNativeHdrSurfaceCapabilitiesAMD[]> Pointer(this VkDisplayNativeHdrSurfaceCapabilitiesAMD[] i) => new ManagedPtr<VkDisplayNativeHdrSurfaceCapabilitiesAMD[]>(i);
+        public static ManagedPtrArray<VkDisplayNativeHdrSurfaceCapabilitiesAMD> Pointer(this VkDisplayNativeHdrSurfaceCapabilitiesAMD[] i) => new ManagedPtrArray<VkDisplayNativeHdrSurfaceCapabilitiesAMD>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkSwapchainDisplayNativeHdrCreateInfoAMD {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5195,7 +5239,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkSwapchainDisplayNativeHdrCreateInfoAMD> Pointer(this VkSwapchainDisplayNativeHdrCreateInfoAMD i) => new ManagedPtr<VkSwapchainDisplayNativeHdrCreateInfoAMD>(i);
-        public static ManagedPtr<VkSwapchainDisplayNativeHdrCreateInfoAMD[]> Pointer(this VkSwapchainDisplayNativeHdrCreateInfoAMD[] i) => new ManagedPtr<VkSwapchainDisplayNativeHdrCreateInfoAMD[]>(i);
+        public static ManagedPtrArray<VkSwapchainDisplayNativeHdrCreateInfoAMD> Pointer(this VkSwapchainDisplayNativeHdrCreateInfoAMD[] i) => new ManagedPtrArray<VkSwapchainDisplayNativeHdrCreateInfoAMD>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceFragmentDensityMapFeaturesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5206,7 +5250,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceFragmentDensityMapFeaturesEXT> Pointer(this VkPhysicalDeviceFragmentDensityMapFeaturesEXT i) => new ManagedPtr<VkPhysicalDeviceFragmentDensityMapFeaturesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceFragmentDensityMapFeaturesEXT[]> Pointer(this VkPhysicalDeviceFragmentDensityMapFeaturesEXT[] i) => new ManagedPtr<VkPhysicalDeviceFragmentDensityMapFeaturesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceFragmentDensityMapFeaturesEXT> Pointer(this VkPhysicalDeviceFragmentDensityMapFeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceFragmentDensityMapFeaturesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceFragmentDensityMapPropertiesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5217,7 +5261,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceFragmentDensityMapPropertiesEXT> Pointer(this VkPhysicalDeviceFragmentDensityMapPropertiesEXT i) => new ManagedPtr<VkPhysicalDeviceFragmentDensityMapPropertiesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceFragmentDensityMapPropertiesEXT[]> Pointer(this VkPhysicalDeviceFragmentDensityMapPropertiesEXT[] i) => new ManagedPtr<VkPhysicalDeviceFragmentDensityMapPropertiesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceFragmentDensityMapPropertiesEXT> Pointer(this VkPhysicalDeviceFragmentDensityMapPropertiesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceFragmentDensityMapPropertiesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkRenderPassFragmentDensityMapCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5226,7 +5270,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkRenderPassFragmentDensityMapCreateInfoEXT> Pointer(this VkRenderPassFragmentDensityMapCreateInfoEXT i) => new ManagedPtr<VkRenderPassFragmentDensityMapCreateInfoEXT>(i);
-        public static ManagedPtr<VkRenderPassFragmentDensityMapCreateInfoEXT[]> Pointer(this VkRenderPassFragmentDensityMapCreateInfoEXT[] i) => new ManagedPtr<VkRenderPassFragmentDensityMapCreateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkRenderPassFragmentDensityMapCreateInfoEXT> Pointer(this VkRenderPassFragmentDensityMapCreateInfoEXT[] i) => new ManagedPtrArray<VkRenderPassFragmentDensityMapCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceSubgroupSizeControlFeaturesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5236,7 +5280,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceSubgroupSizeControlFeaturesEXT> Pointer(this VkPhysicalDeviceSubgroupSizeControlFeaturesEXT i) => new ManagedPtr<VkPhysicalDeviceSubgroupSizeControlFeaturesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceSubgroupSizeControlFeaturesEXT[]> Pointer(this VkPhysicalDeviceSubgroupSizeControlFeaturesEXT[] i) => new ManagedPtr<VkPhysicalDeviceSubgroupSizeControlFeaturesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceSubgroupSizeControlFeaturesEXT> Pointer(this VkPhysicalDeviceSubgroupSizeControlFeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceSubgroupSizeControlFeaturesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceSubgroupSizeControlPropertiesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5244,11 +5288,11 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(16)]public uint minSubgroupSize;
 			[FieldOffset(20)]public uint maxSubgroupSize;
 			[FieldOffset(24)]public uint maxComputeWorkgroupSubgroups;
-			[FieldOffset(28)]public uint requiredSubgroupSizeStages;
+			[FieldOffset(28)]public VkShaderStageFlags requiredSubgroupSizeStages;
 		}
 
         public static ManagedPtr<VkPhysicalDeviceSubgroupSizeControlPropertiesEXT> Pointer(this VkPhysicalDeviceSubgroupSizeControlPropertiesEXT i) => new ManagedPtr<VkPhysicalDeviceSubgroupSizeControlPropertiesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceSubgroupSizeControlPropertiesEXT[]> Pointer(this VkPhysicalDeviceSubgroupSizeControlPropertiesEXT[] i) => new ManagedPtr<VkPhysicalDeviceSubgroupSizeControlPropertiesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceSubgroupSizeControlPropertiesEXT> Pointer(this VkPhysicalDeviceSubgroupSizeControlPropertiesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceSubgroupSizeControlPropertiesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5257,17 +5301,17 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT> Pointer(this VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT i) => new ManagedPtr<VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT>(i);
-        public static ManagedPtr<VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT[]> Pointer(this VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT[] i) => new ManagedPtr<VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT> Pointer(this VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT[] i) => new ManagedPtrArray<VkPipelineShaderStageRequiredSubgroupSizeCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceShaderCoreProperties2AMD {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint shaderCoreFeatures;
+			[FieldOffset(16)]public VkShaderCorePropertiesFlagsAMD shaderCoreFeatures;
 			[FieldOffset(20)]public uint activeComputeUnitCount;
 		}
 
         public static ManagedPtr<VkPhysicalDeviceShaderCoreProperties2AMD> Pointer(this VkPhysicalDeviceShaderCoreProperties2AMD i) => new ManagedPtr<VkPhysicalDeviceShaderCoreProperties2AMD>(i);
-        public static ManagedPtr<VkPhysicalDeviceShaderCoreProperties2AMD[]> Pointer(this VkPhysicalDeviceShaderCoreProperties2AMD[] i) => new ManagedPtr<VkPhysicalDeviceShaderCoreProperties2AMD[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceShaderCoreProperties2AMD> Pointer(this VkPhysicalDeviceShaderCoreProperties2AMD[] i) => new ManagedPtrArray<VkPhysicalDeviceShaderCoreProperties2AMD>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceCoherentMemoryFeaturesAMD {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5276,17 +5320,19 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceCoherentMemoryFeaturesAMD> Pointer(this VkPhysicalDeviceCoherentMemoryFeaturesAMD i) => new ManagedPtr<VkPhysicalDeviceCoherentMemoryFeaturesAMD>(i);
-        public static ManagedPtr<VkPhysicalDeviceCoherentMemoryFeaturesAMD[]> Pointer(this VkPhysicalDeviceCoherentMemoryFeaturesAMD[] i) => new ManagedPtr<VkPhysicalDeviceCoherentMemoryFeaturesAMD[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceCoherentMemoryFeaturesAMD> Pointer(this VkPhysicalDeviceCoherentMemoryFeaturesAMD[] i) => new ManagedPtrArray<VkPhysicalDeviceCoherentMemoryFeaturesAMD>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceMemoryBudgetPropertiesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)][MarshalAs(UnmanagedType.ByValArray, SizeConst=16)] public ulong[] heapBudget;
+			public const int heapBudget_len = 16;
 			[FieldOffset(144)][MarshalAs(UnmanagedType.ByValArray, SizeConst=16)] public ulong[] heapUsage;
+			public const int heapUsage_len = 16;
 		}
 
         public static ManagedPtr<VkPhysicalDeviceMemoryBudgetPropertiesEXT> Pointer(this VkPhysicalDeviceMemoryBudgetPropertiesEXT i) => new ManagedPtr<VkPhysicalDeviceMemoryBudgetPropertiesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceMemoryBudgetPropertiesEXT[]> Pointer(this VkPhysicalDeviceMemoryBudgetPropertiesEXT[] i) => new ManagedPtr<VkPhysicalDeviceMemoryBudgetPropertiesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceMemoryBudgetPropertiesEXT> Pointer(this VkPhysicalDeviceMemoryBudgetPropertiesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceMemoryBudgetPropertiesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceMemoryPriorityFeaturesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5295,7 +5341,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceMemoryPriorityFeaturesEXT> Pointer(this VkPhysicalDeviceMemoryPriorityFeaturesEXT i) => new ManagedPtr<VkPhysicalDeviceMemoryPriorityFeaturesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceMemoryPriorityFeaturesEXT[]> Pointer(this VkPhysicalDeviceMemoryPriorityFeaturesEXT[] i) => new ManagedPtr<VkPhysicalDeviceMemoryPriorityFeaturesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceMemoryPriorityFeaturesEXT> Pointer(this VkPhysicalDeviceMemoryPriorityFeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceMemoryPriorityFeaturesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkMemoryPriorityAllocateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5304,7 +5350,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkMemoryPriorityAllocateInfoEXT> Pointer(this VkMemoryPriorityAllocateInfoEXT i) => new ManagedPtr<VkMemoryPriorityAllocateInfoEXT>(i);
-        public static ManagedPtr<VkMemoryPriorityAllocateInfoEXT[]> Pointer(this VkMemoryPriorityAllocateInfoEXT[] i) => new ManagedPtr<VkMemoryPriorityAllocateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkMemoryPriorityAllocateInfoEXT> Pointer(this VkMemoryPriorityAllocateInfoEXT[] i) => new ManagedPtrArray<VkMemoryPriorityAllocateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5313,7 +5359,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV> Pointer(this VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV i) => new ManagedPtr<VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV>(i);
-        public static ManagedPtr<VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV[]> Pointer(this VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV[] i) => new ManagedPtr<VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV> Pointer(this VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV[] i) => new ManagedPtrArray<VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceBufferDeviceAddressFeaturesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5324,7 +5370,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceBufferDeviceAddressFeaturesEXT> Pointer(this VkPhysicalDeviceBufferDeviceAddressFeaturesEXT i) => new ManagedPtr<VkPhysicalDeviceBufferDeviceAddressFeaturesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceBufferDeviceAddressFeaturesEXT[]> Pointer(this VkPhysicalDeviceBufferDeviceAddressFeaturesEXT[] i) => new ManagedPtr<VkPhysicalDeviceBufferDeviceAddressFeaturesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceBufferDeviceAddressFeaturesEXT> Pointer(this VkPhysicalDeviceBufferDeviceAddressFeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceBufferDeviceAddressFeaturesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkBufferDeviceAddressCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5333,20 +5379,24 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkBufferDeviceAddressCreateInfoEXT> Pointer(this VkBufferDeviceAddressCreateInfoEXT i) => new ManagedPtr<VkBufferDeviceAddressCreateInfoEXT>(i);
-        public static ManagedPtr<VkBufferDeviceAddressCreateInfoEXT[]> Pointer(this VkBufferDeviceAddressCreateInfoEXT[] i) => new ManagedPtr<VkBufferDeviceAddressCreateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkBufferDeviceAddressCreateInfoEXT> Pointer(this VkBufferDeviceAddressCreateInfoEXT[] i) => new ManagedPtrArray<VkBufferDeviceAddressCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceToolPropertiesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public fixed byte name[256];
+			public const int name_len = 256;
 			[FieldOffset(272)]public fixed byte version[256];
-			[FieldOffset(528)]public uint purposes;
+			public const int version_len = 256;
+			[FieldOffset(528)]public VkToolPurposeFlagsEXT purposes;
 			[FieldOffset(532)]public fixed byte description[256];
+			public const int description_len = 256;
 			[FieldOffset(788)]public fixed byte layer[256];
+			public const int layer_len = 256;
 		}
 
         public static ManagedPtr<VkPhysicalDeviceToolPropertiesEXT> Pointer(this VkPhysicalDeviceToolPropertiesEXT i) => new ManagedPtr<VkPhysicalDeviceToolPropertiesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceToolPropertiesEXT[]> Pointer(this VkPhysicalDeviceToolPropertiesEXT[] i) => new ManagedPtr<VkPhysicalDeviceToolPropertiesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceToolPropertiesEXT> Pointer(this VkPhysicalDeviceToolPropertiesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceToolPropertiesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkValidationFeaturesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5358,7 +5408,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkValidationFeaturesEXT> Pointer(this VkValidationFeaturesEXT i) => new ManagedPtr<VkValidationFeaturesEXT>(i);
-        public static ManagedPtr<VkValidationFeaturesEXT[]> Pointer(this VkValidationFeaturesEXT[] i) => new ManagedPtr<VkValidationFeaturesEXT[]>(i);
+        public static ManagedPtrArray<VkValidationFeaturesEXT> Pointer(this VkValidationFeaturesEXT[] i) => new ManagedPtrArray<VkValidationFeaturesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkCooperativeMatrixPropertiesNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5374,7 +5424,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkCooperativeMatrixPropertiesNV> Pointer(this VkCooperativeMatrixPropertiesNV i) => new ManagedPtr<VkCooperativeMatrixPropertiesNV>(i);
-        public static ManagedPtr<VkCooperativeMatrixPropertiesNV[]> Pointer(this VkCooperativeMatrixPropertiesNV[] i) => new ManagedPtr<VkCooperativeMatrixPropertiesNV[]>(i);
+        public static ManagedPtrArray<VkCooperativeMatrixPropertiesNV> Pointer(this VkCooperativeMatrixPropertiesNV[] i) => new ManagedPtrArray<VkCooperativeMatrixPropertiesNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceCooperativeMatrixFeaturesNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5384,16 +5434,16 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceCooperativeMatrixFeaturesNV> Pointer(this VkPhysicalDeviceCooperativeMatrixFeaturesNV i) => new ManagedPtr<VkPhysicalDeviceCooperativeMatrixFeaturesNV>(i);
-        public static ManagedPtr<VkPhysicalDeviceCooperativeMatrixFeaturesNV[]> Pointer(this VkPhysicalDeviceCooperativeMatrixFeaturesNV[] i) => new ManagedPtr<VkPhysicalDeviceCooperativeMatrixFeaturesNV[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceCooperativeMatrixFeaturesNV> Pointer(this VkPhysicalDeviceCooperativeMatrixFeaturesNV[] i) => new ManagedPtrArray<VkPhysicalDeviceCooperativeMatrixFeaturesNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceCooperativeMatrixPropertiesNV {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint cooperativeMatrixSupportedStages;
+			[FieldOffset(16)]public VkShaderStageFlags cooperativeMatrixSupportedStages;
 		}
 
         public static ManagedPtr<VkPhysicalDeviceCooperativeMatrixPropertiesNV> Pointer(this VkPhysicalDeviceCooperativeMatrixPropertiesNV i) => new ManagedPtr<VkPhysicalDeviceCooperativeMatrixPropertiesNV>(i);
-        public static ManagedPtr<VkPhysicalDeviceCooperativeMatrixPropertiesNV[]> Pointer(this VkPhysicalDeviceCooperativeMatrixPropertiesNV[] i) => new ManagedPtr<VkPhysicalDeviceCooperativeMatrixPropertiesNV[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceCooperativeMatrixPropertiesNV> Pointer(this VkPhysicalDeviceCooperativeMatrixPropertiesNV[] i) => new ManagedPtrArray<VkPhysicalDeviceCooperativeMatrixPropertiesNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceCoverageReductionModeFeaturesNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5402,7 +5452,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceCoverageReductionModeFeaturesNV> Pointer(this VkPhysicalDeviceCoverageReductionModeFeaturesNV i) => new ManagedPtr<VkPhysicalDeviceCoverageReductionModeFeaturesNV>(i);
-        public static ManagedPtr<VkPhysicalDeviceCoverageReductionModeFeaturesNV[]> Pointer(this VkPhysicalDeviceCoverageReductionModeFeaturesNV[] i) => new ManagedPtr<VkPhysicalDeviceCoverageReductionModeFeaturesNV[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceCoverageReductionModeFeaturesNV> Pointer(this VkPhysicalDeviceCoverageReductionModeFeaturesNV[] i) => new ManagedPtrArray<VkPhysicalDeviceCoverageReductionModeFeaturesNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineCoverageReductionStateCreateInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5412,19 +5462,19 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineCoverageReductionStateCreateInfoNV> Pointer(this VkPipelineCoverageReductionStateCreateInfoNV i) => new ManagedPtr<VkPipelineCoverageReductionStateCreateInfoNV>(i);
-        public static ManagedPtr<VkPipelineCoverageReductionStateCreateInfoNV[]> Pointer(this VkPipelineCoverageReductionStateCreateInfoNV[] i) => new ManagedPtr<VkPipelineCoverageReductionStateCreateInfoNV[]>(i);
+        public static ManagedPtrArray<VkPipelineCoverageReductionStateCreateInfoNV> Pointer(this VkPipelineCoverageReductionStateCreateInfoNV[] i) => new ManagedPtrArray<VkPipelineCoverageReductionStateCreateInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkFramebufferMixedSamplesCombinationNV {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public VkCoverageReductionModeNV coverageReductionMode;
-			[FieldOffset(20)]public VkSampleCountFlagBits rasterizationSamples;
-			[FieldOffset(24)]public uint depthStencilSamples;
-			[FieldOffset(28)]public uint colorSamples;
+			[FieldOffset(20)]public VkSampleCountFlags rasterizationSamples;
+			[FieldOffset(24)]public VkSampleCountFlags depthStencilSamples;
+			[FieldOffset(28)]public VkSampleCountFlags colorSamples;
 		}
 
         public static ManagedPtr<VkFramebufferMixedSamplesCombinationNV> Pointer(this VkFramebufferMixedSamplesCombinationNV i) => new ManagedPtr<VkFramebufferMixedSamplesCombinationNV>(i);
-        public static ManagedPtr<VkFramebufferMixedSamplesCombinationNV[]> Pointer(this VkFramebufferMixedSamplesCombinationNV[] i) => new ManagedPtr<VkFramebufferMixedSamplesCombinationNV[]>(i);
+        public static ManagedPtrArray<VkFramebufferMixedSamplesCombinationNV> Pointer(this VkFramebufferMixedSamplesCombinationNV[] i) => new ManagedPtrArray<VkFramebufferMixedSamplesCombinationNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5435,7 +5485,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT> Pointer(this VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT i) => new ManagedPtr<VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT[]> Pointer(this VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT[] i) => new ManagedPtr<VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT> Pointer(this VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceYcbcrImageArraysFeaturesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5444,7 +5494,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceYcbcrImageArraysFeaturesEXT> Pointer(this VkPhysicalDeviceYcbcrImageArraysFeaturesEXT i) => new ManagedPtr<VkPhysicalDeviceYcbcrImageArraysFeaturesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceYcbcrImageArraysFeaturesEXT[]> Pointer(this VkPhysicalDeviceYcbcrImageArraysFeaturesEXT[] i) => new ManagedPtr<VkPhysicalDeviceYcbcrImageArraysFeaturesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceYcbcrImageArraysFeaturesEXT> Pointer(this VkPhysicalDeviceYcbcrImageArraysFeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceYcbcrImageArraysFeaturesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkHeadlessSurfaceCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5453,7 +5503,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkHeadlessSurfaceCreateInfoEXT> Pointer(this VkHeadlessSurfaceCreateInfoEXT i) => new ManagedPtr<VkHeadlessSurfaceCreateInfoEXT>(i);
-        public static ManagedPtr<VkHeadlessSurfaceCreateInfoEXT[]> Pointer(this VkHeadlessSurfaceCreateInfoEXT[] i) => new ManagedPtr<VkHeadlessSurfaceCreateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkHeadlessSurfaceCreateInfoEXT> Pointer(this VkHeadlessSurfaceCreateInfoEXT[] i) => new ManagedPtrArray<VkHeadlessSurfaceCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceLineRasterizationFeaturesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5467,7 +5517,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceLineRasterizationFeaturesEXT> Pointer(this VkPhysicalDeviceLineRasterizationFeaturesEXT i) => new ManagedPtr<VkPhysicalDeviceLineRasterizationFeaturesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceLineRasterizationFeaturesEXT[]> Pointer(this VkPhysicalDeviceLineRasterizationFeaturesEXT[] i) => new ManagedPtr<VkPhysicalDeviceLineRasterizationFeaturesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceLineRasterizationFeaturesEXT> Pointer(this VkPhysicalDeviceLineRasterizationFeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceLineRasterizationFeaturesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceLineRasterizationPropertiesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5476,7 +5526,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceLineRasterizationPropertiesEXT> Pointer(this VkPhysicalDeviceLineRasterizationPropertiesEXT i) => new ManagedPtr<VkPhysicalDeviceLineRasterizationPropertiesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceLineRasterizationPropertiesEXT[]> Pointer(this VkPhysicalDeviceLineRasterizationPropertiesEXT[] i) => new ManagedPtr<VkPhysicalDeviceLineRasterizationPropertiesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceLineRasterizationPropertiesEXT> Pointer(this VkPhysicalDeviceLineRasterizationPropertiesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceLineRasterizationPropertiesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineRasterizationLineStateCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5488,7 +5538,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPipelineRasterizationLineStateCreateInfoEXT> Pointer(this VkPipelineRasterizationLineStateCreateInfoEXT i) => new ManagedPtr<VkPipelineRasterizationLineStateCreateInfoEXT>(i);
-        public static ManagedPtr<VkPipelineRasterizationLineStateCreateInfoEXT[]> Pointer(this VkPipelineRasterizationLineStateCreateInfoEXT[] i) => new ManagedPtr<VkPipelineRasterizationLineStateCreateInfoEXT[]>(i);
+        public static ManagedPtrArray<VkPipelineRasterizationLineStateCreateInfoEXT> Pointer(this VkPipelineRasterizationLineStateCreateInfoEXT[] i) => new ManagedPtrArray<VkPipelineRasterizationLineStateCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceIndexTypeUint8FeaturesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5497,7 +5547,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceIndexTypeUint8FeaturesEXT> Pointer(this VkPhysicalDeviceIndexTypeUint8FeaturesEXT i) => new ManagedPtr<VkPhysicalDeviceIndexTypeUint8FeaturesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceIndexTypeUint8FeaturesEXT[]> Pointer(this VkPhysicalDeviceIndexTypeUint8FeaturesEXT[] i) => new ManagedPtr<VkPhysicalDeviceIndexTypeUint8FeaturesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceIndexTypeUint8FeaturesEXT> Pointer(this VkPhysicalDeviceIndexTypeUint8FeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceIndexTypeUint8FeaturesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5506,7 +5556,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT> Pointer(this VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT i) => new ManagedPtr<VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT[]> Pointer(this VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT[] i) => new ManagedPtr<VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT> Pointer(this VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5515,7 +5565,7 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT> Pointer(this VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT i) => new ManagedPtr<VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT[]> Pointer(this VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT[] i) => new ManagedPtr<VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT> Pointer(this VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5527,6 +5577,6 @@ namespace VulkanSharp.Raw {
 		}
 
         public static ManagedPtr<VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT> Pointer(this VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT i) => new ManagedPtr<VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT>(i);
-        public static ManagedPtr<VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT[]> Pointer(this VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT[] i) => new ManagedPtr<VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT[]>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT> Pointer(this VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT>(i);
 	}
 }

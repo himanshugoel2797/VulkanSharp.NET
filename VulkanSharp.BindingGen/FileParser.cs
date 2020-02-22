@@ -102,6 +102,7 @@ namespace VulkanSharp.BindingGen
         List<VkStructDef> structs;
         List<VkStructDef> unions;
         List<VkFuncDef> funcs;
+        List<string> flagList;
         Dictionary<string, string> typedefs;
 
         public FileParser(string path, string[] files)
@@ -113,6 +114,7 @@ namespace VulkanSharp.BindingGen
             structs = new List<VkStructDef>();
             unions = new List<VkStructDef>();
             funcs = new List<VkFuncDef>();
+            flagList = new List<string>();
             typedefs = new Dictionary<string, string>();
         }
 
@@ -121,6 +123,9 @@ namespace VulkanSharp.BindingGen
             //read all defines starting with VK, put them in a list
             for (int i = 0; i < files.Length; i++)
                 ProcessDefines(File.ReadAllLines(Path.Combine(path, files[i])));
+            //read all typedefs that specify flag enums
+            for (int i = 0; i < files.Length; i++)
+                ProcessFlags(File.ReadAllLines(Path.Combine(path, files[i])));
             //read all enums starting with Vk, resolve named values
             for (int i = 0; i < files.Length; i++)
                 ProcessEnums(File.ReadAllLines(Path.Combine(path, files[i])));
@@ -195,6 +200,22 @@ namespace VulkanSharp.BindingGen
                     while (d.Value.StartsWith("(") && d.Value.EndsWith(")"))
                         d.Value = d.Value.Substring(1, d.Value.Length - 2);
                     defines.Add(d);
+                }
+            }
+        }
+
+        private void ProcessFlags(string[] lines)
+        {
+            //check for 'typedef VkFlags'
+            //extract name,
+            //store values as is, can translate in a separate pass
+            for (int i = 0; i < lines.Length; i++)
+            {
+                var s = lines[i].Trim();
+                var p = s.Split(' ').Where(a => !string.IsNullOrWhiteSpace(a)).ToArray();
+                if (s.StartsWith("typedef VkFlags Vk"))
+                {
+                    flagList.Add(p[2].TrimEnd(';'));
                 }
             }
         }
@@ -366,7 +387,7 @@ namespace VulkanSharp.BindingGen
             {
                 var s = lines[i].Trim();
                 var p = s.Split(' ').Where(a => !string.IsNullOrWhiteSpace(a)).ToArray();
-                if (p.Length > 2 && p[0] == "typedef" && p[1] != "enum" && p[1] != "struct" && p[1] != "union" && !s.Contains("VKAPI_PTR") && !s.EndsWith("VkBool32;"))
+                if (p.Length > 2 && p[0] == "typedef" && p[1] != "enum" && p[1] != "struct" && p[1] != "union" && p[1] != "VkFlags" && !s.Contains("VKAPI_PTR") && !s.EndsWith("VkBool32;"))
                 {
                     typedefs.Add(p[2].TrimEnd(';'), p[1]);
                 }
@@ -428,6 +449,12 @@ namespace VulkanSharp.BindingGen
             }
             end_ptr += p[0].ToCharArray().Count(a => a == '*');
             tn = p[0].Trim('*');
+            if (flagList.Contains(tn.Replace("FlagBits", "Flags")))
+            {
+                tn = tn.Replace("FlagBits", "Flags");
+                if (!enums.Any(a => a.Name == tn))
+                    tn = "uint";
+            }
             if (typedefs.ContainsKey(tn))
                 tn = typedefs[tn];
 
@@ -563,6 +590,8 @@ namespace VulkanSharp.BindingGen
                     default:
                         if (enums.Any(a => a.Name == tn))
                             return sizeof(int);
+                        if (flagList.Contains(tn))
+                            return sizeof(uint);
                         if (structs.Any(a => a.Name == tn))
                         {
                             var v = structs.Find(a => a.Name == tn);
@@ -627,6 +656,8 @@ namespace VulkanSharp.BindingGen
                     default:
                         if (enums.Any(a => a.Name == tn))
                             return sizeof(int);
+                        if (flagList.Contains(tn))
+                            return sizeof(uint);
                         if (structs.Any(a => a.Name == tn))
                         {
                             var v = structs.Find(a => a.Name == tn);
@@ -868,6 +899,8 @@ namespace VulkanSharp.BindingGen
             {
                 var d = enums[i];
                 var dict = new Dictionary<string, string>();
+                if (d.Name.Contains("FlagBits"))
+                    d.Name = d.Name.Replace("FlagBits", "Flags");
                 EnumFile += $"\t\tpublic enum {d.Name} {{\n";
                 foreach (var kvp in d.Values)
                 {
@@ -948,6 +981,7 @@ namespace VulkanSharp.BindingGen
                             StructFile += $"\t\t\t[FieldOffset({kvp.Offset})]public fixed {tn} {CleanItemName(kvp.ParamName)};\n";
                         else
                             StructFile += $"\t\t\t[FieldOffset({kvp.Offset})][MarshalAs(UnmanagedType.ByValArray, SizeConst={kvp.ElementCount})] public {tn}[] {CleanItemName(kvp.ParamName).Split('[')[0]};\n";
+                        StructFile += $"\t\t\tpublic const int {CleanItemName(kvp.ParamName).Split('[')[0]}_len = {kvp.ElementCount};\n";
                     }
                     else
                     {
@@ -972,7 +1006,7 @@ namespace VulkanSharp.BindingGen
                 StructFile += "\t\t}\n";
                 StructFile += $@"
         public static ManagedPtr<{d.Name}> Pointer(this {d.Name} i) => new ManagedPtr<{d.Name}>(i);
-        public static ManagedPtr<{d.Name}[]> Pointer(this {d.Name}[] i) => new ManagedPtr<{d.Name}[]>(i);
+        public static ManagedPtrArray<{d.Name}> Pointer(this {d.Name}[] i) => new ManagedPtrArray<{d.Name}>(i);
 ";
             }
             StructFile += "\t}\n";

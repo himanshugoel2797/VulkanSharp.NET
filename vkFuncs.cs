@@ -5,16 +5,16 @@ namespace VulkanSharp.Raw {
 		public static VkResult vkCreateWin32SurfaceKHR(IntPtr instance, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pSurface) { throw new NotImplementedException(); }
 		public static bool vkGetPhysicalDeviceWin32PresentationSupportKHR(IntPtr physicalDevice, uint queueFamilyIndex) { throw new NotImplementedException(); }
 		public static VkResult vkGetMemoryWin32HandleKHR(IntPtr device, IntPtr pGetWin32HandleInfo, IntPtr* pHandle) { throw new NotImplementedException(); }
-		public static VkResult vkGetMemoryWin32HandlePropertiesKHR(IntPtr device, VkExternalMemoryHandleTypeFlagBits handleType, IntPtr handle, IntPtr pMemoryWin32HandleProperties) { throw new NotImplementedException(); }
+		public static VkResult vkGetMemoryWin32HandlePropertiesKHR(IntPtr device, VkExternalMemoryHandleTypeFlags handleType, IntPtr handle, IntPtr pMemoryWin32HandleProperties) { throw new NotImplementedException(); }
 		public static VkResult vkImportSemaphoreWin32HandleKHR(IntPtr device, IntPtr pImportSemaphoreWin32HandleInfo) { throw new NotImplementedException(); }
 		public static VkResult vkGetSemaphoreWin32HandleKHR(IntPtr device, IntPtr pGetWin32HandleInfo, IntPtr* pHandle) { throw new NotImplementedException(); }
 		public static VkResult vkImportFenceWin32HandleKHR(IntPtr device, IntPtr pImportFenceWin32HandleInfo) { throw new NotImplementedException(); }
 		public static VkResult vkGetFenceWin32HandleKHR(IntPtr device, IntPtr pGetWin32HandleInfo, IntPtr* pHandle) { throw new NotImplementedException(); }
-		public static VkResult vkGetMemoryWin32HandleNV(IntPtr device, IntPtr memory, uint handleType, IntPtr* pHandle) { throw new NotImplementedException(); }
+		public static VkResult vkGetMemoryWin32HandleNV(IntPtr device, IntPtr memory, VkExternalMemoryHandleTypeFlagsNV handleType, IntPtr* pHandle) { throw new NotImplementedException(); }
 		public static VkResult vkGetPhysicalDeviceSurfacePresentModes2EXT(IntPtr physicalDevice, IntPtr pSurfaceInfo, uint* pPresentModeCount, VkPresentModeKHR* pPresentModes) { throw new NotImplementedException(); }
 		public static VkResult vkAcquireFullScreenExclusiveModeEXT(IntPtr device, IntPtr swapchain) { throw new NotImplementedException(); }
 		public static VkResult vkReleaseFullScreenExclusiveModeEXT(IntPtr device, IntPtr swapchain) { throw new NotImplementedException(); }
-		public static VkResult vkGetDeviceGroupSurfacePresentModes2EXT(IntPtr device, IntPtr pSurfaceInfo, uint* pModes) { throw new NotImplementedException(); }
+		public static VkResult vkGetDeviceGroupSurfacePresentModes2EXT(IntPtr device, IntPtr pSurfaceInfo, VkDeviceGroupPresentModeFlagsKHR* pModes) { throw new NotImplementedException(); }
 		public static VkResult vkCreateWaylandSurfaceKHR(IntPtr instance, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pSurface) { throw new NotImplementedException(); }
 		public static bool vkGetPhysicalDeviceWaylandPresentationSupportKHR(IntPtr physicalDevice, uint queueFamilyIndex, IntPtr display) { throw new NotImplementedException(); }
 		public static VkResult vkCreateXlibSurfaceKHR(IntPtr instance, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pSurface) { throw new NotImplementedException(); }
@@ -24,7 +24,7 @@ namespace VulkanSharp.Raw {
 		public static VkResult vkEnumeratePhysicalDevices(IntPtr instance, uint* pPhysicalDeviceCount, IntPtr* pPhysicalDevices) { throw new NotImplementedException(); }
 		public static void vkGetPhysicalDeviceFeatures(IntPtr physicalDevice, IntPtr pFeatures) { throw new NotImplementedException(); }
 		public static void vkGetPhysicalDeviceFormatProperties(IntPtr physicalDevice, VkFormat format, IntPtr pFormatProperties) { throw new NotImplementedException(); }
-		public static VkResult vkGetPhysicalDeviceImageFormatProperties(IntPtr physicalDevice, VkFormat format, VkImageType type, VkImageTiling tiling, uint usage, uint flags, IntPtr pImageFormatProperties) { throw new NotImplementedException(); }
+		public static VkResult vkGetPhysicalDeviceImageFormatProperties(IntPtr physicalDevice, VkFormat format, VkImageType type, VkImageTiling tiling, VkImageUsageFlags usage, VkImageCreateFlags flags, IntPtr pImageFormatProperties) { throw new NotImplementedException(); }
 		public static void vkGetPhysicalDeviceProperties(IntPtr physicalDevice, IntPtr pProperties) { throw new NotImplementedException(); }
 		public static void vkGetPhysicalDeviceQueueFamilyProperties(IntPtr physicalDevice, uint* pQueueFamilyPropertyCount, IntPtr pQueueFamilyProperties) { throw new NotImplementedException(); }
 		public static void vkGetPhysicalDeviceMemoryProperties(IntPtr physicalDevice, IntPtr pMemoryProperties) { throw new NotImplementedException(); }
@@ -52,7 +52,7 @@ namespace VulkanSharp.Raw {
 		public static void vkGetBufferMemoryRequirements(IntPtr device, IntPtr buffer, IntPtr pMemoryRequirements) { throw new NotImplementedException(); }
 		public static void vkGetImageMemoryRequirements(IntPtr device, IntPtr image, IntPtr pMemoryRequirements) { throw new NotImplementedException(); }
 		public static void vkGetImageSparseMemoryRequirements(IntPtr device, IntPtr image, uint* pSparseMemoryRequirementCount, IntPtr pSparseMemoryRequirements) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceSparseImageFormatProperties(IntPtr physicalDevice, VkFormat format, VkImageType type, VkSampleCountFlagBits samples, uint usage, VkImageTiling tiling, uint* pPropertyCount, IntPtr pProperties) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceSparseImageFormatProperties(IntPtr physicalDevice, VkFormat format, VkImageType type, VkSampleCountFlags samples, VkImageUsageFlags usage, VkImageTiling tiling, uint* pPropertyCount, IntPtr pProperties) { throw new NotImplementedException(); }
 		public static VkResult vkQueueBindSparse(IntPtr queue, uint bindInfoCount, IntPtr pBindInfo, IntPtr fence) { throw new NotImplementedException(); }
 		public static VkResult vkCreateFence(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pFence) { throw new NotImplementedException(); }
 		public static void vkDestroyFence(IntPtr device, IntPtr fence, IntPtr pAllocator) { throw new NotImplementedException(); }
@@ -68,7 +68,7 @@ namespace VulkanSharp.Raw {
 		public static VkResult vkResetEvent(IntPtr device, IntPtr @event) { throw new NotImplementedException(); }
 		public static VkResult vkCreateQueryPool(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pQueryPool) { throw new NotImplementedException(); }
 		public static void vkDestroyQueryPool(IntPtr device, IntPtr queryPool, IntPtr pAllocator) { throw new NotImplementedException(); }
-		public static VkResult vkGetQueryPoolResults(IntPtr device, IntPtr queryPool, uint firstQuery, uint queryCount, ulong dataSize, IntPtr pData, ulong stride, uint flags) { throw new NotImplementedException(); }
+		public static VkResult vkGetQueryPoolResults(IntPtr device, IntPtr queryPool, uint firstQuery, uint queryCount, ulong dataSize, IntPtr pData, ulong stride, VkQueryResultFlags flags) { throw new NotImplementedException(); }
 		public static VkResult vkCreateBuffer(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pBuffer) { throw new NotImplementedException(); }
 		public static void vkDestroyBuffer(IntPtr device, IntPtr buffer, IntPtr pAllocator) { throw new NotImplementedException(); }
 		public static VkResult vkCreateBufferView(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pView) { throw new NotImplementedException(); }
@@ -106,12 +106,12 @@ namespace VulkanSharp.Raw {
 		public static void vkGetRenderAreaGranularity(IntPtr device, IntPtr renderPass, IntPtr pGranularity) { throw new NotImplementedException(); }
 		public static VkResult vkCreateCommandPool(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pCommandPool) { throw new NotImplementedException(); }
 		public static void vkDestroyCommandPool(IntPtr device, IntPtr commandPool, IntPtr pAllocator) { throw new NotImplementedException(); }
-		public static VkResult vkResetCommandPool(IntPtr device, IntPtr commandPool, uint flags) { throw new NotImplementedException(); }
+		public static VkResult vkResetCommandPool(IntPtr device, IntPtr commandPool, VkCommandPoolResetFlags flags) { throw new NotImplementedException(); }
 		public static VkResult vkAllocateCommandBuffers(IntPtr device, IntPtr pAllocateInfo, IntPtr* pCommandBuffers) { throw new NotImplementedException(); }
 		public static void vkFreeCommandBuffers(IntPtr device, IntPtr commandPool, uint commandBufferCount, IntPtr* pCommandBuffers) { throw new NotImplementedException(); }
 		public static VkResult vkBeginCommandBuffer(IntPtr commandBuffer, IntPtr pBeginInfo) { throw new NotImplementedException(); }
 		public static VkResult vkEndCommandBuffer(IntPtr commandBuffer) { throw new NotImplementedException(); }
-		public static VkResult vkResetCommandBuffer(IntPtr commandBuffer, uint flags) { throw new NotImplementedException(); }
+		public static VkResult vkResetCommandBuffer(IntPtr commandBuffer, VkCommandBufferResetFlags flags) { throw new NotImplementedException(); }
 		public static void vkCmdBindPipeline(IntPtr commandBuffer, VkPipelineBindPoint pipelineBindPoint, IntPtr pipeline) { throw new NotImplementedException(); }
 		public static void vkCmdSetViewport(IntPtr commandBuffer, uint firstViewport, uint viewportCount, IntPtr pViewports) { throw new NotImplementedException(); }
 		public static void vkCmdSetScissor(IntPtr commandBuffer, uint firstScissor, uint scissorCount, IntPtr pScissors) { throw new NotImplementedException(); }
@@ -119,9 +119,9 @@ namespace VulkanSharp.Raw {
 		public static void vkCmdSetDepthBias(IntPtr commandBuffer, float depthBiasConstantFactor, float depthBiasClamp, float depthBiasSlopeFactor) { throw new NotImplementedException(); }
 		public static void vkCmdSetBlendConstants(IntPtr commandBuffer, [MarshalAs(UnmanagedType.LPArray, SizeConst=4)] float[] blendConstants) { throw new NotImplementedException(); }
 		public static void vkCmdSetDepthBounds(IntPtr commandBuffer, float minDepthBounds, float maxDepthBounds) { throw new NotImplementedException(); }
-		public static void vkCmdSetStencilCompareMask(IntPtr commandBuffer, uint faceMask, uint compareMask) { throw new NotImplementedException(); }
-		public static void vkCmdSetStencilWriteMask(IntPtr commandBuffer, uint faceMask, uint writeMask) { throw new NotImplementedException(); }
-		public static void vkCmdSetStencilReference(IntPtr commandBuffer, uint faceMask, uint reference) { throw new NotImplementedException(); }
+		public static void vkCmdSetStencilCompareMask(IntPtr commandBuffer, VkStencilFaceFlags faceMask, uint compareMask) { throw new NotImplementedException(); }
+		public static void vkCmdSetStencilWriteMask(IntPtr commandBuffer, VkStencilFaceFlags faceMask, uint writeMask) { throw new NotImplementedException(); }
+		public static void vkCmdSetStencilReference(IntPtr commandBuffer, VkStencilFaceFlags faceMask, uint reference) { throw new NotImplementedException(); }
 		public static void vkCmdBindDescriptorSets(IntPtr commandBuffer, VkPipelineBindPoint pipelineBindPoint, IntPtr layout, uint firstSet, uint descriptorSetCount, IntPtr* pDescriptorSets, uint dynamicOffsetCount, uint* pDynamicOffsets) { throw new NotImplementedException(); }
 		public static void vkCmdBindIndexBuffer(IntPtr commandBuffer, IntPtr buffer, ulong offset, VkIndexType indexType) { throw new NotImplementedException(); }
 		public static void vkCmdBindVertexBuffers(IntPtr commandBuffer, uint firstBinding, uint bindingCount, IntPtr* pBuffers, ulong* pOffsets) { throw new NotImplementedException(); }
@@ -142,16 +142,16 @@ namespace VulkanSharp.Raw {
 		public static void vkCmdClearDepthStencilImage(IntPtr commandBuffer, IntPtr image, VkImageLayout imageLayout, IntPtr pDepthStencil, uint rangeCount, IntPtr pRanges) { throw new NotImplementedException(); }
 		public static void vkCmdClearAttachments(IntPtr commandBuffer, uint attachmentCount, IntPtr pAttachments, uint rectCount, IntPtr pRects) { throw new NotImplementedException(); }
 		public static void vkCmdResolveImage(IntPtr commandBuffer, IntPtr srcImage, VkImageLayout srcImageLayout, IntPtr dstImage, VkImageLayout dstImageLayout, uint regionCount, IntPtr pRegions) { throw new NotImplementedException(); }
-		public static void vkCmdSetEvent(IntPtr commandBuffer, IntPtr @event, uint stageMask) { throw new NotImplementedException(); }
-		public static void vkCmdResetEvent(IntPtr commandBuffer, IntPtr @event, uint stageMask) { throw new NotImplementedException(); }
-		public static void vkCmdWaitEvents(IntPtr commandBuffer, uint eventCount, IntPtr* pEvents, uint srcStageMask, uint dstStageMask, uint memoryBarrierCount, IntPtr pMemoryBarriers, uint bufferMemoryBarrierCount, IntPtr pBufferMemoryBarriers, uint imageMemoryBarrierCount, IntPtr pImageMemoryBarriers) { throw new NotImplementedException(); }
-		public static void vkCmdPipelineBarrier(IntPtr commandBuffer, uint srcStageMask, uint dstStageMask, uint dependencyFlags, uint memoryBarrierCount, IntPtr pMemoryBarriers, uint bufferMemoryBarrierCount, IntPtr pBufferMemoryBarriers, uint imageMemoryBarrierCount, IntPtr pImageMemoryBarriers) { throw new NotImplementedException(); }
-		public static void vkCmdBeginQuery(IntPtr commandBuffer, IntPtr queryPool, uint query, uint flags) { throw new NotImplementedException(); }
+		public static void vkCmdSetEvent(IntPtr commandBuffer, IntPtr @event, VkPipelineStageFlags stageMask) { throw new NotImplementedException(); }
+		public static void vkCmdResetEvent(IntPtr commandBuffer, IntPtr @event, VkPipelineStageFlags stageMask) { throw new NotImplementedException(); }
+		public static void vkCmdWaitEvents(IntPtr commandBuffer, uint eventCount, IntPtr* pEvents, VkPipelineStageFlags srcStageMask, VkPipelineStageFlags dstStageMask, uint memoryBarrierCount, IntPtr pMemoryBarriers, uint bufferMemoryBarrierCount, IntPtr pBufferMemoryBarriers, uint imageMemoryBarrierCount, IntPtr pImageMemoryBarriers) { throw new NotImplementedException(); }
+		public static void vkCmdPipelineBarrier(IntPtr commandBuffer, VkPipelineStageFlags srcStageMask, VkPipelineStageFlags dstStageMask, VkDependencyFlags dependencyFlags, uint memoryBarrierCount, IntPtr pMemoryBarriers, uint bufferMemoryBarrierCount, IntPtr pBufferMemoryBarriers, uint imageMemoryBarrierCount, IntPtr pImageMemoryBarriers) { throw new NotImplementedException(); }
+		public static void vkCmdBeginQuery(IntPtr commandBuffer, IntPtr queryPool, uint query, VkQueryControlFlags flags) { throw new NotImplementedException(); }
 		public static void vkCmdEndQuery(IntPtr commandBuffer, IntPtr queryPool, uint query) { throw new NotImplementedException(); }
 		public static void vkCmdResetQueryPool(IntPtr commandBuffer, IntPtr queryPool, uint firstQuery, uint queryCount) { throw new NotImplementedException(); }
-		public static void vkCmdWriteTimestamp(IntPtr commandBuffer, VkPipelineStageFlagBits pipelineStage, IntPtr queryPool, uint query) { throw new NotImplementedException(); }
-		public static void vkCmdCopyQueryPoolResults(IntPtr commandBuffer, IntPtr queryPool, uint firstQuery, uint queryCount, IntPtr dstBuffer, ulong dstOffset, ulong stride, uint flags) { throw new NotImplementedException(); }
-		public static void vkCmdPushConstants(IntPtr commandBuffer, IntPtr layout, uint stageFlags, uint offset, uint size, IntPtr pValues) { throw new NotImplementedException(); }
+		public static void vkCmdWriteTimestamp(IntPtr commandBuffer, VkPipelineStageFlags pipelineStage, IntPtr queryPool, uint query) { throw new NotImplementedException(); }
+		public static void vkCmdCopyQueryPoolResults(IntPtr commandBuffer, IntPtr queryPool, uint firstQuery, uint queryCount, IntPtr dstBuffer, ulong dstOffset, ulong stride, VkQueryResultFlags flags) { throw new NotImplementedException(); }
+		public static void vkCmdPushConstants(IntPtr commandBuffer, IntPtr layout, VkShaderStageFlags stageFlags, uint offset, uint size, IntPtr pValues) { throw new NotImplementedException(); }
 		public static void vkCmdBeginRenderPass(IntPtr commandBuffer, IntPtr pRenderPassBegin, VkSubpassContents contents) { throw new NotImplementedException(); }
 		public static void vkCmdNextSubpass(IntPtr commandBuffer, VkSubpassContents contents) { throw new NotImplementedException(); }
 		public static void vkCmdEndRenderPass(IntPtr commandBuffer) { throw new NotImplementedException(); }
@@ -159,7 +159,7 @@ namespace VulkanSharp.Raw {
 		public static VkResult vkEnumerateInstanceVersion(uint* pApiVersion) { throw new NotImplementedException(); }
 		public static VkResult vkBindBufferMemory2(IntPtr device, uint bindInfoCount, IntPtr pBindInfos) { throw new NotImplementedException(); }
 		public static VkResult vkBindImageMemory2(IntPtr device, uint bindInfoCount, IntPtr pBindInfos) { throw new NotImplementedException(); }
-		public static void vkGetDeviceGroupPeerMemoryFeatures(IntPtr device, uint heapIndex, uint localDeviceIndex, uint remoteDeviceIndex, uint* pPeerMemoryFeatures) { throw new NotImplementedException(); }
+		public static void vkGetDeviceGroupPeerMemoryFeatures(IntPtr device, uint heapIndex, uint localDeviceIndex, uint remoteDeviceIndex, VkPeerMemoryFeatureFlags* pPeerMemoryFeatures) { throw new NotImplementedException(); }
 		public static void vkCmdSetDeviceMask(IntPtr commandBuffer, uint deviceMask) { throw new NotImplementedException(); }
 		public static void vkCmdDispatchBase(IntPtr commandBuffer, uint baseGroupX, uint baseGroupY, uint baseGroupZ, uint groupCountX, uint groupCountY, uint groupCountZ) { throw new NotImplementedException(); }
 		public static VkResult vkEnumeratePhysicalDeviceGroups(IntPtr instance, uint* pPhysicalDeviceGroupCount, IntPtr pPhysicalDeviceGroupProperties) { throw new NotImplementedException(); }
@@ -208,7 +208,7 @@ namespace VulkanSharp.Raw {
 		public static VkResult vkAcquireNextImageKHR(IntPtr device, IntPtr swapchain, ulong timeout, IntPtr semaphore, IntPtr fence, uint* pImageIndex) { throw new NotImplementedException(); }
 		public static VkResult vkQueuePresentKHR(IntPtr queue, IntPtr pPresentInfo) { throw new NotImplementedException(); }
 		public static VkResult vkGetDeviceGroupPresentCapabilitiesKHR(IntPtr device, IntPtr pDeviceGroupPresentCapabilities) { throw new NotImplementedException(); }
-		public static VkResult vkGetDeviceGroupSurfacePresentModesKHR(IntPtr device, IntPtr surface, uint* pModes) { throw new NotImplementedException(); }
+		public static VkResult vkGetDeviceGroupSurfacePresentModesKHR(IntPtr device, IntPtr surface, VkDeviceGroupPresentModeFlagsKHR* pModes) { throw new NotImplementedException(); }
 		public static VkResult vkGetPhysicalDevicePresentRectanglesKHR(IntPtr physicalDevice, IntPtr surface, uint* pRectCount, IntPtr pRects) { throw new NotImplementedException(); }
 		public static VkResult vkAcquireNextImage2KHR(IntPtr device, IntPtr pAcquireInfo, uint* pImageIndex) { throw new NotImplementedException(); }
 		public static VkResult vkGetPhysicalDeviceDisplayPropertiesKHR(IntPtr physicalDevice, uint* pPropertyCount, IntPtr pProperties) { throw new NotImplementedException(); }
@@ -226,14 +226,14 @@ namespace VulkanSharp.Raw {
 		public static void vkGetPhysicalDeviceQueueFamilyProperties2KHR(IntPtr physicalDevice, uint* pQueueFamilyPropertyCount, IntPtr pQueueFamilyProperties) { throw new NotImplementedException(); }
 		public static void vkGetPhysicalDeviceMemoryProperties2KHR(IntPtr physicalDevice, IntPtr pMemoryProperties) { throw new NotImplementedException(); }
 		public static void vkGetPhysicalDeviceSparseImageFormatProperties2KHR(IntPtr physicalDevice, IntPtr pFormatInfo, uint* pPropertyCount, IntPtr pProperties) { throw new NotImplementedException(); }
-		public static void vkGetDeviceGroupPeerMemoryFeaturesKHR(IntPtr device, uint heapIndex, uint localDeviceIndex, uint remoteDeviceIndex, uint* pPeerMemoryFeatures) { throw new NotImplementedException(); }
+		public static void vkGetDeviceGroupPeerMemoryFeaturesKHR(IntPtr device, uint heapIndex, uint localDeviceIndex, uint remoteDeviceIndex, VkPeerMemoryFeatureFlags* pPeerMemoryFeatures) { throw new NotImplementedException(); }
 		public static void vkCmdSetDeviceMaskKHR(IntPtr commandBuffer, uint deviceMask) { throw new NotImplementedException(); }
 		public static void vkCmdDispatchBaseKHR(IntPtr commandBuffer, uint baseGroupX, uint baseGroupY, uint baseGroupZ, uint groupCountX, uint groupCountY, uint groupCountZ) { throw new NotImplementedException(); }
 		public static void vkTrimCommandPoolKHR(IntPtr device, IntPtr commandPool, uint flags) { throw new NotImplementedException(); }
 		public static VkResult vkEnumeratePhysicalDeviceGroupsKHR(IntPtr instance, uint* pPhysicalDeviceGroupCount, IntPtr pPhysicalDeviceGroupProperties) { throw new NotImplementedException(); }
 		public static void vkGetPhysicalDeviceExternalBufferPropertiesKHR(IntPtr physicalDevice, IntPtr pExternalBufferInfo, IntPtr pExternalBufferProperties) { throw new NotImplementedException(); }
 		public static VkResult vkGetMemoryFdKHR(IntPtr device, IntPtr pGetFdInfo, int* pFd) { throw new NotImplementedException(); }
-		public static VkResult vkGetMemoryFdPropertiesKHR(IntPtr device, VkExternalMemoryHandleTypeFlagBits handleType, int fd, IntPtr pMemoryFdProperties) { throw new NotImplementedException(); }
+		public static VkResult vkGetMemoryFdPropertiesKHR(IntPtr device, VkExternalMemoryHandleTypeFlags handleType, int fd, IntPtr pMemoryFdProperties) { throw new NotImplementedException(); }
 		public static void vkGetPhysicalDeviceExternalSemaphorePropertiesKHR(IntPtr physicalDevice, IntPtr pExternalSemaphoreInfo, IntPtr pExternalSemaphoreProperties) { throw new NotImplementedException(); }
 		public static VkResult vkImportSemaphoreFdKHR(IntPtr device, IntPtr pImportSemaphoreFdInfo) { throw new NotImplementedException(); }
 		public static VkResult vkGetSemaphoreFdKHR(IntPtr device, IntPtr pGetFdInfo, int* pFd) { throw new NotImplementedException(); }
@@ -281,7 +281,7 @@ namespace VulkanSharp.Raw {
 		public static VkResult vkGetPipelineExecutableInternalRepresentationsKHR(IntPtr device, IntPtr pExecutableInfo, uint* pInternalRepresentationCount, IntPtr pInternalRepresentations) { throw new NotImplementedException(); }
 		public static VkResult vkCreateDebugReportCallbackEXT(IntPtr instance, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pCallback) { throw new NotImplementedException(); }
 		public static void vkDestroyDebugReportCallbackEXT(IntPtr instance, IntPtr callback, IntPtr pAllocator) { throw new NotImplementedException(); }
-		public static void vkDebugReportMessageEXT(IntPtr instance, uint flags, VkDebugReportObjectTypeEXT objectType, ulong @object, ulong location, int messageCode, string pLayerPrefix, string pMessage) { throw new NotImplementedException(); }
+		public static void vkDebugReportMessageEXT(IntPtr instance, VkDebugReportFlagsEXT flags, VkDebugReportObjectTypeEXT objectType, ulong @object, ulong location, int messageCode, string pLayerPrefix, string pMessage) { throw new NotImplementedException(); }
 		public static VkResult vkDebugMarkerSetObjectTagEXT(IntPtr device, IntPtr pTagInfo) { throw new NotImplementedException(); }
 		public static VkResult vkDebugMarkerSetObjectNameEXT(IntPtr device, IntPtr pNameInfo) { throw new NotImplementedException(); }
 		public static void vkCmdDebugMarkerBeginEXT(IntPtr commandBuffer, IntPtr pMarkerInfo) { throw new NotImplementedException(); }
@@ -290,14 +290,14 @@ namespace VulkanSharp.Raw {
 		public static void vkCmdBindTransformFeedbackBuffersEXT(IntPtr commandBuffer, uint firstBinding, uint bindingCount, IntPtr* pBuffers, ulong* pOffsets, ulong* pSizes) { throw new NotImplementedException(); }
 		public static void vkCmdBeginTransformFeedbackEXT(IntPtr commandBuffer, uint firstCounterBuffer, uint counterBufferCount, IntPtr* pCounterBuffers, ulong* pCounterBufferOffsets) { throw new NotImplementedException(); }
 		public static void vkCmdEndTransformFeedbackEXT(IntPtr commandBuffer, uint firstCounterBuffer, uint counterBufferCount, IntPtr* pCounterBuffers, ulong* pCounterBufferOffsets) { throw new NotImplementedException(); }
-		public static void vkCmdBeginQueryIndexedEXT(IntPtr commandBuffer, IntPtr queryPool, uint query, uint flags, uint index) { throw new NotImplementedException(); }
+		public static void vkCmdBeginQueryIndexedEXT(IntPtr commandBuffer, IntPtr queryPool, uint query, VkQueryControlFlags flags, uint index) { throw new NotImplementedException(); }
 		public static void vkCmdEndQueryIndexedEXT(IntPtr commandBuffer, IntPtr queryPool, uint query, uint index) { throw new NotImplementedException(); }
 		public static void vkCmdDrawIndirectByteCountEXT(IntPtr commandBuffer, uint instanceCount, uint firstInstance, IntPtr counterBuffer, ulong counterBufferOffset, uint counterOffset, uint vertexStride) { throw new NotImplementedException(); }
 		public static uint vkGetImageViewHandleNVX(IntPtr device, IntPtr pInfo) { throw new NotImplementedException(); }
 		public static void vkCmdDrawIndirectCountAMD(IntPtr commandBuffer, IntPtr buffer, ulong offset, IntPtr countBuffer, ulong countBufferOffset, uint maxDrawCount, uint stride) { throw new NotImplementedException(); }
 		public static void vkCmdDrawIndexedIndirectCountAMD(IntPtr commandBuffer, IntPtr buffer, ulong offset, IntPtr countBuffer, ulong countBufferOffset, uint maxDrawCount, uint stride) { throw new NotImplementedException(); }
-		public static VkResult vkGetShaderInfoAMD(IntPtr device, IntPtr pipeline, VkShaderStageFlagBits shaderStage, VkShaderInfoTypeAMD infoType, ulong* pInfoSize, IntPtr pInfo) { throw new NotImplementedException(); }
-		public static VkResult vkGetPhysicalDeviceExternalImageFormatPropertiesNV(IntPtr physicalDevice, VkFormat format, VkImageType type, VkImageTiling tiling, uint usage, uint flags, uint externalHandleType, IntPtr pExternalImageFormatProperties) { throw new NotImplementedException(); }
+		public static VkResult vkGetShaderInfoAMD(IntPtr device, IntPtr pipeline, VkShaderStageFlags shaderStage, VkShaderInfoTypeAMD infoType, ulong* pInfoSize, IntPtr pInfo) { throw new NotImplementedException(); }
+		public static VkResult vkGetPhysicalDeviceExternalImageFormatPropertiesNV(IntPtr physicalDevice, VkFormat format, VkImageType type, VkImageTiling tiling, VkImageUsageFlags usage, VkImageCreateFlags flags, VkExternalMemoryHandleTypeFlagsNV externalHandleType, IntPtr pExternalImageFormatProperties) { throw new NotImplementedException(); }
 		public static void vkCmdBeginConditionalRenderingEXT(IntPtr commandBuffer, IntPtr pConditionalRenderingBegin) { throw new NotImplementedException(); }
 		public static void vkCmdEndConditionalRenderingEXT(IntPtr commandBuffer) { throw new NotImplementedException(); }
 		public static void vkCmdProcessCommandsNVX(IntPtr commandBuffer, IntPtr pProcessCommandsInfo) { throw new NotImplementedException(); }
@@ -315,7 +315,7 @@ namespace VulkanSharp.Raw {
 		public static VkResult vkDisplayPowerControlEXT(IntPtr device, IntPtr display, IntPtr pDisplayPowerInfo) { throw new NotImplementedException(); }
 		public static VkResult vkRegisterDeviceEventEXT(IntPtr device, IntPtr pDeviceEventInfo, IntPtr pAllocator, IntPtr* pFence) { throw new NotImplementedException(); }
 		public static VkResult vkRegisterDisplayEventEXT(IntPtr device, IntPtr display, IntPtr pDisplayEventInfo, IntPtr pAllocator, IntPtr* pFence) { throw new NotImplementedException(); }
-		public static VkResult vkGetSwapchainCounterEXT(IntPtr device, IntPtr swapchain, VkSurfaceCounterFlagBitsEXT counter, ulong* pCounterValue) { throw new NotImplementedException(); }
+		public static VkResult vkGetSwapchainCounterEXT(IntPtr device, IntPtr swapchain, VkSurfaceCounterFlagsEXT counter, ulong* pCounterValue) { throw new NotImplementedException(); }
 		public static VkResult vkGetRefreshCycleDurationGOOGLE(IntPtr device, IntPtr swapchain, IntPtr pDisplayTimingProperties) { throw new NotImplementedException(); }
 		public static VkResult vkGetPastPresentationTimingGOOGLE(IntPtr device, IntPtr swapchain, uint* pPresentationTimingCount, IntPtr pPresentationTimings) { throw new NotImplementedException(); }
 		public static void vkCmdSetDiscardRectangleEXT(IntPtr commandBuffer, uint firstDiscardRectangle, uint discardRectangleCount, IntPtr pDiscardRectangles) { throw new NotImplementedException(); }
@@ -330,9 +330,9 @@ namespace VulkanSharp.Raw {
 		public static void vkCmdInsertDebugUtilsLabelEXT(IntPtr commandBuffer, IntPtr pLabelInfo) { throw new NotImplementedException(); }
 		public static VkResult vkCreateDebugUtilsMessengerEXT(IntPtr instance, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pMessenger) { throw new NotImplementedException(); }
 		public static void vkDestroyDebugUtilsMessengerEXT(IntPtr instance, IntPtr messenger, IntPtr pAllocator) { throw new NotImplementedException(); }
-		public static void vkSubmitDebugUtilsMessageEXT(IntPtr instance, VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity, uint messageTypes, IntPtr pCallbackData) { throw new NotImplementedException(); }
+		public static void vkSubmitDebugUtilsMessageEXT(IntPtr instance, VkDebugUtilsMessageSeverityFlagsEXT messageSeverity, VkDebugUtilsMessageTypeFlagsEXT messageTypes, IntPtr pCallbackData) { throw new NotImplementedException(); }
 		public static void vkCmdSetSampleLocationsEXT(IntPtr commandBuffer, IntPtr pSampleLocationsInfo) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceMultisamplePropertiesEXT(IntPtr physicalDevice, VkSampleCountFlagBits samples, IntPtr pMultisampleProperties) { throw new NotImplementedException(); }
+		public static void vkGetPhysicalDeviceMultisamplePropertiesEXT(IntPtr physicalDevice, VkSampleCountFlags samples, IntPtr pMultisampleProperties) { throw new NotImplementedException(); }
 		public static VkResult vkGetImageDrmFormatModifierPropertiesEXT(IntPtr device, IntPtr image, IntPtr pProperties) { throw new NotImplementedException(); }
 		public static VkResult vkCreateValidationCacheEXT(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pValidationCache) { throw new NotImplementedException(); }
 		public static void vkDestroyValidationCacheEXT(IntPtr device, IntPtr validationCache, IntPtr pAllocator) { throw new NotImplementedException(); }
@@ -353,8 +353,8 @@ namespace VulkanSharp.Raw {
 		public static VkResult vkGetAccelerationStructureHandleNV(IntPtr device, IntPtr accelerationStructure, ulong dataSize, IntPtr pData) { throw new NotImplementedException(); }
 		public static void vkCmdWriteAccelerationStructuresPropertiesNV(IntPtr commandBuffer, uint accelerationStructureCount, IntPtr* pAccelerationStructures, VkQueryType queryType, IntPtr queryPool, uint firstQuery) { throw new NotImplementedException(); }
 		public static VkResult vkCompileDeferredNV(IntPtr device, IntPtr pipeline, uint shader) { throw new NotImplementedException(); }
-		public static VkResult vkGetMemoryHostPointerPropertiesEXT(IntPtr device, VkExternalMemoryHandleTypeFlagBits handleType, IntPtr pHostPointer, IntPtr pMemoryHostPointerProperties) { throw new NotImplementedException(); }
-		public static void vkCmdWriteBufferMarkerAMD(IntPtr commandBuffer, VkPipelineStageFlagBits pipelineStage, IntPtr dstBuffer, ulong dstOffset, uint marker) { throw new NotImplementedException(); }
+		public static VkResult vkGetMemoryHostPointerPropertiesEXT(IntPtr device, VkExternalMemoryHandleTypeFlags handleType, IntPtr pHostPointer, IntPtr pMemoryHostPointerProperties) { throw new NotImplementedException(); }
+		public static void vkCmdWriteBufferMarkerAMD(IntPtr commandBuffer, VkPipelineStageFlags pipelineStage, IntPtr dstBuffer, ulong dstOffset, uint marker) { throw new NotImplementedException(); }
 		public static VkResult vkGetPhysicalDeviceCalibrateableTimeDomainsEXT(IntPtr physicalDevice, uint* pTimeDomainCount, VkTimeDomainEXT* pTimeDomains) { throw new NotImplementedException(); }
 		public static VkResult vkGetCalibratedTimestampsEXT(IntPtr device, uint timestampCount, IntPtr pTimestampInfos, ulong* pTimestamps, ulong* pMaxDeviation) { throw new NotImplementedException(); }
 		public static void vkCmdDrawMeshTasksNV(IntPtr commandBuffer, uint taskCount, uint firstTask) { throw new NotImplementedException(); }

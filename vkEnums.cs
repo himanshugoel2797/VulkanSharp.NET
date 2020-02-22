@@ -1351,7 +1351,7 @@ namespace VulkanSharp.Raw {
 			VendorIdRangeSize = (VendorIdKazan-VendorIdViv+1 ),
 			VendorIdMaxEnum = 0x7fffffff,
 		}
-		public enum VkFormatFeatureFlagBits {
+		public enum VkFormatFeatureFlags {
 			FormatFeatureSampledImageBit = 0x00000001,
 			FormatFeatureStorageImageBit = 0x00000002,
 			FormatFeatureStorageImageAtomicBit = 0x00000004,
@@ -1390,7 +1390,7 @@ namespace VulkanSharp.Raw {
 			FormatFeatureSampledImageFilterCubicBitExt = FormatFeatureSampledImageFilterCubicBitImg,
 			FormatFeatureFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkImageUsageFlagBits {
+		public enum VkImageUsageFlags {
 			ImageUsageTransferSrcBit = 0x00000001,
 			ImageUsageTransferDstBit = 0x00000002,
 			ImageUsageSampledBit = 0x00000004,
@@ -1403,7 +1403,7 @@ namespace VulkanSharp.Raw {
 			ImageUsageFragmentDensityMapBitExt = 0x00000200,
 			ImageUsageFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkImageCreateFlagBits {
+		public enum VkImageCreateFlags {
 			ImageCreateSparseBindingBit = 0x00000001,
 			ImageCreateSparseResidencyBit = 0x00000002,
 			ImageCreateSparseAliasedBit = 0x00000004,
@@ -1427,7 +1427,7 @@ namespace VulkanSharp.Raw {
 			ImageCreateAliasBitKhr = ImageCreateAliasBit,
 			ImageCreateFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkSampleCountFlagBits {
+		public enum VkSampleCountFlags {
 			SampleCount1Bit = 0x00000001,
 			SampleCount2Bit = 0x00000002,
 			SampleCount4Bit = 0x00000004,
@@ -1437,7 +1437,7 @@ namespace VulkanSharp.Raw {
 			SampleCount64Bit = 0x00000040,
 			SampleCountFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkQueueFlagBits {
+		public enum VkQueueFlags {
 			QueueGraphicsBit = 0x00000001,
 			QueueComputeBit = 0x00000002,
 			QueueTransferBit = 0x00000004,
@@ -1445,7 +1445,7 @@ namespace VulkanSharp.Raw {
 			QueueProtectedBit = 0x00000010,
 			QueueFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkMemoryPropertyFlagBits {
+		public enum VkMemoryPropertyFlags {
 			MemoryPropertyDeviceLocalBit = 0x00000001,
 			MemoryPropertyHostVisibleBit = 0x00000002,
 			MemoryPropertyHostCoherentBit = 0x00000004,
@@ -1456,17 +1456,17 @@ namespace VulkanSharp.Raw {
 			MemoryPropertyDeviceUncachedBitAmd = 0x00000080,
 			MemoryPropertyFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkMemoryHeapFlagBits {
+		public enum VkMemoryHeapFlags {
 			MemoryHeapDeviceLocalBit = 0x00000001,
 			MemoryHeapMultiInstanceBit = 0x00000002,
 			MemoryHeapMultiInstanceBitKhr = MemoryHeapMultiInstanceBit,
 			MemoryHeapFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkDeviceQueueCreateFlagBits {
+		public enum VkDeviceQueueCreateFlags {
 			DeviceQueueCreateProtectedBit = 0x00000001,
 			DeviceQueueCreateFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkPipelineStageFlagBits {
+		public enum VkPipelineStageFlags {
 			PipelineStageTopOfPipeBit = 0x00000001,
 			PipelineStageDrawIndirectBit = 0x00000002,
 			PipelineStageVertexInputBit = 0x00000004,
@@ -1495,7 +1495,7 @@ namespace VulkanSharp.Raw {
 			PipelineStageFragmentDensityProcessBitExt = 0x00800000,
 			PipelineStageFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkImageAspectFlagBits {
+		public enum VkImageAspectFlags {
 			ImageAspectColorBit = 0x00000001,
 			ImageAspectDepthBit = 0x00000002,
 			ImageAspectStencilBit = 0x00000004,
@@ -1512,21 +1512,21 @@ namespace VulkanSharp.Raw {
 			ImageAspectPlane2BitKhr = ImageAspectPlane2Bit,
 			ImageAspectFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkSparseImageFormatFlagBits {
+		public enum VkSparseImageFormatFlags {
 			SparseImageFormatSingleMiptailBit = 0x00000001,
 			SparseImageFormatAlignedMipSizeBit = 0x00000002,
 			SparseImageFormatNonstandardBlockSizeBit = 0x00000004,
 			SparseImageFormatFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkSparseMemoryBindFlagBits {
+		public enum VkSparseMemoryBindFlags {
 			SparseMemoryBindMetadataBit = 0x00000001,
 			SparseMemoryBindFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkFenceCreateFlagBits {
+		public enum VkFenceCreateFlags {
 			FenceCreateSignaledBit = 0x00000001,
 			FenceCreateFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkQueryPipelineStatisticFlagBits {
+		public enum VkQueryPipelineStatisticFlags {
 			QueryPipelineStatisticInputAssemblyVerticesBit = 0x00000001,
 			QueryPipelineStatisticInputAssemblyPrimitivesBit = 0x00000002,
 			QueryPipelineStatisticVertexShaderInvocationsBit = 0x00000004,
@@ -1540,14 +1540,14 @@ namespace VulkanSharp.Raw {
 			QueryPipelineStatisticComputeShaderInvocationsBit = 0x00000400,
 			QueryPipelineStatisticFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkQueryResultFlagBits {
+		public enum VkQueryResultFlags {
 			QueryResult64Bit = 0x00000001,
 			QueryResultWaitBit = 0x00000002,
 			QueryResultWithAvailabilityBit = 0x00000004,
 			QueryResultPartialBit = 0x00000008,
 			QueryResultFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkBufferCreateFlagBits {
+		public enum VkBufferCreateFlags {
 			BufferCreateSparseBindingBit = 0x00000001,
 			BufferCreateSparseResidencyBit = 0x00000002,
 			BufferCreateSparseAliasedBit = 0x00000004,
@@ -1557,7 +1557,7 @@ namespace VulkanSharp.Raw {
 			BufferCreateDeviceAddressCaptureReplayBitKhr = BufferCreateDeviceAddressCaptureReplayBit,
 			BufferCreateFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkBufferUsageFlagBits {
+		public enum VkBufferUsageFlags {
 			BufferUsageTransferSrcBit = 0x00000001,
 			BufferUsageTransferDstBit = 0x00000002,
 			BufferUsageUniformTexelBufferBit = 0x00000004,
@@ -1576,14 +1576,14 @@ namespace VulkanSharp.Raw {
 			BufferUsageShaderDeviceAddressBitKhr = BufferUsageShaderDeviceAddressBit,
 			BufferUsageFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkImageViewCreateFlagBits {
+		public enum VkImageViewCreateFlags {
 			ImageViewCreateFragmentDensityMapDynamicBitExt = 0x00000001,
 			ImageViewCreateFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkShaderModuleCreateFlagBits {
+		public enum VkShaderModuleCreateFlags {
 			ShaderModuleCreateFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkPipelineCreateFlagBits {
+		public enum VkPipelineCreateFlags {
 			PipelineCreateDisableOptimizationBit = 0x00000001,
 			PipelineCreateAllowDerivativesBit = 0x00000002,
 			PipelineCreateDerivativeBit = 0x00000004,
@@ -1597,12 +1597,12 @@ namespace VulkanSharp.Raw {
 			PipelineCreateDispatchBaseKhr = PipelineCreateDispatchBase,
 			PipelineCreateFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkPipelineShaderStageCreateFlagBits {
+		public enum VkPipelineShaderStageCreateFlags {
 			PipelineShaderStageCreateAllowVaryingSubgroupSizeBitExt = 0x00000001,
 			PipelineShaderStageCreateRequireFullSubgroupsBitExt = 0x00000002,
 			PipelineShaderStageCreateFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkShaderStageFlagBits {
+		public enum VkShaderStageFlags {
 			ShaderStageVertexBit = 0x00000001,
 			ShaderStageTessellationControlBit = 0x00000002,
 			ShaderStageTessellationEvaluationBit = 0x00000004,
@@ -1621,55 +1621,55 @@ namespace VulkanSharp.Raw {
 			ShaderStageMeshBitNv = 0x00000080,
 			ShaderStageFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkCullModeFlagBits {
+		public enum VkCullModeFlags {
 			CullModeNone = 0,
 			CullModeFrontBit = 0x00000001,
 			CullModeBackBit = 0x00000002,
 			CullModeFrontAndBack = 0x00000003,
 			CullModeFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkColorComponentFlagBits {
+		public enum VkColorComponentFlags {
 			ColorComponentRBit = 0x00000001,
 			ColorComponentGBit = 0x00000002,
 			ColorComponentBBit = 0x00000004,
 			ColorComponentABit = 0x00000008,
 			ColorComponentFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkSamplerCreateFlagBits {
+		public enum VkSamplerCreateFlags {
 			SamplerCreateSubsampledBitExt = 0x00000001,
 			SamplerCreateSubsampledCoarseReconstructionBitExt = 0x00000002,
 			SamplerCreateFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkDescriptorSetLayoutCreateFlagBits {
+		public enum VkDescriptorSetLayoutCreateFlags {
 			DescriptorSetLayoutCreateUpdateAfterBindPoolBit = 0x00000002,
 			DescriptorSetLayoutCreatePushDescriptorBitKhr = 0x00000001,
 			DescriptorSetLayoutCreateUpdateAfterBindPoolBitExt = DescriptorSetLayoutCreateUpdateAfterBindPoolBit,
 			DescriptorSetLayoutCreateFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkDescriptorPoolCreateFlagBits {
+		public enum VkDescriptorPoolCreateFlags {
 			DescriptorPoolCreateFreeDescriptorSetBit = 0x00000001,
 			DescriptorPoolCreateUpdateAfterBindBit = 0x00000002,
 			DescriptorPoolCreateUpdateAfterBindBitExt = DescriptorPoolCreateUpdateAfterBindBit,
 			DescriptorPoolCreateFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkFramebufferCreateFlagBits {
+		public enum VkFramebufferCreateFlags {
 			FramebufferCreateImagelessBit = 0x00000001,
 			FramebufferCreateImagelessBitKhr = FramebufferCreateImagelessBit,
 			FramebufferCreateFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkRenderPassCreateFlagBits {
+		public enum VkRenderPassCreateFlags {
 			RenderPassCreateFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkAttachmentDescriptionFlagBits {
+		public enum VkAttachmentDescriptionFlags {
 			AttachmentDescriptionMayAliasBit = 0x00000001,
 			AttachmentDescriptionFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkSubpassDescriptionFlagBits {
+		public enum VkSubpassDescriptionFlags {
 			SubpassDescriptionPerViewAttributesBitNvx = 0x00000001,
 			SubpassDescriptionPerViewPositionXOnlyBitNvx = 0x00000002,
 			SubpassDescriptionFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkAccessFlagBits {
+		public enum VkAccessFlags {
 			AccessIndirectCommandReadBit = 0x00000001,
 			AccessIndexReadBit = 0x00000002,
 			AccessVertexAttributeReadBit = 0x00000004,
@@ -1700,7 +1700,7 @@ namespace VulkanSharp.Raw {
 			AccessFragmentDensityMapReadBitExt = 0x01000000,
 			AccessFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkDependencyFlagBits {
+		public enum VkDependencyFlags {
 			DependencyByRegionBit = 0x00000001,
 			DependencyDeviceGroupBit = 0x00000004,
 			DependencyViewLocalBit = 0x00000002,
@@ -1708,31 +1708,31 @@ namespace VulkanSharp.Raw {
 			DependencyDeviceGroupBitKhr = DependencyDeviceGroupBit,
 			DependencyFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkCommandPoolCreateFlagBits {
+		public enum VkCommandPoolCreateFlags {
 			CommandPoolCreateTransientBit = 0x00000001,
 			CommandPoolCreateResetCommandBufferBit = 0x00000002,
 			CommandPoolCreateProtectedBit = 0x00000004,
 			CommandPoolCreateFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkCommandPoolResetFlagBits {
+		public enum VkCommandPoolResetFlags {
 			CommandPoolResetReleaseResourcesBit = 0x00000001,
 			CommandPoolResetFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkCommandBufferUsageFlagBits {
+		public enum VkCommandBufferUsageFlags {
 			CommandBufferUsageOneTimeSubmitBit = 0x00000001,
 			CommandBufferUsageRenderPassContinueBit = 0x00000002,
 			CommandBufferUsageSimultaneousUseBit = 0x00000004,
 			CommandBufferUsageFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkQueryControlFlagBits {
+		public enum VkQueryControlFlags {
 			QueryControlPreciseBit = 0x00000001,
 			QueryControlFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkCommandBufferResetFlagBits {
+		public enum VkCommandBufferResetFlags {
 			CommandBufferResetReleaseResourcesBit = 0x00000001,
 			CommandBufferResetFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkStencilFaceFlagBits {
+		public enum VkStencilFaceFlags {
 			StencilFaceFrontBit = 0x00000001,
 			StencilFaceBackBit = 0x00000002,
 			StencilFaceFrontAndBack = 0x00000003,
@@ -1804,7 +1804,7 @@ namespace VulkanSharp.Raw {
 			DescriptorUpdateTemplateTypeRangeSize = (DescriptorUpdateTemplateTypeDescriptorSet-DescriptorUpdateTemplateTypeDescriptorSet+1 ),
 			DescriptorUpdateTemplateTypeMaxEnum = 0x7fffffff,
 		}
-		public enum VkSubgroupFeatureFlagBits {
+		public enum VkSubgroupFeatureFlags {
 			SubgroupFeatureBasicBit = 0x00000001,
 			SubgroupFeatureVoteBit = 0x00000002,
 			SubgroupFeatureArithmeticBit = 0x00000004,
@@ -1816,7 +1816,7 @@ namespace VulkanSharp.Raw {
 			SubgroupFeaturePartitionedBitNv = 0x00000100,
 			SubgroupFeatureFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkPeerMemoryFeatureFlagBits {
+		public enum VkPeerMemoryFeatureFlags {
 			PeerMemoryFeatureCopySrcBit = 0x00000001,
 			PeerMemoryFeatureCopyDstBit = 0x00000002,
 			PeerMemoryFeatureGenericSrcBit = 0x00000004,
@@ -1827,7 +1827,7 @@ namespace VulkanSharp.Raw {
 			PeerMemoryFeatureGenericDstBitKhr = PeerMemoryFeatureGenericDstBit,
 			PeerMemoryFeatureFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkMemoryAllocateFlagBits {
+		public enum VkMemoryAllocateFlags {
 			MemoryAllocateDeviceMaskBit = 0x00000001,
 			MemoryAllocateDeviceAddressBit = 0x00000002,
 			MemoryAllocateDeviceAddressCaptureReplayBit = 0x00000004,
@@ -1836,7 +1836,7 @@ namespace VulkanSharp.Raw {
 			MemoryAllocateDeviceAddressCaptureReplayBitKhr = MemoryAllocateDeviceAddressCaptureReplayBit,
 			MemoryAllocateFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkExternalMemoryHandleTypeFlagBits {
+		public enum VkExternalMemoryHandleTypeFlags {
 			ExternalMemoryHandleTypeOpaqueFdBit = 0x00000001,
 			ExternalMemoryHandleTypeOpaqueWin32Bit = 0x00000002,
 			ExternalMemoryHandleTypeOpaqueWin32KmtBit = 0x00000004,
@@ -1857,7 +1857,7 @@ namespace VulkanSharp.Raw {
 			ExternalMemoryHandleTypeD3d12ResourceBitKhr = ExternalMemoryHandleTypeD3d12ResourceBit,
 			ExternalMemoryHandleTypeFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkExternalMemoryFeatureFlagBits {
+		public enum VkExternalMemoryFeatureFlags {
 			ExternalMemoryFeatureDedicatedOnlyBit = 0x00000001,
 			ExternalMemoryFeatureExportableBit = 0x00000002,
 			ExternalMemoryFeatureImportableBit = 0x00000004,
@@ -1866,7 +1866,7 @@ namespace VulkanSharp.Raw {
 			ExternalMemoryFeatureImportableBitKhr = ExternalMemoryFeatureImportableBit,
 			ExternalMemoryFeatureFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkExternalFenceHandleTypeFlagBits {
+		public enum VkExternalFenceHandleTypeFlags {
 			ExternalFenceHandleTypeOpaqueFdBit = 0x00000001,
 			ExternalFenceHandleTypeOpaqueWin32Bit = 0x00000002,
 			ExternalFenceHandleTypeOpaqueWin32KmtBit = 0x00000004,
@@ -1877,24 +1877,24 @@ namespace VulkanSharp.Raw {
 			ExternalFenceHandleTypeSyncFdBitKhr = ExternalFenceHandleTypeSyncFdBit,
 			ExternalFenceHandleTypeFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkExternalFenceFeatureFlagBits {
+		public enum VkExternalFenceFeatureFlags {
 			ExternalFenceFeatureExportableBit = 0x00000001,
 			ExternalFenceFeatureImportableBit = 0x00000002,
 			ExternalFenceFeatureExportableBitKhr = ExternalFenceFeatureExportableBit,
 			ExternalFenceFeatureImportableBitKhr = ExternalFenceFeatureImportableBit,
 			ExternalFenceFeatureFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkFenceImportFlagBits {
+		public enum VkFenceImportFlags {
 			FenceImportTemporaryBit = 0x00000001,
 			FenceImportTemporaryBitKhr = FenceImportTemporaryBit,
 			FenceImportFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkSemaphoreImportFlagBits {
+		public enum VkSemaphoreImportFlags {
 			SemaphoreImportTemporaryBit = 0x00000001,
 			SemaphoreImportTemporaryBitKhr = SemaphoreImportTemporaryBit,
 			SemaphoreImportFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkExternalSemaphoreHandleTypeFlagBits {
+		public enum VkExternalSemaphoreHandleTypeFlags {
 			ExternalSemaphoreHandleTypeOpaqueFdBit = 0x00000001,
 			ExternalSemaphoreHandleTypeOpaqueWin32Bit = 0x00000002,
 			ExternalSemaphoreHandleTypeOpaqueWin32KmtBit = 0x00000004,
@@ -1907,7 +1907,7 @@ namespace VulkanSharp.Raw {
 			ExternalSemaphoreHandleTypeSyncFdBitKhr = ExternalSemaphoreHandleTypeSyncFdBit,
 			ExternalSemaphoreHandleTypeFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkExternalSemaphoreFeatureFlagBits {
+		public enum VkExternalSemaphoreFeatureFlags {
 			ExternalSemaphoreFeatureExportableBit = 0x00000001,
 			ExternalSemaphoreFeatureImportableBit = 0x00000002,
 			ExternalSemaphoreFeatureExportableBitKhr = ExternalSemaphoreFeatureExportableBit,
@@ -1978,7 +1978,7 @@ namespace VulkanSharp.Raw {
 			SemaphoreTypeRangeSize = (SemaphoreTypeTimeline-SemaphoreTypeBinary+1 ),
 			SemaphoreTypeMaxEnum = 0x7fffffff,
 		}
-		public enum VkResolveModeFlagBits {
+		public enum VkResolveModeFlags {
 			ResolveModeNone = 0,
 			ResolveModeSampleZeroBit = 0x00000001,
 			ResolveModeAverageBit = 0x00000002,
@@ -1991,7 +1991,7 @@ namespace VulkanSharp.Raw {
 			ResolveModeMaxBitKhr = ResolveModeMaxBit,
 			ResolveModeFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkDescriptorBindingFlagBits {
+		public enum VkDescriptorBindingFlags {
 			DescriptorBindingUpdateAfterBindBit = 0x00000001,
 			DescriptorBindingUpdateUnusedWhilePendingBit = 0x00000002,
 			DescriptorBindingPartiallyBoundBit = 0x00000004,
@@ -2002,7 +2002,7 @@ namespace VulkanSharp.Raw {
 			DescriptorBindingVariableDescriptorCountBitExt = DescriptorBindingVariableDescriptorCountBit,
 			DescriptorBindingFlagBitsMaxEnum = 0x7fffffff,
 		}
-		public enum VkSemaphoreWaitFlagBits {
+		public enum VkSemaphoreWaitFlags {
 			SemaphoreWaitAnyBit = 0x00000001,
 			SemaphoreWaitAnyBitKhr = SemaphoreWaitAnyBit,
 			SemaphoreWaitFlagBitsMaxEnum = 0x7fffffff,
@@ -2043,7 +2043,7 @@ namespace VulkanSharp.Raw {
 			PresentModeRangeSizeKhr = (PresentModeFifoRelaxedKhr-PresentModeImmediateKhr+1 ),
 			PresentModeMaxEnumKhr = 0x7fffffff,
 		}
-		public enum VkSurfaceTransformFlagBitsKHR {
+		public enum VkSurfaceTransformFlagsKHR {
 			SurfaceTransformIdentityBitKhr = 0x00000001,
 			SurfaceTransformRotate90BitKhr = 0x00000002,
 			SurfaceTransformRotate180BitKhr = 0x00000004,
@@ -2055,27 +2055,27 @@ namespace VulkanSharp.Raw {
 			SurfaceTransformInheritBitKhr = 0x00000100,
 			SurfaceTransformFlagBitsMaxEnumKhr = 0x7fffffff,
 		}
-		public enum VkCompositeAlphaFlagBitsKHR {
+		public enum VkCompositeAlphaFlagsKHR {
 			CompositeAlphaOpaqueBitKhr = 0x00000001,
 			CompositeAlphaPreMultipliedBitKhr = 0x00000002,
 			CompositeAlphaPostMultipliedBitKhr = 0x00000004,
 			CompositeAlphaInheritBitKhr = 0x00000008,
 			CompositeAlphaFlagBitsMaxEnumKhr = 0x7fffffff,
 		}
-		public enum VkSwapchainCreateFlagBitsKHR {
+		public enum VkSwapchainCreateFlagsKHR {
 			SwapchainCreateSplitInstanceBindRegionsBitKhr = 0x00000001,
 			SwapchainCreateProtectedBitKhr = 0x00000002,
 			SwapchainCreateMutableFormatBitKhr = 0x00000004,
 			SwapchainCreateFlagBitsMaxEnumKhr = 0x7fffffff,
 		}
-		public enum VkDeviceGroupPresentModeFlagBitsKHR {
+		public enum VkDeviceGroupPresentModeFlagsKHR {
 			DeviceGroupPresentModeLocalBitKhr = 0x00000001,
 			DeviceGroupPresentModeRemoteBitKhr = 0x00000002,
 			DeviceGroupPresentModeSumBitKhr = 0x00000004,
 			DeviceGroupPresentModeLocalMultiDeviceBitKhr = 0x00000008,
 			DeviceGroupPresentModeFlagBitsMaxEnumKhr = 0x7fffffff,
 		}
-		public enum VkDisplayPlaneAlphaFlagBitsKHR {
+		public enum VkDisplayPlaneAlphaFlagsKHR {
 			DisplayPlaneAlphaOpaqueBitKhr = 0x00000001,
 			DisplayPlaneAlphaGlobalBitKhr = 0x00000002,
 			DisplayPlaneAlphaPerPixelBitKhr = 0x00000004,
@@ -2123,12 +2123,12 @@ namespace VulkanSharp.Raw {
 			PerformanceCounterStorageRangeSizeKhr = (PerformanceCounterStorageFloat64Khr-PerformanceCounterStorageInt32Khr+1 ),
 			PerformanceCounterStorageMaxEnumKhr = 0x7fffffff,
 		}
-		public enum VkPerformanceCounterDescriptionFlagBitsKHR {
+		public enum VkPerformanceCounterDescriptionFlagsKHR {
 			PerformanceCounterDescriptionPerformanceImpactingKhr = 0x00000001,
 			PerformanceCounterDescriptionConcurrentlyImpactedKhr = 0x00000002,
 			PerformanceCounterDescriptionFlagBitsMaxEnumKhr = 0x7fffffff,
 		}
-		public enum VkAcquireProfilingLockFlagBitsKHR {
+		public enum VkAcquireProfilingLockFlagsKHR {
 			AcquireProfilingLockFlagBitsMaxEnumKhr = 0x7fffffff,
 		}
 		public enum VkPipelineExecutableStatisticFormatKHR {
@@ -2188,7 +2188,7 @@ namespace VulkanSharp.Raw {
 			DebugReportObjectTypeRangeSizeExt = (DebugReportObjectTypeValidationCacheExtExt-DebugReportObjectTypeUnknownExt+1 ),
 			DebugReportObjectTypeMaxEnumExt = 0x7fffffff,
 		}
-		public enum VkDebugReportFlagBitsEXT {
+		public enum VkDebugReportFlagsEXT {
 			DebugReportInformationBitExt = 0x00000001,
 			DebugReportWarningBitExt = 0x00000002,
 			DebugReportPerformanceWarningBitExt = 0x00000004,
@@ -2213,14 +2213,14 @@ namespace VulkanSharp.Raw {
 			ShaderInfoTypeRangeSizeAmd = (ShaderInfoTypeDisassemblyAmd-ShaderInfoTypeStatisticsAmd+1 ),
 			ShaderInfoTypeMaxEnumAmd = 0x7fffffff,
 		}
-		public enum VkExternalMemoryHandleTypeFlagBitsNV {
+		public enum VkExternalMemoryHandleTypeFlagsNV {
 			ExternalMemoryHandleTypeOpaqueWin32BitNv = 0x00000001,
 			ExternalMemoryHandleTypeOpaqueWin32KmtBitNv = 0x00000002,
 			ExternalMemoryHandleTypeD3d11ImageBitNv = 0x00000004,
 			ExternalMemoryHandleTypeD3d11ImageKmtBitNv = 0x00000008,
 			ExternalMemoryHandleTypeFlagBitsMaxEnumNv = 0x7fffffff,
 		}
-		public enum VkExternalMemoryFeatureFlagBitsNV {
+		public enum VkExternalMemoryFeatureFlagsNV {
 			ExternalMemoryFeatureDedicatedOnlyBitNv = 0x00000001,
 			ExternalMemoryFeatureExportableBitNv = 0x00000002,
 			ExternalMemoryFeatureImportableBitNv = 0x00000004,
@@ -2234,7 +2234,7 @@ namespace VulkanSharp.Raw {
 			ValidationCheckRangeSizeExt = (ValidationCheckShadersExt-ValidationCheckAllExt+1 ),
 			ValidationCheckMaxEnumExt = 0x7fffffff,
 		}
-		public enum VkConditionalRenderingFlagBitsEXT {
+		public enum VkConditionalRenderingFlagsEXT {
 			ConditionalRenderingInvertedBitExt = 0x00000001,
 			ConditionalRenderingFlagBitsMaxEnumExt = 0x7fffffff,
 		}
@@ -2263,19 +2263,19 @@ namespace VulkanSharp.Raw {
 			ObjectEntryTypeRangeSizeNvx = (ObjectEntryTypePushConstantNvx-ObjectEntryTypeDescriptorSetNvx+1 ),
 			ObjectEntryTypeMaxEnumNvx = 0x7fffffff,
 		}
-		public enum VkIndirectCommandsLayoutUsageFlagBitsNVX {
+		public enum VkIndirectCommandsLayoutUsageFlagsNVX {
 			IndirectCommandsLayoutUsageUnorderedSequencesBitNvx = 0x00000001,
 			IndirectCommandsLayoutUsageSparseSequencesBitNvx = 0x00000002,
 			IndirectCommandsLayoutUsageEmptyExecutionsBitNvx = 0x00000004,
 			IndirectCommandsLayoutUsageIndexedSequencesBitNvx = 0x00000008,
 			IndirectCommandsLayoutUsageFlagBitsMaxEnumNvx = 0x7fffffff,
 		}
-		public enum VkObjectEntryUsageFlagBitsNVX {
+		public enum VkObjectEntryUsageFlagsNVX {
 			ObjectEntryUsageGraphicsBitNvx = 0x00000001,
 			ObjectEntryUsageComputeBitNvx = 0x00000002,
 			ObjectEntryUsageFlagBitsMaxEnumNvx = 0x7fffffff,
 		}
-		public enum VkSurfaceCounterFlagBitsEXT {
+		public enum VkSurfaceCounterFlagsEXT {
 			SurfaceCounterVblankExt = 0x00000001,
 			SurfaceCounterFlagBitsMaxEnumExt = 0x7fffffff,
 		}
@@ -2333,14 +2333,14 @@ namespace VulkanSharp.Raw {
 			ConservativeRasterizationModeRangeSizeExt = (ConservativeRasterizationModeUnderestimateExt-ConservativeRasterizationModeDisabledExt+1 ),
 			ConservativeRasterizationModeMaxEnumExt = 0x7fffffff,
 		}
-		public enum VkDebugUtilsMessageSeverityFlagBitsEXT {
+		public enum VkDebugUtilsMessageSeverityFlagsEXT {
 			DebugUtilsMessageSeverityVerboseBitExt = 0x00000001,
 			DebugUtilsMessageSeverityInfoBitExt = 0x00000010,
 			DebugUtilsMessageSeverityWarningBitExt = 0x00000100,
 			DebugUtilsMessageSeverityErrorBitExt = 0x00001000,
 			DebugUtilsMessageSeverityFlagBitsMaxEnumExt = 0x7fffffff,
 		}
-		public enum VkDebugUtilsMessageTypeFlagBitsEXT {
+		public enum VkDebugUtilsMessageTypeFlagsEXT {
 			DebugUtilsMessageTypeGeneralBitExt = 0x00000001,
 			DebugUtilsMessageTypeValidationBitExt = 0x00000002,
 			DebugUtilsMessageTypePerformanceBitExt = 0x00000004,
@@ -2442,19 +2442,19 @@ namespace VulkanSharp.Raw {
 			AccelerationStructureMemoryRequirementsTypeRangeSizeNv = (AccelerationStructureMemoryRequirementsTypeUpdateScratchNv-AccelerationStructureMemoryRequirementsTypeObjectNv+1 ),
 			AccelerationStructureMemoryRequirementsTypeMaxEnumNv = 0x7fffffff,
 		}
-		public enum VkGeometryFlagBitsNV {
+		public enum VkGeometryFlagsNV {
 			GeometryOpaqueBitNv = 0x00000001,
 			GeometryNoDuplicateAnyHitInvocationBitNv = 0x00000002,
 			GeometryFlagBitsMaxEnumNv = 0x7fffffff,
 		}
-		public enum VkGeometryInstanceFlagBitsNV {
+		public enum VkGeometryInstanceFlagsNV {
 			GeometryInstanceTriangleCullDisableBitNv = 0x00000001,
 			GeometryInstanceTriangleFrontCounterclockwiseBitNv = 0x00000002,
 			GeometryInstanceForceOpaqueBitNv = 0x00000004,
 			GeometryInstanceForceNoOpaqueBitNv = 0x00000008,
 			GeometryInstanceFlagBitsMaxEnumNv = 0x7fffffff,
 		}
-		public enum VkBuildAccelerationStructureFlagBitsNV {
+		public enum VkBuildAccelerationStructureFlagsNV {
 			BuildAccelerationStructureAllowUpdateBitNv = 0x00000001,
 			BuildAccelerationStructureAllowCompactionBitNv = 0x00000002,
 			BuildAccelerationStructurePreferFastTraceBitNv = 0x00000004,
@@ -2472,7 +2472,7 @@ namespace VulkanSharp.Raw {
 			QueueGlobalPriorityRangeSizeExt = (QueueGlobalPriorityRealtimeExt-QueueGlobalPriorityLowExt+1 ),
 			QueueGlobalPriorityMaxEnumExt = 0x7fffffff,
 		}
-		public enum VkPipelineCompilerControlFlagBitsAMD {
+		public enum VkPipelineCompilerControlFlagsAMD {
 			PipelineCompilerControlFlagBitsMaxEnumAmd = 0x7fffffff,
 		}
 		public enum VkTimeDomainEXT {
@@ -2494,7 +2494,7 @@ namespace VulkanSharp.Raw {
 			MemoryOverallocationBehaviorRangeSizeAmd = (MemoryOverallocationBehaviorDisallowedAmd-MemoryOverallocationBehaviorDefaultAmd+1 ),
 			MemoryOverallocationBehaviorMaxEnumAmd = 0x7fffffff,
 		}
-		public enum VkPipelineCreationFeedbackFlagBitsEXT {
+		public enum VkPipelineCreationFeedbackFlagsEXT {
 			PipelineCreationFeedbackValidBitExt = 0x00000001,
 			PipelineCreationFeedbackApplicationPipelineCacheHitBitExt = 0x00000002,
 			PipelineCreationFeedbackBasePipelineAccelerationBitExt = 0x00000004,
@@ -2541,10 +2541,10 @@ namespace VulkanSharp.Raw {
 			PerformanceValueTypeRangeSizeIntel = (PerformanceValueTypeStringIntel-PerformanceValueTypeUint32Intel+1 ),
 			PerformanceValueTypeMaxEnumIntel = 0x7fffffff,
 		}
-		public enum VkShaderCorePropertiesFlagBitsAMD {
+		public enum VkShaderCorePropertiesFlagsAMD {
 			ShaderCorePropertiesFlagBitsMaxEnumAmd = 0x7fffffff,
 		}
-		public enum VkToolPurposeFlagBitsEXT {
+		public enum VkToolPurposeFlagsEXT {
 			ToolPurposeValidationBitExt = 0x00000001,
 			ToolPurposeProfilingBitExt = 0x00000002,
 			ToolPurposeTracingBitExt = 0x00000004,
