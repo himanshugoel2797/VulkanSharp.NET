@@ -41,6 +41,7 @@ namespace GlfwSharp.BindingGen
         public string Name;
         public List<ParameterDef> Parameters;
         public int Len;
+        public int Alignment;
 
         public GlfwStructDef()
         {
@@ -650,6 +651,68 @@ namespace GlfwSharp.BindingGen
                 }
             }
         }
+        private int GetTypeAlign(string tn)
+        {
+            unsafe
+            {
+                int end_ptr = tn.ToCharArray().Count(a => a == '*');
+                tn = tn.Trim('*');
+                if (end_ptr > 0) return sizeof(IntPtr);
+
+                switch (tn)
+                {
+                    case "byte":
+                        return sizeof(byte);
+                    case "char":
+                        return sizeof(byte);
+                    case "ushort":
+                        return sizeof(ushort);
+                    case "uint":
+                        return sizeof(uint);
+                    case "int":
+                        return sizeof(int);
+                    case "float":
+                        return sizeof(float);
+                    case "double":
+                        return sizeof(double);
+                    case "ulong":
+                        return sizeof(ulong);
+                    case "long":
+                        return sizeof(long);
+                    case "string":
+                    case "IntPtr":
+                    case "UIntPtr":
+                    case "Window":
+                        return sizeof(IntPtr);
+                    case "string[]":
+                        return sizeof(IntPtr);
+                    default:
+                        if (enums.Any(a => a.Name == tn))
+                            return sizeof(int);
+                        if (structs.Any(a => a.Name == tn))
+                        {
+                            var v = structs.Find(a => a.Name == tn);
+                            if (v.Len == 0) ComputeStructSize(v);
+                            return v.Alignment;
+                        }
+                        if (unions.Any(a => a.Name == tn))
+                        {
+                            var v = unions.Find(a => a.Name == tn);
+                            if (v.Len == 0) ComputeUnionSize(v);
+                            return v.Alignment;
+                        }
+                        if (structs.Any(a => a.Name + "[]" == tn))
+                        {
+                            return 8;
+                        }
+                        if (unions.Any(a => a.Name + "[]" == tn))
+                        {
+                            return 8;
+                        }
+                        throw new Exception("Unrecognized Type");
+                }
+            }
+        }
 
         private int GetElementCount(ref string name)
         {
@@ -667,29 +730,39 @@ namespace GlfwSharp.BindingGen
         private void ComputeStructSize(GlfwStructDef d)
         {
             int off = 0;
+            int max_align = 1;
             for (int j = 0; j < d.Parameters.Count; j++)
             {
-                int element_sz = GetTypeSize(CleanTypeName(d.Parameters[j].TypeName));
-                if (off % element_sz != 0) off += element_sz - (off % element_sz);
+                var tn = CleanTypeName(d.Parameters[j].TypeName);
+                int element_sz = GetTypeSize(tn);
+                int alignment = GetTypeAlign(tn);
+                if (off % alignment != 0) off += alignment - (off % alignment);
                 d.Parameters[j].Offset = off;
 
                 int cnt = GetElementCount(ref d.Parameters[j].ParamName);
                 d.Parameters[j].ElementCount = cnt;
                 off += cnt * element_sz;
+                max_align = Math.Max(max_align, alignment);
             }
             d.Len = off;
+            d.Alignment = max_align;
         }
 
         private void ComputeUnionSize(GlfwStructDef d)
         {
             int off = 0;
+            int max_align = 1;
             for (int j = 0; j < d.Parameters.Count; j++)
             {
+                var tn = CleanTypeName(d.Parameters[j].TypeName);
                 d.Parameters[j].Offset = 0;
-                int element_sz = GetTypeSize(CleanTypeName(d.Parameters[j].TypeName));
+                int element_sz = GetTypeSize(tn);
+                int alignment = GetTypeAlign(tn);
                 off = Math.Max(off, element_sz);
+                max_align = Math.Max(max_align, alignment);
             }
             d.Len = off;
+            d.Alignment = max_align;
         }
 
         #region Emitter

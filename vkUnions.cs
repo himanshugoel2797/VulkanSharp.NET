@@ -24,7 +24,7 @@ namespace VulkanSharp.Raw {
 		}
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPipelineExecutableStatisticValueKHR {
-			[FieldOffset(0)]public uint b32;
+			[FieldOffset(0)]public bool b32;
 			[FieldOffset(0)]public long i64;
 			[FieldOffset(0)]public ulong u64;
 			[FieldOffset(0)]public double f64;
@@ -34,7 +34,7 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(0)]public uint value32;
 			[FieldOffset(0)]public ulong value64;
 			[FieldOffset(0)]public float valueFloat;
-			[FieldOffset(0)]public uint valueBool;
+			[FieldOffset(0)]public bool valueBool;
 			[FieldOffset(0)]public string valueString;
 		}
 	}

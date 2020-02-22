@@ -41,6 +41,7 @@ namespace VulkanSharp.BindingGen
         public string Name;
         public List<ParameterDef> Parameters;
         public int Len;
+        public int Alignment;
 
         public VkStructDef()
         {
@@ -365,7 +366,7 @@ namespace VulkanSharp.BindingGen
             {
                 var s = lines[i].Trim();
                 var p = s.Split(' ').Where(a => !string.IsNullOrWhiteSpace(a)).ToArray();
-                if (p.Length > 2 && p[0] == "typedef" && p[1] != "enum" && p[1] != "struct" && p[1] != "union" && !s.Contains("VKAPI_PTR"))
+                if (p.Length > 2 && p[0] == "typedef" && p[1] != "enum" && p[1] != "struct" && p[1] != "union" && !s.Contains("VKAPI_PTR") && !s.EndsWith("VkBool32;"))
                 {
                     typedefs.Add(p[2].TrimEnd(';'), p[1]);
                 }
@@ -437,6 +438,12 @@ namespace VulkanSharp.BindingGen
 
             switch (tn)
             {
+                case "VkBool32":
+                    tn = "bool";
+                    break;
+                case "VkBool32*":
+                    tn = "bool*";
+                    break;
                 case "uint8_t":
                     tn = "byte";
                     break;
@@ -481,6 +488,9 @@ namespace VulkanSharp.BindingGen
                     break;
                 case "void*":
                     tn = "IntPtr";
+                    break;
+                case "char":
+                    tn = "byte";
                     break;
                 case "char*":
                     tn = "string";
@@ -530,6 +540,7 @@ namespace VulkanSharp.BindingGen
                         return sizeof(byte);
                     case "ushort":
                         return sizeof(ushort);
+                    case "bool":
                     case "uint":
                         return sizeof(uint);
                     case "int":
@@ -577,6 +588,70 @@ namespace VulkanSharp.BindingGen
             }
         }
 
+        private int GetTypeAlign(string tn)
+        {
+            unsafe
+            {
+                int end_ptr = tn.ToCharArray().Count(a => a == '*');
+                tn = tn.Trim('*');
+                if (end_ptr > 0) return sizeof(IntPtr);
+
+                switch (tn)
+                {
+                    case "byte":
+                        return sizeof(byte);
+                    case "char":
+                        return sizeof(byte);
+                    case "ushort":
+                        return sizeof(ushort);
+                    case "bool":
+                    case "uint":
+                        return sizeof(uint);
+                    case "int":
+                        return sizeof(int);
+                    case "float":
+                        return sizeof(float);
+                    case "double":
+                        return sizeof(double);
+                    case "ulong":
+                        return sizeof(ulong);
+                    case "long":
+                        return sizeof(long);
+                    case "string":
+                    case "IntPtr":
+                    case "UIntPtr":
+                    case "Window":
+                        return sizeof(IntPtr);
+                    case "string[]":
+                        return sizeof(IntPtr);
+                    default:
+                        if (enums.Any(a => a.Name == tn))
+                            return sizeof(int);
+                        if (structs.Any(a => a.Name == tn))
+                        {
+                            var v = structs.Find(a => a.Name == tn);
+                            if (v.Len == 0) ComputeStructSize(v);
+                            return v.Alignment;
+                        }
+                        if (unions.Any(a => a.Name == tn))
+                        {
+                            var v = unions.Find(a => a.Name == tn);
+                            if (v.Len == 0) ComputeUnionSize(v);
+                            return v.Alignment;
+                        }
+                        if (structs.Any(a => a.Name + "[]" == tn))
+                        {
+                            return 8;
+                        }
+                        if (unions.Any(a => a.Name + "[]" == tn))
+                        {
+                            return 8;
+                        }
+                        throw new Exception("Unrecognized Type");
+                }
+            }
+        }
+
         private int GetElementCount(ref string name)
         {
             int cnt = 1;
@@ -593,29 +668,39 @@ namespace VulkanSharp.BindingGen
         private void ComputeStructSize(VkStructDef d)
         {
             int off = 0;
+            int max_align = 1;
             for (int j = 0; j < d.Parameters.Count; j++)
             {
-                int element_sz = GetTypeSize(CleanTypeName(d.Parameters[j].TypeName));
-                if (off % element_sz != 0) off += element_sz - (off % element_sz);
+                var tn = CleanTypeName(d.Parameters[j].TypeName);
+                int element_sz = GetTypeSize(tn);
+                int alignment = GetTypeAlign(tn);
+                if (off % alignment != 0) off += alignment - (off % alignment);
                 d.Parameters[j].Offset = off;
 
                 int cnt = GetElementCount(ref d.Parameters[j].ParamName);
                 d.Parameters[j].ElementCount = cnt;
                 off += cnt * element_sz;
+                max_align = Math.Max(max_align, alignment);
             }
             d.Len = off;
+            d.Alignment = max_align;
         }
 
         private void ComputeUnionSize(VkStructDef d)
         {
             int off = 0;
+            int max_align = 1;
             for (int j = 0; j < d.Parameters.Count; j++)
             {
+                var tn = CleanTypeName(d.Parameters[j].TypeName);
                 d.Parameters[j].Offset = 0;
-                int element_sz = GetTypeSize(CleanTypeName(d.Parameters[j].TypeName));
+                int element_sz = GetTypeSize(tn);
+                int alignment = GetTypeAlign(tn);
                 off = Math.Max(off, element_sz);
+                max_align = Math.Max(max_align, alignment);
             }
             d.Len = off;
+            d.Alignment = max_align;
         }
 
         #region Emitter
@@ -746,7 +831,7 @@ namespace VulkanSharp.BindingGen
                 else if (d.Value.StartsWith("0x"))
                 {
                     //Hex value
-                    constFile += $"\t\t\tpublic const int {ConvertConstName(d.Name)} = {d.Value};\n";
+                    ConstantFile += $"\t\t\tpublic const int {ConvertConstName(d.Name)} = {d.Value};\n";
                     d.ValType = typeof(uint);
                 }
                 else if (defines.Any(a => a.Name == d.Value))
@@ -859,7 +944,7 @@ namespace VulkanSharp.BindingGen
                     if (kvp.ParamName.Contains('['))
                     {
                         var tn = CleanTypeName(kvp.TypeName);
-                        if (tn == "byte" || tn == "short" || tn == "int" || tn == "long" || tn == "ushort")
+                        if (tn == "byte" || tn == "short" || tn == "int" || tn == "uint" || tn == "float" || tn == "char" || tn == "long" || tn == "ushort")
                             StructFile += $"\t\t\t[FieldOffset({kvp.Offset})]public fixed {tn} {CleanItemName(kvp.ParamName)};\n";
                         else
                             StructFile += $"\t\t\t[FieldOffset({kvp.Offset})][MarshalAs(UnmanagedType.ByValArray, SizeConst={kvp.ElementCount})] public {tn}[] {CleanItemName(kvp.ParamName).Split('[')[0]};\n";

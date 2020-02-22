@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 namespace VulkanSharp.Raw {
 	public unsafe static partial class Vk {
 		public static VkResult vkCreateWin32SurfaceKHR(IntPtr instance, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pSurface) { throw new NotImplementedException(); }
-		public static uint vkGetPhysicalDeviceWin32PresentationSupportKHR(IntPtr physicalDevice, uint queueFamilyIndex) { throw new NotImplementedException(); }
+		public static bool vkGetPhysicalDeviceWin32PresentationSupportKHR(IntPtr physicalDevice, uint queueFamilyIndex) { throw new NotImplementedException(); }
 		public static VkResult vkGetMemoryWin32HandleKHR(IntPtr device, IntPtr pGetWin32HandleInfo, IntPtr* pHandle) { throw new NotImplementedException(); }
 		public static VkResult vkGetMemoryWin32HandlePropertiesKHR(IntPtr device, VkExternalMemoryHandleTypeFlagBits handleType, IntPtr handle, IntPtr pMemoryWin32HandleProperties) { throw new NotImplementedException(); }
 		public static VkResult vkImportSemaphoreWin32HandleKHR(IntPtr device, IntPtr pImportSemaphoreWin32HandleInfo) { throw new NotImplementedException(); }
@@ -16,9 +16,9 @@ namespace VulkanSharp.Raw {
 		public static VkResult vkReleaseFullScreenExclusiveModeEXT(IntPtr device, IntPtr swapchain) { throw new NotImplementedException(); }
 		public static VkResult vkGetDeviceGroupSurfacePresentModes2EXT(IntPtr device, IntPtr pSurfaceInfo, uint* pModes) { throw new NotImplementedException(); }
 		public static VkResult vkCreateWaylandSurfaceKHR(IntPtr instance, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pSurface) { throw new NotImplementedException(); }
-		public static uint vkGetPhysicalDeviceWaylandPresentationSupportKHR(IntPtr physicalDevice, uint queueFamilyIndex, IntPtr display) { throw new NotImplementedException(); }
+		public static bool vkGetPhysicalDeviceWaylandPresentationSupportKHR(IntPtr physicalDevice, uint queueFamilyIndex, IntPtr display) { throw new NotImplementedException(); }
 		public static VkResult vkCreateXlibSurfaceKHR(IntPtr instance, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pSurface) { throw new NotImplementedException(); }
-		public static uint vkGetPhysicalDeviceXlibPresentationSupportKHR(IntPtr physicalDevice, uint queueFamilyIndex, IntPtr dpy, IntPtr visualID) { throw new NotImplementedException(); }
+		public static bool vkGetPhysicalDeviceXlibPresentationSupportKHR(IntPtr physicalDevice, uint queueFamilyIndex, IntPtr dpy, IntPtr visualID) { throw new NotImplementedException(); }
 		public static VkResult vkCreateInstance(IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pInstance) { throw new NotImplementedException(); }
 		public static void vkDestroyInstance(IntPtr instance, IntPtr pAllocator) { throw new NotImplementedException(); }
 		public static VkResult vkEnumeratePhysicalDevices(IntPtr instance, uint* pPhysicalDeviceCount, IntPtr* pPhysicalDevices) { throw new NotImplementedException(); }
@@ -58,7 +58,7 @@ namespace VulkanSharp.Raw {
 		public static void vkDestroyFence(IntPtr device, IntPtr fence, IntPtr pAllocator) { throw new NotImplementedException(); }
 		public static VkResult vkResetFences(IntPtr device, uint fenceCount, IntPtr* pFences) { throw new NotImplementedException(); }
 		public static VkResult vkGetFenceStatus(IntPtr device, IntPtr fence) { throw new NotImplementedException(); }
-		public static VkResult vkWaitForFences(IntPtr device, uint fenceCount, IntPtr* pFences, uint waitAll, ulong timeout) { throw new NotImplementedException(); }
+		public static VkResult vkWaitForFences(IntPtr device, uint fenceCount, IntPtr* pFences, bool waitAll, ulong timeout) { throw new NotImplementedException(); }
 		public static VkResult vkCreateSemaphore(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pSemaphore) { throw new NotImplementedException(); }
 		public static void vkDestroySemaphore(IntPtr device, IntPtr semaphore, IntPtr pAllocator) { throw new NotImplementedException(); }
 		public static VkResult vkCreateEvent(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pEvent) { throw new NotImplementedException(); }
@@ -198,7 +198,7 @@ namespace VulkanSharp.Raw {
 		public static ulong vkGetBufferOpaqueCaptureAddress(IntPtr device, IntPtr pInfo) { throw new NotImplementedException(); }
 		public static ulong vkGetDeviceMemoryOpaqueCaptureAddress(IntPtr device, IntPtr pInfo) { throw new NotImplementedException(); }
 		public static void vkDestroySurfaceKHR(IntPtr instance, IntPtr surface, IntPtr pAllocator) { throw new NotImplementedException(); }
-		public static VkResult vkGetPhysicalDeviceSurfaceSupportKHR(IntPtr physicalDevice, uint queueFamilyIndex, IntPtr surface, uint* pSupported) { throw new NotImplementedException(); }
+		public static VkResult vkGetPhysicalDeviceSurfaceSupportKHR(IntPtr physicalDevice, uint queueFamilyIndex, IntPtr surface, bool* pSupported) { throw new NotImplementedException(); }
 		public static VkResult vkGetPhysicalDeviceSurfaceCapabilitiesKHR(IntPtr physicalDevice, IntPtr surface, IntPtr pSurfaceCapabilities) { throw new NotImplementedException(); }
 		public static VkResult vkGetPhysicalDeviceSurfaceFormatsKHR(IntPtr physicalDevice, IntPtr surface, uint* pSurfaceFormatCount, IntPtr pSurfaceFormats) { throw new NotImplementedException(); }
 		public static VkResult vkGetPhysicalDeviceSurfacePresentModesKHR(IntPtr physicalDevice, IntPtr surface, uint* pPresentModeCount, VkPresentModeKHR* pPresentModes) { throw new NotImplementedException(); }
@@ -345,7 +345,7 @@ namespace VulkanSharp.Raw {
 		public static void vkDestroyAccelerationStructureNV(IntPtr device, IntPtr accelerationStructure, IntPtr pAllocator) { throw new NotImplementedException(); }
 		public static void vkGetAccelerationStructureMemoryRequirementsNV(IntPtr device, IntPtr pInfo, IntPtr pMemoryRequirements) { throw new NotImplementedException(); }
 		public static VkResult vkBindAccelerationStructureMemoryNV(IntPtr device, uint bindInfoCount, IntPtr pBindInfos) { throw new NotImplementedException(); }
-		public static void vkCmdBuildAccelerationStructureNV(IntPtr commandBuffer, IntPtr pInfo, IntPtr instanceData, ulong instanceOffset, uint update, IntPtr dst, IntPtr src, IntPtr scratch, ulong scratchOffset) { throw new NotImplementedException(); }
+		public static void vkCmdBuildAccelerationStructureNV(IntPtr commandBuffer, IntPtr pInfo, IntPtr instanceData, ulong instanceOffset, bool update, IntPtr dst, IntPtr src, IntPtr scratch, ulong scratchOffset) { throw new NotImplementedException(); }
 		public static void vkCmdCopyAccelerationStructureNV(IntPtr commandBuffer, IntPtr dst, IntPtr src, VkCopyAccelerationStructureModeNV mode) { throw new NotImplementedException(); }
 		public static void vkCmdTraceRaysNV(IntPtr commandBuffer, IntPtr raygenShaderBindingTableBuffer, ulong raygenShaderBindingOffset, IntPtr missShaderBindingTableBuffer, ulong missShaderBindingOffset, ulong missShaderBindingStride, IntPtr hitShaderBindingTableBuffer, ulong hitShaderBindingOffset, ulong hitShaderBindingStride, IntPtr callableShaderBindingTableBuffer, ulong callableShaderBindingOffset, ulong callableShaderBindingStride, uint width, uint height, uint depth) { throw new NotImplementedException(); }
 		public static VkResult vkCreateRayTracingPipelinesNV(IntPtr device, IntPtr pipelineCache, uint createInfoCount, IntPtr pCreateInfos, IntPtr pAllocator, IntPtr* pPipelines) { throw new NotImplementedException(); }
@@ -372,7 +372,7 @@ namespace VulkanSharp.Raw {
 		public static VkResult vkReleasePerformanceConfigurationINTEL(IntPtr device, IntPtr configuration) { throw new NotImplementedException(); }
 		public static VkResult vkQueueSetPerformanceConfigurationINTEL(IntPtr queue, IntPtr configuration) { throw new NotImplementedException(); }
 		public static VkResult vkGetPerformanceParameterINTEL(IntPtr device, VkPerformanceParameterTypeINTEL parameter, IntPtr pValue) { throw new NotImplementedException(); }
-		public static void vkSetLocalDimmingAMD(IntPtr device, IntPtr swapChain, uint localDimmingEnable) { throw new NotImplementedException(); }
+		public static void vkSetLocalDimmingAMD(IntPtr device, IntPtr swapChain, bool localDimmingEnable) { throw new NotImplementedException(); }
 		public static ulong vkGetBufferDeviceAddressEXT(IntPtr device, IntPtr pInfo) { throw new NotImplementedException(); }
 		public static VkResult vkGetPhysicalDeviceToolPropertiesEXT(IntPtr physicalDevice, uint* pToolCount, IntPtr pToolProperties) { throw new NotImplementedException(); }
 		public static VkResult vkGetPhysicalDeviceCooperativeMatrixPropertiesNV(IntPtr physicalDevice, uint* pPropertyCount, IntPtr pProperties) { throw new NotImplementedException(); }

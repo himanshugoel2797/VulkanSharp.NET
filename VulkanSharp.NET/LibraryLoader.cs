@@ -21,11 +21,17 @@ namespace VulkanSharp.Raw
         public sealed class ManagedPtr<T> : IDisposable
         {
             public IntPtr Pointer { get; }
+            public T Value { get => Marshal.PtrToStructure<T>(Pointer); }
 
             public ManagedPtr(T val)
             {
                 Pointer = Marshal.AllocHGlobal(Marshal.SizeOf(val));
                 Marshal.StructureToPtr(val, Pointer, false);
+            }
+
+            public ManagedPtr()
+            {
+                Pointer = Marshal.AllocHGlobal(Marshal.SizeOf<T>());
             }
 
             public static implicit operator IntPtr(ManagedPtr<T> p) => p.Pointer;
@@ -67,8 +73,6 @@ namespace VulkanSharp.Raw
                 GC.SuppressFinalize(this);
             }
             #endregion
-
-
         }
     }
 }
