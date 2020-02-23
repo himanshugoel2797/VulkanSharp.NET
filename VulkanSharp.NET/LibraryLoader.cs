@@ -131,7 +131,6 @@ namespace VulkanSharp.Raw
         }
 
         public static implicit operator IntPtr(ManagedPtrArray<T> p) => p == null ? IntPtr.Zero : p.Pointer;
-        public static implicit operator ManagedPtrArray<T>(IntPtr p) => new ManagedPtrArray<T>(p);
 
         #region IDisposable Support
         private bool disposedValue = false; // To detect redundant calls

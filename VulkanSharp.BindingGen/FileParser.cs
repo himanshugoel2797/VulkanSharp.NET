@@ -1096,6 +1096,7 @@ namespace VulkanSharp.BindingGen
                 funcPtrDefs += $"\t\tinternal static IntPtr {funcs[i].Name}_hndl;\n";
                 funcPtrInit += $"\t\t\tNativeLibrary.TryGetExport(libHndl, \"{funcs[i].Name}\", out {funcs[i].Name}_hndl);\n";
 
+                bool emitOverload = false;
                 FuncFile += $"\t\tpublic static {CleanTypeName(funcs[i].ReturnType)} {funcs[i].Name}(";
                 for (int j = 0; j < funcs[i].Parameters.Count; j++)
                 {
@@ -1112,11 +1113,13 @@ namespace VulkanSharp.BindingGen
                         if (structs.Any(a => tn == a.Name + "*"))
                         {
                             //tn = "IntPtr";
+                            emitOverload = true;
                             tn = $"ManagedPtrArray<{tn.Trim('*')}>";
                         }
                         if (unions.Any(a => tn == a.Name + "*"))
                         {
                             //tn = "IntPtr";
+                            emitOverload = true;
                             tn = $"ManagedPtrArray<{tn.Trim('*')}>";
                         }
                         if (structs.Any(a => tn == a.Name + "**"))
@@ -1132,6 +1135,44 @@ namespace VulkanSharp.BindingGen
                 }
                 FuncFile = FuncFile.Trim().Trim(',');
                 FuncFile += ") { throw new NotImplementedException(); }\n";
+
+                if (emitOverload)
+                {
+                    FuncFile += $"\t\tpublic static {CleanTypeName(funcs[i].ReturnType)} {funcs[i].Name}(";
+                    for (int j = 0; j < funcs[i].Parameters.Count; j++)
+                    {
+                        if (funcs[i].Parameters[j].ParamName.Contains('['))
+                        {
+                            funcs[i].Parameters[j].ElementCount = GetElementCount(ref funcs[i].Parameters[j].ParamName);
+                            var tn = CleanTypeName(funcs[i].Parameters[j].TypeName);
+                            FuncFile += $"[MarshalAs(UnmanagedType.LPArray, SizeConst={funcs[i].Parameters[j].ElementCount})] {tn}[] {CleanItemName(funcs[i].Parameters[j].ParamName).Split('[')[0]}, ";
+                        }
+                        else
+                        {
+                            var attr = "";
+                            var tn = CleanTypeName(funcs[i].Parameters[j].TypeName);
+                            if (structs.Any(a => tn == a.Name + "*"))
+                            {
+                                tn = "IntPtr";
+                            }
+                            if (unions.Any(a => tn == a.Name + "*"))
+                            {
+                                tn = "IntPtr";
+                            }
+                            if (structs.Any(a => tn == a.Name + "**"))
+                            {
+                                tn = "IntPtr";
+                            }
+                            if (unions.Any(a => tn == a.Name + "**"))
+                            {
+                                tn = "IntPtr";
+                            }
+                            FuncFile += $"{attr}{tn} {CleanItemName(funcs[i].Parameters[j].ParamName)}, ";
+                        }
+                    }
+                    FuncFile = FuncFile.Trim().Trim(',');
+                    FuncFile += ") { throw new NotImplementedException(); }\n";
+                }
             }
             funcPtrInit += "\t\t}\n";
 
