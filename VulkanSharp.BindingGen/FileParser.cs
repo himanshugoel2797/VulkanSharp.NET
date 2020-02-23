@@ -93,6 +93,7 @@ namespace VulkanSharp.BindingGen
         public string StructFile { get; private set; }
         public string UnionFile { get; private set; }
         public string FuncFile { get; private set; }
+        public string DelegateFile { get; private set; }
 
         string funcPtrDefs;
         string funcPtrInit;
@@ -102,6 +103,7 @@ namespace VulkanSharp.BindingGen
         List<VkStructDef> structs;
         List<VkStructDef> unions;
         List<VkFuncDef> funcs;
+        List<VkFuncDef> delegates;
         List<string> flagList;
         Dictionary<string, string> typedefs;
 
@@ -114,6 +116,7 @@ namespace VulkanSharp.BindingGen
             structs = new List<VkStructDef>();
             unions = new List<VkStructDef>();
             funcs = new List<VkFuncDef>();
+            delegates = new List<VkFuncDef>();
             flagList = new List<string>();
             typedefs = new Dictionary<string, string>();
         }
@@ -126,6 +129,9 @@ namespace VulkanSharp.BindingGen
             //read all typedefs that specify flag enums
             for (int i = 0; i < files.Length; i++)
                 ProcessFlags(File.ReadAllLines(Path.Combine(path, files[i])));
+            //read all delegate definitions
+            for (int i = 0; i < files.Length; i++)
+                ProcessDelegates(File.ReadAllLines(Path.Combine(path, files[i])));
             //read all enums starting with Vk, resolve named values
             for (int i = 0; i < files.Length; i++)
                 ProcessEnums(File.ReadAllLines(Path.Combine(path, files[i])));
@@ -169,6 +175,9 @@ namespace VulkanSharp.BindingGen
             //emit enums in namespace VulkanSharp.Raw
             EmitEnums();
 
+            //Emit Delegates
+            EmitDelegates();
+
             //emit structs with layout attributes in namespace VulkanSharp.Raw
             EmitUnions();
             EmitStructs();
@@ -181,6 +190,7 @@ namespace VulkanSharp.BindingGen
             File.WriteAllText("../../../../vkStructs.cs", StructFile);
             File.WriteAllText("../../../../vkUnions.cs", UnionFile);
             File.WriteAllText("../../../../vkFuncs.cs", FuncFile);
+            File.WriteAllText("../../../../vkDelegates.cs", DelegateFile);
         }
 
         #region Parser
@@ -333,6 +343,64 @@ namespace VulkanSharp.BindingGen
             }
         }
 
+        private void ProcessDelegates(string[] lines)
+        {
+            //check for VKAPI_ATTR
+            //extract return type, store name and parameters
+            //convert types and names in a separate pass
+            VkFuncDef d = null;
+            for (int i = 0; i < lines.Length; i++)
+            {
+                var s = lines[i].Trim();
+                var p = s.Split(' ', ')', '(').Where(a => !string.IsNullOrWhiteSpace(a)).ToArray();
+                int j = 0;
+                if (s.StartsWith("typedef") && s.Contains("(VKAPI_PTR *PFN_") && !s.Contains("vkVoidFunction"))
+                {
+                    d = new VkFuncDef();
+                    d.ReturnType = "";
+                    //stuff between VKAPI_ATTR and VKAPI_CALL is the return type
+                    j = 1;
+                    for (; j < p.Length; j++)
+                        if (p[j] != "VKAPI_PTR")
+                            d.ReturnType += p[j] + " ";
+                        else
+                        {
+                            d.ReturnType = d.ReturnType.Trim();
+                            break;
+                        }
+                    j++;
+                    d.Name = p[j].Trim('*');
+                    j++;
+                }
+                if (d != null && j < p.Length)
+                {
+                    //parse the parameter
+                    var tName = "";
+                    for (int k = j; k < p.Length; k++)
+                    {
+                        if (p[k] == ";") break;
+                        if (!p[k].Contains(',') && k + 1 < p.Length && p[k + 1] != ";")
+                            tName += p[k] + " ";
+                        else
+                        {
+                            d.Parameters.Add(new ParameterDef()
+                            {
+                                TypeName = tName.Trim(),
+                                ParamName = p[k].Replace(",", "")
+                            });
+                            tName = "";
+                        }
+                    }
+
+                    if (s.EndsWith(");"))
+                    {
+                        delegates.Add(d);
+                        d = null;
+                    }
+                }
+            }
+        }
+
         private void ProcessFuncs(string[] lines)
         {
             //check for VKAPI_ATTR
@@ -458,7 +526,7 @@ namespace VulkanSharp.BindingGen
             if (typedefs.ContainsKey(tn))
                 tn = typedefs[tn];
 
-            if (tn.StartsWith("PFN_"))
+            if (tn.StartsWith("PFN_vkVoidFunction"))
                 tn = "IntPtr";
             while (end_ptr-- > 0)
                 tn += "*";
@@ -592,6 +660,8 @@ namespace VulkanSharp.BindingGen
                             return sizeof(int);
                         if (flagList.Contains(tn))
                             return sizeof(uint);
+                        if (delegates.Any(a => a.Name == tn))
+                            return sizeof(IntPtr);
                         if (structs.Any(a => a.Name == tn))
                         {
                             var v = structs.Find(a => a.Name == tn);
@@ -658,6 +728,8 @@ namespace VulkanSharp.BindingGen
                             return sizeof(int);
                         if (flagList.Contains(tn))
                             return sizeof(uint);
+                        if (delegates.Any(a => a.Name == tn))
+                            return sizeof(IntPtr);
                         if (structs.Any(a => a.Name == tn))
                         {
                             var v = structs.Find(a => a.Name == tn);
@@ -990,15 +1062,15 @@ namespace VulkanSharp.BindingGen
                         var kn = CleanItemName(kvp.ParamName);
                         if (structs.Any(a => tn == a.Name + "*"))
                         {
-                            //tn = tn.Trim('*') + "[]";
-                            //attr = "[MarshalAs(UnmanagedType.LPArray)]";
                             tn = "IntPtr";
                         }
                         if (unions.Any(a => tn == a.Name + "*"))
                         {
-                            //tn = tn.Trim('*') + "[]";
-                            //attr = "[MarshalAs(UnmanagedType.LPArray)]";
                             tn = "IntPtr";
+                        }
+                        if (delegates.Any(a => tn == a.Name))
+                        {
+                            attr = "[MarshalAs(UnmanagedType.FunctionPtr)]";
                         }
                         StructFile += $"\t\t\t[FieldOffset({kvp.Offset})]{attr}public {tn} {kn};\n";
                     }
@@ -1076,6 +1148,60 @@ namespace VulkanSharp.BindingGen
             FuncFile += "}\n";
 
             funcPtrDefs += "}\n";
+        }
+
+        private void EmitDelegates()
+        {
+            DelegateFile = "using System;\nusing System.Runtime.InteropServices;\nnamespace VulkanSharp.Raw {\n";
+            DelegateFile += "\tpublic unsafe static partial class Vk {\n";
+            for (int i = 0; i < delegates.Count; i++)
+            {
+                DelegateFile += $"\t\t[UnmanagedFunctionPointer(CallingConvention.Cdecl)]\n";
+                DelegateFile += $"\t\tpublic delegate {CleanTypeName(delegates[i].ReturnType)} {delegates[i].Name}(";
+                for (int j = 0; j < delegates[i].Parameters.Count; j++)
+                {
+                    if (delegates[i].Parameters[j].ParamName.Contains('['))
+                    {
+                        delegates[i].Parameters[j].ElementCount = GetElementCount(ref delegates[i].Parameters[j].ParamName);
+                        var tn = CleanTypeName(delegates[i].Parameters[j].TypeName);
+                        DelegateFile += $"[MarshalAs(UnmanagedType.LPArray, SizeConst={delegates[i].Parameters[j].ElementCount})] {tn}[] {CleanItemName(delegates[i].Parameters[j].ParamName).Split('[')[0]}, ";
+                    }
+                    else
+                    {
+                        var attr = "";
+                        var tn = CleanTypeName(delegates[i].Parameters[j].TypeName);
+                        if (structs.Any(a => tn == a.Name + "*"))
+                        {
+                            //tn = tn.Trim('*') + "[]";
+                            //attr = "[MarshalAs(UnmanagedType.LPArray)]";
+                            tn = "IntPtr";
+                        }
+                        if (unions.Any(a => tn == a.Name + "*"))
+                        {
+                            //tn = tn.Trim('*') + "[]";
+                            //attr = "[MarshalAs(UnmanagedType.LPArray)]";
+                            tn = "IntPtr";
+                        }
+                        if (structs.Any(a => tn == a.Name + "**"))
+                        {
+                            //tn = tn.Trim('*') + "[][]";
+                            //attr = "[MarshalAs(UnmanagedType.LPArray)]";
+                            tn = "IntPtr";
+                        }
+                        if (unions.Any(a => tn == a.Name + "**"))
+                        {
+                            //tn = tn.Trim('*') + "[][]";
+                            //attr = "[MarshalAs(UnmanagedType.LPArray)]";
+                            tn = "IntPtr";
+                        }
+                        DelegateFile += $"{attr}{tn} {CleanItemName(delegates[i].Parameters[j].ParamName)}, ";
+                    }
+                }
+                DelegateFile = DelegateFile.Trim().Trim(',');
+                DelegateFile += ");\n";
+            }
+            DelegateFile += "\t}\n";
+            DelegateFile += "}\n";
         }
         #endregion
     }

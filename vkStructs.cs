@@ -263,11 +263,11 @@ namespace VulkanSharp.Raw {
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkAllocationCallbacks {
 			[FieldOffset(0)]public IntPtr pUserData;
-			[FieldOffset(8)]public IntPtr pfnAllocation;
-			[FieldOffset(16)]public IntPtr pfnReallocation;
-			[FieldOffset(24)]public IntPtr pfnFree;
-			[FieldOffset(32)]public IntPtr pfnInternalAllocation;
-			[FieldOffset(40)]public IntPtr pfnInternalFree;
+			[FieldOffset(8)][MarshalAs(UnmanagedType.FunctionPtr)]public PFN_vkAllocationFunction pfnAllocation;
+			[FieldOffset(16)][MarshalAs(UnmanagedType.FunctionPtr)]public PFN_vkReallocationFunction pfnReallocation;
+			[FieldOffset(24)][MarshalAs(UnmanagedType.FunctionPtr)]public PFN_vkFreeFunction pfnFree;
+			[FieldOffset(32)][MarshalAs(UnmanagedType.FunctionPtr)]public PFN_vkInternalAllocationNotification pfnInternalAllocation;
+			[FieldOffset(40)][MarshalAs(UnmanagedType.FunctionPtr)]public PFN_vkInternalFreeNotification pfnInternalFree;
 		}
 
         public static ManagedPtr<VkAllocationCallbacks> Pointer(this VkAllocationCallbacks i) => new ManagedPtr<VkAllocationCallbacks>(i);
@@ -3630,7 +3630,7 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public VkDebugReportFlagsEXT flags;
-			[FieldOffset(24)]public IntPtr pfnCallback;
+			[FieldOffset(24)][MarshalAs(UnmanagedType.FunctionPtr)]public PFN_vkDebugReportCallbackEXT pfnCallback;
 			[FieldOffset(32)]public IntPtr pUserData;
 		}
 
@@ -4342,7 +4342,7 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(16)]public uint flags;
 			[FieldOffset(20)]public VkDebugUtilsMessageSeverityFlagsEXT messageSeverity;
 			[FieldOffset(24)]public VkDebugUtilsMessageTypeFlagsEXT messageType;
-			[FieldOffset(32)]public IntPtr pfnUserCallback;
+			[FieldOffset(32)][MarshalAs(UnmanagedType.FunctionPtr)]public PFN_vkDebugUtilsMessengerCallbackEXT pfnUserCallback;
 			[FieldOffset(40)]public IntPtr pUserData;
 		}
 

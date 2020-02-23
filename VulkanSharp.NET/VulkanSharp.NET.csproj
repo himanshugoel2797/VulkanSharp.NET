@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <Compile Include="..\vkConsts.cs" Link="vkConsts.cs" />
+    <Compile Include="..\vkDelegates.cs" Link="vkDelegates.cs" />
     <Compile Include="..\vkEnums.cs" Link="vkEnums.cs" />
     <Compile Include="..\vkFuncs.cs" Link="vkFuncs.cs" />
     <Compile Include="..\vkStructs.cs" Link="vkStructs.cs" />
