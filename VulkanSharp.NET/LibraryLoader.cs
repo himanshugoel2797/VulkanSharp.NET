@@ -20,6 +20,7 @@ namespace VulkanSharp.Raw
         }
 
         public static implicit operator IntPtr(ManagedPtr<T> p) => p.Pointer;
+        public static implicit operator ManagedPtrArray<T>(ManagedPtr<T> p) => new ManagedPtrArray<T>(p);
 
         #region IDisposable Support
         private bool disposedValue = false; // To detect redundant calls
@@ -63,14 +64,14 @@ namespace VulkanSharp.Raw
     public sealed class ManagedPtrArray<T> : IDisposable
     {
         public IntPtr Pointer { get; }
-        private uint cnt;
+        public uint Length { get; }
 
         public T[] Value
         {
             get
             {
-                var tmp = new T[cnt];
-                for (int i = 0; i < cnt; i++)
+                var tmp = new T[Length];
+                for (int i = 0; i < Length; i++)
                     tmp[i] = this[i];
                 return tmp;
             }
@@ -78,7 +79,7 @@ namespace VulkanSharp.Raw
 
         public ManagedPtrArray(T[] val)
         {
-            cnt = (uint)val.Length;
+            Length = (uint)val.Length;
             var unitSz = Marshal.SizeOf<T>();
             Pointer = Marshal.AllocHGlobal(unitSz * val.Length);
             for (int i = 0; i < val.Length; i++)
@@ -87,26 +88,50 @@ namespace VulkanSharp.Raw
 
         public ManagedPtrArray(int cnt)
         {
-            this.cnt = (uint)cnt;
-            Pointer = Marshal.AllocHGlobal(Marshal.SizeOf<T>() * cnt);
+            if (cnt != 0)
+            {
+                this.Length = (uint)cnt;
+                Pointer = Marshal.AllocHGlobal(Marshal.SizeOf<T>() * cnt);
+            }
+            else
+                throw new ArgumentException("cnt must be greater than 0");
         }
 
         public ManagedPtrArray(uint cnt)
         {
-            this.cnt = cnt;
-            Pointer = Marshal.AllocHGlobal(Marshal.SizeOf<T>() * (int)cnt);
+            if (cnt != 0)
+            {
+                this.Length = (uint)cnt;
+                Pointer = Marshal.AllocHGlobal(Marshal.SizeOf<T>() * (int)cnt);
+            }
+            else
+                throw new ArgumentException("cnt must be greater than 0");
+        }
+
+        public ManagedPtrArray(ManagedPtr<T> o)
+        {
+            this.Length = 1;
+            disposedValue = true;   //only free in the parent object
+            Pointer = o.Pointer;
+        }
+
+        private ManagedPtrArray(IntPtr p)
+        {
+            disposedValue = true;   //Don't autofree a custom pointer
+            Pointer = p;
         }
 
         public T this[int i]
         {
             get
             {
-                if (i >= cnt) throw new IndexOutOfRangeException();
+                if (i >= Length) throw new IndexOutOfRangeException();
                 return Marshal.PtrToStructure<T>(Pointer + i * Marshal.SizeOf<T>());
             }
         }
 
-        public static implicit operator IntPtr(ManagedPtrArray<T> p) => p.Pointer;
+        public static implicit operator IntPtr(ManagedPtrArray<T> p) => p == null ? IntPtr.Zero : p.Pointer;
+        public static implicit operator ManagedPtrArray<T>(IntPtr p) => new ManagedPtrArray<T>(p);
 
         #region IDisposable Support
         private bool disposedValue = false; // To detect redundant calls

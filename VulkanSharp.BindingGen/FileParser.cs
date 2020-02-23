@@ -1111,26 +1111,20 @@ namespace VulkanSharp.BindingGen
                         var tn = CleanTypeName(funcs[i].Parameters[j].TypeName);
                         if (structs.Any(a => tn == a.Name + "*"))
                         {
-                            //tn = tn.Trim('*') + "[]";
-                            //attr = "[MarshalAs(UnmanagedType.LPArray)]";
-                            tn = "IntPtr";
+                            //tn = "IntPtr";
+                            tn = $"ManagedPtrArray<{tn.Trim('*')}>";
                         }
                         if (unions.Any(a => tn == a.Name + "*"))
                         {
-                            //tn = tn.Trim('*') + "[]";
-                            //attr = "[MarshalAs(UnmanagedType.LPArray)]";
-                            tn = "IntPtr";
+                            //tn = "IntPtr";
+                            tn = $"ManagedPtrArray<{tn.Trim('*')}>";
                         }
                         if (structs.Any(a => tn == a.Name + "**"))
                         {
-                            //tn = tn.Trim('*') + "[][]";
-                            //attr = "[MarshalAs(UnmanagedType.LPArray)]";
                             tn = "IntPtr";
                         }
                         if (unions.Any(a => tn == a.Name + "**"))
                         {
-                            //tn = tn.Trim('*') + "[][]";
-                            //attr = "[MarshalAs(UnmanagedType.LPArray)]";
                             tn = "IntPtr";
                         }
                         FuncFile += $"{attr}{tn} {CleanItemName(funcs[i].Parameters[j].ParamName)}, ";
@@ -1172,26 +1166,20 @@ namespace VulkanSharp.BindingGen
                         var tn = CleanTypeName(delegates[i].Parameters[j].TypeName);
                         if (structs.Any(a => tn == a.Name + "*"))
                         {
-                            //tn = tn.Trim('*') + "[]";
-                            //attr = "[MarshalAs(UnmanagedType.LPArray)]";
                             tn = "IntPtr";
+                            //tn = $"ManagedPtrArray<{tn.Trim('*')}>";
                         }
                         if (unions.Any(a => tn == a.Name + "*"))
                         {
-                            //tn = tn.Trim('*') + "[]";
-                            //attr = "[MarshalAs(UnmanagedType.LPArray)]";
                             tn = "IntPtr";
+                            //tn = $"ManagedPtrArray<{tn.Trim('*')}>";
                         }
                         if (structs.Any(a => tn == a.Name + "**"))
                         {
-                            //tn = tn.Trim('*') + "[][]";
-                            //attr = "[MarshalAs(UnmanagedType.LPArray)]";
                             tn = "IntPtr";
                         }
                         if (unions.Any(a => tn == a.Name + "**"))
                         {
-                            //tn = tn.Trim('*') + "[][]";
-                            //attr = "[MarshalAs(UnmanagedType.LPArray)]";
                             tn = "IntPtr";
                         }
                         DelegateFile += $"{attr}{tn} {CleanItemName(delegates[i].Parameters[j].ParamName)}, ";
