@@ -90,7 +90,7 @@ namespace RadeonRays.BindingGen
             //generate interface implementation
             var intptr_type = mod.ImportReference(typeof(IntPtr));
             foreach (TypeDefinition type in mod.Types)
-                if (type.Name == "Vk" || type.Name == "Vma")
+                if (type.Name == "RadeonRays")
                     foreach (MethodDefinition mthd in type.Methods)
                         if (!mthd.IsConstructor && mthd.IsStatic && mthd.Name != "InitPtrs" && mthd.Name != "Pointer")
                         {
