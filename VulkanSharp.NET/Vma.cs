@@ -55,39 +55,39 @@ namespace VulkanSharp.Raw
 
         public enum VmaMemoryUsage
         {
-            MEMORY_USAGE_UNKNOWN = 0,
-            MEMORY_USAGE_GPU_ONLY = 1,
-            MEMORY_USAGE_CPU_ONLY = 2,
-            MEMORY_USAGE_CPU_TO_GPU = 3,
-            MEMORY_USAGE_GPU_TO_CPU = 4,
-            MEMORY_USAGE_CPU_COPY = 5,
-            MEMORY_USAGE_GPU_LAZILY_ALLOCATED = 6,
-            MEMORY_USAGE_MAX_ENUM = 0x7FFFFFFF
+            Unknown = 0,
+            GpuOnly = 1,
+            CpuOnly = 2,
+            CpuToGpu = 3,
+            GpuToCpu = 4,
+            CpuCopy = 5,
+            GpuLazilyAllocated = 6,
+            MaxEnum = 0x7FFFFFFF
         }
 
         public enum VmaAllocationCreateFlags
         {
-            ALLOCATION_CREATE_DEDICATED_MEMORY_BIT = 0x00000001,
-            ALLOCATION_CREATE_NEVER_ALLOCATE_BIT = 0x00000002,
-            ALLOCATION_CREATE_MAPPED_BIT = 0x00000004,
-            ALLOCATION_CREATE_CAN_BECOME_LOST_BIT = 0x00000008,
-            ALLOCATION_CREATE_CAN_MAKE_OTHER_LOST_BIT = 0x00000010,
-            ALLOCATION_CREATE_USER_DATA_COPY_STRING_BIT = 0x00000020,
-            ALLOCATION_CREATE_UPPER_ADDRESS_BIT = 0x00000040,
-            ALLOCATION_CREATE_DONT_BIND_BIT = 0x00000080,
-            ALLOCATION_CREATE_WITHIN_BUDGET_BIT = 0x00000100,
-            ALLOCATION_CREATE_STRATEGY_BEST_FIT_BIT = 0x00010000,
-            ALLOCATION_CREATE_STRATEGY_WORST_FIT_BIT = 0x00020000,
-            ALLOCATION_CREATE_STRATEGY_FIRST_FIT_BIT = 0x00040000,
-            ALLOCATION_CREATE_STRATEGY_MIN_MEMORY_BIT = ALLOCATION_CREATE_STRATEGY_BEST_FIT_BIT,
-            ALLOCATION_CREATE_STRATEGY_MIN_TIME_BIT = ALLOCATION_CREATE_STRATEGY_FIRST_FIT_BIT,
-            ALLOCATION_CREATE_STRATEGY_MIN_FRAGMENTATION_BIT = ALLOCATION_CREATE_STRATEGY_WORST_FIT_BIT,
+            DedicatedMemoryBit = 0x00000001,
+            NeverAllocateBit = 0x00000002,
+            MappedBit = 0x00000004,
+            CanBecomeLostBit = 0x00000008,
+            CanMakeOtherLostBit = 0x00000010,
+            UserDataCopyStringBit = 0x00000020,
+            UpperAddressBit = 0x00000040,
+            DontBindBit = 0x00000080,
+            WithinBudgetBit = 0x00000100,
+            StrategyBestFitBit = 0x00010000,
+            StrategyWorstFitBit = 0x00020000,
+            StrategyFirstFitBit = 0x00040000,
+            StrategyMinMemoryBit = StrategyBestFitBit,
+            StrategyMinTimeBit = StrategyFirstFitBit,
+            StrategyMinFragmentationBit = StrategyWorstFitBit,
 
-            ALLOCATION_CREATE_STRATEGY_MASK =
-            ALLOCATION_CREATE_STRATEGY_BEST_FIT_BIT |
-            ALLOCATION_CREATE_STRATEGY_WORST_FIT_BIT |
-            ALLOCATION_CREATE_STRATEGY_FIRST_FIT_BIT,
-            ALLOCATION_CREATE_FLAG_BITS_MAX_ENUM = 0x7FFFFFFF
+            StrategyMask =
+            StrategyBestFitBit |
+            StrategyWorstFitBit |
+            StrategyFirstFitBit,
+            MaxEnum = 0x7FFFFFFF
         }
 
         [StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
@@ -117,9 +117,9 @@ namespace VulkanSharp.Raw
         public static ManagedPtr<VmaAllocationInfo> Pointer(this VmaAllocationInfo i) => new ManagedPtr<VmaAllocationInfo>(i);
         public static ManagedPtrArray<VmaAllocationInfo> Pointer(this VmaAllocationInfo[] i) => new ManagedPtrArray<VmaAllocationInfo>(i);
 
-        public static VkResult vmaCreateBuffer(IntPtr allocator, IntPtr pBufferCreateInfo, IntPtr pAllocationCreateInfo, IntPtr* pBuffer, IntPtr* pAllocation, IntPtr pAllocationInfo) { throw new NotImplementedException(); }
+        public static VkResult vmaCreateBuffer(IntPtr allocator, ManagedPtrArray<VkBufferCreateInfo> pBufferCreateInfo, ManagedPtrArray<VmaAllocationCreateInfo> pAllocationCreateInfo, IntPtr* pBuffer, IntPtr* pAllocation, ManagedPtrArray<VmaAllocationInfo> pAllocationInfo) { throw new NotImplementedException(); }
         public static void vmaDestroyBuffer(IntPtr allocator, IntPtr buffer, IntPtr allocation) { throw new NotImplementedException(); }
-        public static VkResult vmaCreateImage(IntPtr allocator, IntPtr pImageCreateInfo, IntPtr pAllocationCreateInfo, IntPtr* pImage, IntPtr* pAllocation, IntPtr pAllocationInfo) { throw new NotImplementedException(); }
+        public static VkResult vmaCreateImage(IntPtr allocator, ManagedPtrArray<VkImageCreateInfo> pImageCreateInfo, ManagedPtrArray<VmaAllocationCreateInfo> pAllocationCreateInfo, IntPtr* pImage, IntPtr* pAllocation, ManagedPtrArray<VmaAllocationInfo> pAllocationInfo) { throw new NotImplementedException(); }
         public static void vmaDestroyImage(IntPtr allocator, IntPtr image, IntPtr allocation) { throw new NotImplementedException(); }
 
         internal static IntPtr vmaCreateAllocator_hndl;

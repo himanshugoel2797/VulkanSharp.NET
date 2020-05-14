@@ -5,7 +5,7 @@ using System.Text;
 using System.Linq;
 using System.Runtime.InteropServices;
 
-namespace VulkanSharp.BindingGen
+namespace RadeonRaysSharp.BindingGen
 {
     class VkEnumDef
     {
@@ -121,32 +121,67 @@ namespace VulkanSharp.BindingGen
             typedefs = new Dictionary<string, string>();
         }
 
+        private string[] StripComments(string[] ss)
+        {
+            var ls = new List<string>();
+
+            bool inblock = false;
+            char prev_char = ' ';
+            foreach (string s in ss)
+            {
+                var t = s.Split("//")[0].Trim();
+
+                var out_str = "";
+                foreach (char c in t)
+                {
+                    var ident = prev_char + c.ToString();
+                    if (ident == "/*")
+                    {
+                        inblock = true;
+                        out_str = out_str.Substring(0, out_str.Length - 1);
+                    }
+
+                    if (!inblock)
+                        out_str += c.ToString();
+
+                    if (inblock && ident == "*/")
+                        inblock = false;
+
+                    prev_char = c;
+                }
+
+                if (!string.IsNullOrWhiteSpace(out_str))
+                    ls.Add(out_str);
+            }
+            return ls.ToArray();
+        }
+
         public void Process()
         {
             //read all defines starting with VK, put them in a list
             for (int i = 0; i < files.Length; i++)
-                ProcessDefines(File.ReadAllLines(Path.Combine(path, files[i])));
+                ProcessDefines(StripComments(File.ReadAllLines(Path.Combine(path, files[i]))));
             //read all typedefs that specify flag enums
             for (int i = 0; i < files.Length; i++)
-                ProcessFlags(File.ReadAllLines(Path.Combine(path, files[i])));
+                ProcessFlags(StripComments(File.ReadAllLines(Path.Combine(path, files[i]))));
             //read all delegate definitions
             for (int i = 0; i < files.Length; i++)
-                ProcessDelegates(File.ReadAllLines(Path.Combine(path, files[i])));
+                ProcessDelegates(StripComments(File.ReadAllLines(Path.Combine(path, files[i]))));
             //read all enums starting with Vk, resolve named values
             for (int i = 0; i < files.Length; i++)
-                ProcessEnums(File.ReadAllLines(Path.Combine(path, files[i])));
+                ProcessEnums(StripComments(File.ReadAllLines(Path.Combine(path, files[i]))));
             //read all structs starting with Vk, convert to correctly sized types
             for (int i = 0; i < files.Length; i++)
-                ProcessStructs(File.ReadAllLines(Path.Combine(path, files[i])));
+                ProcessStructs(StripComments(File.ReadAllLines(Path.Combine(path, files[i]))));
             //read all unions starting with Vk, convert to correctly sized types
             for (int i = 0; i < files.Length; i++)
-                ProcessUnions(File.ReadAllLines(Path.Combine(path, files[i])));
+                ProcessUnions(StripComments(File.ReadAllLines(Path.Combine(path, files[i]))));
             //read all function definitions starting with vk
             for (int i = 0; i < files.Length; i++)
-                ProcessFuncs(File.ReadAllLines(Path.Combine(path, files[i])));
+                ProcessFuncs(StripComments(File.ReadAllLines(Path.Combine(path, files[i]))));
             //read all typedefs that aren't struct/enum defs
             for (int i = 0; i < files.Length; i++)
-                ProcessTypedefs(File.ReadAllLines(Path.Combine(path, files[i])));
+                ProcessTypedefs(StripComments(File.ReadAllLines(Path.Combine(path, files[i]))));
 
             var keys = typedefs.Keys.ToArray();
             foreach (var k in keys)
@@ -169,28 +204,28 @@ namespace VulkanSharp.BindingGen
                 ComputeUnionSize(unions[i]);
             }
 
-            //emit defines as constants in class: VulkanSharp.Raw.VkDefines
+            //emit defines as constants in class: RadeonRaysSharp.Raw.VkDefines
             EmitConstants();
 
-            //emit enums in namespace VulkanSharp.Raw
+            //emit enums in namespace RadeonRaysSharp.Raw
             EmitEnums();
 
             //Emit Delegates
             EmitDelegates();
 
-            //emit structs with layout attributes in namespace VulkanSharp.Raw
+            //emit structs with layout attributes in namespace RadeonRaysSharp.Raw
             EmitUnions();
             EmitStructs();
 
-            //emit function definitions in class: VulkanSharp.Raw.VkFuncs
+            //emit function definitions in class: RadeonRaysSharp.Raw.VkFuncs
             EmitFuncs();
 
-            File.WriteAllText("../../../../vkConsts.cs", ConstantFile);
-            File.WriteAllText("../../../../vkEnums.cs", EnumFile);
-            File.WriteAllText("../../../../vkStructs.cs", StructFile);
-            File.WriteAllText("../../../../vkUnions.cs", UnionFile);
-            File.WriteAllText("../../../../vkFuncs.cs", FuncFile);
-            File.WriteAllText("../../../../vkDelegates.cs", DelegateFile);
+            File.WriteAllText("../../../../rrConsts.cs", ConstantFile);
+            File.WriteAllText("../../../../rrEnums.cs", EnumFile);
+            File.WriteAllText("../../../../rrStructs.cs", StructFile);
+            File.WriteAllText("../../../../rrUnions.cs", UnionFile);
+            File.WriteAllText("../../../../rrFuncs.cs", FuncFile);
+            File.WriteAllText("../../../../rrDelegates.cs", DelegateFile);
         }
 
         #region Parser
@@ -199,7 +234,7 @@ namespace VulkanSharp.BindingGen
             for (int i = 0; i < lines.Length; i++)
             {
                 var s = lines[i].Trim();
-                if (s.StartsWith("#define VK_"))
+                if (s.StartsWith("#define RR_"))
                 {
                     var p = s.Split(' ').Where(a => !string.IsNullOrWhiteSpace(a)).ToArray();
                     var d = new VkDefineDef();
@@ -236,30 +271,39 @@ namespace VulkanSharp.BindingGen
             //extract name,
             //store values as is, can translate in a separate pass
             VkEnumDef d = null;
+            int enum_val = 0;
             for (int i = 0; i < lines.Length; i++)
             {
                 var s = lines[i].Trim();
                 var p = s.Split(' ').Where(a => !string.IsNullOrWhiteSpace(a)).ToArray();
-                if (s.StartsWith("typedef enum Vk"))
+                if (s.StartsWith("typedef enum"))
                 {
                     d = new VkEnumDef();
-                    d.Name = p[2];
                 }
                 else if (d != null)
                 {
                     if (s.StartsWith("}"))
                     {
+                        d.Name = s.Trim('}', ';').Trim();
                         enums.Add(d);
+                        enum_val = 0;
                         d = null;
                     }
-                    else
+                    else if (s != "{")
                     {
-                        if (p.Length < 3) throw new Exception("Enum member doesn't have a value assigned, will need to track order");
-                        var p_v = p[2];
-                        for (int j = 3; j < p.Length; j++)
-                            p_v += p[j];
+                        if (p.Length < 3)
+                        {
+                            d.Values.Add(p[0].Trim(','), enum_val.ToString());
+                            enum_val++;
+                        }
+                        else
+                        {
+                            var p_v = p[2];
+                            for (int j = 3; j < p.Length; j++)
+                                p_v += p[j];
 
-                        d.Values.Add(p[0], p_v.Trim(','));
+                            d.Values.Add(p[0].Trim(','), p_v.Trim(','));
+                        }
                     }
                 }
             }
@@ -275,34 +319,49 @@ namespace VulkanSharp.BindingGen
             for (int i = 0; i < lines.Length; i++)
             {
                 var s = lines[i].Trim();
+                if (string.IsNullOrEmpty(s)) continue;
                 var p = s.Split(' ').Where(a => !string.IsNullOrWhiteSpace(a)).ToArray();
-                if (s.StartsWith("typedef struct Vk"))
+                if (s.StartsWith("typedef struct"))
                 {
                     d = new VkStructDef();
-                    d.Name = p[2];
                 }
                 else if (d != null)
                 {
                     if (s.StartsWith("}"))
                     {
+                        d.Name = s.Trim('}', ';').Trim();
                         structs.Add(d);
                         d = null;
                     }
-                    else
+                    else if (s != "{")
                     {
-                        if (p.Length < 2) throw new Exception();
-                        var tName = "";
-                        for (int j = 0; j < p.Length - 1; j++)
-                            tName += p[j] + " ";
-
-                        var pname = p[p.Length - 1].Trim(';');
-                        pname = pname.Split(':')[0];
-#warning Bitfield handling not implemented, bitfields will be wrong
-                        d.Parameters.Add(new ParameterDef()
+                        if (s == "union")
                         {
-                            ParamName = pname,
-                            TypeName = tName.Trim()
-                        });
+#warning Hardcoded to handle the single inline union in RadeonRays
+                            d.Parameters.Add(new ParameterDef()
+                            {
+                                ParamName = "primitives",
+                                TypeName = "void*",
+                            });
+                            while (!lines[i].EndsWith("};"))
+                                i++;
+                        }
+                        else
+                        {
+                            if (p.Length < 2) throw new Exception();
+                            var tName = "";
+                            for (int j = 0; j < p.Length - 1; j++)
+                                tName += p[j] + " ";
+
+                            var pname = p[p.Length - 1].Trim(';');
+                            pname = pname.Split(':')[0];
+#warning Bitfield handling not implemented, bitfields will be wrong
+                            d.Parameters.Add(new ParameterDef()
+                            {
+                                ParamName = pname,
+                                TypeName = tName.Trim()
+                            });
+                        }
                     }
                 }
             }
@@ -319,7 +378,7 @@ namespace VulkanSharp.BindingGen
             {
                 var s = lines[i].Trim();
                 var p = s.Split(' ').Where(a => !string.IsNullOrWhiteSpace(a)).ToArray();
-                if (s.StartsWith("typedef union Vk"))
+                if (s.StartsWith("typedef union"))
                 {
                     d = new VkStructDef();
                     d.Name = p[2];
@@ -415,22 +474,53 @@ namespace VulkanSharp.BindingGen
             {
                 var s = lines[i].Trim();
                 var p = s.Split(' ').Where(a => !string.IsNullOrWhiteSpace(a)).ToArray();
-                if (s.StartsWith("VKAPI_ATTR"))
+                if (s.StartsWith("RR_API "))
                 {
                     d = new VkFuncDef();
                     d.ReturnType = "";
                     //stuff between VKAPI_ATTR and VKAPI_CALL is the return type
                     int j = 1;
                     for (; j < p.Length; j++)
-                        if (p[j] != "VKAPI_CALL")
+                        if (!p[j].StartsWith("rr"))
                             d.ReturnType += p[j] + " ";
                         else
                         {
                             d.ReturnType = d.ReturnType.Trim();
                             break;
                         }
+                    var name_arg_pair = p[j].Split('(');
+                    d.Name = name_arg_pair[0];
+
                     j++;
-                    d.Name = p[j].Trim('(');
+                    d.Parameters.Add(new ParameterDef()
+                    {
+                        TypeName = name_arg_pair[1].Trim(),
+                        ParamName = p[j].Trim(',').Replace(");", "").Trim(),
+                    });
+
+                    j++;
+                    while (j < p.Length)
+                    {
+                        var tName = "";
+                        for (; j < p.Length; j++)
+                        {
+                            if (p[j].EndsWith(',') || p[j].EndsWith(");"))
+                                break;
+                            tName += p[j] + " ";
+                        }
+                        d.Parameters.Add(new ParameterDef()
+                        {
+                            TypeName = tName.Trim(),
+                            ParamName = p[j].Trim(',').Replace(");", "").Trim(),
+                        });
+                        j++;
+                    }
+
+                    if (s.EndsWith(");"))
+                    {
+                        funcs.Add(d);
+                        d = null;
+                    }
                 }
                 else if (d != null)
                 {
@@ -459,18 +549,18 @@ namespace VulkanSharp.BindingGen
             {
                 var s = lines[i].Trim();
                 var p = s.Split(' ').Where(a => !string.IsNullOrWhiteSpace(a)).ToArray();
-                if (p.Length > 2 && p[0] == "typedef" && p[1] != "enum" && p[1] != "struct" && p[1] != "union" && p[1] != "VkFlags" && !s.Contains("VKAPI_PTR") && !s.EndsWith("VkBool32;"))
+                if (p.Length > 2 && p[0] == "typedef" && p[1] != "enum" && p[1] != "struct" && p[1] != "union" && p[1] != "VkFlags" && !s.Contains("VKAPI_PTR") && !s.EndsWith("VkBool32;") && !s.EndsWith("RRDevicePtr;") && !s.EndsWith("RRContext;") && !s.EndsWith("RREvent;") && !s.EndsWith("RRCommandStream;"))
                 {
                     typedefs.Add(p[2].TrimEnd(';'), p[1]);
                 }
-                else if (s.StartsWith("VK_DEFINE_HANDLE"))
+                else if (s.StartsWith("RR_DEFINE_HANDLE"))
                 {
                     int sV = s.LastIndexOf('(') + 1;
                     var tname = s.Substring(sV, s.IndexOf(')') - sV);
 
                     typedefs.Add(tname, "IntPtr");
                 }
-                else if (s.StartsWith("VK_DEFINE_NON_DISPATCHABLE_HANDLE"))
+                else if (s.StartsWith("RR_DEFINE_NON_DISPATCHABLE_HANDLE"))
                 {
                     int sV = s.LastIndexOf('(') + 1;
                     var tname = s.Substring(sV, s.IndexOf(')') - sV);
@@ -604,9 +694,22 @@ namespace VulkanSharp.BindingGen
                 case "Window":
                 case "VisualID":
                 case "Display*":
+                case "RRCommandStream":
+                case "RRDevicePtr":
+                case "RRContext":
+                case "RREvent":
+                case "VkBuffer":
+                case "VkDevice":
+                case "VkPhysicalDevice":
+                case "VkQueue":
+                case "VkCommandBuffer":
                     tn = "IntPtr";
                     break;
                 case "HANDLE*":
+                case "RRDevicePtr*":
+                case "RRContext*":
+                case "RREvent*":
+                case "RRCommandStream*":
                 case "SECURITY_ATTRIBUTES*":
                     tn = "IntPtr*";
                     break;
@@ -653,6 +756,10 @@ namespace VulkanSharp.BindingGen
                     case "long":
                         return sizeof(long);
                     case "string":
+                    case "RRDevicePtr":
+                    case "RRContext":
+                    case "RREvent":
+                    case "RRCommandStream":
                     case "IntPtr":
                     case "UIntPtr":
                     case "Window":
@@ -721,6 +828,10 @@ namespace VulkanSharp.BindingGen
                     case "long":
                         return sizeof(long);
                     case "string":
+                    case "RRDevicePtr":
+                    case "RRContext":
+                    case "RREvent":
+                    case "RRCommandStream":
                     case "IntPtr":
                     case "UIntPtr":
                     case "Window":
@@ -857,8 +968,8 @@ namespace VulkanSharp.BindingGen
 
         private void EmitConstants()
         {
-            ConstantFile = "namespace VulkanSharp.Raw {\n";
-            ConstantFile += "\tpublic unsafe static partial class Vk {\n";
+            ConstantFile = "namespace RadeonRaysSharp.Raw {\n";
+            ConstantFile += "\tpublic unsafe static partial class RadeonRays {\n";
 
             void handleDef(VkDefineDef d)
             {
@@ -887,44 +998,23 @@ namespace VulkanSharp.BindingGen
                     ConstantFile += $"\t\t\tpublic const string {ConvertConstName(d.Name)} = {d.Value};\n";
                     d.ValType = typeof(string);
                 }
-                else if (d.Name.StartsWith("VK_MAKE_VERSION"))
+                else if (d.Name.StartsWith("RR_API"))
                 {
                     //skip
 #warning May need proper handling and parsing
-                }
-                else if (d.Name.StartsWith("VK_VERSION_MAJOR"))
+                }else if (d.Name.StartsWith("RR_API_VERSION"))
                 {
-                    //skip
+                    //Skip
 #warning May need proper handling and parsing
                 }
-                else if (d.Name.StartsWith("VK_VERSION_MINOR"))
-                {
-                    //skip
-#warning May need proper handling and parsing
-                }
-                else if (d.Name.StartsWith("VK_VERSION_PATCH"))
-                {
-                    //skip
-#warning May need proper handling and parsing
-                }
-                else if (d.Name.StartsWith("VK_DEFINE_HANDLE"))
-                {
-                    //skip
-#warning May need proper handling and parsing
-                }
-                else if (d.Name.StartsWith("VK_DEFINE_NON_DISPATCHABLE_HANDLE"))
-                {
-                    //skip
-#warning May need proper handling and parsing
-                }
-                else if (d.Value.StartsWith("VK_MAKE_VERSION"))
+                else if (d.Value.StartsWith("RR_MAKE_VERSION"))
                 {
                     //generate value
                     int startV = d.Value.LastIndexOf('(') + 1;
                     var v = d.Value.Substring(startV, d.Value.IndexOf(')') - startV).Split(',').ToArray();
                     uint major = uint.Parse(v[0]);
                     uint minor = uint.Parse(v[1]);
-                    if(!uint.TryParse(v[2], out uint patch))
+                    if (!uint.TryParse(v[2], out uint patch))
                     {
                         patch = uint.Parse(defines.First(a => a.Name == v[2].Trim()).Value);
                     }
@@ -972,8 +1062,9 @@ namespace VulkanSharp.BindingGen
 
         private void EmitEnums()
         {
-            EnumFile = "namespace VulkanSharp.Raw {\n";
-            EnumFile += "\tpublic unsafe static partial class Vk {\n";
+            EnumFile = "namespace RadeonRaysSharp.Raw {\n";
+            EnumFile += "\tpublic unsafe static partial class RadeonRays {\n";
+            EnumFile += "#pragma warning disable CA1712 // Do not prefix enum values with type name\n";
             for (int i = 0; i < enums.Count; i++)
             {
                 var d = enums[i];
@@ -1001,8 +1092,8 @@ namespace VulkanSharp.BindingGen
 
         private void EmitUnions()
         {
-            UnionFile = "using System;\nusing System.Runtime.InteropServices;\nnamespace VulkanSharp.Raw {\n";
-            UnionFile += "\tpublic unsafe static partial class Vk {\n";
+            UnionFile = "using System;\nusing System.Runtime.InteropServices;\nnamespace RadeonRaysSharp.Raw {\n";
+            UnionFile += "\tpublic unsafe static partial class RadeonRays {\n";
             for (int i = 0; i < unions.Count; i++)
             {
                 var d = unions[i];
@@ -1047,8 +1138,8 @@ namespace VulkanSharp.BindingGen
 
         private void EmitStructs()
         {
-            StructFile = "using System;\nusing System.Runtime.InteropServices;\nnamespace VulkanSharp.Raw {\n";
-            StructFile += "\tpublic unsafe static partial class Vk {\n";
+            StructFile = "using System;\nusing System.Runtime.InteropServices;\nnamespace RadeonRaysSharp.Raw {\n";
+            StructFile += "\tpublic unsafe static partial class RadeonRays {\n";
             for (int i = 0; i < structs.Count; i++)
             {
                 var d = structs[i];
@@ -1100,8 +1191,8 @@ namespace VulkanSharp.BindingGen
         {
             funcPtrInit += "\t\tprivate static void InitPtrs() {\n";
 
-            FuncFile = "using System;\nusing System.Runtime.InteropServices;\nnamespace VulkanSharp.Raw {\n";
-            FuncFile += "\tpublic unsafe static partial class Vk {\n";
+            FuncFile = "using System;\nusing System.Runtime.InteropServices;\nnamespace RadeonRaysSharp.Raw {\n";
+            FuncFile += "\tpublic unsafe static partial class RadeonRays {\n";
             for (int i = 0; i < funcs.Count; i++)
             {
                 funcPtrDefs += $"\t\tinternal static IntPtr {funcs[i].Name}_hndl;\n";
@@ -1198,8 +1289,8 @@ namespace VulkanSharp.BindingGen
 
         private void EmitDelegates()
         {
-            DelegateFile = "using System;\nusing System.Runtime.InteropServices;\nnamespace VulkanSharp.Raw {\n";
-            DelegateFile += "\tpublic unsafe static partial class Vk {\n";
+            DelegateFile = "using System;\nusing System.Runtime.InteropServices;\nnamespace RadeonRaysSharp.Raw {\n";
+            DelegateFile += "\tpublic unsafe static partial class RadeonRays {\n";
             for (int i = 0; i < delegates.Count; i++)
             {
                 DelegateFile += $"\t\t[UnmanagedFunctionPointer(CallingConvention.Cdecl)]\n";

@@ -894,7 +894,7 @@ namespace VulkanSharp.Raw {
 		public unsafe struct VkPipelineCacheCreateInfo {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint flags;
+			[FieldOffset(16)]public VkPipelineCacheCreateFlags flags;
 			[FieldOffset(24)]public ulong initialDataSize;
 			[FieldOffset(32)]public IntPtr pInitialData;
 		}
@@ -3896,161 +3896,6 @@ namespace VulkanSharp.Raw {
         public static ManagedPtr<VkCommandBufferInheritanceConditionalRenderingInfoEXT> Pointer(this VkCommandBufferInheritanceConditionalRenderingInfoEXT i) => new ManagedPtr<VkCommandBufferInheritanceConditionalRenderingInfoEXT>(i);
         public static ManagedPtrArray<VkCommandBufferInheritanceConditionalRenderingInfoEXT> Pointer(this VkCommandBufferInheritanceConditionalRenderingInfoEXT[] i) => new ManagedPtrArray<VkCommandBufferInheritanceConditionalRenderingInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
-		public unsafe struct VkDeviceGeneratedCommandsFeaturesNVX {
-			[FieldOffset(0)]public VkStructureType sType;
-			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public bool computeBindingPointSupport;
-		}
-
-        public static ManagedPtr<VkDeviceGeneratedCommandsFeaturesNVX> Pointer(this VkDeviceGeneratedCommandsFeaturesNVX i) => new ManagedPtr<VkDeviceGeneratedCommandsFeaturesNVX>(i);
-        public static ManagedPtrArray<VkDeviceGeneratedCommandsFeaturesNVX> Pointer(this VkDeviceGeneratedCommandsFeaturesNVX[] i) => new ManagedPtrArray<VkDeviceGeneratedCommandsFeaturesNVX>(i);
-		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
-		public unsafe struct VkDeviceGeneratedCommandsLimitsNVX {
-			[FieldOffset(0)]public VkStructureType sType;
-			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint maxIndirectCommandsLayoutTokenCount;
-			[FieldOffset(20)]public uint maxObjectEntryCounts;
-			[FieldOffset(24)]public uint minSequenceCountBufferOffsetAlignment;
-			[FieldOffset(28)]public uint minSequenceIndexBufferOffsetAlignment;
-			[FieldOffset(32)]public uint minCommandsTokenBufferOffsetAlignment;
-		}
-
-        public static ManagedPtr<VkDeviceGeneratedCommandsLimitsNVX> Pointer(this VkDeviceGeneratedCommandsLimitsNVX i) => new ManagedPtr<VkDeviceGeneratedCommandsLimitsNVX>(i);
-        public static ManagedPtrArray<VkDeviceGeneratedCommandsLimitsNVX> Pointer(this VkDeviceGeneratedCommandsLimitsNVX[] i) => new ManagedPtrArray<VkDeviceGeneratedCommandsLimitsNVX>(i);
-		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
-		public unsafe struct VkIndirectCommandsTokenNVX {
-			[FieldOffset(0)]public VkIndirectCommandsTokenTypeNVX tokenType;
-			[FieldOffset(8)]public IntPtr buffer;
-			[FieldOffset(16)]public ulong offset;
-		}
-
-        public static ManagedPtr<VkIndirectCommandsTokenNVX> Pointer(this VkIndirectCommandsTokenNVX i) => new ManagedPtr<VkIndirectCommandsTokenNVX>(i);
-        public static ManagedPtrArray<VkIndirectCommandsTokenNVX> Pointer(this VkIndirectCommandsTokenNVX[] i) => new ManagedPtrArray<VkIndirectCommandsTokenNVX>(i);
-		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
-		public unsafe struct VkIndirectCommandsLayoutTokenNVX {
-			[FieldOffset(0)]public VkIndirectCommandsTokenTypeNVX tokenType;
-			[FieldOffset(4)]public uint bindingUnit;
-			[FieldOffset(8)]public uint dynamicCount;
-			[FieldOffset(12)]public uint divisor;
-		}
-
-        public static ManagedPtr<VkIndirectCommandsLayoutTokenNVX> Pointer(this VkIndirectCommandsLayoutTokenNVX i) => new ManagedPtr<VkIndirectCommandsLayoutTokenNVX>(i);
-        public static ManagedPtrArray<VkIndirectCommandsLayoutTokenNVX> Pointer(this VkIndirectCommandsLayoutTokenNVX[] i) => new ManagedPtrArray<VkIndirectCommandsLayoutTokenNVX>(i);
-		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
-		public unsafe struct VkIndirectCommandsLayoutCreateInfoNVX {
-			[FieldOffset(0)]public VkStructureType sType;
-			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public VkPipelineBindPoint pipelineBindPoint;
-			[FieldOffset(20)]public VkIndirectCommandsLayoutUsageFlagsNVX flags;
-			[FieldOffset(24)]public uint tokenCount;
-			[FieldOffset(32)]public IntPtr pTokens;
-		}
-
-        public static ManagedPtr<VkIndirectCommandsLayoutCreateInfoNVX> Pointer(this VkIndirectCommandsLayoutCreateInfoNVX i) => new ManagedPtr<VkIndirectCommandsLayoutCreateInfoNVX>(i);
-        public static ManagedPtrArray<VkIndirectCommandsLayoutCreateInfoNVX> Pointer(this VkIndirectCommandsLayoutCreateInfoNVX[] i) => new ManagedPtrArray<VkIndirectCommandsLayoutCreateInfoNVX>(i);
-		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
-		public unsafe struct VkCmdProcessCommandsInfoNVX {
-			[FieldOffset(0)]public VkStructureType sType;
-			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public IntPtr objectTable;
-			[FieldOffset(24)]public IntPtr indirectCommandsLayout;
-			[FieldOffset(32)]public uint indirectCommandsTokenCount;
-			[FieldOffset(40)]public IntPtr pIndirectCommandsTokens;
-			[FieldOffset(48)]public uint maxSequencesCount;
-			[FieldOffset(56)]public IntPtr targetCommandBuffer;
-			[FieldOffset(64)]public IntPtr sequencesCountBuffer;
-			[FieldOffset(72)]public ulong sequencesCountOffset;
-			[FieldOffset(80)]public IntPtr sequencesIndexBuffer;
-			[FieldOffset(88)]public ulong sequencesIndexOffset;
-		}
-
-        public static ManagedPtr<VkCmdProcessCommandsInfoNVX> Pointer(this VkCmdProcessCommandsInfoNVX i) => new ManagedPtr<VkCmdProcessCommandsInfoNVX>(i);
-        public static ManagedPtrArray<VkCmdProcessCommandsInfoNVX> Pointer(this VkCmdProcessCommandsInfoNVX[] i) => new ManagedPtrArray<VkCmdProcessCommandsInfoNVX>(i);
-		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
-		public unsafe struct VkCmdReserveSpaceForCommandsInfoNVX {
-			[FieldOffset(0)]public VkStructureType sType;
-			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public IntPtr objectTable;
-			[FieldOffset(24)]public IntPtr indirectCommandsLayout;
-			[FieldOffset(32)]public uint maxSequencesCount;
-		}
-
-        public static ManagedPtr<VkCmdReserveSpaceForCommandsInfoNVX> Pointer(this VkCmdReserveSpaceForCommandsInfoNVX i) => new ManagedPtr<VkCmdReserveSpaceForCommandsInfoNVX>(i);
-        public static ManagedPtrArray<VkCmdReserveSpaceForCommandsInfoNVX> Pointer(this VkCmdReserveSpaceForCommandsInfoNVX[] i) => new ManagedPtrArray<VkCmdReserveSpaceForCommandsInfoNVX>(i);
-		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
-		public unsafe struct VkObjectTableCreateInfoNVX {
-			[FieldOffset(0)]public VkStructureType sType;
-			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public uint objectCount;
-			[FieldOffset(24)]public VkObjectEntryTypeNVX* pObjectEntryTypes;
-			[FieldOffset(32)]public uint* pObjectEntryCounts;
-			[FieldOffset(40)]public VkObjectEntryUsageFlagsNVX* pObjectEntryUsageFlags;
-			[FieldOffset(48)]public uint maxUniformBuffersPerDescriptor;
-			[FieldOffset(52)]public uint maxStorageBuffersPerDescriptor;
-			[FieldOffset(56)]public uint maxStorageImagesPerDescriptor;
-			[FieldOffset(60)]public uint maxSampledImagesPerDescriptor;
-			[FieldOffset(64)]public uint maxPipelineLayouts;
-		}
-
-        public static ManagedPtr<VkObjectTableCreateInfoNVX> Pointer(this VkObjectTableCreateInfoNVX i) => new ManagedPtr<VkObjectTableCreateInfoNVX>(i);
-        public static ManagedPtrArray<VkObjectTableCreateInfoNVX> Pointer(this VkObjectTableCreateInfoNVX[] i) => new ManagedPtrArray<VkObjectTableCreateInfoNVX>(i);
-		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
-		public unsafe struct VkObjectTableEntryNVX {
-			[FieldOffset(0)]public VkObjectEntryTypeNVX type;
-			[FieldOffset(4)]public VkObjectEntryUsageFlagsNVX flags;
-		}
-
-        public static ManagedPtr<VkObjectTableEntryNVX> Pointer(this VkObjectTableEntryNVX i) => new ManagedPtr<VkObjectTableEntryNVX>(i);
-        public static ManagedPtrArray<VkObjectTableEntryNVX> Pointer(this VkObjectTableEntryNVX[] i) => new ManagedPtrArray<VkObjectTableEntryNVX>(i);
-		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
-		public unsafe struct VkObjectTablePipelineEntryNVX {
-			[FieldOffset(0)]public VkObjectEntryTypeNVX type;
-			[FieldOffset(4)]public VkObjectEntryUsageFlagsNVX flags;
-			[FieldOffset(8)]public IntPtr pipeline;
-		}
-
-        public static ManagedPtr<VkObjectTablePipelineEntryNVX> Pointer(this VkObjectTablePipelineEntryNVX i) => new ManagedPtr<VkObjectTablePipelineEntryNVX>(i);
-        public static ManagedPtrArray<VkObjectTablePipelineEntryNVX> Pointer(this VkObjectTablePipelineEntryNVX[] i) => new ManagedPtrArray<VkObjectTablePipelineEntryNVX>(i);
-		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
-		public unsafe struct VkObjectTableDescriptorSetEntryNVX {
-			[FieldOffset(0)]public VkObjectEntryTypeNVX type;
-			[FieldOffset(4)]public VkObjectEntryUsageFlagsNVX flags;
-			[FieldOffset(8)]public IntPtr pipelineLayout;
-			[FieldOffset(16)]public IntPtr descriptorSet;
-		}
-
-        public static ManagedPtr<VkObjectTableDescriptorSetEntryNVX> Pointer(this VkObjectTableDescriptorSetEntryNVX i) => new ManagedPtr<VkObjectTableDescriptorSetEntryNVX>(i);
-        public static ManagedPtrArray<VkObjectTableDescriptorSetEntryNVX> Pointer(this VkObjectTableDescriptorSetEntryNVX[] i) => new ManagedPtrArray<VkObjectTableDescriptorSetEntryNVX>(i);
-		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
-		public unsafe struct VkObjectTableVertexBufferEntryNVX {
-			[FieldOffset(0)]public VkObjectEntryTypeNVX type;
-			[FieldOffset(4)]public VkObjectEntryUsageFlagsNVX flags;
-			[FieldOffset(8)]public IntPtr buffer;
-		}
-
-        public static ManagedPtr<VkObjectTableVertexBufferEntryNVX> Pointer(this VkObjectTableVertexBufferEntryNVX i) => new ManagedPtr<VkObjectTableVertexBufferEntryNVX>(i);
-        public static ManagedPtrArray<VkObjectTableVertexBufferEntryNVX> Pointer(this VkObjectTableVertexBufferEntryNVX[] i) => new ManagedPtrArray<VkObjectTableVertexBufferEntryNVX>(i);
-		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
-		public unsafe struct VkObjectTableIndexBufferEntryNVX {
-			[FieldOffset(0)]public VkObjectEntryTypeNVX type;
-			[FieldOffset(4)]public VkObjectEntryUsageFlagsNVX flags;
-			[FieldOffset(8)]public IntPtr buffer;
-			[FieldOffset(16)]public VkIndexType indexType;
-		}
-
-        public static ManagedPtr<VkObjectTableIndexBufferEntryNVX> Pointer(this VkObjectTableIndexBufferEntryNVX i) => new ManagedPtr<VkObjectTableIndexBufferEntryNVX>(i);
-        public static ManagedPtrArray<VkObjectTableIndexBufferEntryNVX> Pointer(this VkObjectTableIndexBufferEntryNVX[] i) => new ManagedPtrArray<VkObjectTableIndexBufferEntryNVX>(i);
-		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
-		public unsafe struct VkObjectTablePushConstantEntryNVX {
-			[FieldOffset(0)]public VkObjectEntryTypeNVX type;
-			[FieldOffset(4)]public VkObjectEntryUsageFlagsNVX flags;
-			[FieldOffset(8)]public IntPtr pipelineLayout;
-			[FieldOffset(16)]public VkShaderStageFlags stageFlags;
-		}
-
-        public static ManagedPtr<VkObjectTablePushConstantEntryNVX> Pointer(this VkObjectTablePushConstantEntryNVX i) => new ManagedPtr<VkObjectTablePushConstantEntryNVX>(i);
-        public static ManagedPtrArray<VkObjectTablePushConstantEntryNVX> Pointer(this VkObjectTablePushConstantEntryNVX[] i) => new ManagedPtrArray<VkObjectTablePushConstantEntryNVX>(i);
-		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkViewportWScalingNV {
 			[FieldOffset(0)]public float xcoeff;
 			[FieldOffset(4)]public float ycoeff;
@@ -4703,7 +4548,7 @@ namespace VulkanSharp.Raw {
 		public unsafe struct VkRayTracingShaderGroupCreateInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public VkRayTracingShaderGroupTypeNV type;
+			[FieldOffset(16)]public VkRayTracingShaderGroupTypeKHR type;
 			[FieldOffset(20)]public uint generalShader;
 			[FieldOffset(24)]public uint closestHitShader;
 			[FieldOffset(28)]public uint anyHitShader;
@@ -4772,9 +4617,9 @@ namespace VulkanSharp.Raw {
 		public unsafe struct VkGeometryNV {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public VkGeometryTypeNV geometryType;
+			[FieldOffset(16)]public VkGeometryTypeKHR geometryType;
 			[FieldOffset(24)]public VkGeometryDataNV geometry;
-			[FieldOffset(160)]public VkGeometryFlagsNV flags;
+			[FieldOffset(160)]public VkGeometryFlagsKHR flags;
 		}
 
         public static ManagedPtr<VkGeometryNV> Pointer(this VkGeometryNV i) => new ManagedPtr<VkGeometryNV>(i);
@@ -4783,8 +4628,8 @@ namespace VulkanSharp.Raw {
 		public unsafe struct VkAccelerationStructureInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public VkAccelerationStructureTypeNV type;
-			[FieldOffset(20)]public VkBuildAccelerationStructureFlagsNV flags;
+			[FieldOffset(16)]public VkAccelerationStructureTypeKHR type;
+			[FieldOffset(20)]public uint flags;
 			[FieldOffset(24)]public uint instanceCount;
 			[FieldOffset(28)]public uint geometryCount;
 			[FieldOffset(32)]public IntPtr pGeometries;
@@ -4803,7 +4648,7 @@ namespace VulkanSharp.Raw {
         public static ManagedPtr<VkAccelerationStructureCreateInfoNV> Pointer(this VkAccelerationStructureCreateInfoNV i) => new ManagedPtr<VkAccelerationStructureCreateInfoNV>(i);
         public static ManagedPtrArray<VkAccelerationStructureCreateInfoNV> Pointer(this VkAccelerationStructureCreateInfoNV[] i) => new ManagedPtrArray<VkAccelerationStructureCreateInfoNV>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
-		public unsafe struct VkBindAccelerationStructureMemoryInfoNV {
+		public unsafe struct VkBindAccelerationStructureMemoryInfoKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public IntPtr accelerationStructure;
@@ -4813,23 +4658,23 @@ namespace VulkanSharp.Raw {
 			[FieldOffset(48)]public uint* pDeviceIndices;
 		}
 
-        public static ManagedPtr<VkBindAccelerationStructureMemoryInfoNV> Pointer(this VkBindAccelerationStructureMemoryInfoNV i) => new ManagedPtr<VkBindAccelerationStructureMemoryInfoNV>(i);
-        public static ManagedPtrArray<VkBindAccelerationStructureMemoryInfoNV> Pointer(this VkBindAccelerationStructureMemoryInfoNV[] i) => new ManagedPtrArray<VkBindAccelerationStructureMemoryInfoNV>(i);
+        public static ManagedPtr<VkBindAccelerationStructureMemoryInfoKHR> Pointer(this VkBindAccelerationStructureMemoryInfoKHR i) => new ManagedPtr<VkBindAccelerationStructureMemoryInfoKHR>(i);
+        public static ManagedPtrArray<VkBindAccelerationStructureMemoryInfoKHR> Pointer(this VkBindAccelerationStructureMemoryInfoKHR[] i) => new ManagedPtrArray<VkBindAccelerationStructureMemoryInfoKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
-		public unsafe struct VkWriteDescriptorSetAccelerationStructureNV {
+		public unsafe struct VkWriteDescriptorSetAccelerationStructureKHR {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public uint accelerationStructureCount;
 			[FieldOffset(24)]public IntPtr* pAccelerationStructures;
 		}
 
-        public static ManagedPtr<VkWriteDescriptorSetAccelerationStructureNV> Pointer(this VkWriteDescriptorSetAccelerationStructureNV i) => new ManagedPtr<VkWriteDescriptorSetAccelerationStructureNV>(i);
-        public static ManagedPtrArray<VkWriteDescriptorSetAccelerationStructureNV> Pointer(this VkWriteDescriptorSetAccelerationStructureNV[] i) => new ManagedPtrArray<VkWriteDescriptorSetAccelerationStructureNV>(i);
+        public static ManagedPtr<VkWriteDescriptorSetAccelerationStructureKHR> Pointer(this VkWriteDescriptorSetAccelerationStructureKHR i) => new ManagedPtr<VkWriteDescriptorSetAccelerationStructureKHR>(i);
+        public static ManagedPtrArray<VkWriteDescriptorSetAccelerationStructureKHR> Pointer(this VkWriteDescriptorSetAccelerationStructureKHR[] i) => new ManagedPtrArray<VkWriteDescriptorSetAccelerationStructureKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkAccelerationStructureMemoryRequirementsInfoNV {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public VkAccelerationStructureMemoryRequirementsTypeNV type;
+			[FieldOffset(16)]public VkAccelerationStructureMemoryRequirementsTypeKHR type;
 			[FieldOffset(24)]public IntPtr accelerationStructure;
 		}
 
@@ -4851,6 +4696,38 @@ namespace VulkanSharp.Raw {
 
         public static ManagedPtr<VkPhysicalDeviceRayTracingPropertiesNV> Pointer(this VkPhysicalDeviceRayTracingPropertiesNV i) => new ManagedPtr<VkPhysicalDeviceRayTracingPropertiesNV>(i);
         public static ManagedPtrArray<VkPhysicalDeviceRayTracingPropertiesNV> Pointer(this VkPhysicalDeviceRayTracingPropertiesNV[] i) => new ManagedPtrArray<VkPhysicalDeviceRayTracingPropertiesNV>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkTransformMatrixKHR {
+			[FieldOffset(0)]public fixed float matrix[3];
+			public const int matrix_len = 3;
+		}
+
+        public static ManagedPtr<VkTransformMatrixKHR> Pointer(this VkTransformMatrixKHR i) => new ManagedPtr<VkTransformMatrixKHR>(i);
+        public static ManagedPtrArray<VkTransformMatrixKHR> Pointer(this VkTransformMatrixKHR[] i) => new ManagedPtrArray<VkTransformMatrixKHR>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkAabbPositionsKHR {
+			[FieldOffset(0)]public float minX;
+			[FieldOffset(4)]public float minY;
+			[FieldOffset(8)]public float minZ;
+			[FieldOffset(12)]public float maxX;
+			[FieldOffset(16)]public float maxY;
+			[FieldOffset(20)]public float maxZ;
+		}
+
+        public static ManagedPtr<VkAabbPositionsKHR> Pointer(this VkAabbPositionsKHR i) => new ManagedPtr<VkAabbPositionsKHR>(i);
+        public static ManagedPtrArray<VkAabbPositionsKHR> Pointer(this VkAabbPositionsKHR[] i) => new ManagedPtrArray<VkAabbPositionsKHR>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkAccelerationStructureInstanceKHR {
+			[FieldOffset(0)]public VkTransformMatrixKHR transform;
+			[FieldOffset(12)]public uint instanceCustomIndex;
+			[FieldOffset(16)]public uint mask;
+			[FieldOffset(20)]public uint instanceShaderBindingTableRecordOffset;
+			[FieldOffset(24)]public VkGeometryInstanceFlagsKHR flags;
+			[FieldOffset(32)]public ulong accelerationStructureReference;
+		}
+
+        public static ManagedPtr<VkAccelerationStructureInstanceKHR> Pointer(this VkAccelerationStructureInstanceKHR i) => new ManagedPtr<VkAccelerationStructureInstanceKHR>(i);
+        public static ManagedPtrArray<VkAccelerationStructureInstanceKHR> Pointer(this VkAccelerationStructureInstanceKHR[] i) => new ManagedPtrArray<VkAccelerationStructureInstanceKHR>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5164,14 +5041,14 @@ namespace VulkanSharp.Raw {
         public static ManagedPtr<VkInitializePerformanceApiInfoINTEL> Pointer(this VkInitializePerformanceApiInfoINTEL i) => new ManagedPtr<VkInitializePerformanceApiInfoINTEL>(i);
         public static ManagedPtrArray<VkInitializePerformanceApiInfoINTEL> Pointer(this VkInitializePerformanceApiInfoINTEL[] i) => new ManagedPtrArray<VkInitializePerformanceApiInfoINTEL>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
-		public unsafe struct VkQueryPoolCreateInfoINTEL {
+		public unsafe struct VkQueryPoolPerformanceQueryCreateInfoINTEL {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
 			[FieldOffset(16)]public VkQueryPoolSamplingModeINTEL performanceCountersSampling;
 		}
 
-        public static ManagedPtr<VkQueryPoolCreateInfoINTEL> Pointer(this VkQueryPoolCreateInfoINTEL i) => new ManagedPtr<VkQueryPoolCreateInfoINTEL>(i);
-        public static ManagedPtrArray<VkQueryPoolCreateInfoINTEL> Pointer(this VkQueryPoolCreateInfoINTEL[] i) => new ManagedPtrArray<VkQueryPoolCreateInfoINTEL>(i);
+        public static ManagedPtr<VkQueryPoolPerformanceQueryCreateInfoINTEL> Pointer(this VkQueryPoolPerformanceQueryCreateInfoINTEL i) => new ManagedPtr<VkQueryPoolPerformanceQueryCreateInfoINTEL>(i);
+        public static ManagedPtrArray<VkQueryPoolPerformanceQueryCreateInfoINTEL> Pointer(this VkQueryPoolPerformanceQueryCreateInfoINTEL[] i) => new ManagedPtrArray<VkQueryPoolPerformanceQueryCreateInfoINTEL>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPerformanceMarkerInfoINTEL {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5558,6 +5435,164 @@ namespace VulkanSharp.Raw {
         public static ManagedPtr<VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT> Pointer(this VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT i) => new ManagedPtr<VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT>(i);
         public static ManagedPtrArray<VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT> Pointer(this VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceShaderDemoteToHelperInvocationFeaturesEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public uint maxGraphicsShaderGroupCount;
+			[FieldOffset(20)]public uint maxIndirectSequenceCount;
+			[FieldOffset(24)]public uint maxIndirectCommandsTokenCount;
+			[FieldOffset(28)]public uint maxIndirectCommandsStreamCount;
+			[FieldOffset(32)]public uint maxIndirectCommandsTokenOffset;
+			[FieldOffset(36)]public uint maxIndirectCommandsStreamStride;
+			[FieldOffset(40)]public uint minSequencesCountBufferOffsetAlignment;
+			[FieldOffset(44)]public uint minSequencesIndexBufferOffsetAlignment;
+			[FieldOffset(48)]public uint minIndirectCommandsBufferOffsetAlignment;
+		}
+
+        public static ManagedPtr<VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV> Pointer(this VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV i) => new ManagedPtr<VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV> Pointer(this VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV[] i) => new ManagedPtrArray<VkPhysicalDeviceDeviceGeneratedCommandsPropertiesNV>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public bool deviceGeneratedCommands;
+		}
+
+        public static ManagedPtr<VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV> Pointer(this VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV i) => new ManagedPtr<VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV> Pointer(this VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV[] i) => new ManagedPtrArray<VkPhysicalDeviceDeviceGeneratedCommandsFeaturesNV>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkGraphicsShaderGroupCreateInfoNV {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public uint stageCount;
+			[FieldOffset(24)]public IntPtr pStages;
+			[FieldOffset(32)]public IntPtr pVertexInputState;
+			[FieldOffset(40)]public IntPtr pTessellationState;
+		}
+
+        public static ManagedPtr<VkGraphicsShaderGroupCreateInfoNV> Pointer(this VkGraphicsShaderGroupCreateInfoNV i) => new ManagedPtr<VkGraphicsShaderGroupCreateInfoNV>(i);
+        public static ManagedPtrArray<VkGraphicsShaderGroupCreateInfoNV> Pointer(this VkGraphicsShaderGroupCreateInfoNV[] i) => new ManagedPtrArray<VkGraphicsShaderGroupCreateInfoNV>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkGraphicsPipelineShaderGroupsCreateInfoNV {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public uint groupCount;
+			[FieldOffset(24)]public IntPtr pGroups;
+			[FieldOffset(32)]public uint pipelineCount;
+			[FieldOffset(40)]public IntPtr* pPipelines;
+		}
+
+        public static ManagedPtr<VkGraphicsPipelineShaderGroupsCreateInfoNV> Pointer(this VkGraphicsPipelineShaderGroupsCreateInfoNV i) => new ManagedPtr<VkGraphicsPipelineShaderGroupsCreateInfoNV>(i);
+        public static ManagedPtrArray<VkGraphicsPipelineShaderGroupsCreateInfoNV> Pointer(this VkGraphicsPipelineShaderGroupsCreateInfoNV[] i) => new ManagedPtrArray<VkGraphicsPipelineShaderGroupsCreateInfoNV>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkBindShaderGroupIndirectCommandNV {
+			[FieldOffset(0)]public uint groupIndex;
+		}
+
+        public static ManagedPtr<VkBindShaderGroupIndirectCommandNV> Pointer(this VkBindShaderGroupIndirectCommandNV i) => new ManagedPtr<VkBindShaderGroupIndirectCommandNV>(i);
+        public static ManagedPtrArray<VkBindShaderGroupIndirectCommandNV> Pointer(this VkBindShaderGroupIndirectCommandNV[] i) => new ManagedPtrArray<VkBindShaderGroupIndirectCommandNV>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkBindIndexBufferIndirectCommandNV {
+			[FieldOffset(0)]public ulong bufferAddress;
+			[FieldOffset(8)]public uint size;
+			[FieldOffset(12)]public VkIndexType indexType;
+		}
+
+        public static ManagedPtr<VkBindIndexBufferIndirectCommandNV> Pointer(this VkBindIndexBufferIndirectCommandNV i) => new ManagedPtr<VkBindIndexBufferIndirectCommandNV>(i);
+        public static ManagedPtrArray<VkBindIndexBufferIndirectCommandNV> Pointer(this VkBindIndexBufferIndirectCommandNV[] i) => new ManagedPtrArray<VkBindIndexBufferIndirectCommandNV>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkBindVertexBufferIndirectCommandNV {
+			[FieldOffset(0)]public ulong bufferAddress;
+			[FieldOffset(8)]public uint size;
+			[FieldOffset(12)]public uint stride;
+		}
+
+        public static ManagedPtr<VkBindVertexBufferIndirectCommandNV> Pointer(this VkBindVertexBufferIndirectCommandNV i) => new ManagedPtr<VkBindVertexBufferIndirectCommandNV>(i);
+        public static ManagedPtrArray<VkBindVertexBufferIndirectCommandNV> Pointer(this VkBindVertexBufferIndirectCommandNV[] i) => new ManagedPtrArray<VkBindVertexBufferIndirectCommandNV>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkSetStateFlagsIndirectCommandNV {
+			[FieldOffset(0)]public uint data;
+		}
+
+        public static ManagedPtr<VkSetStateFlagsIndirectCommandNV> Pointer(this VkSetStateFlagsIndirectCommandNV i) => new ManagedPtr<VkSetStateFlagsIndirectCommandNV>(i);
+        public static ManagedPtrArray<VkSetStateFlagsIndirectCommandNV> Pointer(this VkSetStateFlagsIndirectCommandNV[] i) => new ManagedPtrArray<VkSetStateFlagsIndirectCommandNV>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkIndirectCommandsStreamNV {
+			[FieldOffset(0)]public IntPtr buffer;
+			[FieldOffset(8)]public ulong offset;
+		}
+
+        public static ManagedPtr<VkIndirectCommandsStreamNV> Pointer(this VkIndirectCommandsStreamNV i) => new ManagedPtr<VkIndirectCommandsStreamNV>(i);
+        public static ManagedPtrArray<VkIndirectCommandsStreamNV> Pointer(this VkIndirectCommandsStreamNV[] i) => new ManagedPtrArray<VkIndirectCommandsStreamNV>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkIndirectCommandsLayoutTokenNV {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public VkIndirectCommandsTokenTypeNV tokenType;
+			[FieldOffset(20)]public uint stream;
+			[FieldOffset(24)]public uint offset;
+			[FieldOffset(28)]public uint vertexBindingUnit;
+			[FieldOffset(32)]public bool vertexDynamicStride;
+			[FieldOffset(40)]public IntPtr pushconstantPipelineLayout;
+			[FieldOffset(48)]public VkShaderStageFlags pushconstantShaderStageFlags;
+			[FieldOffset(52)]public uint pushconstantOffset;
+			[FieldOffset(56)]public uint pushconstantSize;
+			[FieldOffset(60)]public VkIndirectStateFlagsNV indirectStateFlags;
+			[FieldOffset(64)]public uint indexTypeCount;
+			[FieldOffset(72)]public VkIndexType* pIndexTypes;
+			[FieldOffset(80)]public uint* pIndexTypeValues;
+		}
+
+        public static ManagedPtr<VkIndirectCommandsLayoutTokenNV> Pointer(this VkIndirectCommandsLayoutTokenNV i) => new ManagedPtr<VkIndirectCommandsLayoutTokenNV>(i);
+        public static ManagedPtrArray<VkIndirectCommandsLayoutTokenNV> Pointer(this VkIndirectCommandsLayoutTokenNV[] i) => new ManagedPtrArray<VkIndirectCommandsLayoutTokenNV>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkIndirectCommandsLayoutCreateInfoNV {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public VkIndirectCommandsLayoutUsageFlagsNV flags;
+			[FieldOffset(20)]public VkPipelineBindPoint pipelineBindPoint;
+			[FieldOffset(24)]public uint tokenCount;
+			[FieldOffset(32)]public IntPtr pTokens;
+			[FieldOffset(40)]public uint streamCount;
+			[FieldOffset(48)]public uint* pStreamStrides;
+		}
+
+        public static ManagedPtr<VkIndirectCommandsLayoutCreateInfoNV> Pointer(this VkIndirectCommandsLayoutCreateInfoNV i) => new ManagedPtr<VkIndirectCommandsLayoutCreateInfoNV>(i);
+        public static ManagedPtrArray<VkIndirectCommandsLayoutCreateInfoNV> Pointer(this VkIndirectCommandsLayoutCreateInfoNV[] i) => new ManagedPtrArray<VkIndirectCommandsLayoutCreateInfoNV>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkGeneratedCommandsInfoNV {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public VkPipelineBindPoint pipelineBindPoint;
+			[FieldOffset(24)]public IntPtr pipeline;
+			[FieldOffset(32)]public IntPtr indirectCommandsLayout;
+			[FieldOffset(40)]public uint streamCount;
+			[FieldOffset(48)]public IntPtr pStreams;
+			[FieldOffset(56)]public uint sequencesCount;
+			[FieldOffset(64)]public IntPtr preprocessBuffer;
+			[FieldOffset(72)]public ulong preprocessOffset;
+			[FieldOffset(80)]public ulong preprocessSize;
+			[FieldOffset(88)]public IntPtr sequencesCountBuffer;
+			[FieldOffset(96)]public ulong sequencesCountOffset;
+			[FieldOffset(104)]public IntPtr sequencesIndexBuffer;
+			[FieldOffset(112)]public ulong sequencesIndexOffset;
+		}
+
+        public static ManagedPtr<VkGeneratedCommandsInfoNV> Pointer(this VkGeneratedCommandsInfoNV i) => new ManagedPtr<VkGeneratedCommandsInfoNV>(i);
+        public static ManagedPtrArray<VkGeneratedCommandsInfoNV> Pointer(this VkGeneratedCommandsInfoNV[] i) => new ManagedPtrArray<VkGeneratedCommandsInfoNV>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkGeneratedCommandsMemoryRequirementsInfoNV {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public VkPipelineBindPoint pipelineBindPoint;
+			[FieldOffset(24)]public IntPtr pipeline;
+			[FieldOffset(32)]public IntPtr indirectCommandsLayout;
+			[FieldOffset(40)]public uint maxSequencesCount;
+		}
+
+        public static ManagedPtr<VkGeneratedCommandsMemoryRequirementsInfoNV> Pointer(this VkGeneratedCommandsMemoryRequirementsInfoNV i) => new ManagedPtr<VkGeneratedCommandsMemoryRequirementsInfoNV>(i);
+        public static ManagedPtrArray<VkGeneratedCommandsMemoryRequirementsInfoNV> Pointer(this VkGeneratedCommandsMemoryRequirementsInfoNV[] i) => new ManagedPtrArray<VkGeneratedCommandsMemoryRequirementsInfoNV>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDeviceTexelBufferAlignmentFeaturesEXT {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
@@ -5578,5 +5613,51 @@ namespace VulkanSharp.Raw {
 
         public static ManagedPtr<VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT> Pointer(this VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT i) => new ManagedPtr<VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT>(i);
         public static ManagedPtrArray<VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT> Pointer(this VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceTexelBufferAlignmentPropertiesEXT>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkRenderPassTransformBeginInfoQCOM {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public VkSurfaceTransformFlagsKHR transform;
+		}
+
+        public static ManagedPtr<VkRenderPassTransformBeginInfoQCOM> Pointer(this VkRenderPassTransformBeginInfoQCOM i) => new ManagedPtr<VkRenderPassTransformBeginInfoQCOM>(i);
+        public static ManagedPtrArray<VkRenderPassTransformBeginInfoQCOM> Pointer(this VkRenderPassTransformBeginInfoQCOM[] i) => new ManagedPtrArray<VkRenderPassTransformBeginInfoQCOM>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkCommandBufferInheritanceRenderPassTransformInfoQCOM {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public VkSurfaceTransformFlagsKHR transform;
+			[FieldOffset(20)]public VkRect2D renderArea;
+		}
+
+        public static ManagedPtr<VkCommandBufferInheritanceRenderPassTransformInfoQCOM> Pointer(this VkCommandBufferInheritanceRenderPassTransformInfoQCOM i) => new ManagedPtr<VkCommandBufferInheritanceRenderPassTransformInfoQCOM>(i);
+        public static ManagedPtrArray<VkCommandBufferInheritanceRenderPassTransformInfoQCOM> Pointer(this VkCommandBufferInheritanceRenderPassTransformInfoQCOM[] i) => new ManagedPtrArray<VkCommandBufferInheritanceRenderPassTransformInfoQCOM>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkPhysicalDevicePipelineCreationCacheControlFeaturesEXT {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public bool pipelineCreationCacheControl;
+		}
+
+        public static ManagedPtr<VkPhysicalDevicePipelineCreationCacheControlFeaturesEXT> Pointer(this VkPhysicalDevicePipelineCreationCacheControlFeaturesEXT i) => new ManagedPtr<VkPhysicalDevicePipelineCreationCacheControlFeaturesEXT>(i);
+        public static ManagedPtrArray<VkPhysicalDevicePipelineCreationCacheControlFeaturesEXT> Pointer(this VkPhysicalDevicePipelineCreationCacheControlFeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDevicePipelineCreationCacheControlFeaturesEXT>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkPhysicalDeviceDiagnosticsConfigFeaturesNV {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public bool diagnosticsConfig;
+		}
+
+        public static ManagedPtr<VkPhysicalDeviceDiagnosticsConfigFeaturesNV> Pointer(this VkPhysicalDeviceDiagnosticsConfigFeaturesNV i) => new ManagedPtr<VkPhysicalDeviceDiagnosticsConfigFeaturesNV>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceDiagnosticsConfigFeaturesNV> Pointer(this VkPhysicalDeviceDiagnosticsConfigFeaturesNV[] i) => new ManagedPtrArray<VkPhysicalDeviceDiagnosticsConfigFeaturesNV>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkDeviceDiagnosticsConfigCreateInfoNV {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public VkDeviceDiagnosticsConfigFlagsNV flags;
+		}
+
+        public static ManagedPtr<VkDeviceDiagnosticsConfigCreateInfoNV> Pointer(this VkDeviceDiagnosticsConfigCreateInfoNV i) => new ManagedPtr<VkDeviceDiagnosticsConfigCreateInfoNV>(i);
+        public static ManagedPtrArray<VkDeviceDiagnosticsConfigCreateInfoNV> Pointer(this VkDeviceDiagnosticsConfigCreateInfoNV[] i) => new ManagedPtrArray<VkDeviceDiagnosticsConfigCreateInfoNV>(i);
 	}
 }

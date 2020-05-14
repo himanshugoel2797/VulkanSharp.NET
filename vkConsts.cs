@@ -32,7 +32,8 @@ namespace VulkanSharp.Raw {
 			public const string VkKhrXlibSurfaceExtensionName = "VK_KHR_xlib_surface";
 			public const int VkVersion10 = 1;
 			public const uint VkApiVersion10 = 4194304;
-			public const int VkHeaderVersion = 131;
+			public const int VkHeaderVersion = 135;
+			public const uint VkHeaderVersionComplete = 4202631;
 			public const int VkNullHandle = 0;
 			public const float VkLodClampNone = 1000.0f;
 			public const uint VkRemainingMipLevels = ~0U;
@@ -237,6 +238,9 @@ namespace VulkanSharp.Raw {
 			public const int VkKhrPipelineExecutableProperties = 1;
 			public const int VkKhrPipelineExecutablePropertiesSpecVersion = 1;
 			public const string VkKhrPipelineExecutablePropertiesExtensionName = "VK_KHR_pipeline_executable_properties";
+			public const int VkKhrShaderNonSemanticInfo = 1;
+			public const int VkKhrShaderNonSemanticInfoSpecVersion = 1;
+			public const string VkKhrShaderNonSemanticInfoExtensionName = "VK_KHR_shader_non_semantic_info";
 			public const int VkExtDebugReport = 1;
 			public const int VkExtDebugReportSpecVersion = 9;
 			public const string VkExtDebugReportExtensionName = "VK_EXT_debug_report";
@@ -324,9 +328,6 @@ namespace VulkanSharp.Raw {
 			public const int VkExtConditionalRendering = 1;
 			public const int VkExtConditionalRenderingSpecVersion = 2;
 			public const string VkExtConditionalRenderingExtensionName = "VK_EXT_conditional_rendering";
-			public const int VkNvxDeviceGeneratedCommands = 1;
-			public const int VkNvxDeviceGeneratedCommandsSpecVersion = 3;
-			public const string VkNvxDeviceGeneratedCommandsExtensionName = "VK_NVX_device_generated_commands";
 			public const int VkNvClipSpaceWScaling = 1;
 			public const int VkNvClipSpaceWScalingSpecVersion = 1;
 			public const string VkNvClipSpaceWScalingExtensionName = "VK_NV_clip_space_w_scaling";
@@ -439,7 +440,8 @@ namespace VulkanSharp.Raw {
 			public const int VkNvRayTracing = 1;
 			public const int VkNvRayTracingSpecVersion = 3;
 			public const string VkNvRayTracingExtensionName = "VK_NV_ray_tracing";
-			public const uint VkShaderUnusedNv = ~0U;
+			public const uint VkShaderUnusedKhr = ~0U;
+			public const System.UInt32 VkShaderUnusedNv = VkShaderUnusedKhr;
 			public const int VkNvRepresentativeFragmentTest = 1;
 			public const int VkNvRepresentativeFragmentTestSpecVersion = 2;
 			public const string VkNvRepresentativeFragmentTestExtensionName = "VK_NV_representative_fragment_test";
@@ -498,7 +500,7 @@ namespace VulkanSharp.Raw {
 			public const int VkIntelShaderIntegerFunctions2SpecVersion = 1;
 			public const string VkIntelShaderIntegerFunctions2ExtensionName = "VK_INTEL_shader_integer_functions2";
 			public const int VkIntelPerformanceQuery = 1;
-			public const int VkIntelPerformanceQuerySpecVersion = 1;
+			public const int VkIntelPerformanceQuerySpecVersion = 2;
 			public const string VkIntelPerformanceQueryExtensionName = "VK_INTEL_performance_query";
 			public const int VkExtPciBusInfo = 1;
 			public const int VkExtPciBusInfoSpecVersion = 2;
@@ -546,7 +548,7 @@ namespace VulkanSharp.Raw {
 			public const int VkExtSeparateStencilUsageSpecVersion = 1;
 			public const string VkExtSeparateStencilUsageExtensionName = "VK_EXT_separate_stencil_usage";
 			public const int VkExtValidationFeatures = 1;
-			public const int VkExtValidationFeaturesSpecVersion = 2;
+			public const int VkExtValidationFeaturesSpecVersion = 3;
 			public const string VkExtValidationFeaturesExtensionName = "VK_EXT_validation_features";
 			public const int VkNvCooperativeMatrix = 1;
 			public const int VkNvCooperativeMatrixSpecVersion = 1;
@@ -575,11 +577,23 @@ namespace VulkanSharp.Raw {
 			public const int VkExtShaderDemoteToHelperInvocation = 1;
 			public const int VkExtShaderDemoteToHelperInvocationSpecVersion = 1;
 			public const string VkExtShaderDemoteToHelperInvocationExtensionName = "VK_EXT_shader_demote_to_helper_invocation";
+			public const int VkNvDeviceGeneratedCommands = 1;
+			public const int VkNvDeviceGeneratedCommandsSpecVersion = 3;
+			public const string VkNvDeviceGeneratedCommandsExtensionName = "VK_NV_device_generated_commands";
 			public const int VkExtTexelBufferAlignment = 1;
 			public const int VkExtTexelBufferAlignmentSpecVersion = 1;
 			public const string VkExtTexelBufferAlignmentExtensionName = "VK_EXT_texel_buffer_alignment";
+			public const int VkQcomRenderPassTransform = 1;
+			public const int VkQcomRenderPassTransformSpecVersion = 1;
+			public const string VkQcomRenderPassTransformExtensionName = "VK_QCOM_render_pass_transform";
 			public const int VkGoogleUserType = 1;
 			public const int VkGoogleUserTypeSpecVersion = 1;
 			public const string VkGoogleUserTypeExtensionName = "VK_GOOGLE_user_type";
+			public const int VkExtPipelineCreationCacheControl = 1;
+			public const int VkExtPipelineCreationCacheControlSpecVersion = 2;
+			public const string VkExtPipelineCreationCacheControlExtensionName = "VK_EXT_pipeline_creation_cache_control";
+			public const int VkNvDeviceDiagnosticsConfig = 1;
+			public const int VkNvDeviceDiagnosticsConfigSpecVersion = 1;
+			public const string VkNvDeviceDiagnosticsConfigExtensionName = "VK_NV_device_diagnostics_config";
 	}
 }

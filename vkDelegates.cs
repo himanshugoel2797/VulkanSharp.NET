@@ -607,24 +607,6 @@ namespace VulkanSharp.Raw {
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		public delegate void PFN_vkCmdEndConditionalRenderingEXT(IntPtr commandBuffer);
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		public delegate void PFN_vkCmdProcessCommandsNVX(IntPtr commandBuffer, IntPtr pProcessCommandsInfo);
-		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		public delegate void PFN_vkCmdReserveSpaceForCommandsNVX(IntPtr commandBuffer, IntPtr pReserveSpaceInfo);
-		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		public delegate VkResult PFN_vkCreateIndirectCommandsLayoutNVX(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pIndirectCommandsLayout);
-		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		public delegate void PFN_vkDestroyIndirectCommandsLayoutNVX(IntPtr device, IntPtr indirectCommandsLayout, IntPtr pAllocator);
-		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		public delegate VkResult PFN_vkCreateObjectTableNVX(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pObjectTable);
-		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		public delegate void PFN_vkDestroyObjectTableNVX(IntPtr device, IntPtr objectTable, IntPtr pAllocator);
-		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		public delegate VkResult PFN_vkRegisterObjectsNVX(IntPtr device, IntPtr objectTable, uint objectCount, IntPtr ppObjectTableEntries, uint* pObjectIndices);
-		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		public delegate VkResult PFN_vkUnregisterObjectsNVX(IntPtr device, IntPtr objectTable, uint objectCount, VkObjectEntryTypeNVX* pObjectEntryTypes, uint* pObjectIndices);
-		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		public delegate void PFN_vkGetPhysicalDeviceGeneratedCommandsPropertiesNVX(IntPtr physicalDevice, IntPtr pFeatures, IntPtr pLimits);
-		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		public delegate void PFN_vkCmdSetViewportWScalingNV(IntPtr commandBuffer, uint firstViewport, uint viewportCount, IntPtr pViewportWScalings);
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		public delegate VkResult PFN_vkReleaseDisplayEXT(IntPtr physicalDevice, IntPtr display);
@@ -693,23 +675,31 @@ namespace VulkanSharp.Raw {
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		public delegate VkResult PFN_vkCreateAccelerationStructureNV(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pAccelerationStructure);
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		public delegate void PFN_vkDestroyAccelerationStructureKHR(IntPtr device, IntPtr accelerationStructure, IntPtr pAllocator);
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		public delegate void PFN_vkDestroyAccelerationStructureNV(IntPtr device, IntPtr accelerationStructure, IntPtr pAllocator);
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		public delegate void PFN_vkGetAccelerationStructureMemoryRequirementsNV(IntPtr device, IntPtr pInfo, IntPtr pMemoryRequirements);
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		public delegate VkResult PFN_vkBindAccelerationStructureMemoryKHR(IntPtr device, uint bindInfoCount, IntPtr pBindInfos);
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		public delegate VkResult PFN_vkBindAccelerationStructureMemoryNV(IntPtr device, uint bindInfoCount, IntPtr pBindInfos);
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		public delegate void PFN_vkCmdBuildAccelerationStructureNV(IntPtr commandBuffer, IntPtr pInfo, IntPtr instanceData, ulong instanceOffset, bool update, IntPtr dst, IntPtr src, IntPtr scratch, ulong scratchOffset);
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-		public delegate void PFN_vkCmdCopyAccelerationStructureNV(IntPtr commandBuffer, IntPtr dst, IntPtr src, VkCopyAccelerationStructureModeNV mode);
+		public delegate void PFN_vkCmdCopyAccelerationStructureNV(IntPtr commandBuffer, IntPtr dst, IntPtr src, VkCopyAccelerationStructureModeKHR mode);
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		public delegate void PFN_vkCmdTraceRaysNV(IntPtr commandBuffer, IntPtr raygenShaderBindingTableBuffer, ulong raygenShaderBindingOffset, IntPtr missShaderBindingTableBuffer, ulong missShaderBindingOffset, ulong missShaderBindingStride, IntPtr hitShaderBindingTableBuffer, ulong hitShaderBindingOffset, ulong hitShaderBindingStride, IntPtr callableShaderBindingTableBuffer, ulong callableShaderBindingOffset, ulong callableShaderBindingStride, uint width, uint height, uint depth);
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		public delegate VkResult PFN_vkCreateRayTracingPipelinesNV(IntPtr device, IntPtr pipelineCache, uint createInfoCount, IntPtr pCreateInfos, IntPtr pAllocator, IntPtr* pPipelines);
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		public delegate VkResult PFN_vkGetRayTracingShaderGroupHandlesKHR(IntPtr device, IntPtr pipeline, uint firstGroup, uint groupCount, ulong dataSize, IntPtr pData);
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		public delegate VkResult PFN_vkGetRayTracingShaderGroupHandlesNV(IntPtr device, IntPtr pipeline, uint firstGroup, uint groupCount, ulong dataSize, IntPtr pData);
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		public delegate VkResult PFN_vkGetAccelerationStructureHandleNV(IntPtr device, IntPtr accelerationStructure, ulong dataSize, IntPtr pData);
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		public delegate void PFN_vkCmdWriteAccelerationStructuresPropertiesKHR(IntPtr commandBuffer, uint accelerationStructureCount, IntPtr* pAccelerationStructures, VkQueryType queryType, IntPtr queryPool, uint firstQuery);
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		public delegate void PFN_vkCmdWriteAccelerationStructuresPropertiesNV(IntPtr commandBuffer, uint accelerationStructureCount, IntPtr* pAccelerationStructures, VkQueryType queryType, IntPtr queryPool, uint firstQuery);
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
@@ -768,5 +758,17 @@ namespace VulkanSharp.Raw {
 		public delegate void PFN_vkCmdSetLineStippleEXT(IntPtr commandBuffer, uint lineStippleFactor, ushort lineStipplePattern);
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		public delegate void PFN_vkResetQueryPoolEXT(IntPtr device, IntPtr queryPool, uint firstQuery, uint queryCount);
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		public delegate void PFN_vkGetGeneratedCommandsMemoryRequirementsNV(IntPtr device, IntPtr pInfo, IntPtr pMemoryRequirements);
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		public delegate void PFN_vkCmdPreprocessGeneratedCommandsNV(IntPtr commandBuffer, IntPtr pGeneratedCommandsInfo);
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		public delegate void PFN_vkCmdExecuteGeneratedCommandsNV(IntPtr commandBuffer, bool isPreprocessed, IntPtr pGeneratedCommandsInfo);
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		public delegate void PFN_vkCmdBindPipelineShaderGroupNV(IntPtr commandBuffer, VkPipelineBindPoint pipelineBindPoint, IntPtr pipeline, uint groupIndex);
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		public delegate VkResult PFN_vkCreateIndirectCommandsLayoutNV(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pIndirectCommandsLayout);
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		public delegate void PFN_vkDestroyIndirectCommandsLayoutNV(IntPtr device, IntPtr indirectCommandsLayout, IntPtr pAllocator);
 	}
 }

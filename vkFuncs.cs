@@ -497,22 +497,6 @@ namespace VulkanSharp.Raw {
 		public static void vkCmdBeginConditionalRenderingEXT(IntPtr commandBuffer, ManagedPtrArray<VkConditionalRenderingBeginInfoEXT> pConditionalRenderingBegin) { throw new NotImplementedException(); }
 		public static void vkCmdBeginConditionalRenderingEXT(IntPtr commandBuffer, IntPtr pConditionalRenderingBegin) { throw new NotImplementedException(); }
 		public static void vkCmdEndConditionalRenderingEXT(IntPtr commandBuffer) { throw new NotImplementedException(); }
-		public static void vkCmdProcessCommandsNVX(IntPtr commandBuffer, ManagedPtrArray<VkCmdProcessCommandsInfoNVX> pProcessCommandsInfo) { throw new NotImplementedException(); }
-		public static void vkCmdProcessCommandsNVX(IntPtr commandBuffer, IntPtr pProcessCommandsInfo) { throw new NotImplementedException(); }
-		public static void vkCmdReserveSpaceForCommandsNVX(IntPtr commandBuffer, ManagedPtrArray<VkCmdReserveSpaceForCommandsInfoNVX> pReserveSpaceInfo) { throw new NotImplementedException(); }
-		public static void vkCmdReserveSpaceForCommandsNVX(IntPtr commandBuffer, IntPtr pReserveSpaceInfo) { throw new NotImplementedException(); }
-		public static VkResult vkCreateIndirectCommandsLayoutNVX(IntPtr device, ManagedPtrArray<VkIndirectCommandsLayoutCreateInfoNVX> pCreateInfo, ManagedPtrArray<VkAllocationCallbacks> pAllocator, IntPtr* pIndirectCommandsLayout) { throw new NotImplementedException(); }
-		public static VkResult vkCreateIndirectCommandsLayoutNVX(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pIndirectCommandsLayout) { throw new NotImplementedException(); }
-		public static void vkDestroyIndirectCommandsLayoutNVX(IntPtr device, IntPtr indirectCommandsLayout, ManagedPtrArray<VkAllocationCallbacks> pAllocator) { throw new NotImplementedException(); }
-		public static void vkDestroyIndirectCommandsLayoutNVX(IntPtr device, IntPtr indirectCommandsLayout, IntPtr pAllocator) { throw new NotImplementedException(); }
-		public static VkResult vkCreateObjectTableNVX(IntPtr device, ManagedPtrArray<VkObjectTableCreateInfoNVX> pCreateInfo, ManagedPtrArray<VkAllocationCallbacks> pAllocator, IntPtr* pObjectTable) { throw new NotImplementedException(); }
-		public static VkResult vkCreateObjectTableNVX(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pObjectTable) { throw new NotImplementedException(); }
-		public static void vkDestroyObjectTableNVX(IntPtr device, IntPtr objectTable, ManagedPtrArray<VkAllocationCallbacks> pAllocator) { throw new NotImplementedException(); }
-		public static void vkDestroyObjectTableNVX(IntPtr device, IntPtr objectTable, IntPtr pAllocator) { throw new NotImplementedException(); }
-		public static VkResult vkRegisterObjectsNVX(IntPtr device, IntPtr objectTable, uint objectCount, IntPtr ppObjectTableEntries, uint* pObjectIndices) { throw new NotImplementedException(); }
-		public static VkResult vkUnregisterObjectsNVX(IntPtr device, IntPtr objectTable, uint objectCount, VkObjectEntryTypeNVX* pObjectEntryTypes, uint* pObjectIndices) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceGeneratedCommandsPropertiesNVX(IntPtr physicalDevice, ManagedPtrArray<VkDeviceGeneratedCommandsFeaturesNVX> pFeatures, ManagedPtrArray<VkDeviceGeneratedCommandsLimitsNVX> pLimits) { throw new NotImplementedException(); }
-		public static void vkGetPhysicalDeviceGeneratedCommandsPropertiesNVX(IntPtr physicalDevice, IntPtr pFeatures, IntPtr pLimits) { throw new NotImplementedException(); }
 		public static void vkCmdSetViewportWScalingNV(IntPtr commandBuffer, uint firstViewport, uint viewportCount, ManagedPtrArray<VkViewportWScalingNV> pViewportWScalings) { throw new NotImplementedException(); }
 		public static void vkCmdSetViewportWScalingNV(IntPtr commandBuffer, uint firstViewport, uint viewportCount, IntPtr pViewportWScalings) { throw new NotImplementedException(); }
 		public static VkResult vkReleaseDisplayEXT(IntPtr physicalDevice, IntPtr display) { throw new NotImplementedException(); }
@@ -572,20 +556,26 @@ namespace VulkanSharp.Raw {
 		public static void vkCmdSetCoarseSampleOrderNV(IntPtr commandBuffer, VkCoarseSampleOrderTypeNV sampleOrderType, uint customSampleOrderCount, IntPtr pCustomSampleOrders) { throw new NotImplementedException(); }
 		public static VkResult vkCreateAccelerationStructureNV(IntPtr device, ManagedPtrArray<VkAccelerationStructureCreateInfoNV> pCreateInfo, ManagedPtrArray<VkAllocationCallbacks> pAllocator, IntPtr* pAccelerationStructure) { throw new NotImplementedException(); }
 		public static VkResult vkCreateAccelerationStructureNV(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pAccelerationStructure) { throw new NotImplementedException(); }
+		public static void vkDestroyAccelerationStructureKHR(IntPtr device, IntPtr accelerationStructure, ManagedPtrArray<VkAllocationCallbacks> pAllocator) { throw new NotImplementedException(); }
+		public static void vkDestroyAccelerationStructureKHR(IntPtr device, IntPtr accelerationStructure, IntPtr pAllocator) { throw new NotImplementedException(); }
 		public static void vkDestroyAccelerationStructureNV(IntPtr device, IntPtr accelerationStructure, ManagedPtrArray<VkAllocationCallbacks> pAllocator) { throw new NotImplementedException(); }
 		public static void vkDestroyAccelerationStructureNV(IntPtr device, IntPtr accelerationStructure, IntPtr pAllocator) { throw new NotImplementedException(); }
 		public static void vkGetAccelerationStructureMemoryRequirementsNV(IntPtr device, ManagedPtrArray<VkAccelerationStructureMemoryRequirementsInfoNV> pInfo, ManagedPtrArray<VkMemoryRequirements2> pMemoryRequirements) { throw new NotImplementedException(); }
 		public static void vkGetAccelerationStructureMemoryRequirementsNV(IntPtr device, IntPtr pInfo, IntPtr pMemoryRequirements) { throw new NotImplementedException(); }
-		public static VkResult vkBindAccelerationStructureMemoryNV(IntPtr device, uint bindInfoCount, ManagedPtrArray<VkBindAccelerationStructureMemoryInfoNV> pBindInfos) { throw new NotImplementedException(); }
+		public static VkResult vkBindAccelerationStructureMemoryKHR(IntPtr device, uint bindInfoCount, ManagedPtrArray<VkBindAccelerationStructureMemoryInfoKHR> pBindInfos) { throw new NotImplementedException(); }
+		public static VkResult vkBindAccelerationStructureMemoryKHR(IntPtr device, uint bindInfoCount, IntPtr pBindInfos) { throw new NotImplementedException(); }
+		public static VkResult vkBindAccelerationStructureMemoryNV(IntPtr device, uint bindInfoCount, ManagedPtrArray<VkBindAccelerationStructureMemoryInfoKHR> pBindInfos) { throw new NotImplementedException(); }
 		public static VkResult vkBindAccelerationStructureMemoryNV(IntPtr device, uint bindInfoCount, IntPtr pBindInfos) { throw new NotImplementedException(); }
 		public static void vkCmdBuildAccelerationStructureNV(IntPtr commandBuffer, ManagedPtrArray<VkAccelerationStructureInfoNV> pInfo, IntPtr instanceData, ulong instanceOffset, bool update, IntPtr dst, IntPtr src, IntPtr scratch, ulong scratchOffset) { throw new NotImplementedException(); }
 		public static void vkCmdBuildAccelerationStructureNV(IntPtr commandBuffer, IntPtr pInfo, IntPtr instanceData, ulong instanceOffset, bool update, IntPtr dst, IntPtr src, IntPtr scratch, ulong scratchOffset) { throw new NotImplementedException(); }
-		public static void vkCmdCopyAccelerationStructureNV(IntPtr commandBuffer, IntPtr dst, IntPtr src, VkCopyAccelerationStructureModeNV mode) { throw new NotImplementedException(); }
+		public static void vkCmdCopyAccelerationStructureNV(IntPtr commandBuffer, IntPtr dst, IntPtr src, VkCopyAccelerationStructureModeKHR mode) { throw new NotImplementedException(); }
 		public static void vkCmdTraceRaysNV(IntPtr commandBuffer, IntPtr raygenShaderBindingTableBuffer, ulong raygenShaderBindingOffset, IntPtr missShaderBindingTableBuffer, ulong missShaderBindingOffset, ulong missShaderBindingStride, IntPtr hitShaderBindingTableBuffer, ulong hitShaderBindingOffset, ulong hitShaderBindingStride, IntPtr callableShaderBindingTableBuffer, ulong callableShaderBindingOffset, ulong callableShaderBindingStride, uint width, uint height, uint depth) { throw new NotImplementedException(); }
 		public static VkResult vkCreateRayTracingPipelinesNV(IntPtr device, IntPtr pipelineCache, uint createInfoCount, ManagedPtrArray<VkRayTracingPipelineCreateInfoNV> pCreateInfos, ManagedPtrArray<VkAllocationCallbacks> pAllocator, IntPtr* pPipelines) { throw new NotImplementedException(); }
 		public static VkResult vkCreateRayTracingPipelinesNV(IntPtr device, IntPtr pipelineCache, uint createInfoCount, IntPtr pCreateInfos, IntPtr pAllocator, IntPtr* pPipelines) { throw new NotImplementedException(); }
+		public static VkResult vkGetRayTracingShaderGroupHandlesKHR(IntPtr device, IntPtr pipeline, uint firstGroup, uint groupCount, ulong dataSize, IntPtr pData) { throw new NotImplementedException(); }
 		public static VkResult vkGetRayTracingShaderGroupHandlesNV(IntPtr device, IntPtr pipeline, uint firstGroup, uint groupCount, ulong dataSize, IntPtr pData) { throw new NotImplementedException(); }
 		public static VkResult vkGetAccelerationStructureHandleNV(IntPtr device, IntPtr accelerationStructure, ulong dataSize, IntPtr pData) { throw new NotImplementedException(); }
+		public static void vkCmdWriteAccelerationStructuresPropertiesKHR(IntPtr commandBuffer, uint accelerationStructureCount, IntPtr* pAccelerationStructures, VkQueryType queryType, IntPtr queryPool, uint firstQuery) { throw new NotImplementedException(); }
 		public static void vkCmdWriteAccelerationStructuresPropertiesNV(IntPtr commandBuffer, uint accelerationStructureCount, IntPtr* pAccelerationStructures, VkQueryType queryType, IntPtr queryPool, uint firstQuery) { throw new NotImplementedException(); }
 		public static VkResult vkCompileDeferredNV(IntPtr device, IntPtr pipeline, uint shader) { throw new NotImplementedException(); }
 		public static VkResult vkGetMemoryHostPointerPropertiesEXT(IntPtr device, VkExternalMemoryHandleTypeFlags handleType, IntPtr pHostPointer, ManagedPtrArray<VkMemoryHostPointerPropertiesEXT> pMemoryHostPointerProperties) { throw new NotImplementedException(); }
@@ -630,6 +620,17 @@ namespace VulkanSharp.Raw {
 		public static VkResult vkCreateHeadlessSurfaceEXT(IntPtr instance, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pSurface) { throw new NotImplementedException(); }
 		public static void vkCmdSetLineStippleEXT(IntPtr commandBuffer, uint lineStippleFactor, ushort lineStipplePattern) { throw new NotImplementedException(); }
 		public static void vkResetQueryPoolEXT(IntPtr device, IntPtr queryPool, uint firstQuery, uint queryCount) { throw new NotImplementedException(); }
+		public static void vkGetGeneratedCommandsMemoryRequirementsNV(IntPtr device, ManagedPtrArray<VkGeneratedCommandsMemoryRequirementsInfoNV> pInfo, ManagedPtrArray<VkMemoryRequirements2> pMemoryRequirements) { throw new NotImplementedException(); }
+		public static void vkGetGeneratedCommandsMemoryRequirementsNV(IntPtr device, IntPtr pInfo, IntPtr pMemoryRequirements) { throw new NotImplementedException(); }
+		public static void vkCmdPreprocessGeneratedCommandsNV(IntPtr commandBuffer, ManagedPtrArray<VkGeneratedCommandsInfoNV> pGeneratedCommandsInfo) { throw new NotImplementedException(); }
+		public static void vkCmdPreprocessGeneratedCommandsNV(IntPtr commandBuffer, IntPtr pGeneratedCommandsInfo) { throw new NotImplementedException(); }
+		public static void vkCmdExecuteGeneratedCommandsNV(IntPtr commandBuffer, bool isPreprocessed, ManagedPtrArray<VkGeneratedCommandsInfoNV> pGeneratedCommandsInfo) { throw new NotImplementedException(); }
+		public static void vkCmdExecuteGeneratedCommandsNV(IntPtr commandBuffer, bool isPreprocessed, IntPtr pGeneratedCommandsInfo) { throw new NotImplementedException(); }
+		public static void vkCmdBindPipelineShaderGroupNV(IntPtr commandBuffer, VkPipelineBindPoint pipelineBindPoint, IntPtr pipeline, uint groupIndex) { throw new NotImplementedException(); }
+		public static VkResult vkCreateIndirectCommandsLayoutNV(IntPtr device, ManagedPtrArray<VkIndirectCommandsLayoutCreateInfoNV> pCreateInfo, ManagedPtrArray<VkAllocationCallbacks> pAllocator, IntPtr* pIndirectCommandsLayout) { throw new NotImplementedException(); }
+		public static VkResult vkCreateIndirectCommandsLayoutNV(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pIndirectCommandsLayout) { throw new NotImplementedException(); }
+		public static void vkDestroyIndirectCommandsLayoutNV(IntPtr device, IntPtr indirectCommandsLayout, ManagedPtrArray<VkAllocationCallbacks> pAllocator) { throw new NotImplementedException(); }
+		public static void vkDestroyIndirectCommandsLayoutNV(IntPtr device, IntPtr indirectCommandsLayout, IntPtr pAllocator) { throw new NotImplementedException(); }
 		internal static IntPtr vkCreateWin32SurfaceKHR_hndl;
 		internal static IntPtr vkGetPhysicalDeviceWin32PresentationSupportKHR_hndl;
 		internal static IntPtr vkGetMemoryWin32HandleKHR_hndl;
@@ -928,15 +929,6 @@ namespace VulkanSharp.Raw {
 		internal static IntPtr vkGetPhysicalDeviceExternalImageFormatPropertiesNV_hndl;
 		internal static IntPtr vkCmdBeginConditionalRenderingEXT_hndl;
 		internal static IntPtr vkCmdEndConditionalRenderingEXT_hndl;
-		internal static IntPtr vkCmdProcessCommandsNVX_hndl;
-		internal static IntPtr vkCmdReserveSpaceForCommandsNVX_hndl;
-		internal static IntPtr vkCreateIndirectCommandsLayoutNVX_hndl;
-		internal static IntPtr vkDestroyIndirectCommandsLayoutNVX_hndl;
-		internal static IntPtr vkCreateObjectTableNVX_hndl;
-		internal static IntPtr vkDestroyObjectTableNVX_hndl;
-		internal static IntPtr vkRegisterObjectsNVX_hndl;
-		internal static IntPtr vkUnregisterObjectsNVX_hndl;
-		internal static IntPtr vkGetPhysicalDeviceGeneratedCommandsPropertiesNVX_hndl;
 		internal static IntPtr vkCmdSetViewportWScalingNV_hndl;
 		internal static IntPtr vkReleaseDisplayEXT_hndl;
 		internal static IntPtr vkGetPhysicalDeviceSurfaceCapabilities2EXT_hndl;
@@ -970,15 +962,19 @@ namespace VulkanSharp.Raw {
 		internal static IntPtr vkCmdSetViewportShadingRatePaletteNV_hndl;
 		internal static IntPtr vkCmdSetCoarseSampleOrderNV_hndl;
 		internal static IntPtr vkCreateAccelerationStructureNV_hndl;
+		internal static IntPtr vkDestroyAccelerationStructureKHR_hndl;
 		internal static IntPtr vkDestroyAccelerationStructureNV_hndl;
 		internal static IntPtr vkGetAccelerationStructureMemoryRequirementsNV_hndl;
+		internal static IntPtr vkBindAccelerationStructureMemoryKHR_hndl;
 		internal static IntPtr vkBindAccelerationStructureMemoryNV_hndl;
 		internal static IntPtr vkCmdBuildAccelerationStructureNV_hndl;
 		internal static IntPtr vkCmdCopyAccelerationStructureNV_hndl;
 		internal static IntPtr vkCmdTraceRaysNV_hndl;
 		internal static IntPtr vkCreateRayTracingPipelinesNV_hndl;
+		internal static IntPtr vkGetRayTracingShaderGroupHandlesKHR_hndl;
 		internal static IntPtr vkGetRayTracingShaderGroupHandlesNV_hndl;
 		internal static IntPtr vkGetAccelerationStructureHandleNV_hndl;
+		internal static IntPtr vkCmdWriteAccelerationStructuresPropertiesKHR_hndl;
 		internal static IntPtr vkCmdWriteAccelerationStructuresPropertiesNV_hndl;
 		internal static IntPtr vkCompileDeferredNV_hndl;
 		internal static IntPtr vkGetMemoryHostPointerPropertiesEXT_hndl;
@@ -1008,6 +1004,12 @@ namespace VulkanSharp.Raw {
 		internal static IntPtr vkCreateHeadlessSurfaceEXT_hndl;
 		internal static IntPtr vkCmdSetLineStippleEXT_hndl;
 		internal static IntPtr vkResetQueryPoolEXT_hndl;
+		internal static IntPtr vkGetGeneratedCommandsMemoryRequirementsNV_hndl;
+		internal static IntPtr vkCmdPreprocessGeneratedCommandsNV_hndl;
+		internal static IntPtr vkCmdExecuteGeneratedCommandsNV_hndl;
+		internal static IntPtr vkCmdBindPipelineShaderGroupNV_hndl;
+		internal static IntPtr vkCreateIndirectCommandsLayoutNV_hndl;
+		internal static IntPtr vkDestroyIndirectCommandsLayoutNV_hndl;
 		private static void InitPtrs() {
 			NativeLibrary.TryGetExport(libHndl, "vkCreateWin32SurfaceKHR", out vkCreateWin32SurfaceKHR_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkGetPhysicalDeviceWin32PresentationSupportKHR", out vkGetPhysicalDeviceWin32PresentationSupportKHR_hndl);
@@ -1307,15 +1309,6 @@ namespace VulkanSharp.Raw {
 			NativeLibrary.TryGetExport(libHndl, "vkGetPhysicalDeviceExternalImageFormatPropertiesNV", out vkGetPhysicalDeviceExternalImageFormatPropertiesNV_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkCmdBeginConditionalRenderingEXT", out vkCmdBeginConditionalRenderingEXT_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkCmdEndConditionalRenderingEXT", out vkCmdEndConditionalRenderingEXT_hndl);
-			NativeLibrary.TryGetExport(libHndl, "vkCmdProcessCommandsNVX", out vkCmdProcessCommandsNVX_hndl);
-			NativeLibrary.TryGetExport(libHndl, "vkCmdReserveSpaceForCommandsNVX", out vkCmdReserveSpaceForCommandsNVX_hndl);
-			NativeLibrary.TryGetExport(libHndl, "vkCreateIndirectCommandsLayoutNVX", out vkCreateIndirectCommandsLayoutNVX_hndl);
-			NativeLibrary.TryGetExport(libHndl, "vkDestroyIndirectCommandsLayoutNVX", out vkDestroyIndirectCommandsLayoutNVX_hndl);
-			NativeLibrary.TryGetExport(libHndl, "vkCreateObjectTableNVX", out vkCreateObjectTableNVX_hndl);
-			NativeLibrary.TryGetExport(libHndl, "vkDestroyObjectTableNVX", out vkDestroyObjectTableNVX_hndl);
-			NativeLibrary.TryGetExport(libHndl, "vkRegisterObjectsNVX", out vkRegisterObjectsNVX_hndl);
-			NativeLibrary.TryGetExport(libHndl, "vkUnregisterObjectsNVX", out vkUnregisterObjectsNVX_hndl);
-			NativeLibrary.TryGetExport(libHndl, "vkGetPhysicalDeviceGeneratedCommandsPropertiesNVX", out vkGetPhysicalDeviceGeneratedCommandsPropertiesNVX_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkCmdSetViewportWScalingNV", out vkCmdSetViewportWScalingNV_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkReleaseDisplayEXT", out vkReleaseDisplayEXT_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkGetPhysicalDeviceSurfaceCapabilities2EXT", out vkGetPhysicalDeviceSurfaceCapabilities2EXT_hndl);
@@ -1349,15 +1342,19 @@ namespace VulkanSharp.Raw {
 			NativeLibrary.TryGetExport(libHndl, "vkCmdSetViewportShadingRatePaletteNV", out vkCmdSetViewportShadingRatePaletteNV_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkCmdSetCoarseSampleOrderNV", out vkCmdSetCoarseSampleOrderNV_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkCreateAccelerationStructureNV", out vkCreateAccelerationStructureNV_hndl);
+			NativeLibrary.TryGetExport(libHndl, "vkDestroyAccelerationStructureKHR", out vkDestroyAccelerationStructureKHR_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkDestroyAccelerationStructureNV", out vkDestroyAccelerationStructureNV_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkGetAccelerationStructureMemoryRequirementsNV", out vkGetAccelerationStructureMemoryRequirementsNV_hndl);
+			NativeLibrary.TryGetExport(libHndl, "vkBindAccelerationStructureMemoryKHR", out vkBindAccelerationStructureMemoryKHR_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkBindAccelerationStructureMemoryNV", out vkBindAccelerationStructureMemoryNV_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkCmdBuildAccelerationStructureNV", out vkCmdBuildAccelerationStructureNV_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkCmdCopyAccelerationStructureNV", out vkCmdCopyAccelerationStructureNV_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkCmdTraceRaysNV", out vkCmdTraceRaysNV_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkCreateRayTracingPipelinesNV", out vkCreateRayTracingPipelinesNV_hndl);
+			NativeLibrary.TryGetExport(libHndl, "vkGetRayTracingShaderGroupHandlesKHR", out vkGetRayTracingShaderGroupHandlesKHR_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkGetRayTracingShaderGroupHandlesNV", out vkGetRayTracingShaderGroupHandlesNV_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkGetAccelerationStructureHandleNV", out vkGetAccelerationStructureHandleNV_hndl);
+			NativeLibrary.TryGetExport(libHndl, "vkCmdWriteAccelerationStructuresPropertiesKHR", out vkCmdWriteAccelerationStructuresPropertiesKHR_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkCmdWriteAccelerationStructuresPropertiesNV", out vkCmdWriteAccelerationStructuresPropertiesNV_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkCompileDeferredNV", out vkCompileDeferredNV_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkGetMemoryHostPointerPropertiesEXT", out vkGetMemoryHostPointerPropertiesEXT_hndl);
@@ -1387,6 +1384,12 @@ namespace VulkanSharp.Raw {
 			NativeLibrary.TryGetExport(libHndl, "vkCreateHeadlessSurfaceEXT", out vkCreateHeadlessSurfaceEXT_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkCmdSetLineStippleEXT", out vkCmdSetLineStippleEXT_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkResetQueryPoolEXT", out vkResetQueryPoolEXT_hndl);
+			NativeLibrary.TryGetExport(libHndl, "vkGetGeneratedCommandsMemoryRequirementsNV", out vkGetGeneratedCommandsMemoryRequirementsNV_hndl);
+			NativeLibrary.TryGetExport(libHndl, "vkCmdPreprocessGeneratedCommandsNV", out vkCmdPreprocessGeneratedCommandsNV_hndl);
+			NativeLibrary.TryGetExport(libHndl, "vkCmdExecuteGeneratedCommandsNV", out vkCmdExecuteGeneratedCommandsNV_hndl);
+			NativeLibrary.TryGetExport(libHndl, "vkCmdBindPipelineShaderGroupNV", out vkCmdBindPipelineShaderGroupNV_hndl);
+			NativeLibrary.TryGetExport(libHndl, "vkCreateIndirectCommandsLayoutNV", out vkCreateIndirectCommandsLayoutNV_hndl);
+			NativeLibrary.TryGetExport(libHndl, "vkDestroyIndirectCommandsLayoutNV", out vkDestroyIndirectCommandsLayoutNV_hndl);
 		}
 	}
 }

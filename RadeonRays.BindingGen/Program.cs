@@ -1,12 +1,11 @@
 ﻿using Mono.Cecil;
 using Mono.Cecil.Cil;
-using Mono.Cecil.Rocks;
+using RadeonRaysSharp.BindingGen;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 
-namespace VulkanSharp.BindingGen
+namespace RadeonRays.BindingGen
 {
     static class Extensions
     {
@@ -44,15 +43,13 @@ namespace VulkanSharp.BindingGen
     class Program
     {
         static List<string> files;
-        static string path = @"I:\VulkanSDK\1.2.135.0\Include\vulkan"; //@"/usr/include/vulkan";
+        static string path = @"I:\Code\RadeonRays_SDK\radeonrays\include"; //@"/usr/include/vulkan";
         static void Main(string[] args)
         {
             files = new List<string>();
 
-            files.Add("vulkan_win32.h");
-            files.Add("vulkan_wayland.h");
-            files.Add("vulkan_xlib.h");
-            files.Add("vulkan_core.h");
+            files.Add("radeonrays.h");
+            files.Add("radeonrays_vlk.h");
 
             FileParser p = new FileParser(path, files.ToArray());
             p.Process();
@@ -61,20 +58,20 @@ namespace VulkanSharp.BindingGen
             var process = Process.Start(new ProcessStartInfo()
             {
                 FileName = "dotnet",
-                Arguments = "clean ../../../../VulkanSharp.NET/VulkanSharp.NET.csproj -c Release",
+                Arguments = "clean ../../../../RadeonRaysSharp.NET/RadeonRaysSharp.NET.csproj -c Release",
                 WorkingDirectory = Environment.CurrentDirectory
             });
             process.WaitForExit();
             process = Process.Start(new ProcessStartInfo()
             {
                 FileName = "dotnet",
-                Arguments = "build ../../../../VulkanSharp.NET/VulkanSharp.NET.csproj -c Release",
+                Arguments = "build ../../../../RadeonRaysSharp.NET/RadeonRaysSharp.NET.csproj -c Release",
                 WorkingDirectory = Environment.CurrentDirectory
             });
             process.WaitForExit();
 
             //Load assembly
-            ModuleDefinition mod = ModuleDefinition.ReadModule("../../../../VulkanSharp.NET/bin/Release/netcoreapp3.1/VulkanSharp.NET.dll");
+            ModuleDefinition mod = ModuleDefinition.ReadModule("../../../../RadeonRaysSharp.NET/bin/Release/netcoreapp3.1/RadeonRaysSharp.NET.dll");
 
             //find relevant cast function
 
@@ -154,7 +151,7 @@ namespace VulkanSharp.BindingGen
                             proc.Emit(OpCodes.Calli, cSite);
                             proc.Emit(OpCodes.Ret);
                         }
-            mod.Write("../../../../VulkanSharp.NET.dll");
+            mod.Write("../../../../RadeonRaysSharp.NET.dll");
             Console.WriteLine("Done!");
         }
     }
