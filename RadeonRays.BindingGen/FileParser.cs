@@ -998,11 +998,24 @@ namespace RadeonRaysSharp.BindingGen
                     ConstantFile += $"\t\t\tpublic const string {ConvertConstName(d.Name)} = {d.Value};\n";
                     d.ValType = typeof(string);
                 }
-                else if (d.Name.StartsWith("RR_API"))
+                else if (d.Name.StartsWith("RR_API_VERSION"))
                 {
-                    //skip
+                    d.ValType = typeof(uint);
+                    ConstantFile += $"\t\t\tpublic const uint {ConvertConstName(d.Name)} = {ConvertConstName("RR_API_MAJOR_VERSION")} * 1000000 + {ConvertConstName("RR_API_MINOR_VERSION")} + 1000 + {ConvertConstName("RR_API_PATCH_VERSION")};\n";
+                    //Skip
 #warning May need proper handling and parsing
-                }else if (d.Name.StartsWith("RR_API_VERSION"))
+                }
+                else if (d.Value.Trim() == "__declspec(dllexport)")
+                {
+                    //Skip
+#warning May need proper handling and parsing
+                }
+                else if (d.Value.Trim() == "__declspec(dllimport)")
+                {
+                    //Skip
+#warning May need proper handling and parsing
+                }
+                else if (d.Value.Trim() == "__attribute__((visibility(\"default\")))")
                 {
                     //Skip
 #warning May need proper handling and parsing
