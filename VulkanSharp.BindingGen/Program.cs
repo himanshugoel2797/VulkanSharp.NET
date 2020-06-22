@@ -44,7 +44,7 @@ namespace VulkanSharp.BindingGen
     class Program
     {
         static List<string> files;
-        static string path = @"I:\VulkanSDK\1.2.135.0\Include\vulkan"; //@"/usr/include/vulkan";
+        static string path = @"I:\VulkanSDK\1.2.141.2\Include\vulkan"; //@"/usr/include/vulkan";
         static void Main(string[] args)
         {
             files = new List<string>();

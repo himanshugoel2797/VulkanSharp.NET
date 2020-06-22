@@ -32,8 +32,8 @@ namespace VulkanSharp.Raw {
 			public const string VkKhrXlibSurfaceExtensionName = "VK_KHR_xlib_surface";
 			public const int VkVersion10 = 1;
 			public const uint VkApiVersion10 = 4194304;
-			public const int VkHeaderVersion = 135;
-			public const uint VkHeaderVersionComplete = 4202631;
+			public const int VkHeaderVersion = 141;
+			public const uint VkHeaderVersionComplete = 4202637;
 			public const int VkNullHandle = 0;
 			public const float VkLodClampNone = 1000.0f;
 			public const uint VkRemainingMipLevels = ~0U;
@@ -275,7 +275,7 @@ namespace VulkanSharp.Raw {
 			public const int VkExtTransformFeedbackSpecVersion = 1;
 			public const string VkExtTransformFeedbackExtensionName = "VK_EXT_transform_feedback";
 			public const int VkNvxImageViewHandle = 1;
-			public const int VkNvxImageViewHandleSpecVersion = 1;
+			public const int VkNvxImageViewHandleSpecVersion = 2;
 			public const string VkNvxImageViewHandleExtensionName = "VK_NVX_image_view_handle";
 			public const int VkAmdDrawIndirectCount = 1;
 			public const int VkAmdDrawIndirectCountSpecVersion = 2;
@@ -381,7 +381,7 @@ namespace VulkanSharp.Raw {
 			public const string VkExtQueueFamilyForeignExtensionName = "VK_EXT_queue_family_foreign";
 			public const uint VkQueueFamilyForeignExt = ~0U-2;
 			public const int VkExtDebugUtils = 1;
-			public const int VkExtDebugUtilsSpecVersion = 1;
+			public const int VkExtDebugUtilsSpecVersion = 2;
 			public const string VkExtDebugUtilsExtensionName = "VK_EXT_debug_utils";
 			public const int VkExtSamplerFilterMinmax = 1;
 			public const int VkExtSamplerFilterMinmaxSpecVersion = 2;
@@ -448,6 +448,9 @@ namespace VulkanSharp.Raw {
 			public const int VkExtFilterCubic = 1;
 			public const int VkExtFilterCubicSpecVersion = 3;
 			public const string VkExtFilterCubicExtensionName = "VK_EXT_filter_cubic";
+			public const int VkQcomRenderPassShaderResolve = 1;
+			public const int VkQcomRenderPassShaderResolveSpecVersion = 4;
+			public const string VkQcomRenderPassShaderResolveExtensionName = "VK_QCOM_render_pass_shader_resolve";
 			public const int VkExtGlobalPriority = 1;
 			public const int VkExtGlobalPrioritySpecVersion = 2;
 			public const string VkExtGlobalPriorityExtensionName = "VK_EXT_global_priority";
@@ -586,14 +589,26 @@ namespace VulkanSharp.Raw {
 			public const int VkQcomRenderPassTransform = 1;
 			public const int VkQcomRenderPassTransformSpecVersion = 1;
 			public const string VkQcomRenderPassTransformExtensionName = "VK_QCOM_render_pass_transform";
+			public const int VkExtRobustness2 = 1;
+			public const int VkExtRobustness2SpecVersion = 1;
+			public const string VkExtRobustness2ExtensionName = "VK_EXT_robustness2";
+			public const int VkExtCustomBorderColor = 1;
+			public const int VkExtCustomBorderColorSpecVersion = 12;
+			public const string VkExtCustomBorderColorExtensionName = "VK_EXT_custom_border_color";
 			public const int VkGoogleUserType = 1;
 			public const int VkGoogleUserTypeSpecVersion = 1;
 			public const string VkGoogleUserTypeExtensionName = "VK_GOOGLE_user_type";
+			public const int VkExtPrivateData = 1;
+			public const int VkExtPrivateDataSpecVersion = 1;
+			public const string VkExtPrivateDataExtensionName = "VK_EXT_private_data";
 			public const int VkExtPipelineCreationCacheControl = 1;
-			public const int VkExtPipelineCreationCacheControlSpecVersion = 2;
+			public const int VkExtPipelineCreationCacheControlSpecVersion = 3;
 			public const string VkExtPipelineCreationCacheControlExtensionName = "VK_EXT_pipeline_creation_cache_control";
 			public const int VkNvDeviceDiagnosticsConfig = 1;
 			public const int VkNvDeviceDiagnosticsConfigSpecVersion = 1;
 			public const string VkNvDeviceDiagnosticsConfigExtensionName = "VK_NV_device_diagnostics_config";
+			public const int VkQcomRenderPassStoreOps = 1;
+			public const int VkQcomRenderPassStoreOpsSpecVersion = 2;
+			public const string VkQcomRenderPassStoreOpsExtensionName = "VK_QCOM_render_pass_store_ops";
 	}
 }

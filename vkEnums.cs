@@ -5,16 +5,10 @@ namespace VulkanSharp.Raw {
 			FullScreenExclusiveAllowedExt = 1,
 			FullScreenExclusiveDisallowedExt = 2,
 			FullScreenExclusiveApplicationControlledExt = 3,
-			FullScreenExclusiveBeginRangeExt = FullScreenExclusiveDefaultExt,
-			FullScreenExclusiveEndRangeExt = FullScreenExclusiveApplicationControlledExt,
-			FullScreenExclusiveRangeSizeExt = (FullScreenExclusiveApplicationControlledExt-FullScreenExclusiveDefaultExt+1 ),
 			FullScreenExclusiveMaxEnumExt = 0x7fffffff,
 		}
 		public enum VkPipelineCacheHeaderVersion {
 			PipelineCacheHeaderVersionOne = 1,
-			PipelineCacheHeaderVersionBeginRange = PipelineCacheHeaderVersionOne,
-			PipelineCacheHeaderVersionEndRange = PipelineCacheHeaderVersionOne,
-			PipelineCacheHeaderVersionRangeSize = (PipelineCacheHeaderVersionOne-PipelineCacheHeaderVersionOne+1 ),
 			PipelineCacheHeaderVersionMaxEnum = 0x7fffffff,
 		}
 		public enum VkResult {
@@ -56,15 +50,13 @@ namespace VulkanSharp.Raw {
 			ThreadDoneKhr = 1000268001,
 			OperationDeferredKhr = 1000268002,
 			OperationNotDeferredKhr = 1000268003,
-			ErrorPipelineCompileRequiredExt = 1000297000,
+			PipelineCompileRequiredExt = 1000297000,
 			ErrorOutOfPoolMemoryKhr = ErrorOutOfPoolMemory,
 			ErrorInvalidExternalHandleKhr = ErrorInvalidExternalHandle,
 			ErrorFragmentationExt = ErrorFragmentation,
 			ErrorInvalidDeviceAddressExt = ErrorInvalidOpaqueCaptureAddress,
 			ErrorInvalidOpaqueCaptureAddressKhr = ErrorInvalidOpaqueCaptureAddress,
-			ResultBeginRange = ErrorUnknown,
-			ResultEndRange = Incomplete,
-			ResultRangeSize = (Incomplete-ErrorUnknown+1 ),
+			ErrorPipelineCompileRequiredExt = PipelineCompileRequiredExt,
 			ResultMaxEnum = 0x7fffffff,
 		}
 		public enum VkStructureType {
@@ -260,6 +252,7 @@ namespace VulkanSharp.Raw {
 			StructureTypePhysicalDeviceTransformFeedbackPropertiesExt = 1000028001,
 			StructureTypePipelineRasterizationStateStreamCreateInfoExt = 1000028002,
 			StructureTypeImageViewHandleInfoNvx = 1000030000,
+			StructureTypeImageViewAddressPropertiesNvx = 1000030001,
 			StructureTypeTextureLodGatherFormatPropertiesAmd = 1000041000,
 			StructureTypeStreamDescriptorSurfaceCreateInfoGgp = 1000049000,
 			StructureTypePhysicalDeviceCornerSampledImageFeaturesNv = 1000050000,
@@ -364,7 +357,6 @@ namespace VulkanSharp.Raw {
 			StructureTypeAccelerationStructureGeometryInstancesDataKhr = 1000150004,
 			StructureTypeAccelerationStructureGeometryTrianglesDataKhr = 1000150005,
 			StructureTypeAccelerationStructureGeometryKhr = 1000150006,
-			StructureTypeAccelerationStructureInfoKhr = 1000150007,
 			StructureTypeAccelerationStructureMemoryRequirementsInfoKhr = 1000150008,
 			StructureTypeAccelerationStructureVersionKhr = 1000150009,
 			StructureTypeCopyAccelerationStructureInfoKhr = 1000150010,
@@ -428,7 +420,7 @@ namespace VulkanSharp.Raw {
 			StructureTypeCheckpointDataNv = 1000206000,
 			StructureTypeQueueFamilyCheckpointPropertiesNv = 1000206001,
 			StructureTypePhysicalDeviceShaderIntegerFunctions2FeaturesIntel = 1000209000,
-			StructureTypeQueryPoolCreateInfoIntel = 1000210000,
+			StructureTypeQueryPoolPerformanceQueryCreateInfoIntel = 1000210000,
 			StructureTypeInitializePerformanceApiInfoIntel = 1000210001,
 			StructureTypePerformanceMarkerInfoIntel = 1000210002,
 			StructureTypePerformanceStreamMarkerInfoIntel = 1000210003,
@@ -492,7 +484,15 @@ namespace VulkanSharp.Raw {
 			StructureTypePhysicalDeviceTexelBufferAlignmentPropertiesExt = 1000281001,
 			StructureTypeCommandBufferInheritanceRenderPassTransformInfoQcom = 1000282000,
 			StructureTypeRenderPassTransformBeginInfoQcom = 1000282001,
+			StructureTypePhysicalDeviceRobustness2FeaturesExt = 1000286000,
+			StructureTypePhysicalDeviceRobustness2PropertiesExt = 1000286001,
+			StructureTypeSamplerCustomBorderColorCreateInfoExt = 1000287000,
+			StructureTypePhysicalDeviceCustomBorderColorPropertiesExt = 1000287001,
+			StructureTypePhysicalDeviceCustomBorderColorFeaturesExt = 1000287002,
 			StructureTypePipelineLibraryCreateInfoKhr = 1000290000,
+			StructureTypePhysicalDevicePrivateDataFeaturesExt = 1000295000,
+			StructureTypeDevicePrivateDataCreateInfoExt = 1000295001,
+			StructureTypePrivateDataSlotCreateInfoExt = 1000295002,
 			StructureTypePhysicalDevicePipelineCreationCacheControlFeaturesExt = 1000297000,
 			StructureTypePhysicalDeviceDiagnosticsConfigFeaturesNv = 1000300000,
 			StructureTypeDeviceDiagnosticsConfigCreateInfoNv = 1000300001,
@@ -553,8 +553,8 @@ namespace VulkanSharp.Raw {
 			StructureTypeRenderPassInputAttachmentAspectCreateInfoKhr = StructureTypeRenderPassInputAttachmentAspectCreateInfo,
 			StructureTypeImageViewUsageCreateInfoKhr = StructureTypeImageViewUsageCreateInfo,
 			StructureTypePipelineTessellationDomainOriginStateCreateInfoKhr = StructureTypePipelineTessellationDomainOriginStateCreateInfo,
-			StructureTypePhysicalDeviceVariablePointerFeaturesKhr = StructureTypePhysicalDeviceVariablePointerFeatures,
-			StructureTypePhysicalDeviceVariablePointersFeaturesKhr = StructureTypePhysicalDeviceVariablePointerFeatures,
+			StructureTypePhysicalDeviceVariablePointersFeaturesKhr = StructureTypePhysicalDeviceVariablePointersFeatures,
+			StructureTypePhysicalDeviceVariablePointerFeaturesKhr = StructureTypePhysicalDeviceVariablePointersFeaturesKhr,
 			StructureTypeMemoryDedicatedRequirementsKhr = StructureTypeMemoryDedicatedRequirements,
 			StructureTypeMemoryDedicatedAllocateInfoKhr = StructureTypeMemoryDedicatedAllocateInfo,
 			StructureTypePhysicalDeviceSamplerFilterMinmaxPropertiesExt = StructureTypePhysicalDeviceSamplerFilterMinmaxProperties,
@@ -595,6 +595,7 @@ namespace VulkanSharp.Raw {
 			StructureTypeTimelineSemaphoreSubmitInfoKhr = StructureTypeTimelineSemaphoreSubmitInfo,
 			StructureTypeSemaphoreWaitInfoKhr = StructureTypeSemaphoreWaitInfo,
 			StructureTypeSemaphoreSignalInfoKhr = StructureTypeSemaphoreSignalInfo,
+			StructureTypeQueryPoolCreateInfoIntel = StructureTypeQueryPoolPerformanceQueryCreateInfoIntel,
 			StructureTypePhysicalDeviceVulkanMemoryModelFeaturesKhr = StructureTypePhysicalDeviceVulkanMemoryModelFeatures,
 			StructureTypePhysicalDeviceScalarBlockLayoutFeaturesExt = StructureTypePhysicalDeviceScalarBlockLayoutFeatures,
 			StructureTypePhysicalDeviceSeparateDepthStencilLayoutsFeaturesKhr = StructureTypePhysicalDeviceSeparateDepthStencilLayoutsFeatures,
@@ -610,9 +611,6 @@ namespace VulkanSharp.Raw {
 			StructureTypeMemoryOpaqueCaptureAddressAllocateInfoKhr = StructureTypeMemoryOpaqueCaptureAddressAllocateInfo,
 			StructureTypeDeviceMemoryOpaqueCaptureAddressInfoKhr = StructureTypeDeviceMemoryOpaqueCaptureAddressInfo,
 			StructureTypePhysicalDeviceHostQueryResetFeaturesExt = StructureTypePhysicalDeviceHostQueryResetFeatures,
-			StructureTypeBeginRange = StructureTypeApplicationInfo,
-			StructureTypeEndRange = StructureTypeLoaderDeviceCreateInfo,
-			StructureTypeRangeSize = (StructureTypeLoaderDeviceCreateInfo-StructureTypeApplicationInfo+1 ),
 			StructureTypeMaxEnum = 0x7fffffff,
 		}
 		public enum VkSystemAllocationScope {
@@ -621,16 +619,10 @@ namespace VulkanSharp.Raw {
 			SystemAllocationScopeCache = 2,
 			SystemAllocationScopeDevice = 3,
 			SystemAllocationScopeInstance = 4,
-			SystemAllocationScopeBeginRange = SystemAllocationScopeCommand,
-			SystemAllocationScopeEndRange = SystemAllocationScopeInstance,
-			SystemAllocationScopeRangeSize = (SystemAllocationScopeInstance-SystemAllocationScopeCommand+1 ),
 			SystemAllocationScopeMaxEnum = 0x7fffffff,
 		}
 		public enum VkInternalAllocationType {
 			InternalAllocationTypeExecutable = 0,
-			InternalAllocationTypeBeginRange = InternalAllocationTypeExecutable,
-			InternalAllocationTypeEndRange = InternalAllocationTypeExecutable,
-			InternalAllocationTypeRangeSize = (InternalAllocationTypeExecutable-InternalAllocationTypeExecutable+1 ),
 			InternalAllocationTypeMaxEnum = 0x7fffffff,
 		}
 		public enum VkFormat {
@@ -909,27 +901,18 @@ namespace VulkanSharp.Raw {
 			FormatG16B16R163plane422UnormKhr = FormatG16B16R163plane422Unorm,
 			FormatG16B16r162plane422UnormKhr = FormatG16B16r162plane422Unorm,
 			FormatG16B16R163plane444UnormKhr = FormatG16B16R163plane444Unorm,
-			FormatBeginRange = FormatUndefined,
-			FormatEndRange = FormatAstc12x12SrgbBlock,
-			FormatRangeSize = (FormatAstc12x12SrgbBlock-FormatUndefined+1 ),
 			FormatMaxEnum = 0x7fffffff,
 		}
 		public enum VkImageType {
 			ImageType1d = 0,
 			ImageType2d = 1,
 			ImageType3d = 2,
-			ImageTypeBeginRange = ImageType1d,
-			ImageTypeEndRange = ImageType3d,
-			ImageTypeRangeSize = (ImageType3d-ImageType1d+1 ),
 			ImageTypeMaxEnum = 0x7fffffff,
 		}
 		public enum VkImageTiling {
 			ImageTilingOptimal = 0,
 			ImageTilingLinear = 1,
 			ImageTilingDrmFormatModifierExt = 1000158000,
-			ImageTilingBeginRange = ImageTilingOptimal,
-			ImageTilingEndRange = ImageTilingLinear,
-			ImageTilingRangeSize = (ImageTilingLinear-ImageTilingOptimal+1 ),
 			ImageTilingMaxEnum = 0x7fffffff,
 		}
 		public enum VkPhysicalDeviceType {
@@ -938,9 +921,6 @@ namespace VulkanSharp.Raw {
 			PhysicalDeviceTypeDiscreteGpu = 2,
 			PhysicalDeviceTypeVirtualGpu = 3,
 			PhysicalDeviceTypeCpu = 4,
-			PhysicalDeviceTypeBeginRange = PhysicalDeviceTypeOther,
-			PhysicalDeviceTypeEndRange = PhysicalDeviceTypeCpu,
-			PhysicalDeviceTypeRangeSize = (PhysicalDeviceTypeCpu-PhysicalDeviceTypeOther+1 ),
 			PhysicalDeviceTypeMaxEnum = 0x7fffffff,
 		}
 		public enum VkQueryType {
@@ -953,17 +933,11 @@ namespace VulkanSharp.Raw {
 			QueryTypeAccelerationStructureSerializationSizeKhr = 1000150000,
 			QueryTypePerformanceQueryIntel = 1000210000,
 			QueryTypeAccelerationStructureCompactedSizeNv = QueryTypeAccelerationStructureCompactedSizeKhr,
-			QueryTypeBeginRange = QueryTypeOcclusion,
-			QueryTypeEndRange = QueryTypeTimestamp,
-			QueryTypeRangeSize = (QueryTypeTimestamp-QueryTypeOcclusion+1 ),
 			QueryTypeMaxEnum = 0x7fffffff,
 		}
 		public enum VkSharingMode {
 			SharingModeExclusive = 0,
 			SharingModeConcurrent = 1,
-			SharingModeBeginRange = SharingModeExclusive,
-			SharingModeEndRange = SharingModeConcurrent,
-			SharingModeRangeSize = (SharingModeConcurrent-SharingModeExclusive+1 ),
 			SharingModeMaxEnum = 0x7fffffff,
 		}
 		public enum VkImageLayout {
@@ -992,9 +966,6 @@ namespace VulkanSharp.Raw {
 			ImageLayoutDepthReadOnlyOptimalKhr = ImageLayoutDepthReadOnlyOptimal,
 			ImageLayoutStencilAttachmentOptimalKhr = ImageLayoutStencilAttachmentOptimal,
 			ImageLayoutStencilReadOnlyOptimalKhr = ImageLayoutStencilReadOnlyOptimal,
-			ImageLayoutBeginRange = ImageLayoutUndefined,
-			ImageLayoutEndRange = ImageLayoutPreinitialized,
-			ImageLayoutRangeSize = (ImageLayoutPreinitialized-ImageLayoutUndefined+1 ),
 			ImageLayoutMaxEnum = 0x7fffffff,
 		}
 		public enum VkImageViewType {
@@ -1005,9 +976,6 @@ namespace VulkanSharp.Raw {
 			ImageViewType1dArray = 4,
 			ImageViewType2dArray = 5,
 			ImageViewTypeCubeArray = 6,
-			ImageViewTypeBeginRange = ImageViewType1d,
-			ImageViewTypeEndRange = ImageViewTypeCubeArray,
-			ImageViewTypeRangeSize = (ImageViewTypeCubeArray-ImageViewType1d+1 ),
 			ImageViewTypeMaxEnum = 0x7fffffff,
 		}
 		public enum VkComponentSwizzle {
@@ -1018,17 +986,11 @@ namespace VulkanSharp.Raw {
 			ComponentSwizzleG = 4,
 			ComponentSwizzleB = 5,
 			ComponentSwizzleA = 6,
-			ComponentSwizzleBeginRange = ComponentSwizzleIdentity,
-			ComponentSwizzleEndRange = ComponentSwizzleA,
-			ComponentSwizzleRangeSize = (ComponentSwizzleA-ComponentSwizzleIdentity+1 ),
 			ComponentSwizzleMaxEnum = 0x7fffffff,
 		}
 		public enum VkVertexInputRate {
 			VertexInputRateVertex = 0,
 			VertexInputRateInstance = 1,
-			VertexInputRateBeginRange = VertexInputRateVertex,
-			VertexInputRateEndRange = VertexInputRateInstance,
-			VertexInputRateRangeSize = (VertexInputRateInstance-VertexInputRateVertex+1 ),
 			VertexInputRateMaxEnum = 0x7fffffff,
 		}
 		public enum VkPrimitiveTopology {
@@ -1043,9 +1005,6 @@ namespace VulkanSharp.Raw {
 			PrimitiveTopologyTriangleListWithAdjacency = 8,
 			PrimitiveTopologyTriangleStripWithAdjacency = 9,
 			PrimitiveTopologyPatchList = 10,
-			PrimitiveTopologyBeginRange = PrimitiveTopologyPointList,
-			PrimitiveTopologyEndRange = PrimitiveTopologyPatchList,
-			PrimitiveTopologyRangeSize = (PrimitiveTopologyPatchList-PrimitiveTopologyPointList+1 ),
 			PrimitiveTopologyMaxEnum = 0x7fffffff,
 		}
 		public enum VkPolygonMode {
@@ -1053,17 +1012,11 @@ namespace VulkanSharp.Raw {
 			PolygonModeLine = 1,
 			PolygonModePoint = 2,
 			PolygonModeFillRectangleNv = 1000153000,
-			PolygonModeBeginRange = PolygonModeFill,
-			PolygonModeEndRange = PolygonModePoint,
-			PolygonModeRangeSize = (PolygonModePoint-PolygonModeFill+1 ),
 			PolygonModeMaxEnum = 0x7fffffff,
 		}
 		public enum VkFrontFace {
 			FrontFaceCounterClockwise = 0,
 			FrontFaceClockwise = 1,
-			FrontFaceBeginRange = FrontFaceCounterClockwise,
-			FrontFaceEndRange = FrontFaceClockwise,
-			FrontFaceRangeSize = (FrontFaceClockwise-FrontFaceCounterClockwise+1 ),
 			FrontFaceMaxEnum = 0x7fffffff,
 		}
 		public enum VkCompareOp {
@@ -1075,9 +1028,6 @@ namespace VulkanSharp.Raw {
 			CompareOpNotEqual = 5,
 			CompareOpGreaterOrEqual = 6,
 			CompareOpAlways = 7,
-			CompareOpBeginRange = CompareOpNever,
-			CompareOpEndRange = CompareOpAlways,
-			CompareOpRangeSize = (CompareOpAlways-CompareOpNever+1 ),
 			CompareOpMaxEnum = 0x7fffffff,
 		}
 		public enum VkStencilOp {
@@ -1089,9 +1039,6 @@ namespace VulkanSharp.Raw {
 			StencilOpInvert = 5,
 			StencilOpIncrementAndWrap = 6,
 			StencilOpDecrementAndWrap = 7,
-			StencilOpBeginRange = StencilOpKeep,
-			StencilOpEndRange = StencilOpDecrementAndWrap,
-			StencilOpRangeSize = (StencilOpDecrementAndWrap-StencilOpKeep+1 ),
 			StencilOpMaxEnum = 0x7fffffff,
 		}
 		public enum VkLogicOp {
@@ -1111,9 +1058,6 @@ namespace VulkanSharp.Raw {
 			LogicOpOrInverted = 13,
 			LogicOpNand = 14,
 			LogicOpSet = 15,
-			LogicOpBeginRange = LogicOpClear,
-			LogicOpEndRange = LogicOpSet,
-			LogicOpRangeSize = (LogicOpSet-LogicOpClear+1 ),
 			LogicOpMaxEnum = 0x7fffffff,
 		}
 		public enum VkBlendFactor {
@@ -1136,9 +1080,6 @@ namespace VulkanSharp.Raw {
 			BlendFactorOneMinusSrc1Color = 16,
 			BlendFactorSrc1Alpha = 17,
 			BlendFactorOneMinusSrc1Alpha = 18,
-			BlendFactorBeginRange = BlendFactorZero,
-			BlendFactorEndRange = BlendFactorOneMinusSrc1Alpha,
-			BlendFactorRangeSize = (BlendFactorOneMinusSrc1Alpha-BlendFactorZero+1 ),
 			BlendFactorMaxEnum = 0x7fffffff,
 		}
 		public enum VkBlendOp {
@@ -1193,9 +1134,6 @@ namespace VulkanSharp.Raw {
 			BlendOpRedExt = 1000148043,
 			BlendOpGreenExt = 1000148044,
 			BlendOpBlueExt = 1000148045,
-			BlendOpBeginRange = BlendOpAdd,
-			BlendOpEndRange = BlendOpMax,
-			BlendOpRangeSize = (BlendOpMax-BlendOpAdd+1 ),
 			BlendOpMaxEnum = 0x7fffffff,
 		}
 		public enum VkDynamicState {
@@ -1215,9 +1153,6 @@ namespace VulkanSharp.Raw {
 			DynamicStateViewportCoarseSampleOrderNv = 1000164006,
 			DynamicStateExclusiveScissorNv = 1000205001,
 			DynamicStateLineStippleExt = 1000259000,
-			DynamicStateBeginRange = DynamicStateViewport,
-			DynamicStateEndRange = DynamicStateStencilReference,
-			DynamicStateRangeSize = (DynamicStateStencilReference-DynamicStateViewport+1 ),
 			DynamicStateMaxEnum = 0x7fffffff,
 		}
 		public enum VkFilter {
@@ -1225,17 +1160,11 @@ namespace VulkanSharp.Raw {
 			FilterLinear = 1,
 			FilterCubicImg = 1000015000,
 			FilterCubicExt = FilterCubicImg,
-			FilterBeginRange = FilterNearest,
-			FilterEndRange = FilterLinear,
-			FilterRangeSize = (FilterLinear-FilterNearest+1 ),
 			FilterMaxEnum = 0x7fffffff,
 		}
 		public enum VkSamplerMipmapMode {
 			SamplerMipmapModeNearest = 0,
 			SamplerMipmapModeLinear = 1,
-			SamplerMipmapModeBeginRange = SamplerMipmapModeNearest,
-			SamplerMipmapModeEndRange = SamplerMipmapModeLinear,
-			SamplerMipmapModeRangeSize = (SamplerMipmapModeLinear-SamplerMipmapModeNearest+1 ),
 			SamplerMipmapModeMaxEnum = 0x7fffffff,
 		}
 		public enum VkSamplerAddressMode {
@@ -1245,9 +1174,6 @@ namespace VulkanSharp.Raw {
 			SamplerAddressModeClampToBorder = 3,
 			SamplerAddressModeMirrorClampToEdge = 4,
 			SamplerAddressModeMirrorClampToEdgeKhr = SamplerAddressModeMirrorClampToEdge,
-			SamplerAddressModeBeginRange = SamplerAddressModeRepeat,
-			SamplerAddressModeEndRange = SamplerAddressModeClampToBorder,
-			SamplerAddressModeRangeSize = (SamplerAddressModeClampToBorder-SamplerAddressModeRepeat+1 ),
 			SamplerAddressModeMaxEnum = 0x7fffffff,
 		}
 		public enum VkBorderColor {
@@ -1257,9 +1183,8 @@ namespace VulkanSharp.Raw {
 			BorderColorIntOpaqueBlack = 3,
 			BorderColorFloatOpaqueWhite = 4,
 			BorderColorIntOpaqueWhite = 5,
-			BorderColorBeginRange = BorderColorFloatTransparentBlack,
-			BorderColorEndRange = BorderColorIntOpaqueWhite,
-			BorderColorRangeSize = (BorderColorIntOpaqueWhite-BorderColorFloatTransparentBlack+1 ),
+			BorderColorFloatCustomExt = 1000287003,
+			BorderColorIntCustomExt = 1000287004,
 			BorderColorMaxEnum = 0x7fffffff,
 		}
 		public enum VkDescriptorType {
@@ -1277,26 +1202,18 @@ namespace VulkanSharp.Raw {
 			DescriptorTypeInlineUniformBlockExt = 1000138000,
 			DescriptorTypeAccelerationStructureKhr = 1000165000,
 			DescriptorTypeAccelerationStructureNv = DescriptorTypeAccelerationStructureKhr,
-			DescriptorTypeBeginRange = DescriptorTypeSampler,
-			DescriptorTypeEndRange = DescriptorTypeInputAttachment,
-			DescriptorTypeRangeSize = (DescriptorTypeInputAttachment-DescriptorTypeSampler+1 ),
 			DescriptorTypeMaxEnum = 0x7fffffff,
 		}
 		public enum VkAttachmentLoadOp {
 			AttachmentLoadOpLoad = 0,
 			AttachmentLoadOpClear = 1,
 			AttachmentLoadOpDontCare = 2,
-			AttachmentLoadOpBeginRange = AttachmentLoadOpLoad,
-			AttachmentLoadOpEndRange = AttachmentLoadOpDontCare,
-			AttachmentLoadOpRangeSize = (AttachmentLoadOpDontCare-AttachmentLoadOpLoad+1 ),
 			AttachmentLoadOpMaxEnum = 0x7fffffff,
 		}
 		public enum VkAttachmentStoreOp {
 			AttachmentStoreOpStore = 0,
 			AttachmentStoreOpDontCare = 1,
-			AttachmentStoreOpBeginRange = AttachmentStoreOpStore,
-			AttachmentStoreOpEndRange = AttachmentStoreOpDontCare,
-			AttachmentStoreOpRangeSize = (AttachmentStoreOpDontCare-AttachmentStoreOpStore+1 ),
+			AttachmentStoreOpNoneQcom = 1000301000,
 			AttachmentStoreOpMaxEnum = 0x7fffffff,
 		}
 		public enum VkPipelineBindPoint {
@@ -1304,17 +1221,11 @@ namespace VulkanSharp.Raw {
 			PipelineBindPointCompute = 1,
 			PipelineBindPointRayTracingKhr = 1000165000,
 			PipelineBindPointRayTracingNv = PipelineBindPointRayTracingKhr,
-			PipelineBindPointBeginRange = PipelineBindPointGraphics,
-			PipelineBindPointEndRange = PipelineBindPointCompute,
-			PipelineBindPointRangeSize = (PipelineBindPointCompute-PipelineBindPointGraphics+1 ),
 			PipelineBindPointMaxEnum = 0x7fffffff,
 		}
 		public enum VkCommandBufferLevel {
 			CommandBufferLevelPrimary = 0,
 			CommandBufferLevelSecondary = 1,
-			CommandBufferLevelBeginRange = CommandBufferLevelPrimary,
-			CommandBufferLevelEndRange = CommandBufferLevelSecondary,
-			CommandBufferLevelRangeSize = (CommandBufferLevelSecondary-CommandBufferLevelPrimary+1 ),
 			CommandBufferLevelMaxEnum = 0x7fffffff,
 		}
 		public enum VkIndexType {
@@ -1323,17 +1234,11 @@ namespace VulkanSharp.Raw {
 			IndexTypeNoneKhr = 1000165000,
 			IndexTypeUint8Ext = 1000265000,
 			IndexTypeNoneNv = IndexTypeNoneKhr,
-			IndexTypeBeginRange = IndexTypeUint16,
-			IndexTypeEndRange = IndexTypeUint32,
-			IndexTypeRangeSize = (IndexTypeUint32-IndexTypeUint16+1 ),
 			IndexTypeMaxEnum = 0x7fffffff,
 		}
 		public enum VkSubpassContents {
 			SubpassContentsInline = 0,
 			SubpassContentsSecondaryCommandBuffers = 1,
-			SubpassContentsBeginRange = SubpassContentsInline,
-			SubpassContentsEndRange = SubpassContentsSecondaryCommandBuffers,
-			SubpassContentsRangeSize = (SubpassContentsSecondaryCommandBuffers-SubpassContentsInline+1 ),
 			SubpassContentsMaxEnum = 0x7fffffff,
 		}
 		public enum VkObjectType {
@@ -1376,12 +1281,10 @@ namespace VulkanSharp.Raw {
 			ObjectTypePerformanceConfigurationIntel = 1000210000,
 			ObjectTypeDeferredOperationKhr = 1000268000,
 			ObjectTypeIndirectCommandsLayoutNv = 1000277000,
+			ObjectTypePrivateDataSlotExt = 1000295000,
 			ObjectTypeDescriptorUpdateTemplateKhr = ObjectTypeDescriptorUpdateTemplate,
 			ObjectTypeSamplerYcbcrConversionKhr = ObjectTypeSamplerYcbcrConversion,
 			ObjectTypeAccelerationStructureNv = ObjectTypeAccelerationStructureKhr,
-			ObjectTypeBeginRange = ObjectTypeUnknown,
-			ObjectTypeEndRange = ObjectTypeCommandPool,
-			ObjectTypeRangeSize = (ObjectTypeCommandPool-ObjectTypeUnknown+1 ),
 			ObjectTypeMaxEnum = 0x7fffffff,
 		}
 		public enum VkVendorId {
@@ -1389,9 +1292,7 @@ namespace VulkanSharp.Raw {
 			VendorIdVsi = 0x10002,
 			VendorIdKazan = 0x10003,
 			VendorIdCodeplay = 0x10004,
-			VendorIdBeginRange = VendorIdViv,
-			VendorIdEndRange = VendorIdCodeplay,
-			VendorIdRangeSize = (VendorIdCodeplay-VendorIdViv+1 ),
+			VendorIdMesa = 0x10005,
 			VendorIdMaxEnum = 0x7fffffff,
 		}
 		public enum VkFormatFeatureFlags {
@@ -1735,6 +1636,8 @@ namespace VulkanSharp.Raw {
 		public enum VkSubpassDescriptionFlags {
 			SubpassDescriptionPerViewAttributesBitNvx = 0x00000001,
 			SubpassDescriptionPerViewPositionXOnlyBitNvx = 0x00000002,
+			SubpassDescriptionFragmentRegionBitQcom = 0x00000004,
+			SubpassDescriptionShaderResolveBitQcom = 0x00000008,
 			SubpassDescriptionFlagBitsMaxEnum = 0x7fffffff,
 		}
 		public enum VkAccessFlags {
@@ -1814,9 +1717,6 @@ namespace VulkanSharp.Raw {
 			PointClippingBehaviorUserClipPlanesOnly = 1,
 			PointClippingBehaviorAllClipPlanesKhr = PointClippingBehaviorAllClipPlanes,
 			PointClippingBehaviorUserClipPlanesOnlyKhr = PointClippingBehaviorUserClipPlanesOnly,
-			PointClippingBehaviorBeginRange = PointClippingBehaviorAllClipPlanes,
-			PointClippingBehaviorEndRange = PointClippingBehaviorUserClipPlanesOnly,
-			PointClippingBehaviorRangeSize = (PointClippingBehaviorUserClipPlanesOnly-PointClippingBehaviorAllClipPlanes+1 ),
 			PointClippingBehaviorMaxEnum = 0x7fffffff,
 		}
 		public enum VkTessellationDomainOrigin {
@@ -1824,9 +1724,6 @@ namespace VulkanSharp.Raw {
 			TessellationDomainOriginLowerLeft = 1,
 			TessellationDomainOriginUpperLeftKhr = TessellationDomainOriginUpperLeft,
 			TessellationDomainOriginLowerLeftKhr = TessellationDomainOriginLowerLeft,
-			TessellationDomainOriginBeginRange = TessellationDomainOriginUpperLeft,
-			TessellationDomainOriginEndRange = TessellationDomainOriginLowerLeft,
-			TessellationDomainOriginRangeSize = (TessellationDomainOriginLowerLeft-TessellationDomainOriginUpperLeft+1 ),
 			TessellationDomainOriginMaxEnum = 0x7fffffff,
 		}
 		public enum VkSamplerYcbcrModelConversion {
@@ -1840,9 +1737,6 @@ namespace VulkanSharp.Raw {
 			SamplerYcbcrModelConversionYcbcr709Khr = SamplerYcbcrModelConversionYcbcr709,
 			SamplerYcbcrModelConversionYcbcr601Khr = SamplerYcbcrModelConversionYcbcr601,
 			SamplerYcbcrModelConversionYcbcr2020Khr = SamplerYcbcrModelConversionYcbcr2020,
-			SamplerYcbcrModelConversionBeginRange = SamplerYcbcrModelConversionRgbIdentity,
-			SamplerYcbcrModelConversionEndRange = SamplerYcbcrModelConversionYcbcr2020,
-			SamplerYcbcrModelConversionRangeSize = (SamplerYcbcrModelConversionYcbcr2020-SamplerYcbcrModelConversionRgbIdentity+1 ),
 			SamplerYcbcrModelConversionMaxEnum = 0x7fffffff,
 		}
 		public enum VkSamplerYcbcrRange {
@@ -1850,9 +1744,6 @@ namespace VulkanSharp.Raw {
 			SamplerYcbcrRangeItuNarrow = 1,
 			SamplerYcbcrRangeItuFullKhr = SamplerYcbcrRangeItuFull,
 			SamplerYcbcrRangeItuNarrowKhr = SamplerYcbcrRangeItuNarrow,
-			SamplerYcbcrRangeBeginRange = SamplerYcbcrRangeItuFull,
-			SamplerYcbcrRangeEndRange = SamplerYcbcrRangeItuNarrow,
-			SamplerYcbcrRangeRangeSize = (SamplerYcbcrRangeItuNarrow-SamplerYcbcrRangeItuFull+1 ),
 			SamplerYcbcrRangeMaxEnum = 0x7fffffff,
 		}
 		public enum VkChromaLocation {
@@ -1860,18 +1751,12 @@ namespace VulkanSharp.Raw {
 			ChromaLocationMidpoint = 1,
 			ChromaLocationCositedEvenKhr = ChromaLocationCositedEven,
 			ChromaLocationMidpointKhr = ChromaLocationMidpoint,
-			ChromaLocationBeginRange = ChromaLocationCositedEven,
-			ChromaLocationEndRange = ChromaLocationMidpoint,
-			ChromaLocationRangeSize = (ChromaLocationMidpoint-ChromaLocationCositedEven+1 ),
 			ChromaLocationMaxEnum = 0x7fffffff,
 		}
 		public enum VkDescriptorUpdateTemplateType {
 			DescriptorUpdateTemplateTypeDescriptorSet = 0,
 			DescriptorUpdateTemplateTypePushDescriptorsKhr = 1,
 			DescriptorUpdateTemplateTypeDescriptorSetKhr = DescriptorUpdateTemplateTypeDescriptorSet,
-			DescriptorUpdateTemplateTypeBeginRange = DescriptorUpdateTemplateTypeDescriptorSet,
-			DescriptorUpdateTemplateTypeEndRange = DescriptorUpdateTemplateTypeDescriptorSet,
-			DescriptorUpdateTemplateTypeRangeSize = (DescriptorUpdateTemplateTypeDescriptorSet-DescriptorUpdateTemplateTypeDescriptorSet+1 ),
 			DescriptorUpdateTemplateTypeMaxEnum = 0x7fffffff,
 		}
 		public enum VkSubgroupFeatureFlags {
@@ -1997,6 +1882,7 @@ namespace VulkanSharp.Raw {
 			DriverIdGoogleSwiftshader = 10,
 			DriverIdGgpProprietary = 11,
 			DriverIdBroadcomProprietary = 12,
+			DriverIdMesaLlvmpipe = 13,
 			DriverIdAmdProprietaryKhr = DriverIdAmdProprietary,
 			DriverIdAmdOpenSourceKhr = DriverIdAmdOpenSource,
 			DriverIdMesaRadvKhr = DriverIdMesaRadv,
@@ -2009,9 +1895,6 @@ namespace VulkanSharp.Raw {
 			DriverIdGoogleSwiftshaderKhr = DriverIdGoogleSwiftshader,
 			DriverIdGgpProprietaryKhr = DriverIdGgpProprietary,
 			DriverIdBroadcomProprietaryKhr = DriverIdBroadcomProprietary,
-			DriverIdBeginRange = DriverIdAmdProprietary,
-			DriverIdEndRange = DriverIdBroadcomProprietary,
-			DriverIdRangeSize = (DriverIdBroadcomProprietary-DriverIdAmdProprietary+1 ),
 			DriverIdMaxEnum = 0x7fffffff,
 		}
 		public enum VkShaderFloatControlsIndependence {
@@ -2021,9 +1904,6 @@ namespace VulkanSharp.Raw {
 			ShaderFloatControlsIndependence32BitOnlyKhr = ShaderFloatControlsIndependence32BitOnly,
 			ShaderFloatControlsIndependenceAllKhr = ShaderFloatControlsIndependenceAll,
 			ShaderFloatControlsIndependenceNoneKhr = ShaderFloatControlsIndependenceNone,
-			ShaderFloatControlsIndependenceBeginRange = ShaderFloatControlsIndependence32BitOnly,
-			ShaderFloatControlsIndependenceEndRange = ShaderFloatControlsIndependenceNone,
-			ShaderFloatControlsIndependenceRangeSize = (ShaderFloatControlsIndependenceNone-ShaderFloatControlsIndependence32BitOnly+1 ),
 			ShaderFloatControlsIndependenceMaxEnum = 0x7fffffff,
 		}
 		public enum VkSamplerReductionMode {
@@ -2033,9 +1913,6 @@ namespace VulkanSharp.Raw {
 			SamplerReductionModeWeightedAverageExt = SamplerReductionModeWeightedAverage,
 			SamplerReductionModeMinExt = SamplerReductionModeMin,
 			SamplerReductionModeMaxExt = SamplerReductionModeMax,
-			SamplerReductionModeBeginRange = SamplerReductionModeWeightedAverage,
-			SamplerReductionModeEndRange = SamplerReductionModeMax,
-			SamplerReductionModeRangeSize = (SamplerReductionModeMax-SamplerReductionModeWeightedAverage+1 ),
 			SamplerReductionModeMaxEnum = 0x7fffffff,
 		}
 		public enum VkSemaphoreType {
@@ -2043,9 +1920,6 @@ namespace VulkanSharp.Raw {
 			SemaphoreTypeTimeline = 1,
 			SemaphoreTypeBinaryKhr = SemaphoreTypeBinary,
 			SemaphoreTypeTimelineKhr = SemaphoreTypeTimeline,
-			SemaphoreTypeBeginRange = SemaphoreTypeBinary,
-			SemaphoreTypeEndRange = SemaphoreTypeTimeline,
-			SemaphoreTypeRangeSize = (SemaphoreTypeTimeline-SemaphoreTypeBinary+1 ),
 			SemaphoreTypeMaxEnum = 0x7fffffff,
 		}
 		public enum VkResolveModeFlags {
@@ -2077,6 +1951,15 @@ namespace VulkanSharp.Raw {
 			SemaphoreWaitAnyBitKhr = SemaphoreWaitAnyBit,
 			SemaphoreWaitFlagBitsMaxEnum = 0x7fffffff,
 		}
+		public enum VkPresentModeKHR {
+			PresentModeImmediateKhr = 0,
+			PresentModeMailboxKhr = 1,
+			PresentModeFifoKhr = 2,
+			PresentModeFifoRelaxedKhr = 3,
+			PresentModeSharedDemandRefreshKhr = 1000111000,
+			PresentModeSharedContinuousRefreshKhr = 1000111001,
+			PresentModeMaxEnumKhr = 0x7fffffff,
+		}
 		public enum VkColorSpaceKHR {
 			ColorSpaceSrgbNonlinearKhr = 0,
 			ColorSpaceDisplayP3NonlinearExt = 1000104001,
@@ -2096,22 +1979,7 @@ namespace VulkanSharp.Raw {
 			ColorSpaceDisplayNativeAmd = 1000213000,
 			ColorspaceSrgbNonlinearKhr = ColorSpaceSrgbNonlinearKhr,
 			ColorSpaceDciP3LinearExt = ColorSpaceDisplayP3LinearExt,
-			ColorSpaceBeginRangeKhr = ColorSpaceSrgbNonlinearKhr,
-			ColorSpaceEndRangeKhr = ColorSpaceSrgbNonlinearKhr,
-			ColorSpaceRangeSizeKhr = (ColorSpaceSrgbNonlinearKhr-ColorSpaceSrgbNonlinearKhr+1 ),
 			ColorSpaceMaxEnumKhr = 0x7fffffff,
-		}
-		public enum VkPresentModeKHR {
-			PresentModeImmediateKhr = 0,
-			PresentModeMailboxKhr = 1,
-			PresentModeFifoKhr = 2,
-			PresentModeFifoRelaxedKhr = 3,
-			PresentModeSharedDemandRefreshKhr = 1000111000,
-			PresentModeSharedContinuousRefreshKhr = 1000111001,
-			PresentModeBeginRangeKhr = PresentModeImmediateKhr,
-			PresentModeEndRangeKhr = PresentModeFifoRelaxedKhr,
-			PresentModeRangeSizeKhr = (PresentModeFifoRelaxedKhr-PresentModeImmediateKhr+1 ),
-			PresentModeMaxEnumKhr = 0x7fffffff,
 		}
 		public enum VkSurfaceTransformFlagsKHR {
 			SurfaceTransformIdentityBitKhr = 0x00000001,
@@ -2164,9 +2032,6 @@ namespace VulkanSharp.Raw {
 			PerformanceCounterUnitAmpsKhr = 8,
 			PerformanceCounterUnitHertzKhr = 9,
 			PerformanceCounterUnitCyclesKhr = 10,
-			PerformanceCounterUnitBeginRangeKhr = PerformanceCounterUnitGenericKhr,
-			PerformanceCounterUnitEndRangeKhr = PerformanceCounterUnitCyclesKhr,
-			PerformanceCounterUnitRangeSizeKhr = (PerformanceCounterUnitCyclesKhr-PerformanceCounterUnitGenericKhr+1 ),
 			PerformanceCounterUnitMaxEnumKhr = 0x7fffffff,
 		}
 		public enum VkPerformanceCounterScopeKHR {
@@ -2176,9 +2041,6 @@ namespace VulkanSharp.Raw {
 			QueryScopeCommandBufferKhr = PerformanceCounterScopeCommandBufferKhr,
 			QueryScopeRenderPassKhr = PerformanceCounterScopeRenderPassKhr,
 			QueryScopeCommandKhr = PerformanceCounterScopeCommandKhr,
-			PerformanceCounterScopeBeginRangeKhr = PerformanceCounterScopeCommandBufferKhr,
-			PerformanceCounterScopeEndRangeKhr = PerformanceCounterScopeCommandKhr,
-			PerformanceCounterScopeRangeSizeKhr = (PerformanceCounterScopeCommandKhr-PerformanceCounterScopeCommandBufferKhr+1 ),
 			PerformanceCounterScopeMaxEnumKhr = 0x7fffffff,
 		}
 		public enum VkPerformanceCounterStorageKHR {
@@ -2188,9 +2050,6 @@ namespace VulkanSharp.Raw {
 			PerformanceCounterStorageUint64Khr = 3,
 			PerformanceCounterStorageFloat32Khr = 4,
 			PerformanceCounterStorageFloat64Khr = 5,
-			PerformanceCounterStorageBeginRangeKhr = PerformanceCounterStorageInt32Khr,
-			PerformanceCounterStorageEndRangeKhr = PerformanceCounterStorageFloat64Khr,
-			PerformanceCounterStorageRangeSizeKhr = (PerformanceCounterStorageFloat64Khr-PerformanceCounterStorageInt32Khr+1 ),
 			PerformanceCounterStorageMaxEnumKhr = 0x7fffffff,
 		}
 		public enum VkPerformanceCounterDescriptionFlagsKHR {
@@ -2206,9 +2065,6 @@ namespace VulkanSharp.Raw {
 			PipelineExecutableStatisticFormatInt64Khr = 1,
 			PipelineExecutableStatisticFormatUint64Khr = 2,
 			PipelineExecutableStatisticFormatFloat64Khr = 3,
-			PipelineExecutableStatisticFormatBeginRangeKhr = PipelineExecutableStatisticFormatBool32Khr,
-			PipelineExecutableStatisticFormatEndRangeKhr = PipelineExecutableStatisticFormatFloat64Khr,
-			PipelineExecutableStatisticFormatRangeSizeKhr = (PipelineExecutableStatisticFormatFloat64Khr-PipelineExecutableStatisticFormatBool32Khr+1 ),
 			PipelineExecutableStatisticFormatMaxEnumKhr = 0x7fffffff,
 		}
 		public enum VkDebugReportObjectTypeEXT {
@@ -2252,9 +2108,6 @@ namespace VulkanSharp.Raw {
 			DebugReportObjectTypeDescriptorUpdateTemplateKhrExt = DebugReportObjectTypeDescriptorUpdateTemplateExt,
 			DebugReportObjectTypeSamplerYcbcrConversionKhrExt = DebugReportObjectTypeSamplerYcbcrConversionExt,
 			DebugReportObjectTypeAccelerationStructureNvExt = DebugReportObjectTypeAccelerationStructureKhrExt,
-			DebugReportObjectTypeBeginRangeExt = DebugReportObjectTypeUnknownExt,
-			DebugReportObjectTypeEndRangeExt = DebugReportObjectTypeValidationCacheExtExt,
-			DebugReportObjectTypeRangeSizeExt = (DebugReportObjectTypeValidationCacheExtExt-DebugReportObjectTypeUnknownExt+1 ),
 			DebugReportObjectTypeMaxEnumExt = 0x7fffffff,
 		}
 		public enum VkDebugReportFlagsEXT {
@@ -2268,18 +2121,12 @@ namespace VulkanSharp.Raw {
 		public enum VkRasterizationOrderAMD {
 			RasterizationOrderStrictAmd = 0,
 			RasterizationOrderRelaxedAmd = 1,
-			RasterizationOrderBeginRangeAmd = RasterizationOrderStrictAmd,
-			RasterizationOrderEndRangeAmd = RasterizationOrderRelaxedAmd,
-			RasterizationOrderRangeSizeAmd = (RasterizationOrderRelaxedAmd-RasterizationOrderStrictAmd+1 ),
 			RasterizationOrderMaxEnumAmd = 0x7fffffff,
 		}
 		public enum VkShaderInfoTypeAMD {
 			ShaderInfoTypeStatisticsAmd = 0,
 			ShaderInfoTypeBinaryAmd = 1,
 			ShaderInfoTypeDisassemblyAmd = 2,
-			ShaderInfoTypeBeginRangeAmd = ShaderInfoTypeStatisticsAmd,
-			ShaderInfoTypeEndRangeAmd = ShaderInfoTypeDisassemblyAmd,
-			ShaderInfoTypeRangeSizeAmd = (ShaderInfoTypeDisassemblyAmd-ShaderInfoTypeStatisticsAmd+1 ),
 			ShaderInfoTypeMaxEnumAmd = 0x7fffffff,
 		}
 		public enum VkExternalMemoryHandleTypeFlagsNV {
@@ -2298,9 +2145,6 @@ namespace VulkanSharp.Raw {
 		public enum VkValidationCheckEXT {
 			ValidationCheckAllExt = 0,
 			ValidationCheckShadersExt = 1,
-			ValidationCheckBeginRangeExt = ValidationCheckAllExt,
-			ValidationCheckEndRangeExt = ValidationCheckShadersExt,
-			ValidationCheckRangeSizeExt = (ValidationCheckShadersExt-ValidationCheckAllExt+1 ),
 			ValidationCheckMaxEnumExt = 0x7fffffff,
 		}
 		public enum VkConditionalRenderingFlagsEXT {
@@ -2315,23 +2159,14 @@ namespace VulkanSharp.Raw {
 			DisplayPowerStateOffExt = 0,
 			DisplayPowerStateSuspendExt = 1,
 			DisplayPowerStateOnExt = 2,
-			DisplayPowerStateBeginRangeExt = DisplayPowerStateOffExt,
-			DisplayPowerStateEndRangeExt = DisplayPowerStateOnExt,
-			DisplayPowerStateRangeSizeExt = (DisplayPowerStateOnExt-DisplayPowerStateOffExt+1 ),
 			DisplayPowerStateMaxEnumExt = 0x7fffffff,
 		}
 		public enum VkDeviceEventTypeEXT {
 			DeviceEventTypeDisplayHotplugExt = 0,
-			DeviceEventTypeBeginRangeExt = DeviceEventTypeDisplayHotplugExt,
-			DeviceEventTypeEndRangeExt = DeviceEventTypeDisplayHotplugExt,
-			DeviceEventTypeRangeSizeExt = (DeviceEventTypeDisplayHotplugExt-DeviceEventTypeDisplayHotplugExt+1 ),
 			DeviceEventTypeMaxEnumExt = 0x7fffffff,
 		}
 		public enum VkDisplayEventTypeEXT {
 			DisplayEventTypeFirstPixelOutExt = 0,
-			DisplayEventTypeBeginRangeExt = DisplayEventTypeFirstPixelOutExt,
-			DisplayEventTypeEndRangeExt = DisplayEventTypeFirstPixelOutExt,
-			DisplayEventTypeRangeSizeExt = (DisplayEventTypeFirstPixelOutExt-DisplayEventTypeFirstPixelOutExt+1 ),
 			DisplayEventTypeMaxEnumExt = 0x7fffffff,
 		}
 		public enum VkViewportCoordinateSwizzleNV {
@@ -2343,26 +2178,17 @@ namespace VulkanSharp.Raw {
 			ViewportCoordinateSwizzleNegativeZNv = 5,
 			ViewportCoordinateSwizzlePositiveWNv = 6,
 			ViewportCoordinateSwizzleNegativeWNv = 7,
-			ViewportCoordinateSwizzleBeginRangeNv = ViewportCoordinateSwizzlePositiveXNv,
-			ViewportCoordinateSwizzleEndRangeNv = ViewportCoordinateSwizzleNegativeWNv,
-			ViewportCoordinateSwizzleRangeSizeNv = (ViewportCoordinateSwizzleNegativeWNv-ViewportCoordinateSwizzlePositiveXNv+1 ),
 			ViewportCoordinateSwizzleMaxEnumNv = 0x7fffffff,
 		}
 		public enum VkDiscardRectangleModeEXT {
 			DiscardRectangleModeInclusiveExt = 0,
 			DiscardRectangleModeExclusiveExt = 1,
-			DiscardRectangleModeBeginRangeExt = DiscardRectangleModeInclusiveExt,
-			DiscardRectangleModeEndRangeExt = DiscardRectangleModeExclusiveExt,
-			DiscardRectangleModeRangeSizeExt = (DiscardRectangleModeExclusiveExt-DiscardRectangleModeInclusiveExt+1 ),
 			DiscardRectangleModeMaxEnumExt = 0x7fffffff,
 		}
 		public enum VkConservativeRasterizationModeEXT {
 			ConservativeRasterizationModeDisabledExt = 0,
 			ConservativeRasterizationModeOverestimateExt = 1,
 			ConservativeRasterizationModeUnderestimateExt = 2,
-			ConservativeRasterizationModeBeginRangeExt = ConservativeRasterizationModeDisabledExt,
-			ConservativeRasterizationModeEndRangeExt = ConservativeRasterizationModeUnderestimateExt,
-			ConservativeRasterizationModeRangeSizeExt = (ConservativeRasterizationModeUnderestimateExt-ConservativeRasterizationModeDisabledExt+1 ),
 			ConservativeRasterizationModeMaxEnumExt = 0x7fffffff,
 		}
 		public enum VkDebugUtilsMessageSeverityFlagsEXT {
@@ -2382,9 +2208,6 @@ namespace VulkanSharp.Raw {
 			BlendOverlapUncorrelatedExt = 0,
 			BlendOverlapDisjointExt = 1,
 			BlendOverlapConjointExt = 2,
-			BlendOverlapBeginRangeExt = BlendOverlapUncorrelatedExt,
-			BlendOverlapEndRangeExt = BlendOverlapConjointExt,
-			BlendOverlapRangeSizeExt = (BlendOverlapConjointExt-BlendOverlapUncorrelatedExt+1 ),
 			BlendOverlapMaxEnumExt = 0x7fffffff,
 		}
 		public enum VkCoverageModulationModeNV {
@@ -2392,16 +2215,10 @@ namespace VulkanSharp.Raw {
 			CoverageModulationModeRgbNv = 1,
 			CoverageModulationModeAlphaNv = 2,
 			CoverageModulationModeRgbaNv = 3,
-			CoverageModulationModeBeginRangeNv = CoverageModulationModeNoneNv,
-			CoverageModulationModeEndRangeNv = CoverageModulationModeRgbaNv,
-			CoverageModulationModeRangeSizeNv = (CoverageModulationModeRgbaNv-CoverageModulationModeNoneNv+1 ),
 			CoverageModulationModeMaxEnumNv = 0x7fffffff,
 		}
 		public enum VkValidationCacheHeaderVersionEXT {
 			ValidationCacheHeaderVersionOneExt = 1,
-			ValidationCacheHeaderVersionBeginRangeExt = ValidationCacheHeaderVersionOneExt,
-			ValidationCacheHeaderVersionEndRangeExt = ValidationCacheHeaderVersionOneExt,
-			ValidationCacheHeaderVersionRangeSizeExt = (ValidationCacheHeaderVersionOneExt-ValidationCacheHeaderVersionOneExt+1 ),
 			ValidationCacheHeaderVersionMaxEnumExt = 0x7fffffff,
 		}
 		public enum VkShadingRatePaletteEntryNV {
@@ -2417,9 +2234,6 @@ namespace VulkanSharp.Raw {
 			ShadingRatePaletteEntry1InvocationPer4x2PixelsNv = 9,
 			ShadingRatePaletteEntry1InvocationPer2x4PixelsNv = 10,
 			ShadingRatePaletteEntry1InvocationPer4x4PixelsNv = 11,
-			ShadingRatePaletteEntryBeginRangeNv = ShadingRatePaletteEntryNoInvocationsNv,
-			ShadingRatePaletteEntryEndRangeNv = ShadingRatePaletteEntry1InvocationPer4x4PixelsNv,
-			ShadingRatePaletteEntryRangeSizeNv = (ShadingRatePaletteEntry1InvocationPer4x4PixelsNv-ShadingRatePaletteEntryNoInvocationsNv+1 ),
 			ShadingRatePaletteEntryMaxEnumNv = 0x7fffffff,
 		}
 		public enum VkCoarseSampleOrderTypeNV {
@@ -2427,9 +2241,6 @@ namespace VulkanSharp.Raw {
 			CoarseSampleOrderTypeCustomNv = 1,
 			CoarseSampleOrderTypePixelMajorNv = 2,
 			CoarseSampleOrderTypeSampleMajorNv = 3,
-			CoarseSampleOrderTypeBeginRangeNv = CoarseSampleOrderTypeDefaultNv,
-			CoarseSampleOrderTypeEndRangeNv = CoarseSampleOrderTypeSampleMajorNv,
-			CoarseSampleOrderTypeRangeSizeNv = (CoarseSampleOrderTypeSampleMajorNv-CoarseSampleOrderTypeDefaultNv+1 ),
 			CoarseSampleOrderTypeMaxEnumNv = 0x7fffffff,
 		}
 		public enum VkRayTracingShaderGroupTypeKHR {
@@ -2439,9 +2250,6 @@ namespace VulkanSharp.Raw {
 			RayTracingShaderGroupTypeGeneralNv = RayTracingShaderGroupTypeGeneralKhr,
 			RayTracingShaderGroupTypeTrianglesHitGroupNv = RayTracingShaderGroupTypeTrianglesHitGroupKhr,
 			RayTracingShaderGroupTypeProceduralHitGroupNv = RayTracingShaderGroupTypeProceduralHitGroupKhr,
-			RayTracingShaderGroupTypeBeginRangeKhr = RayTracingShaderGroupTypeGeneralKhr,
-			RayTracingShaderGroupTypeEndRangeKhr = RayTracingShaderGroupTypeProceduralHitGroupKhr,
-			RayTracingShaderGroupTypeRangeSizeKhr = (RayTracingShaderGroupTypeProceduralHitGroupKhr-RayTracingShaderGroupTypeGeneralKhr+1 ),
 			RayTracingShaderGroupTypeMaxEnumKhr = 0x7fffffff,
 		}
 		public enum VkGeometryTypeKHR {
@@ -2450,9 +2258,6 @@ namespace VulkanSharp.Raw {
 			GeometryTypeInstancesKhr = 1000150000,
 			GeometryTypeTrianglesNv = GeometryTypeTrianglesKhr,
 			GeometryTypeAabbsNv = GeometryTypeAabbsKhr,
-			GeometryTypeBeginRangeKhr = GeometryTypeTrianglesKhr,
-			GeometryTypeEndRangeKhr = GeometryTypeAabbsKhr,
-			GeometryTypeRangeSizeKhr = (GeometryTypeAabbsKhr-GeometryTypeTrianglesKhr+1 ),
 			GeometryTypeMaxEnumKhr = 0x7fffffff,
 		}
 		public enum VkAccelerationStructureTypeKHR {
@@ -2460,9 +2265,6 @@ namespace VulkanSharp.Raw {
 			AccelerationStructureTypeBottomLevelKhr = 1,
 			AccelerationStructureTypeTopLevelNv = AccelerationStructureTypeTopLevelKhr,
 			AccelerationStructureTypeBottomLevelNv = AccelerationStructureTypeBottomLevelKhr,
-			AccelerationStructureTypeBeginRangeKhr = AccelerationStructureTypeTopLevelKhr,
-			AccelerationStructureTypeEndRangeKhr = AccelerationStructureTypeBottomLevelKhr,
-			AccelerationStructureTypeRangeSizeKhr = (AccelerationStructureTypeBottomLevelKhr-AccelerationStructureTypeTopLevelKhr+1 ),
 			AccelerationStructureTypeMaxEnumKhr = 0x7fffffff,
 		}
 		public enum VkCopyAccelerationStructureModeKHR {
@@ -2472,9 +2274,6 @@ namespace VulkanSharp.Raw {
 			CopyAccelerationStructureModeDeserializeKhr = 3,
 			CopyAccelerationStructureModeCloneNv = CopyAccelerationStructureModeCloneKhr,
 			CopyAccelerationStructureModeCompactNv = CopyAccelerationStructureModeCompactKhr,
-			CopyAccelerationStructureModeBeginRangeKhr = CopyAccelerationStructureModeCloneKhr,
-			CopyAccelerationStructureModeEndRangeKhr = CopyAccelerationStructureModeDeserializeKhr,
-			CopyAccelerationStructureModeRangeSizeKhr = (CopyAccelerationStructureModeDeserializeKhr-CopyAccelerationStructureModeCloneKhr+1 ),
 			CopyAccelerationStructureModeMaxEnumKhr = 0x7fffffff,
 		}
 		public enum VkAccelerationStructureMemoryRequirementsTypeKHR {
@@ -2484,9 +2283,6 @@ namespace VulkanSharp.Raw {
 			AccelerationStructureMemoryRequirementsTypeObjectNv = AccelerationStructureMemoryRequirementsTypeObjectKhr,
 			AccelerationStructureMemoryRequirementsTypeBuildScratchNv = AccelerationStructureMemoryRequirementsTypeBuildScratchKhr,
 			AccelerationStructureMemoryRequirementsTypeUpdateScratchNv = AccelerationStructureMemoryRequirementsTypeUpdateScratchKhr,
-			AccelerationStructureMemoryRequirementsTypeBeginRangeKhr = AccelerationStructureMemoryRequirementsTypeObjectKhr,
-			AccelerationStructureMemoryRequirementsTypeEndRangeKhr = AccelerationStructureMemoryRequirementsTypeUpdateScratchKhr,
-			AccelerationStructureMemoryRequirementsTypeRangeSizeKhr = (AccelerationStructureMemoryRequirementsTypeUpdateScratchKhr-AccelerationStructureMemoryRequirementsTypeObjectKhr+1 ),
 			AccelerationStructureMemoryRequirementsTypeMaxEnumKhr = 0x7fffffff,
 		}
 		public enum VkGeometryFlagsKHR {
@@ -2525,9 +2321,6 @@ namespace VulkanSharp.Raw {
 			QueueGlobalPriorityMediumExt = 256,
 			QueueGlobalPriorityHighExt = 512,
 			QueueGlobalPriorityRealtimeExt = 1024,
-			QueueGlobalPriorityBeginRangeExt = QueueGlobalPriorityLowExt,
-			QueueGlobalPriorityEndRangeExt = QueueGlobalPriorityRealtimeExt,
-			QueueGlobalPriorityRangeSizeExt = (QueueGlobalPriorityRealtimeExt-QueueGlobalPriorityLowExt+1 ),
 			QueueGlobalPriorityMaxEnumExt = 0x7fffffff,
 		}
 		public enum VkPipelineCompilerControlFlagsAMD {
@@ -2538,18 +2331,12 @@ namespace VulkanSharp.Raw {
 			TimeDomainClockMonotonicExt = 1,
 			TimeDomainClockMonotonicRawExt = 2,
 			TimeDomainQueryPerformanceCounterExt = 3,
-			TimeDomainBeginRangeExt = TimeDomainDeviceExt,
-			TimeDomainEndRangeExt = TimeDomainQueryPerformanceCounterExt,
-			TimeDomainRangeSizeExt = (TimeDomainQueryPerformanceCounterExt-TimeDomainDeviceExt+1 ),
 			TimeDomainMaxEnumExt = 0x7fffffff,
 		}
 		public enum VkMemoryOverallocationBehaviorAMD {
 			MemoryOverallocationBehaviorDefaultAmd = 0,
 			MemoryOverallocationBehaviorAllowedAmd = 1,
 			MemoryOverallocationBehaviorDisallowedAmd = 2,
-			MemoryOverallocationBehaviorBeginRangeAmd = MemoryOverallocationBehaviorDefaultAmd,
-			MemoryOverallocationBehaviorEndRangeAmd = MemoryOverallocationBehaviorDisallowedAmd,
-			MemoryOverallocationBehaviorRangeSizeAmd = (MemoryOverallocationBehaviorDisallowedAmd-MemoryOverallocationBehaviorDefaultAmd+1 ),
 			MemoryOverallocationBehaviorMaxEnumAmd = 0x7fffffff,
 		}
 		public enum VkPipelineCreationFeedbackFlagsEXT {
@@ -2560,32 +2347,20 @@ namespace VulkanSharp.Raw {
 		}
 		public enum VkPerformanceConfigurationTypeINTEL {
 			PerformanceConfigurationTypeCommandQueueMetricsDiscoveryActivatedIntel = 0,
-			PerformanceConfigurationTypeBeginRangeIntel = PerformanceConfigurationTypeCommandQueueMetricsDiscoveryActivatedIntel,
-			PerformanceConfigurationTypeEndRangeIntel = PerformanceConfigurationTypeCommandQueueMetricsDiscoveryActivatedIntel,
-			PerformanceConfigurationTypeRangeSizeIntel = (PerformanceConfigurationTypeCommandQueueMetricsDiscoveryActivatedIntel-PerformanceConfigurationTypeCommandQueueMetricsDiscoveryActivatedIntel+1 ),
 			PerformanceConfigurationTypeMaxEnumIntel = 0x7fffffff,
 		}
 		public enum VkQueryPoolSamplingModeINTEL {
 			QueryPoolSamplingModeManualIntel = 0,
-			QueryPoolSamplingModeBeginRangeIntel = QueryPoolSamplingModeManualIntel,
-			QueryPoolSamplingModeEndRangeIntel = QueryPoolSamplingModeManualIntel,
-			QueryPoolSamplingModeRangeSizeIntel = (QueryPoolSamplingModeManualIntel-QueryPoolSamplingModeManualIntel+1 ),
 			QueryPoolSamplingModeMaxEnumIntel = 0x7fffffff,
 		}
 		public enum VkPerformanceOverrideTypeINTEL {
 			PerformanceOverrideTypeNullHardwareIntel = 0,
 			PerformanceOverrideTypeFlushGpuCachesIntel = 1,
-			PerformanceOverrideTypeBeginRangeIntel = PerformanceOverrideTypeNullHardwareIntel,
-			PerformanceOverrideTypeEndRangeIntel = PerformanceOverrideTypeFlushGpuCachesIntel,
-			PerformanceOverrideTypeRangeSizeIntel = (PerformanceOverrideTypeFlushGpuCachesIntel-PerformanceOverrideTypeNullHardwareIntel+1 ),
 			PerformanceOverrideTypeMaxEnumIntel = 0x7fffffff,
 		}
 		public enum VkPerformanceParameterTypeINTEL {
 			PerformanceParameterTypeHwCountersSupportedIntel = 0,
 			PerformanceParameterTypeStreamMarkerValidBitsIntel = 1,
-			PerformanceParameterTypeBeginRangeIntel = PerformanceParameterTypeHwCountersSupportedIntel,
-			PerformanceParameterTypeEndRangeIntel = PerformanceParameterTypeStreamMarkerValidBitsIntel,
-			PerformanceParameterTypeRangeSizeIntel = (PerformanceParameterTypeStreamMarkerValidBitsIntel-PerformanceParameterTypeHwCountersSupportedIntel+1 ),
 			PerformanceParameterTypeMaxEnumIntel = 0x7fffffff,
 		}
 		public enum VkPerformanceValueTypeINTEL {
@@ -2594,9 +2369,6 @@ namespace VulkanSharp.Raw {
 			PerformanceValueTypeFloatIntel = 2,
 			PerformanceValueTypeBoolIntel = 3,
 			PerformanceValueTypeStringIntel = 4,
-			PerformanceValueTypeBeginRangeIntel = PerformanceValueTypeUint32Intel,
-			PerformanceValueTypeEndRangeIntel = PerformanceValueTypeStringIntel,
-			PerformanceValueTypeRangeSizeIntel = (PerformanceValueTypeStringIntel-PerformanceValueTypeUint32Intel+1 ),
 			PerformanceValueTypeMaxEnumIntel = 0x7fffffff,
 		}
 		public enum VkShaderCorePropertiesFlagsAMD {
@@ -2617,9 +2389,6 @@ namespace VulkanSharp.Raw {
 			ValidationFeatureEnableGpuAssistedReserveBindingSlotExt = 1,
 			ValidationFeatureEnableBestPracticesExt = 2,
 			ValidationFeatureEnableDebugPrintfExt = 3,
-			ValidationFeatureEnableBeginRangeExt = ValidationFeatureEnableGpuAssistedExt,
-			ValidationFeatureEnableEndRangeExt = ValidationFeatureEnableDebugPrintfExt,
-			ValidationFeatureEnableRangeSizeExt = (ValidationFeatureEnableDebugPrintfExt-ValidationFeatureEnableGpuAssistedExt+1 ),
 			ValidationFeatureEnableMaxEnumExt = 0x7fffffff,
 		}
 		public enum VkValidationFeatureDisableEXT {
@@ -2630,9 +2399,6 @@ namespace VulkanSharp.Raw {
 			ValidationFeatureDisableObjectLifetimesExt = 4,
 			ValidationFeatureDisableCoreChecksExt = 5,
 			ValidationFeatureDisableUniqueHandlesExt = 6,
-			ValidationFeatureDisableBeginRangeExt = ValidationFeatureDisableAllExt,
-			ValidationFeatureDisableEndRangeExt = ValidationFeatureDisableUniqueHandlesExt,
-			ValidationFeatureDisableRangeSizeExt = (ValidationFeatureDisableUniqueHandlesExt-ValidationFeatureDisableAllExt+1 ),
 			ValidationFeatureDisableMaxEnumExt = 0x7fffffff,
 		}
 		public enum VkComponentTypeNV {
@@ -2647,9 +2413,6 @@ namespace VulkanSharp.Raw {
 			ComponentTypeUint16Nv = 8,
 			ComponentTypeUint32Nv = 9,
 			ComponentTypeUint64Nv = 10,
-			ComponentTypeBeginRangeNv = ComponentTypeFloat16Nv,
-			ComponentTypeEndRangeNv = ComponentTypeUint64Nv,
-			ComponentTypeRangeSizeNv = (ComponentTypeUint64Nv-ComponentTypeFloat16Nv+1 ),
 			ComponentTypeMaxEnumNv = 0x7fffffff,
 		}
 		public enum VkScopeNV {
@@ -2657,17 +2420,11 @@ namespace VulkanSharp.Raw {
 			ScopeWorkgroupNv = 2,
 			ScopeSubgroupNv = 3,
 			ScopeQueueFamilyNv = 5,
-			ScopeBeginRangeNv = ScopeDeviceNv,
-			ScopeEndRangeNv = ScopeQueueFamilyNv,
-			ScopeRangeSizeNv = (ScopeQueueFamilyNv-ScopeDeviceNv+1 ),
 			ScopeMaxEnumNv = 0x7fffffff,
 		}
 		public enum VkCoverageReductionModeNV {
 			CoverageReductionModeMergeNv = 0,
 			CoverageReductionModeTruncateNv = 1,
-			CoverageReductionModeBeginRangeNv = CoverageReductionModeMergeNv,
-			CoverageReductionModeEndRangeNv = CoverageReductionModeTruncateNv,
-			CoverageReductionModeRangeSizeNv = (CoverageReductionModeTruncateNv-CoverageReductionModeMergeNv+1 ),
 			CoverageReductionModeMaxEnumNv = 0x7fffffff,
 		}
 		public enum VkLineRasterizationModeEXT {
@@ -2675,9 +2432,6 @@ namespace VulkanSharp.Raw {
 			LineRasterizationModeRectangularExt = 1,
 			LineRasterizationModeBresenhamExt = 2,
 			LineRasterizationModeRectangularSmoothExt = 3,
-			LineRasterizationModeBeginRangeExt = LineRasterizationModeDefaultExt,
-			LineRasterizationModeEndRangeExt = LineRasterizationModeRectangularSmoothExt,
-			LineRasterizationModeRangeSizeExt = (LineRasterizationModeRectangularSmoothExt-LineRasterizationModeDefaultExt+1 ),
 			LineRasterizationModeMaxEnumExt = 0x7fffffff,
 		}
 		public enum VkIndirectCommandsTokenTypeNV {
@@ -2689,9 +2443,6 @@ namespace VulkanSharp.Raw {
 			IndirectCommandsTokenTypeDrawIndexedNv = 5,
 			IndirectCommandsTokenTypeDrawNv = 6,
 			IndirectCommandsTokenTypeDrawTasksNv = 7,
-			IndirectCommandsTokenTypeBeginRangeNv = IndirectCommandsTokenTypeShaderGroupNv,
-			IndirectCommandsTokenTypeEndRangeNv = IndirectCommandsTokenTypeDrawTasksNv,
-			IndirectCommandsTokenTypeRangeSizeNv = (IndirectCommandsTokenTypeDrawTasksNv-IndirectCommandsTokenTypeShaderGroupNv+1 ),
 			IndirectCommandsTokenTypeMaxEnumNv = 0x7fffffff,
 		}
 		public enum VkIndirectStateFlagsNV {
@@ -2703,6 +2454,9 @@ namespace VulkanSharp.Raw {
 			IndirectCommandsLayoutUsageIndexedSequencesBitNv = 0x00000002,
 			IndirectCommandsLayoutUsageUnorderedSequencesBitNv = 0x00000004,
 			IndirectCommandsLayoutUsageFlagBitsMaxEnumNv = 0x7fffffff,
+		}
+		public enum VkPrivateDataSlotCreateFlagsEXT {
+			PrivateDataSlotCreateFlagBitsMaxEnumExt = 0x7fffffff,
 		}
 		public enum VkDeviceDiagnosticsConfigFlagsNV {
 			DeviceDiagnosticsConfigEnableShaderDebugInfoBitNv = 0x00000001,

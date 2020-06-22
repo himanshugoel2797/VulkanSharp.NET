@@ -489,6 +489,8 @@ namespace VulkanSharp.Raw {
 		public static void vkCmdDrawIndirectByteCountEXT(IntPtr commandBuffer, uint instanceCount, uint firstInstance, IntPtr counterBuffer, ulong counterBufferOffset, uint counterOffset, uint vertexStride) { throw new NotImplementedException(); }
 		public static uint vkGetImageViewHandleNVX(IntPtr device, ManagedPtrArray<VkImageViewHandleInfoNVX> pInfo) { throw new NotImplementedException(); }
 		public static uint vkGetImageViewHandleNVX(IntPtr device, IntPtr pInfo) { throw new NotImplementedException(); }
+		public static VkResult vkGetImageViewAddressNVX(IntPtr device, IntPtr imageView, ManagedPtrArray<VkImageViewAddressPropertiesNVX> pProperties) { throw new NotImplementedException(); }
+		public static VkResult vkGetImageViewAddressNVX(IntPtr device, IntPtr imageView, IntPtr pProperties) { throw new NotImplementedException(); }
 		public static void vkCmdDrawIndirectCountAMD(IntPtr commandBuffer, IntPtr buffer, ulong offset, IntPtr countBuffer, ulong countBufferOffset, uint maxDrawCount, uint stride) { throw new NotImplementedException(); }
 		public static void vkCmdDrawIndexedIndirectCountAMD(IntPtr commandBuffer, IntPtr buffer, ulong offset, IntPtr countBuffer, ulong countBufferOffset, uint maxDrawCount, uint stride) { throw new NotImplementedException(); }
 		public static VkResult vkGetShaderInfoAMD(IntPtr device, IntPtr pipeline, VkShaderStageFlags shaderStage, VkShaderInfoTypeAMD infoType, ulong* pInfoSize, IntPtr pInfo) { throw new NotImplementedException(); }
@@ -631,6 +633,12 @@ namespace VulkanSharp.Raw {
 		public static VkResult vkCreateIndirectCommandsLayoutNV(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pIndirectCommandsLayout) { throw new NotImplementedException(); }
 		public static void vkDestroyIndirectCommandsLayoutNV(IntPtr device, IntPtr indirectCommandsLayout, ManagedPtrArray<VkAllocationCallbacks> pAllocator) { throw new NotImplementedException(); }
 		public static void vkDestroyIndirectCommandsLayoutNV(IntPtr device, IntPtr indirectCommandsLayout, IntPtr pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkCreatePrivateDataSlotEXT(IntPtr device, ManagedPtrArray<VkPrivateDataSlotCreateInfoEXT> pCreateInfo, ManagedPtrArray<VkAllocationCallbacks> pAllocator, IntPtr* pPrivateDataSlot) { throw new NotImplementedException(); }
+		public static VkResult vkCreatePrivateDataSlotEXT(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pPrivateDataSlot) { throw new NotImplementedException(); }
+		public static void vkDestroyPrivateDataSlotEXT(IntPtr device, IntPtr privateDataSlot, ManagedPtrArray<VkAllocationCallbacks> pAllocator) { throw new NotImplementedException(); }
+		public static void vkDestroyPrivateDataSlotEXT(IntPtr device, IntPtr privateDataSlot, IntPtr pAllocator) { throw new NotImplementedException(); }
+		public static VkResult vkSetPrivateDataEXT(IntPtr device, VkObjectType objectType, ulong objectHandle, IntPtr privateDataSlot, ulong data) { throw new NotImplementedException(); }
+		public static void vkGetPrivateDataEXT(IntPtr device, VkObjectType objectType, ulong objectHandle, IntPtr privateDataSlot, ulong* pData) { throw new NotImplementedException(); }
 		internal static IntPtr vkCreateWin32SurfaceKHR_hndl;
 		internal static IntPtr vkGetPhysicalDeviceWin32PresentationSupportKHR_hndl;
 		internal static IntPtr vkGetMemoryWin32HandleKHR_hndl;
@@ -923,6 +931,7 @@ namespace VulkanSharp.Raw {
 		internal static IntPtr vkCmdEndQueryIndexedEXT_hndl;
 		internal static IntPtr vkCmdDrawIndirectByteCountEXT_hndl;
 		internal static IntPtr vkGetImageViewHandleNVX_hndl;
+		internal static IntPtr vkGetImageViewAddressNVX_hndl;
 		internal static IntPtr vkCmdDrawIndirectCountAMD_hndl;
 		internal static IntPtr vkCmdDrawIndexedIndirectCountAMD_hndl;
 		internal static IntPtr vkGetShaderInfoAMD_hndl;
@@ -1010,6 +1019,10 @@ namespace VulkanSharp.Raw {
 		internal static IntPtr vkCmdBindPipelineShaderGroupNV_hndl;
 		internal static IntPtr vkCreateIndirectCommandsLayoutNV_hndl;
 		internal static IntPtr vkDestroyIndirectCommandsLayoutNV_hndl;
+		internal static IntPtr vkCreatePrivateDataSlotEXT_hndl;
+		internal static IntPtr vkDestroyPrivateDataSlotEXT_hndl;
+		internal static IntPtr vkSetPrivateDataEXT_hndl;
+		internal static IntPtr vkGetPrivateDataEXT_hndl;
 		private static void InitPtrs() {
 			NativeLibrary.TryGetExport(libHndl, "vkCreateWin32SurfaceKHR", out vkCreateWin32SurfaceKHR_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkGetPhysicalDeviceWin32PresentationSupportKHR", out vkGetPhysicalDeviceWin32PresentationSupportKHR_hndl);
@@ -1303,6 +1316,7 @@ namespace VulkanSharp.Raw {
 			NativeLibrary.TryGetExport(libHndl, "vkCmdEndQueryIndexedEXT", out vkCmdEndQueryIndexedEXT_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkCmdDrawIndirectByteCountEXT", out vkCmdDrawIndirectByteCountEXT_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkGetImageViewHandleNVX", out vkGetImageViewHandleNVX_hndl);
+			NativeLibrary.TryGetExport(libHndl, "vkGetImageViewAddressNVX", out vkGetImageViewAddressNVX_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkCmdDrawIndirectCountAMD", out vkCmdDrawIndirectCountAMD_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkCmdDrawIndexedIndirectCountAMD", out vkCmdDrawIndexedIndirectCountAMD_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkGetShaderInfoAMD", out vkGetShaderInfoAMD_hndl);
@@ -1390,6 +1404,10 @@ namespace VulkanSharp.Raw {
 			NativeLibrary.TryGetExport(libHndl, "vkCmdBindPipelineShaderGroupNV", out vkCmdBindPipelineShaderGroupNV_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkCreateIndirectCommandsLayoutNV", out vkCreateIndirectCommandsLayoutNV_hndl);
 			NativeLibrary.TryGetExport(libHndl, "vkDestroyIndirectCommandsLayoutNV", out vkDestroyIndirectCommandsLayoutNV_hndl);
+			NativeLibrary.TryGetExport(libHndl, "vkCreatePrivateDataSlotEXT", out vkCreatePrivateDataSlotEXT_hndl);
+			NativeLibrary.TryGetExport(libHndl, "vkDestroyPrivateDataSlotEXT", out vkDestroyPrivateDataSlotEXT_hndl);
+			NativeLibrary.TryGetExport(libHndl, "vkSetPrivateDataEXT", out vkSetPrivateDataEXT_hndl);
+			NativeLibrary.TryGetExport(libHndl, "vkGetPrivateDataEXT", out vkGetPrivateDataEXT_hndl);
 		}
 	}
 }

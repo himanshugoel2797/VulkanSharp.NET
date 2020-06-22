@@ -3758,6 +3758,16 @@ namespace VulkanSharp.Raw {
         public static ManagedPtr<VkImageViewHandleInfoNVX> Pointer(this VkImageViewHandleInfoNVX i) => new ManagedPtr<VkImageViewHandleInfoNVX>(i);
         public static ManagedPtrArray<VkImageViewHandleInfoNVX> Pointer(this VkImageViewHandleInfoNVX[] i) => new ManagedPtrArray<VkImageViewHandleInfoNVX>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkImageViewAddressPropertiesNVX {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public ulong deviceAddress;
+			[FieldOffset(24)]public ulong size;
+		}
+
+        public static ManagedPtr<VkImageViewAddressPropertiesNVX> Pointer(this VkImageViewAddressPropertiesNVX i) => new ManagedPtr<VkImageViewAddressPropertiesNVX>(i);
+        public static ManagedPtrArray<VkImageViewAddressPropertiesNVX> Pointer(this VkImageViewAddressPropertiesNVX[] i) => new ManagedPtrArray<VkImageViewAddressPropertiesNVX>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkTextureLODGatherFormatPropertiesAMD {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
@@ -4128,30 +4138,6 @@ namespace VulkanSharp.Raw {
         public static ManagedPtr<VkHdrMetadataEXT> Pointer(this VkHdrMetadataEXT i) => new ManagedPtr<VkHdrMetadataEXT>(i);
         public static ManagedPtrArray<VkHdrMetadataEXT> Pointer(this VkHdrMetadataEXT[] i) => new ManagedPtrArray<VkHdrMetadataEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
-		public unsafe struct VkDebugUtilsObjectNameInfoEXT {
-			[FieldOffset(0)]public VkStructureType sType;
-			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public VkObjectType objectType;
-			[FieldOffset(24)]public ulong objectHandle;
-			[FieldOffset(32)]public string pObjectName;
-		}
-
-        public static ManagedPtr<VkDebugUtilsObjectNameInfoEXT> Pointer(this VkDebugUtilsObjectNameInfoEXT i) => new ManagedPtr<VkDebugUtilsObjectNameInfoEXT>(i);
-        public static ManagedPtrArray<VkDebugUtilsObjectNameInfoEXT> Pointer(this VkDebugUtilsObjectNameInfoEXT[] i) => new ManagedPtrArray<VkDebugUtilsObjectNameInfoEXT>(i);
-		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
-		public unsafe struct VkDebugUtilsObjectTagInfoEXT {
-			[FieldOffset(0)]public VkStructureType sType;
-			[FieldOffset(8)]public IntPtr pNext;
-			[FieldOffset(16)]public VkObjectType objectType;
-			[FieldOffset(24)]public ulong objectHandle;
-			[FieldOffset(32)]public ulong tagName;
-			[FieldOffset(40)]public ulong tagSize;
-			[FieldOffset(48)]public IntPtr pTag;
-		}
-
-        public static ManagedPtr<VkDebugUtilsObjectTagInfoEXT> Pointer(this VkDebugUtilsObjectTagInfoEXT i) => new ManagedPtr<VkDebugUtilsObjectTagInfoEXT>(i);
-        public static ManagedPtrArray<VkDebugUtilsObjectTagInfoEXT> Pointer(this VkDebugUtilsObjectTagInfoEXT[] i) => new ManagedPtrArray<VkDebugUtilsObjectTagInfoEXT>(i);
-		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDebugUtilsLabelEXT {
 			[FieldOffset(0)]public VkStructureType sType;
 			[FieldOffset(8)]public IntPtr pNext;
@@ -4162,6 +4148,17 @@ namespace VulkanSharp.Raw {
 
         public static ManagedPtr<VkDebugUtilsLabelEXT> Pointer(this VkDebugUtilsLabelEXT i) => new ManagedPtr<VkDebugUtilsLabelEXT>(i);
         public static ManagedPtrArray<VkDebugUtilsLabelEXT> Pointer(this VkDebugUtilsLabelEXT[] i) => new ManagedPtrArray<VkDebugUtilsLabelEXT>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkDebugUtilsObjectNameInfoEXT {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public VkObjectType objectType;
+			[FieldOffset(24)]public ulong objectHandle;
+			[FieldOffset(32)]public string pObjectName;
+		}
+
+        public static ManagedPtr<VkDebugUtilsObjectNameInfoEXT> Pointer(this VkDebugUtilsObjectNameInfoEXT i) => new ManagedPtr<VkDebugUtilsObjectNameInfoEXT>(i);
+        public static ManagedPtrArray<VkDebugUtilsObjectNameInfoEXT> Pointer(this VkDebugUtilsObjectNameInfoEXT[] i) => new ManagedPtrArray<VkDebugUtilsObjectNameInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDebugUtilsMessengerCallbackDataEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -4180,6 +4177,19 @@ namespace VulkanSharp.Raw {
 
         public static ManagedPtr<VkDebugUtilsMessengerCallbackDataEXT> Pointer(this VkDebugUtilsMessengerCallbackDataEXT i) => new ManagedPtr<VkDebugUtilsMessengerCallbackDataEXT>(i);
         public static ManagedPtrArray<VkDebugUtilsMessengerCallbackDataEXT> Pointer(this VkDebugUtilsMessengerCallbackDataEXT[] i) => new ManagedPtrArray<VkDebugUtilsMessengerCallbackDataEXT>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkDebugUtilsObjectTagInfoEXT {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public VkObjectType objectType;
+			[FieldOffset(24)]public ulong objectHandle;
+			[FieldOffset(32)]public ulong tagName;
+			[FieldOffset(40)]public ulong tagSize;
+			[FieldOffset(48)]public IntPtr pTag;
+		}
+
+        public static ManagedPtr<VkDebugUtilsObjectTagInfoEXT> Pointer(this VkDebugUtilsObjectTagInfoEXT i) => new ManagedPtr<VkDebugUtilsObjectTagInfoEXT>(i);
+        public static ManagedPtrArray<VkDebugUtilsObjectTagInfoEXT> Pointer(this VkDebugUtilsObjectTagInfoEXT[] i) => new ManagedPtrArray<VkDebugUtilsObjectTagInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkDebugUtilsMessengerCreateInfoEXT {
 			[FieldOffset(0)]public VkStructureType sType;
@@ -5632,6 +5642,83 @@ namespace VulkanSharp.Raw {
 
         public static ManagedPtr<VkCommandBufferInheritanceRenderPassTransformInfoQCOM> Pointer(this VkCommandBufferInheritanceRenderPassTransformInfoQCOM i) => new ManagedPtr<VkCommandBufferInheritanceRenderPassTransformInfoQCOM>(i);
         public static ManagedPtrArray<VkCommandBufferInheritanceRenderPassTransformInfoQCOM> Pointer(this VkCommandBufferInheritanceRenderPassTransformInfoQCOM[] i) => new ManagedPtrArray<VkCommandBufferInheritanceRenderPassTransformInfoQCOM>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkPhysicalDeviceRobustness2FeaturesEXT {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public bool robustBufferAccess2;
+			[FieldOffset(20)]public bool robustImageAccess2;
+			[FieldOffset(24)]public bool nullDescriptor;
+		}
+
+        public static ManagedPtr<VkPhysicalDeviceRobustness2FeaturesEXT> Pointer(this VkPhysicalDeviceRobustness2FeaturesEXT i) => new ManagedPtr<VkPhysicalDeviceRobustness2FeaturesEXT>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceRobustness2FeaturesEXT> Pointer(this VkPhysicalDeviceRobustness2FeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceRobustness2FeaturesEXT>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkPhysicalDeviceRobustness2PropertiesEXT {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public ulong robustStorageBufferAccessSizeAlignment;
+			[FieldOffset(24)]public ulong robustUniformBufferAccessSizeAlignment;
+		}
+
+        public static ManagedPtr<VkPhysicalDeviceRobustness2PropertiesEXT> Pointer(this VkPhysicalDeviceRobustness2PropertiesEXT i) => new ManagedPtr<VkPhysicalDeviceRobustness2PropertiesEXT>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceRobustness2PropertiesEXT> Pointer(this VkPhysicalDeviceRobustness2PropertiesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceRobustness2PropertiesEXT>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkSamplerCustomBorderColorCreateInfoEXT {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public VkClearColorValue customBorderColor;
+			[FieldOffset(20)]public VkFormat format;
+		}
+
+        public static ManagedPtr<VkSamplerCustomBorderColorCreateInfoEXT> Pointer(this VkSamplerCustomBorderColorCreateInfoEXT i) => new ManagedPtr<VkSamplerCustomBorderColorCreateInfoEXT>(i);
+        public static ManagedPtrArray<VkSamplerCustomBorderColorCreateInfoEXT> Pointer(this VkSamplerCustomBorderColorCreateInfoEXT[] i) => new ManagedPtrArray<VkSamplerCustomBorderColorCreateInfoEXT>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkPhysicalDeviceCustomBorderColorPropertiesEXT {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public uint maxCustomBorderColorSamplers;
+		}
+
+        public static ManagedPtr<VkPhysicalDeviceCustomBorderColorPropertiesEXT> Pointer(this VkPhysicalDeviceCustomBorderColorPropertiesEXT i) => new ManagedPtr<VkPhysicalDeviceCustomBorderColorPropertiesEXT>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceCustomBorderColorPropertiesEXT> Pointer(this VkPhysicalDeviceCustomBorderColorPropertiesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceCustomBorderColorPropertiesEXT>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkPhysicalDeviceCustomBorderColorFeaturesEXT {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public bool customBorderColors;
+			[FieldOffset(20)]public bool customBorderColorWithoutFormat;
+		}
+
+        public static ManagedPtr<VkPhysicalDeviceCustomBorderColorFeaturesEXT> Pointer(this VkPhysicalDeviceCustomBorderColorFeaturesEXT i) => new ManagedPtr<VkPhysicalDeviceCustomBorderColorFeaturesEXT>(i);
+        public static ManagedPtrArray<VkPhysicalDeviceCustomBorderColorFeaturesEXT> Pointer(this VkPhysicalDeviceCustomBorderColorFeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDeviceCustomBorderColorFeaturesEXT>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkPhysicalDevicePrivateDataFeaturesEXT {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public bool privateData;
+		}
+
+        public static ManagedPtr<VkPhysicalDevicePrivateDataFeaturesEXT> Pointer(this VkPhysicalDevicePrivateDataFeaturesEXT i) => new ManagedPtr<VkPhysicalDevicePrivateDataFeaturesEXT>(i);
+        public static ManagedPtrArray<VkPhysicalDevicePrivateDataFeaturesEXT> Pointer(this VkPhysicalDevicePrivateDataFeaturesEXT[] i) => new ManagedPtrArray<VkPhysicalDevicePrivateDataFeaturesEXT>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkDevicePrivateDataCreateInfoEXT {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public uint privateDataSlotRequestCount;
+		}
+
+        public static ManagedPtr<VkDevicePrivateDataCreateInfoEXT> Pointer(this VkDevicePrivateDataCreateInfoEXT i) => new ManagedPtr<VkDevicePrivateDataCreateInfoEXT>(i);
+        public static ManagedPtrArray<VkDevicePrivateDataCreateInfoEXT> Pointer(this VkDevicePrivateDataCreateInfoEXT[] i) => new ManagedPtrArray<VkDevicePrivateDataCreateInfoEXT>(i);
+		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
+		public unsafe struct VkPrivateDataSlotCreateInfoEXT {
+			[FieldOffset(0)]public VkStructureType sType;
+			[FieldOffset(8)]public IntPtr pNext;
+			[FieldOffset(16)]public VkPrivateDataSlotCreateFlagsEXT flags;
+		}
+
+        public static ManagedPtr<VkPrivateDataSlotCreateInfoEXT> Pointer(this VkPrivateDataSlotCreateInfoEXT i) => new ManagedPtr<VkPrivateDataSlotCreateInfoEXT>(i);
+        public static ManagedPtrArray<VkPrivateDataSlotCreateInfoEXT> Pointer(this VkPrivateDataSlotCreateInfoEXT[] i) => new ManagedPtrArray<VkPrivateDataSlotCreateInfoEXT>(i);
 		[StructLayout(LayoutKind.Explicit, CharSet = CharSet.Ansi)]
 		public unsafe struct VkPhysicalDevicePipelineCreationCacheControlFeaturesEXT {
 			[FieldOffset(0)]public VkStructureType sType;

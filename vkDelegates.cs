@@ -595,6 +595,8 @@ namespace VulkanSharp.Raw {
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		public delegate uint PFN_vkGetImageViewHandleNVX(IntPtr device, IntPtr pInfo);
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		public delegate VkResult PFN_vkGetImageViewAddressNVX(IntPtr device, IntPtr imageView, IntPtr pProperties);
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		public delegate void PFN_vkCmdDrawIndirectCountAMD(IntPtr commandBuffer, IntPtr buffer, ulong offset, IntPtr countBuffer, ulong countBufferOffset, uint maxDrawCount, uint stride);
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		public delegate void PFN_vkCmdDrawIndexedIndirectCountAMD(IntPtr commandBuffer, IntPtr buffer, ulong offset, IntPtr countBuffer, ulong countBufferOffset, uint maxDrawCount, uint stride);
@@ -770,5 +772,13 @@ namespace VulkanSharp.Raw {
 		public delegate VkResult PFN_vkCreateIndirectCommandsLayoutNV(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pIndirectCommandsLayout);
 		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
 		public delegate void PFN_vkDestroyIndirectCommandsLayoutNV(IntPtr device, IntPtr indirectCommandsLayout, IntPtr pAllocator);
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		public delegate VkResult PFN_vkCreatePrivateDataSlotEXT(IntPtr device, IntPtr pCreateInfo, IntPtr pAllocator, IntPtr* pPrivateDataSlot);
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		public delegate void PFN_vkDestroyPrivateDataSlotEXT(IntPtr device, IntPtr privateDataSlot, IntPtr pAllocator);
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		public delegate VkResult PFN_vkSetPrivateDataEXT(IntPtr device, VkObjectType objectType, ulong objectHandle, IntPtr privateDataSlot, ulong data);
+		[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+		public delegate void PFN_vkGetPrivateDataEXT(IntPtr device, VkObjectType objectType, ulong objectHandle, IntPtr privateDataSlot, ulong* pData);
 	}
 }
